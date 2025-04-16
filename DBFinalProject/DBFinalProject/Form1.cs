@@ -13,9 +13,15 @@ namespace DBFinalProject
 {
     public partial class MainInterface : KryptonForm
     {
+        public KryptonPalette kryptonPalette1;
+
         public MainInterface()
         {
             InitializeComponent();
+            KryptonManager kryptonManager = new KryptonManager();
+            this.kryptonManager1.GlobalPalette = myPallet;
+            this.kryptonManager1.GlobalPaletteMode = PaletteModeManager.Custom;
+
         }
 
         private void login_Click(object sender, EventArgs e)
@@ -30,14 +36,48 @@ namespace DBFinalProject
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void MainInterface_Load(object sender, EventArgs e)
+        {
+            KryptonManager kryptonManager = new KryptonManager();
+            this.kryptonManager1.GlobalPalette = myPallet;
+            this.kryptonManager1.GlobalPaletteMode = PaletteModeManager.Custom;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pass_TextChanged(object sender, EventArgs e)
+        {
             if (checkBox1.Checked == true)
             {
-                password.PasswordChar = '\0';
+                pass.PasswordChar = '\0';
             }
             else
             {
-                password.PasswordChar = '•';
+                pass.PasswordChar = '•';
             }
+        }
+
+        private void pass_Click(object sender, EventArgs e)
+        {
+            pass.Text = "";
+        }
+
+        private void login_btn_Click(object sender, EventArgs e)
+        {
+            ClientManagement clientManagement = new ClientManagement();
+            clientManagement.Show();
+            this.Hide();
         }
     }
 }
