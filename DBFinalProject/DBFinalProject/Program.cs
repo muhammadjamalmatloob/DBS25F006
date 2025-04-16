@@ -17,6 +17,7 @@ namespace DBFinalProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
 
             KryptonManager kryptonManager = new KryptonManager();
             kryptonManager.GlobalPaletteMode = PaletteModeManager.Custom;
@@ -24,6 +25,8 @@ namespace DBFinalProject
             //MainInterface mainForm = new MainInterface();
             //kryptonManager.GlobalPalette = mainForm.myPallet;
 
+=======
+>>>>>>> 0ece54309b7b6eb9b2dd69cae107a702401643c3
             Application.Run(new GeneralMenu());
         }
     }
