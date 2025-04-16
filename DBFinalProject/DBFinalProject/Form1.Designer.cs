@@ -190,9 +190,7 @@
             this.Closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Closebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Closebtn.ForeColor = System.Drawing.SystemColors.Highlight;
-
             this.Closebtn.Location = new System.Drawing.Point(889, 0);
-
             this.Closebtn.Margin = new System.Windows.Forms.Padding(0);
             this.Closebtn.Name = "Closebtn";
             this.Closebtn.Size = new System.Drawing.Size(45, 43);
