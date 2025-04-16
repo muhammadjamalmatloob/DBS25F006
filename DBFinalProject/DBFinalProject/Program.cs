@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace DBFinalProject
 {
@@ -16,6 +17,13 @@ namespace DBFinalProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            KryptonManager kryptonManager = new KryptonManager();
+            kryptonManager.GlobalPaletteMode = PaletteModeManager.Custom;
+
+            //MainInterface mainForm = new MainInterface();
+            //kryptonManager.GlobalPalette = mainForm.myPallet;
+
             Application.Run(new MainInterface());
         }
     }
