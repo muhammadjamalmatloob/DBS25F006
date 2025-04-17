@@ -24,5 +24,17 @@ namespace DBFinalProject
             applicationForm.Show();
             this.Hide();
         }
+
+        private void Closebtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            EmployeeManagement employeeManagement = new EmployeeManagement();
+            employeeManagement.Show();
+            this.Hide();
+        }
     }
 }

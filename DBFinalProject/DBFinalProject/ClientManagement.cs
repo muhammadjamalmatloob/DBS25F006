@@ -44,5 +44,10 @@ namespace DBFinalProject
         {
 
         }
+
+        private void Closebtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
