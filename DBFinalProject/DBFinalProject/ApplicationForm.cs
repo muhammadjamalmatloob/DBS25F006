@@ -11,18 +11,11 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace DBFinalProject
 {
-    public partial class AdminDashboard : KryptonForm
+    public partial class ApplicationForm : KryptonForm
     {
-        public AdminDashboard()
+        public ApplicationForm()
         {
             InitializeComponent();
-        }
-
-        private void kryptonButton1_Click(object sender, EventArgs e)
-        {
-            ApplicationForm applicationForm = new ApplicationForm();
-            applicationForm.Show();
-            this.Hide();
         }
     }
 }

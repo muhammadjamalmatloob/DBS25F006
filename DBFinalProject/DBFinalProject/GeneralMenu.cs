@@ -71,5 +71,12 @@ namespace DBFinalProject
         {
             Application.Exit();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ApplicationForm applicationForm = new ApplicationForm();
+            applicationForm.Show(); 
+            this.Hide();
+        }
     }
 }
