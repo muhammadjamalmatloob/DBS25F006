@@ -75,8 +75,12 @@ namespace DBFinalProject
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-            ClientManagement clientManagement = new ClientManagement();
-            clientManagement.Show();
+            //ClientManagement clientManagement = new ClientManagement();
+            //clientManagement.Show();
+            //this.Hide();
+
+            AdminDashboard adminDashboard = new AdminDashboard();
+            adminDashboard.Show();
             this.Hide();
         }
     }
