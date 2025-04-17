@@ -66,5 +66,10 @@ namespace DBFinalProject
             MainInterface mi = new MainInterface();
             mi.Show();
         }
+
+        private void Closebtn_Click_2(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

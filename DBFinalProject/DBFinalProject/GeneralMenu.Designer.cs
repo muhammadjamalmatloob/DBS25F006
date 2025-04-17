@@ -315,6 +315,7 @@
             this.Closebtn.TabIndex = 14;
             this.Closebtn.Text = "X";
             this.Closebtn.UseVisualStyleBackColor = true;
+            this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click_2);
             // 
             // pictureBox1
             // 
