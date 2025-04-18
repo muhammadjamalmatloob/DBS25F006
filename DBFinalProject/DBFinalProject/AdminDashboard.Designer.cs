@@ -245,7 +245,7 @@
             // 
             // kryptonButton8
             // 
-            this.kryptonButton8.Location = new System.Drawing.Point(11, 563);
+            this.kryptonButton8.Location = new System.Drawing.Point(11, 592);
             this.kryptonButton8.Name = "kryptonButton8";
             this.kryptonButton8.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton8.TabIndex = 6;
@@ -261,7 +261,7 @@
             // 
             // kryptonButton7
             // 
-            this.kryptonButton7.Location = new System.Drawing.Point(11, 483);
+            this.kryptonButton7.Location = new System.Drawing.Point(11, 506);
             this.kryptonButton7.Name = "kryptonButton7";
             this.kryptonButton7.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton7.TabIndex = 5;
@@ -278,7 +278,7 @@
             // 
             // kryptonButton6
             // 
-            this.kryptonButton6.Location = new System.Drawing.Point(11, 413);
+            this.kryptonButton6.Location = new System.Drawing.Point(11, 425);
             this.kryptonButton6.Name = "kryptonButton6";
             this.kryptonButton6.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton6.TabIndex = 4;
@@ -295,7 +295,7 @@
             // 
             // kryptonButton5
             // 
-            this.kryptonButton5.Location = new System.Drawing.Point(11, 337);
+            this.kryptonButton5.Location = new System.Drawing.Point(11, 350);
             this.kryptonButton5.Name = "kryptonButton5";
             this.kryptonButton5.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton5.TabIndex = 3;

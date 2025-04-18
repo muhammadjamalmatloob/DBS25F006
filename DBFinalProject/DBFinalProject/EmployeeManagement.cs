@@ -18,6 +18,8 @@ namespace DBFinalProject
             InitializeComponent();
             GrpAdd.Visible = false;
             GrpBox.Visible = false;
+            GrpUpdate.Visible = false;
+            GrpDelete.Visible = false;
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
@@ -39,12 +41,16 @@ namespace DBFinalProject
         {
             GrpAdd.Visible = true;
             GrpBox.Visible = false;
+            GrpUpdate.Visible = false;
+            GrpDelete.Visible = false;
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             GrpBox.Visible = true;
             GrpAdd.Visible = false;
+            GrpUpdate.Visible = false;
+            GrpDelete.Visible = false;
         }
 
         private void kryptonButton6_Click(object sender, EventArgs e)
@@ -53,6 +59,59 @@ namespace DBFinalProject
         }
 
         private void kryptonButton7_Click(object sender, EventArgs e)
+        {
+            GrpAdd.Visible = false;
+        }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            GrpUpdate.Visible = true;
+            GrpAdd.Visible = false;
+            GrpBox.Visible = false;
+            GrpDelete.Visible = false;
+        }
+
+        private void kryptonButton9_Click(object sender, EventArgs e)
+        {
+            GrpUpdate.Visible = false;
+        }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
+            GrpDelete.Visible = true;
+            GrpAdd.Visible = false;
+            GrpBox.Visible = false;
+            GrpUpdate.Visible = false;
+        }
+
+        private void kryptonButton11_Click(object sender, EventArgs e)
+        {
+            GrpDelete.Visible = false;
+        }
+
+        private void kryptonButton12_Click(object sender, EventArgs e)
+        {
+            GrpUpdate.Visible = false;
+        }
+
+        private void kryptonButton13_Click(object sender, EventArgs e)
+        {
+            GrpAdd.Visible = false;
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void kryptonButton14_Click(object sender, EventArgs e)
+        {
+            AdminDashboard adminDashboard = new AdminDashboard();
+            adminDashboard.Show();
+            this.Hide();
+        }
+
+        private void kryptonButton13_Click_1(object sender, EventArgs e)
         {
             GrpAdd.Visible = false;
         }
