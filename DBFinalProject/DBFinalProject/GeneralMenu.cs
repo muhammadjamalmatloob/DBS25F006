@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace DBFinalProject
 {
-    public partial class GeneralMenu : Form
+    public partial class GeneralMenu : KryptonForm
     {
         bool sidebarExpand;
         public GeneralMenu()
@@ -63,8 +64,8 @@ namespace DBFinalProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MainInterface mi = new MainInterface();
-            mi.Show();
+            commonInterface1.Visible = false;
+            depositMoney1.Visible = true;
         }
 
         private void Closebtn_Click_2(object sender, EventArgs e)
@@ -77,6 +78,22 @@ namespace DBFinalProject
             ApplicationForm applicationForm = new ApplicationForm();
             applicationForm.Show(); 
             this.Hide();
+        }
+
+        private void kryptonPalette1_PalettePaint(object sender, ComponentFactory.Krypton.Toolkit.PaletteLayoutEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            commonInterface1.Visible = true;
+            depositMoney1.Visible = false;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
