@@ -36,5 +36,10 @@ namespace DBFinalProject
             employeeManagement.Show();
             this.Hide();
         }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientManagement));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.Closebtn = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -63,7 +64,6 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.myPallet = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.Closebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -90,6 +90,24 @@
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1521, 107);
             this.kryptonPanel1.TabIndex = 1;
+            // 
+            // Closebtn
+            // 
+            this.Closebtn.BackColor = System.Drawing.Color.Transparent;
+            this.Closebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Closebtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Closebtn.FlatAppearance.BorderSize = 0;
+            this.Closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Closebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Closebtn.ForeColor = System.Drawing.Color.White;
+            this.Closebtn.Location = new System.Drawing.Point(1476, 0);
+            this.Closebtn.Margin = new System.Windows.Forms.Padding(0);
+            this.Closebtn.Name = "Closebtn";
+            this.Closebtn.Size = new System.Drawing.Size(45, 43);
+            this.Closebtn.TabIndex = 12;
+            this.Closebtn.Text = "X";
+            this.Closebtn.UseVisualStyleBackColor = false;
+            this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click);
             // 
             // panel7
             // 
@@ -310,6 +328,7 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.radioButton2);
             this.panel5.Controls.Add(this.radioButton4);
@@ -366,6 +385,7 @@
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.radioButton3);
             this.panel6.Controls.Add(this.radioButton1);
@@ -503,24 +523,6 @@
             this.myPallet.PanelStyles.PanelCommon.StateCommon.Color2 = System.Drawing.Color.LightBlue;
             this.myPallet.PanelStyles.PanelCommon.StateCommon.ColorAngle = 45F;
             this.myPallet.PanelStyles.PanelCommon.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
-            // 
-            // Closebtn
-            // 
-            this.Closebtn.BackColor = System.Drawing.Color.Transparent;
-            this.Closebtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Closebtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Closebtn.FlatAppearance.BorderSize = 0;
-            this.Closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Closebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Closebtn.ForeColor = System.Drawing.Color.White;
-            this.Closebtn.Location = new System.Drawing.Point(1476, 0);
-            this.Closebtn.Margin = new System.Windows.Forms.Padding(0);
-            this.Closebtn.Name = "Closebtn";
-            this.Closebtn.Size = new System.Drawing.Size(45, 43);
-            this.Closebtn.TabIndex = 12;
-            this.Closebtn.Text = "X";
-            this.Closebtn.UseVisualStyleBackColor = false;
-            this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click);
             // 
             // ClientManagement
             // 
