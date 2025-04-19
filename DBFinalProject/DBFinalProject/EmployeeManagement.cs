@@ -20,6 +20,8 @@ namespace DBFinalProject
             GrpBox.Visible = false;
             GrpUpdate.Visible = false;
             GrpDelete.Visible = false;
+            radioButton1.Checked = true;
+            radioButton4.Checked = true;
         }
 
         private void Closebtn_Click(object sender, EventArgs e)

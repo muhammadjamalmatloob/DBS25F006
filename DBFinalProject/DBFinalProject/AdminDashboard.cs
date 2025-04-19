@@ -39,7 +39,9 @@ namespace DBFinalProject
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
-
+            ClientManagement clientManagement = new ClientManagement();
+            clientManagement.Show();
+            this.Hide();
         }
     }
 }
