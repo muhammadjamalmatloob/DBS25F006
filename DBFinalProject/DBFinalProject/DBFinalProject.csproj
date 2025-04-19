@@ -68,6 +68,18 @@
     <Compile Include="ClientManagement.Designer.cs">
       <DependentUpon>ClientManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="CommonInterface.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonInterface.Designer.cs">
+      <DependentUpon>CommonInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepositMoney.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DepositMoney.Designer.cs">
+      <DependentUpon>DepositMoney.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +108,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClientManagement.resx">
       <DependentUpon>ClientManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonInterface.resx">
+      <DependentUpon>CommonInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepositMoney.resx">
+      <DependentUpon>DepositMoney.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeManagement.resx">
       <DependentUpon>EmployeeManagement.cs</DependentUpon>
