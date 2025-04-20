@@ -62,6 +62,18 @@
     <Compile Include="ApplicationForm.Designer.cs">
       <DependentUpon>ApplicationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForm2.Designer.cs">
+      <DependentUpon>ApplicationForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BranchManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BranchManagement.Designer.cs">
+      <DependentUpon>BranchManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +117,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationForm.resx">
       <DependentUpon>ApplicationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForm2.resx">
+      <DependentUpon>ApplicationForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BranchManagement.resx">
+      <DependentUpon>BranchManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientManagement.resx">
       <DependentUpon>ClientManagement.cs</DependentUpon>

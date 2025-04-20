@@ -20,9 +20,13 @@ namespace DBFinalProject
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            ApplicationForm applicationForm = new ApplicationForm();
-            applicationForm.Show();
+            BranchManagement branchManagement = new BranchManagement();
+            branchManagement.Show();
             this.Hide();
+
+            //ApplicationForm applicationForm = new ApplicationForm();
+            //applicationForm.Show();
+            //this.Hide();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
@@ -38,6 +42,11 @@ namespace DBFinalProject
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
         {
             ClientManagement clientManagement = new ClientManagement();
             clientManagement.Show();

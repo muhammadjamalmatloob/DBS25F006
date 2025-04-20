@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationForm));
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,18 +45,34 @@
             this.kryptonTextBox6 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.Closebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // kryptonManager1
+            // 
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
+            // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.Closebtn);
             this.kryptonPanel1.Controls.Add(this.panel4);
             this.kryptonPanel1.Controls.Add(this.label1);
-            this.kryptonPanel1.Location = new System.Drawing.Point(2, 2);
+            this.kryptonPanel1.Location = new System.Drawing.Point(-6, 1);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(802, 118);
+            this.kryptonPanel1.Size = new System.Drawing.Size(813, 117);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(145, 109);
+            this.panel4.TabIndex = 4;
             // 
             // label1
             // 
@@ -69,16 +85,6 @@
             this.label1.Size = new System.Drawing.Size(324, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "APEX BANK LIMITED";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(145, 109);
-            this.panel4.TabIndex = 4;
             // 
             // label2
             // 
@@ -229,6 +235,7 @@
             this.kryptonButton1.Size = new System.Drawing.Size(150, 50);
             this.kryptonButton1.TabIndex = 20;
             this.kryptonButton1.Values.Text = "NEXT";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // kryptonButton2
             // 
@@ -237,6 +244,25 @@
             this.kryptonButton2.Size = new System.Drawing.Size(150, 50);
             this.kryptonButton2.TabIndex = 21;
             this.kryptonButton2.Values.Text = "BACK";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
+            // 
+            // Closebtn
+            // 
+            this.Closebtn.BackColor = System.Drawing.Color.Transparent;
+            this.Closebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Closebtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Closebtn.FlatAppearance.BorderSize = 0;
+            this.Closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Closebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Closebtn.ForeColor = System.Drawing.Color.White;
+            this.Closebtn.Location = new System.Drawing.Point(768, 0);
+            this.Closebtn.Margin = new System.Windows.Forms.Padding(0);
+            this.Closebtn.Name = "Closebtn";
+            this.Closebtn.Size = new System.Drawing.Size(45, 43);
+            this.Closebtn.TabIndex = 22;
+            this.Closebtn.Text = "X";
+            this.Closebtn.UseVisualStyleBackColor = false;
+            this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click);
             // 
             // ApplicationForm
             // 
@@ -255,7 +281,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.kryptonPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ApplicationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ApplicationForm";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
@@ -283,5 +311,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox6;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+        private System.Windows.Forms.Button Closebtn;
     }
 }
