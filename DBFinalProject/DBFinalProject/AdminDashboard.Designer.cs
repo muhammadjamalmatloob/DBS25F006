@@ -249,7 +249,7 @@
             this.kryptonButton8.Name = "kryptonButton8";
             this.kryptonButton8.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton8.TabIndex = 6;
-            this.kryptonButton8.Values.Text = "kryptonButton8";
+            this.kryptonButton8.Values.Text = "Logout";
             // 
             // kryptonButton4
             // 
@@ -257,7 +257,8 @@
             this.kryptonButton4.Name = "kryptonButton4";
             this.kryptonButton4.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton4.TabIndex = 5;
-            this.kryptonButton4.Values.Text = "kryptonButton4";
+            this.kryptonButton4.Values.Text = "Client Management";
+            this.kryptonButton4.Click += new System.EventHandler(this.kryptonButton4_Click);
             // 
             // kryptonButton7
             // 
@@ -273,7 +274,7 @@
             this.kryptonButton3.Name = "kryptonButton3";
             this.kryptonButton3.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton3.TabIndex = 4;
-            this.kryptonButton3.Values.Text = "kryptonButton3";
+            this.kryptonButton3.Values.Text = "Account Applications";
             this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
             // 
             // kryptonButton6
@@ -290,7 +291,7 @@
             this.kryptonButton2.Name = "kryptonButton2";
             this.kryptonButton2.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton2.TabIndex = 3;
-            this.kryptonButton2.Values.Text = "kryptonButton2";
+            this.kryptonButton2.Values.Text = "Employee Management";
             this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // kryptonButton5
@@ -299,7 +300,7 @@
             this.kryptonButton5.Name = "kryptonButton5";
             this.kryptonButton5.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton5.TabIndex = 3;
-            this.kryptonButton5.Values.Text = "kryptonButton5";
+            this.kryptonButton5.Values.Text = "Loan Management";
             // 
             // kryptonButton1
             // 
@@ -307,7 +308,7 @@
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton1.TabIndex = 2;
-            this.kryptonButton1.Values.Text = "kryptonButton1";
+            this.kryptonButton1.Values.Text = "Branch Management";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // panel3

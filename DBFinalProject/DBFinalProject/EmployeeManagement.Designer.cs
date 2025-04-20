@@ -122,7 +122,6 @@
             // 
             // kryptonManager1
             // 
-            this.kryptonManager1.GlobalPalette = this.myPallet;
             this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
             // 
             // myPallet
