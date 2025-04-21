@@ -52,5 +52,12 @@ namespace DBFinalProject
             clientManagement.Show();
             this.Hide();
         }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            LoanManagement loanManagement = new LoanManagement();
+            loanManagement.Show();
+            this.Hide();
+        }
     }
 }

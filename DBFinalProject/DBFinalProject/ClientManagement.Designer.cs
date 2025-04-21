@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientManagement));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonButton14 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Closebtn = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -47,12 +48,6 @@
             this.kryptonComboBox7 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonButton10 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dataGrid = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.col1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GrpBox = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.kryptonButton8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -74,7 +69,13 @@
             this.kryptonButton9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonTextBox7 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox8 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonButton14 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -111,6 +112,15 @@
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1521, 107);
             this.kryptonPanel1.TabIndex = 1;
+            // 
+            // kryptonButton14
+            // 
+            this.kryptonButton14.Location = new System.Drawing.Point(23, 32);
+            this.kryptonButton14.Name = "kryptonButton14";
+            this.kryptonButton14.Size = new System.Drawing.Size(111, 41);
+            this.kryptonButton14.TabIndex = 27;
+            this.kryptonButton14.Values.Text = "Back";
+            this.kryptonButton14.Click += new System.EventHandler(this.kryptonButton14_Click);
             // 
             // Closebtn
             // 
@@ -290,6 +300,7 @@
             // 
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
             this.col1,
             this.col2,
             this.col3,
@@ -305,51 +316,9 @@
             this.dataGrid.TabIndex = 0;
             this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
             // 
-            // col1
-            // 
-            this.col1.HeaderText = "Name";
-            this.col1.MinimumWidth = 6;
-            this.col1.Name = "col1";
-            this.col1.Width = 125;
-            // 
-            // col2
-            // 
-            this.col2.HeaderText = "Email";
-            this.col2.MinimumWidth = 6;
-            this.col2.Name = "col2";
-            this.col2.Width = 125;
-            // 
-            // col3
-            // 
-            this.col3.HeaderText = "Contact";
-            this.col3.MinimumWidth = 6;
-            this.col3.Name = "col3";
-            this.col3.Width = 125;
-            // 
-            // col4
-            // 
-            this.col4.HeaderText = "CNIC";
-            this.col4.MinimumWidth = 6;
-            this.col4.Name = "col4";
-            this.col4.Width = 125;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Gender";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // col5
-            // 
-            this.col5.HeaderText = "Nationality";
-            this.col5.MinimumWidth = 6;
-            this.col5.Name = "col5";
-            this.col5.Width = 125;
-            // 
             // GrpBox
             // 
-            this.GrpBox.Location = new System.Drawing.Point(310, 151);
+            this.GrpBox.Location = new System.Drawing.Point(310, 154);
             this.GrpBox.Name = "GrpBox";
             // 
             // GrpBox.Panel
@@ -706,14 +675,54 @@
             this.kryptonTextBox8.TabIndex = 20;
             this.kryptonTextBox8.Text = "Contact";
             // 
-            // kryptonButton14
+            // Column2
             // 
-            this.kryptonButton14.Location = new System.Drawing.Point(23, 32);
-            this.kryptonButton14.Name = "kryptonButton14";
-            this.kryptonButton14.Size = new System.Drawing.Size(111, 41);
-            this.kryptonButton14.TabIndex = 27;
-            this.kryptonButton14.Values.Text = "Back";
-            this.kryptonButton14.Click += new System.EventHandler(this.kryptonButton14_Click);
+            this.Column2.HeaderText = "Client Id";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // col1
+            // 
+            this.col1.HeaderText = "Name";
+            this.col1.MinimumWidth = 6;
+            this.col1.Name = "col1";
+            this.col1.Width = 125;
+            // 
+            // col2
+            // 
+            this.col2.HeaderText = "Email";
+            this.col2.MinimumWidth = 6;
+            this.col2.Name = "col2";
+            this.col2.Width = 125;
+            // 
+            // col3
+            // 
+            this.col3.HeaderText = "Contact";
+            this.col3.MinimumWidth = 6;
+            this.col3.Name = "col3";
+            this.col3.Width = 125;
+            // 
+            // col4
+            // 
+            this.col4.HeaderText = "CNIC";
+            this.col4.MinimumWidth = 6;
+            this.col4.Name = "col4";
+            this.col4.Width = 125;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Gender";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // col5
+            // 
+            this.col5.HeaderText = "Nationality";
+            this.col5.MinimumWidth = 6;
+            this.col5.Name = "col5";
+            this.col5.Width = 125;
             // 
             // ClientManagement
             // 
@@ -782,12 +791,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
         public ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col5;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private System.Windows.Forms.Panel panel7;
@@ -806,5 +809,12 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col5;
     }
 }
