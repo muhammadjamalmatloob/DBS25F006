@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -43,7 +44,9 @@ namespace DBFinalProject
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
-            
+            ApproveApplicationscs approveApplicationscs = new ApproveApplicationscs();
+            approveApplicationscs.Show();
+            this.Hide();
         }
 
         private void kryptonButton4_Click(object sender, EventArgs e)

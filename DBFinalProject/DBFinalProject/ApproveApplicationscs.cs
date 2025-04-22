@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
+
+namespace DBFinalProject
+{
+    public partial class ApproveApplicationscs : KryptonForm
+    {
+        public ApproveApplicationscs()
+        {
+            InitializeComponent();
+        }
+
+        private void kryptonButton14_Click(object sender, EventArgs e)
+        {
+            AdminDashboard adminDashboard = new AdminDashboard();
+            adminDashboard.Show();
+            this.Hide();
+        }
+    }
+}
