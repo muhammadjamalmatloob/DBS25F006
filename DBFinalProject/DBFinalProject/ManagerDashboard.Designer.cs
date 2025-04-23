@@ -62,6 +62,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -126,6 +127,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panel1.Controls.Add(this.kryptonButton6);
             this.panel1.Controls.Add(this.kryptonButton8);
             this.panel1.Controls.Add(this.kryptonButton4);
             this.panel1.Controls.Add(this.kryptonButton3);
@@ -144,18 +146,20 @@
             this.kryptonButton8.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton8.TabIndex = 6;
             this.kryptonButton8.Values.Text = "Logout";
+            this.kryptonButton8.Click += new System.EventHandler(this.kryptonButton8_Click);
             // 
             // kryptonButton4
             // 
-            this.kryptonButton4.Location = new System.Drawing.Point(3, 376);
+            this.kryptonButton4.Location = new System.Drawing.Point(12, 330);
             this.kryptonButton4.Name = "kryptonButton4";
             this.kryptonButton4.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton4.TabIndex = 5;
             this.kryptonButton4.Values.Text = "Currency Exchange";
+            this.kryptonButton4.Click += new System.EventHandler(this.kryptonButton4_Click);
             // 
             // kryptonButton3
             // 
-            this.kryptonButton3.Location = new System.Drawing.Point(11, 267);
+            this.kryptonButton3.Location = new System.Drawing.Point(11, 233);
             this.kryptonButton3.Name = "kryptonButton3";
             this.kryptonButton3.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton3.TabIndex = 4;
@@ -164,7 +168,7 @@
             // 
             // kryptonButton2
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(11, 156);
+            this.kryptonButton2.Location = new System.Drawing.Point(11, 138);
             this.kryptonButton2.Name = "kryptonButton2";
             this.kryptonButton2.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton2.TabIndex = 3;
@@ -173,11 +177,12 @@
             // 
             // kryptonButton5
             // 
-            this.kryptonButton5.Location = new System.Drawing.Point(11, 487);
+            this.kryptonButton5.Location = new System.Drawing.Point(12, 423);
             this.kryptonButton5.Name = "kryptonButton5";
             this.kryptonButton5.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton5.TabIndex = 3;
             this.kryptonButton5.Values.Text = "Bill Payements Record";
+            this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
             // 
             // kryptonButton1
             // 
@@ -449,6 +454,15 @@
             this.label15.TabIndex = 5;
             this.label15.Text = "Total Current Accounts: ";
             // 
+            // kryptonButton6
+            // 
+            this.kryptonButton6.Location = new System.Drawing.Point(12, 509);
+            this.kryptonButton6.Name = "kryptonButton6";
+            this.kryptonButton6.Size = new System.Drawing.Size(297, 50);
+            this.kryptonButton6.TabIndex = 7;
+            this.kryptonButton6.Values.Text = "Transactions Record";
+            this.kryptonButton6.Click += new System.EventHandler(this.kryptonButton6_Click);
+            // 
             // ManagerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -521,5 +535,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton6;
     }
 }

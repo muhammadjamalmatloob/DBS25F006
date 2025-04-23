@@ -74,6 +74,12 @@
     <Compile Include="ApproveApplicationscs.Designer.cs">
       <DependentUpon>ApproveApplicationscs.cs</DependentUpon>
     </Compile>
+    <Compile Include="BillPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillPayments.Designer.cs">
+      <DependentUpon>BillPayments.cs</DependentUpon>
+    </Compile>
     <Compile Include="BranchEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,12 @@
     </Compile>
     <Compile Include="CommonInterface.Designer.cs">
       <DependentUpon>CommonInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencyExchange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrencyExchange.Designer.cs">
+      <DependentUpon>CurrencyExchange.cs</DependentUpon>
     </Compile>
     <Compile Include="DepositMoney.cs">
       <SubType>UserControl</SubType>
@@ -142,6 +154,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransactionRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionRecord.Designer.cs">
+      <DependentUpon>TransactionRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewBranchInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +178,9 @@
     <EmbeddedResource Include="ApproveApplicationscs.resx">
       <DependentUpon>ApproveApplicationscs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BillPayments.resx">
+      <DependentUpon>BillPayments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BranchEmployees.resx">
       <DependentUpon>BranchEmployees.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CommonInterface.resx">
       <DependentUpon>CommonInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrencyExchange.resx">
+      <DependentUpon>CurrencyExchange.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DepositMoney.resx">
       <DependentUpon>DepositMoney.cs</DependentUpon>
@@ -202,6 +226,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TransactionRecord.resx">
+      <DependentUpon>TransactionRecord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewBranchInfo.resx">
       <DependentUpon>ViewBranchInfo.cs</DependentUpon>
     </EmbeddedResource>
