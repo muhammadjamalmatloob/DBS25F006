@@ -43,5 +43,34 @@ namespace DBFinalProject
             application.Show();
             this.Hide();
         }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
+            CurrencyExchange currencyExchange = new CurrencyExchange();
+            currencyExchange.Show();
+            this.Hide();
+        }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            BillPayments billPayments = new BillPayments();
+            billPayments.Show();
+            this.Hide();
+        }
+
+        private void kryptonButton6_Click(object sender, EventArgs e)
+        {
+            TransactionRecord transactionRecord = new TransactionRecord();
+            transactionRecord.Show();
+            this.Hide();
+
+        }
+
+        private void kryptonButton8_Click(object sender, EventArgs e)
+        {
+            MainInterface mainInterface = new MainInterface();
+            mainInterface.Show();
+            this.Hide();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace DBFinalProject
 {
-    partial class LoanApplications
+    partial class CurrencyExchange
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoanApplications));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CurrencyExchange));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonButton14 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Closebtn = new System.Windows.Forms.Button();
@@ -37,37 +37,37 @@
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.GrpBox = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.kryptonButton8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn();
-            this.Column7 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.GrpBox = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrpBox.Panel)).BeginInit();
             this.GrpBox.Panel.SuspendLayout();
             this.GrpBox.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -79,10 +79,10 @@
             this.kryptonPanel1.Controls.Add(this.kryptonTextBox1);
             this.kryptonPanel1.Controls.Add(this.panel2);
             this.kryptonPanel1.Controls.Add(this.label1);
-            this.kryptonPanel1.Location = new System.Drawing.Point(1, 0);
+            this.kryptonPanel1.Location = new System.Drawing.Point(0, 1);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1521, 107);
-            this.kryptonPanel1.TabIndex = 5;
+            this.kryptonPanel1.TabIndex = 6;
             // 
             // kryptonButton14
             // 
@@ -165,147 +165,45 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(338, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 38);
+            this.label1.Size = new System.Drawing.Size(277, 38);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Loan Applications";
+            this.label1.Text = "Currency Exchange";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.kryptonButton1);
+            this.panel1.Location = new System.Drawing.Point(0, 114);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(303, 687);
+            this.panel1.TabIndex = 7;
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Location = new System.Drawing.Point(52, 230);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(205, 88);
+            this.kryptonButton1.TabIndex = 3;
+            this.kryptonButton1.Values.Text = "Apply Filters";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.GrpBox);
             this.panel3.Controls.Add(this.kryptonDataGridView1);
-            this.panel3.Location = new System.Drawing.Point(310, 143);
+            this.panel3.Location = new System.Drawing.Point(309, 129);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1198, 604);
-            this.panel3.TabIndex = 32;
+            this.panel3.Size = new System.Drawing.Size(1199, 672);
+            this.panel3.TabIndex = 9;
             // 
-            // GrpBox
+            // Column1
             // 
-            this.GrpBox.Location = new System.Drawing.Point(15, 33);
-            this.GrpBox.Name = "GrpBox";
-            // 
-            // GrpBox.Panel
-            // 
-            this.GrpBox.Panel.Controls.Add(this.kryptonButton8);
-            this.GrpBox.Panel.Controls.Add(this.kryptonButton6);
-            this.GrpBox.Panel.Controls.Add(this.panel6);
-            this.GrpBox.Size = new System.Drawing.Size(409, 495);
-            this.GrpBox.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.GrpBox.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
-            this.GrpBox.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
-            this.GrpBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.GrpBox.StateCommon.Border.Rounding = 15;
-            this.GrpBox.StateCommon.Border.Width = 3;
-            this.GrpBox.TabIndex = 33;
-            this.GrpBox.Values.Heading = "Apply Filters";
-            // 
-            // kryptonButton8
-            // 
-            this.kryptonButton8.Location = new System.Drawing.Point(16, 387);
-            this.kryptonButton8.Name = "kryptonButton8";
-            this.kryptonButton8.Size = new System.Drawing.Size(140, 48);
-            this.kryptonButton8.TabIndex = 29;
-            this.kryptonButton8.Values.Text = "Apply";
-            // 
-            // kryptonButton6
-            // 
-            this.kryptonButton6.Location = new System.Drawing.Point(223, 387);
-            this.kryptonButton6.Name = "kryptonButton6";
-            this.kryptonButton6.Size = new System.Drawing.Size(140, 48);
-            this.kryptonButton6.TabIndex = 26;
-            this.kryptonButton6.Values.Text = "BACK";
-            this.kryptonButton6.Click += new System.EventHandler(this.kryptonButton6_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Controls.Add(this.radioButton5);
-            this.panel6.Controls.Add(this.radioButton4);
-            this.panel6.Controls.Add(this.radioButton2);
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.radioButton3);
-            this.panel6.Controls.Add(this.radioButton1);
-            this.panel6.Location = new System.Drawing.Point(16, 19);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(347, 349);
-            this.panel6.TabIndex = 27;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton5.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.Location = new System.Drawing.Point(49, 257);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(225, 28);
-            this.radioButton5.TabIndex = 26;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Loan Amount > 100,000";
-            this.radioButton5.UseVisualStyleBackColor = false;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton4.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(49, 204);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(215, 28);
-            this.radioButton4.TabIndex = 25;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Loan Amount > 50,000";
-            this.radioButton4.UseVisualStyleBackColor = false;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(49, 55);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(171, 28);
-            this.radioButton2.TabIndex = 24;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Loan Amount > 0";
-            this.radioButton2.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 25);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "SELECT";
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton3.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(49, 153);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(215, 28);
-            this.radioButton3.TabIndex = 22;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Loan Amount > 20,000";
-            this.radioButton3.UseVisualStyleBackColor = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(49, 101);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(215, 28);
-            this.radioButton1.TabIndex = 21;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Loan Amount > 10,000";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.Column1.HeaderText = "Exchange Id";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
             // kryptonDataGridView1
             // 
@@ -323,19 +221,12 @@
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
             this.kryptonDataGridView1.RowHeadersWidth = 51;
             this.kryptonDataGridView1.RowTemplate.Height = 24;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(1198, 604);
-            this.kryptonDataGridView1.TabIndex = 32;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Application ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(1199, 672);
+            this.kryptonDataGridView1.TabIndex = 8;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Customer Name";
+            this.Column2.HeaderText = "Customer Name ";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 125;
@@ -349,53 +240,161 @@
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Loan Type";
+            this.Column4.HeaderText = "Base Currency";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.Width = 125;
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Amount";
+            this.Column5.HeaderText = "Target Currency";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.Width = 125;
             // 
             // Column6
             // 
-            this.Column6.HeaderText = "Approve";
+            this.Column6.HeaderText = "Exchange Rate";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.Width = 125;
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "Reject";
+            this.Column7.HeaderText = "Amount ";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.Width = 125;
             // 
-            // kryptonButton1
+            // panel6
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(52, 230);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(205, 88);
-            this.kryptonButton1.TabIndex = 3;
-            this.kryptonButton1.Values.Text = "Apply Filters";
-            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.Controls.Add(this.radioButton5);
+            this.panel6.Controls.Add(this.radioButton4);
+            this.panel6.Controls.Add(this.radioButton2);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.radioButton3);
+            this.panel6.Controls.Add(this.radioButton1);
+            this.panel6.Location = new System.Drawing.Point(16, 19);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(347, 349);
+            this.panel6.TabIndex = 27;
             // 
-            // panel1
+            // radioButton1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.kryptonButton1);
-            this.panel1.Location = new System.Drawing.Point(1, 113);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(303, 687);
-            this.panel1.TabIndex = 6;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(49, 101);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(172, 28);
+            this.radioButton1.TabIndex = 21;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Amount > 10,000";
+            this.radioButton1.UseVisualStyleBackColor = false;
             // 
-            // LoanApplications
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton3.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Location = new System.Drawing.Point(49, 153);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(172, 28);
+            this.radioButton3.TabIndex = 22;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Amount > 20,000";
+            this.radioButton3.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 25);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "SELECT";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(49, 55);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(128, 28);
+            this.radioButton2.TabIndex = 24;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Amount > 0";
+            this.radioButton2.UseVisualStyleBackColor = false;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton4.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton4.Location = new System.Drawing.Point(49, 204);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(172, 28);
+            this.radioButton4.TabIndex = 25;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Amount > 50,000";
+            this.radioButton4.UseVisualStyleBackColor = false;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton5.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton5.Location = new System.Drawing.Point(49, 257);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(182, 28);
+            this.radioButton5.TabIndex = 26;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Amount > 100,000";
+            this.radioButton5.UseVisualStyleBackColor = false;
+            // 
+            // kryptonButton6
+            // 
+            this.kryptonButton6.Location = new System.Drawing.Point(223, 387);
+            this.kryptonButton6.Name = "kryptonButton6";
+            this.kryptonButton6.Size = new System.Drawing.Size(140, 48);
+            this.kryptonButton6.TabIndex = 26;
+            this.kryptonButton6.Values.Text = "BACK";
+            // 
+            // kryptonButton8
+            // 
+            this.kryptonButton8.Location = new System.Drawing.Point(16, 387);
+            this.kryptonButton8.Name = "kryptonButton8";
+            this.kryptonButton8.Size = new System.Drawing.Size(140, 48);
+            this.kryptonButton8.TabIndex = 29;
+            this.kryptonButton8.Values.Text = "Apply";
+            // 
+            // GrpBox
+            // 
+            this.GrpBox.Location = new System.Drawing.Point(22, 94);
+            this.GrpBox.Name = "GrpBox";
+            // 
+            // GrpBox.Panel
+            // 
+            this.GrpBox.Panel.Controls.Add(this.kryptonButton8);
+            this.GrpBox.Panel.Controls.Add(this.kryptonButton6);
+            this.GrpBox.Panel.Controls.Add(this.panel6);
+            this.GrpBox.Size = new System.Drawing.Size(409, 495);
+            this.GrpBox.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.GrpBox.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
+            this.GrpBox.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
+            this.GrpBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.GrpBox.StateCommon.Border.Rounding = 15;
+            this.GrpBox.StateCommon.Border.Width = 3;
+            this.GrpBox.TabIndex = 34;
+            this.GrpBox.Values.Heading = "Apply Filters";
+            // 
+            // CurrencyExchange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -404,21 +403,21 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LoanApplications";
+            this.Name = "CurrencyExchange";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LoanApplications";
+            this.Text = "CurrencyExchange";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpBox.Panel)).EndInit();
             this.GrpBox.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GrpBox)).EndInit();
             this.GrpBox.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -433,7 +432,17 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private System.Windows.Forms.Panel panel3;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox GrpBox;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton8;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton6;
@@ -444,15 +453,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn Column6;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewButtonColumn Column7;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
-        private System.Windows.Forms.Panel panel1;
     }
 }
