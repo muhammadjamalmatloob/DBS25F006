@@ -126,14 +126,11 @@
   <metadata name="myPallet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="myPallet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGjPSURBVHhe7d0H
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGjPSURBVHhe7d0H
         lBTF1gdwJOecc85xAQkCoqIg6lOfghEwACrqE1SCIopgQCWIEkRAEQMZkaRIzjnHJQeRoC/qS77vvfru
         7XFwxbu7PdNd1V2z/3vO7xzOstvd1TPTdae7qm4mBAKBQCAQCAQCkXiRjdQnXcmLZASZRGb9jP/NP+P/
         60L4d/lvEAgEAoFAWBYNyVCyjfybqBj9i2wlQ0gDgkAgEAgEIqRRiPC3+KNE6tS9OEIGEd4HAoFAIBCI
@@ -587,7 +584,7 @@
   <data name="panel3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAF83SURBVHhe7Z0J
+        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAF83SURBVHhe7Z0J
         XFRXnu97m+6eme6ZN0vP9Jt5M9Pz3szreZM0oGiwqtjFhUUQtViq2ERRQEBQAdkUdwFFwZiYGM2+bxrA
         DRU1JsbExCUxCq5IYrZOzNKd7s523z3lIYHiL9Zyb91zb/2+n8/300lHoaru//x/t+4995zvAQAAAAAA
         AAAAAAAAAAAAAAAAAAAAALQhODL97wNNttuCTDZroDm9ONBiWxpott0VYLZtCzTbX5D/+bjsBdl3ZT+W

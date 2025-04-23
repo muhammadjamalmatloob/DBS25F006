@@ -79,8 +79,12 @@ namespace DBFinalProject
             //clientManagement.Show();
             //this.Hide();
 
-            AdminDashboard adminDashboard = new AdminDashboard();
-            adminDashboard.Show();
+            //AdminDashboard adminDashboard = new AdminDashboard();
+            //adminDashboard.Show();
+            //this.Hide();
+
+            ManagerDashboard managerDashboard = new ManagerDashboard();
+            managerDashboard.Show();
             this.Hide();
         }
     }
