@@ -29,5 +29,19 @@ namespace DBFinalProject
         {
             Application.Exit();
         }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            BranchEmployees branchEmployees = new BranchEmployees();
+            branchEmployees.Show();
+            this.Hide();
+        }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            LoanApplications application = new LoanApplications();
+            application.Show();
+            this.Hide();
+        }
     }
 }

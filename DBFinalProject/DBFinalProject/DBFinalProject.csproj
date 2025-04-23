@@ -74,6 +74,12 @@
     <Compile Include="ApproveApplicationscs.Designer.cs">
       <DependentUpon>ApproveApplicationscs.cs</DependentUpon>
     </Compile>
+    <Compile Include="BranchEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BranchEmployees.Designer.cs">
+      <DependentUpon>BranchEmployees.cs</DependentUpon>
+    </Compile>
     <Compile Include="BranchManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,12 @@
     <Compile Include="GeneralMenu.Designer.cs">
       <DependentUpon>GeneralMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoanApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoanApplications.Designer.cs">
+      <DependentUpon>LoanApplications.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoanManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +160,9 @@
     <EmbeddedResource Include="ApproveApplicationscs.resx">
       <DependentUpon>ApproveApplicationscs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BranchEmployees.resx">
+      <DependentUpon>BranchEmployees.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BranchManagement.resx">
       <DependentUpon>BranchManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralMenu.resx">
       <DependentUpon>GeneralMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoanApplications.resx">
+      <DependentUpon>LoanApplications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoanManagement.resx">
       <DependentUpon>LoanManagement.cs</DependentUpon>
