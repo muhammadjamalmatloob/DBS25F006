@@ -11,19 +11,19 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace DBFinalProject
 {
-    public partial class DepositMoney : KryptonForm
+    public partial class ExchaangeCurr_Cashier : KryptonForm
     {
-        public DepositMoney()
+        public ExchaangeCurr_Cashier()
         {
             InitializeComponent();
         }
 
-        private void DepositMoney_Load(object sender, EventArgs e)
+        private void kryptonComboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void GrpRecieve_Panel_Paint(object sender, PaintEventArgs e)
+        private void kryptonComboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

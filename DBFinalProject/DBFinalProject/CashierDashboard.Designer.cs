@@ -137,6 +137,7 @@
             this.kryptonButton5.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton5.TabIndex = 7;
             this.kryptonButton5.Values.Text = "Money Deposit";
+            this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
             // 
             // kryptonButton8
             // 
@@ -145,6 +146,7 @@
             this.kryptonButton8.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton8.TabIndex = 6;
             this.kryptonButton8.Values.Text = "Logout";
+            this.kryptonButton8.Click += new System.EventHandler(this.kryptonButton8_Click);
             // 
             // kryptonButton4
             // 
@@ -153,6 +155,7 @@
             this.kryptonButton4.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton4.TabIndex = 5;
             this.kryptonButton4.Values.Text = "Apply Loan";
+            this.kryptonButton4.Click += new System.EventHandler(this.kryptonButton4_Click);
             // 
             // kryptonButton3
             // 
@@ -161,6 +164,7 @@
             this.kryptonButton3.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton3.TabIndex = 4;
             this.kryptonButton3.Values.Text = "Pay Bills";
+            this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
             // 
             // kryptonButton2
             // 
@@ -169,6 +173,7 @@
             this.kryptonButton2.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton2.TabIndex = 3;
             this.kryptonButton2.Values.Text = "Exchange Currency";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // kryptonButton1
             // 
@@ -186,7 +191,7 @@
             this.kryptonPanel3.Controls.Add(this.label14);
             this.kryptonPanel3.Controls.Add(this.label16);
             this.kryptonPanel3.Controls.Add(this.label15);
-            this.kryptonPanel3.Location = new System.Drawing.Point(902, 431);
+            this.kryptonPanel3.Location = new System.Drawing.Point(940, 406);
             this.kryptonPanel3.Name = "kryptonPanel3";
             this.kryptonPanel3.Size = new System.Drawing.Size(358, 373);
             this.kryptonPanel3.StateCommon.Color1 = System.Drawing.Color.SkyBlue;
@@ -261,7 +266,7 @@
             this.kryptonPanel2.Controls.Add(this.label10);
             this.kryptonPanel2.Controls.Add(this.label9);
             this.kryptonPanel2.Controls.Add(this.label6);
-            this.kryptonPanel2.Location = new System.Drawing.Point(426, 431);
+            this.kryptonPanel2.Location = new System.Drawing.Point(450, 406);
             this.kryptonPanel2.Name = "kryptonPanel2";
             this.kryptonPanel2.Size = new System.Drawing.Size(358, 373);
             this.kryptonPanel2.StateCommon.Color1 = System.Drawing.Color.SkyBlue;
