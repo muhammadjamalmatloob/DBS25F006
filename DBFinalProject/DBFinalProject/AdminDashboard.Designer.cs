@@ -40,9 +40,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.kryptonButton8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -68,6 +66,8 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -255,14 +255,6 @@
             this.kryptonButton4.Values.Text = "Client Management";
             this.kryptonButton4.Click += new System.EventHandler(this.kryptonButton4_Click);
             // 
-            // kryptonButton7
-            // 
-            this.kryptonButton7.Location = new System.Drawing.Point(11, 506);
-            this.kryptonButton7.Name = "kryptonButton7";
-            this.kryptonButton7.Size = new System.Drawing.Size(297, 50);
-            this.kryptonButton7.TabIndex = 5;
-            this.kryptonButton7.Values.Text = "kryptonButton7";
-            // 
             // kryptonButton3
             // 
             this.kryptonButton3.Location = new System.Drawing.Point(11, 190);
@@ -271,14 +263,6 @@
             this.kryptonButton3.TabIndex = 4;
             this.kryptonButton3.Values.Text = "Account Applications";
             this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
-            // 
-            // kryptonButton6
-            // 
-            this.kryptonButton6.Location = new System.Drawing.Point(11, 425);
-            this.kryptonButton6.Name = "kryptonButton6";
-            this.kryptonButton6.Size = new System.Drawing.Size(297, 50);
-            this.kryptonButton6.TabIndex = 4;
-            this.kryptonButton6.Values.Text = "kryptonButton6";
             // 
             // kryptonButton2
             // 
@@ -570,6 +554,22 @@
             this.label20.TabIndex = 0;
             this.label20.Text = "EMPLOYEES DETAIL";
             // 
+            // kryptonButton6
+            // 
+            this.kryptonButton6.Location = new System.Drawing.Point(11, 425);
+            this.kryptonButton6.Name = "kryptonButton6";
+            this.kryptonButton6.Size = new System.Drawing.Size(297, 50);
+            this.kryptonButton6.TabIndex = 4;
+            this.kryptonButton6.Values.Text = "kryptonButton6";
+            // 
+            // kryptonButton7
+            // 
+            this.kryptonButton7.Location = new System.Drawing.Point(11, 506);
+            this.kryptonButton7.Name = "kryptonButton7";
+            this.kryptonButton7.Size = new System.Drawing.Size(297, 50);
+            this.kryptonButton7.TabIndex = 5;
+            this.kryptonButton7.Values.Text = "kryptonButton7";
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -619,9 +619,7 @@
         private System.Windows.Forms.Panel panel1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton8;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton7;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton6;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
@@ -650,5 +648,7 @@
         private System.Windows.Forms.Label label20;
         public ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
         private System.Windows.Forms.Button Closebtn;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton7;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton6;
     }
 }

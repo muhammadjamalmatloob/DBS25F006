@@ -34,6 +34,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -62,7 +63,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -127,6 +128,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panel1.Controls.Add(this.kryptonButton7);
             this.panel1.Controls.Add(this.kryptonButton6);
             this.panel1.Controls.Add(this.kryptonButton8);
             this.panel1.Controls.Add(this.kryptonButton4);
@@ -139,6 +141,15 @@
             this.panel1.Size = new System.Drawing.Size(325, 667);
             this.panel1.TabIndex = 2;
             // 
+            // kryptonButton6
+            // 
+            this.kryptonButton6.Location = new System.Drawing.Point(12, 509);
+            this.kryptonButton6.Name = "kryptonButton6";
+            this.kryptonButton6.Size = new System.Drawing.Size(297, 50);
+            this.kryptonButton6.TabIndex = 7;
+            this.kryptonButton6.Values.Text = "Transactions Record";
+            this.kryptonButton6.Click += new System.EventHandler(this.kryptonButton6_Click);
+            // 
             // kryptonButton8
             // 
             this.kryptonButton8.Location = new System.Drawing.Point(11, 592);
@@ -150,7 +161,7 @@
             // 
             // kryptonButton4
             // 
-            this.kryptonButton4.Location = new System.Drawing.Point(12, 330);
+            this.kryptonButton4.Location = new System.Drawing.Point(12, 368);
             this.kryptonButton4.Name = "kryptonButton4";
             this.kryptonButton4.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton4.TabIndex = 5;
@@ -159,7 +170,7 @@
             // 
             // kryptonButton3
             // 
-            this.kryptonButton3.Location = new System.Drawing.Point(11, 233);
+            this.kryptonButton3.Location = new System.Drawing.Point(12, 294);
             this.kryptonButton3.Name = "kryptonButton3";
             this.kryptonButton3.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton3.TabIndex = 4;
@@ -168,7 +179,7 @@
             // 
             // kryptonButton2
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(11, 138);
+            this.kryptonButton2.Location = new System.Drawing.Point(11, 132);
             this.kryptonButton2.Name = "kryptonButton2";
             this.kryptonButton2.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton2.TabIndex = 3;
@@ -177,7 +188,7 @@
             // 
             // kryptonButton5
             // 
-            this.kryptonButton5.Location = new System.Drawing.Point(12, 423);
+            this.kryptonButton5.Location = new System.Drawing.Point(11, 440);
             this.kryptonButton5.Name = "kryptonButton5";
             this.kryptonButton5.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton5.TabIndex = 3;
@@ -454,14 +465,14 @@
             this.label15.TabIndex = 5;
             this.label15.Text = "Total Current Accounts: ";
             // 
-            // kryptonButton6
+            // kryptonButton7
             // 
-            this.kryptonButton6.Location = new System.Drawing.Point(12, 509);
-            this.kryptonButton6.Name = "kryptonButton6";
-            this.kryptonButton6.Size = new System.Drawing.Size(297, 50);
-            this.kryptonButton6.TabIndex = 7;
-            this.kryptonButton6.Values.Text = "Transactions Record";
-            this.kryptonButton6.Click += new System.EventHandler(this.kryptonButton6_Click);
+            this.kryptonButton7.Location = new System.Drawing.Point(12, 221);
+            this.kryptonButton7.Name = "kryptonButton7";
+            this.kryptonButton7.Size = new System.Drawing.Size(297, 50);
+            this.kryptonButton7.TabIndex = 8;
+            this.kryptonButton7.Values.Text = "Account Applications";
+            this.kryptonButton7.Click += new System.EventHandler(this.kryptonButton7_Click);
             // 
             // ManagerDashboard
             // 
@@ -536,5 +547,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton6;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton7;
     }
 }
