@@ -53,6 +53,11 @@
             this.button7 = new System.Windows.Forms.Button();
             this.commonInterface1 = new DBFinalProject.CommonInterface();
             this.depositMoney1 = new DBFinalProject.DepositMoney();
+            this.purchase1 = new DBFinalProject.Purchase();
+            this.sendMoney1 = new DBFinalProject.SendMoney();
+            this.applyLoan1 = new DBFinalProject.ApplyLoan();
+            this.currencyExchange1 = new DBFinalProject.CurrencyExchange();
+            this.withdrawMoney1 = new DBFinalProject.WithdrawMoney();
             this.sidebar.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -100,14 +105,14 @@
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(218, 51);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(218, 64);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // menuButton
             // 
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.Image = ((System.Drawing.Image)(resources.GetObject("menuButton.Image")));
-            this.menuButton.Location = new System.Drawing.Point(3, 14);
+            this.menuButton.Location = new System.Drawing.Point(3, 27);
             this.menuButton.Name = "menuButton";
             this.menuButton.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.menuButton.Size = new System.Drawing.Size(44, 34);
@@ -121,7 +126,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(53, 15);
+            this.label1.Location = new System.Drawing.Point(53, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 36);
             this.label1.TabIndex = 1;
@@ -131,9 +136,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(3, 60);
+            this.panel1.Location = new System.Drawing.Point(3, 73);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(214, 48);
+            this.panel1.Size = new System.Drawing.Size(214, 88);
             this.panel1.TabIndex = 1;
             // 
             // button1
@@ -143,9 +148,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(-15, -16);
+            this.button1.Location = new System.Drawing.Point(-18, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 82);
+            this.button1.Size = new System.Drawing.Size(240, 99);
             this.button1.TabIndex = 1;
             this.button1.Text = "                       DEPOSIT MONEY";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -155,9 +160,9 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Location = new System.Drawing.Point(3, 114);
+            this.panel2.Location = new System.Drawing.Point(3, 167);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(214, 48);
+            this.panel2.Size = new System.Drawing.Size(214, 90);
             this.panel2.TabIndex = 2;
             // 
             // button2
@@ -167,20 +172,21 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(-15, -13);
+            this.button2.Location = new System.Drawing.Point(-18, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(240, 70);
+            this.button2.Size = new System.Drawing.Size(240, 90);
             this.button2.TabIndex = 1;
             this.button2.Text = "                       PURCHASE";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.button3);
-            this.panel3.Location = new System.Drawing.Point(3, 168);
+            this.panel3.Location = new System.Drawing.Point(3, 263);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(214, 48);
+            this.panel3.Size = new System.Drawing.Size(214, 85);
             this.panel3.TabIndex = 2;
             // 
             // button3
@@ -189,20 +195,21 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(-15, -11);
+            this.button3.Location = new System.Drawing.Point(-18, -17);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(240, 70);
+            this.button3.Size = new System.Drawing.Size(240, 102);
             this.button3.TabIndex = 1;
             this.button3.Text = "                       SEND MONEY";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.button4);
-            this.panel4.Location = new System.Drawing.Point(3, 222);
+            this.panel4.Location = new System.Drawing.Point(3, 354);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(214, 48);
+            this.panel4.Size = new System.Drawing.Size(214, 84);
             this.panel4.TabIndex = 3;
             // 
             // button4
@@ -211,20 +218,21 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(-15, -13);
+            this.button4.Location = new System.Drawing.Point(-17, -11);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(240, 70);
+            this.button4.Size = new System.Drawing.Size(240, 95);
             this.button4.TabIndex = 1;
             this.button4.Text = "                       APPLY FOR LOAN\r\n";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.button5);
-            this.panel5.Location = new System.Drawing.Point(3, 276);
+            this.panel5.Location = new System.Drawing.Point(3, 444);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(214, 48);
+            this.panel5.Size = new System.Drawing.Size(214, 81);
             this.panel5.TabIndex = 4;
             // 
             // button5
@@ -233,20 +241,21 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(-15, -13);
+            this.button5.Location = new System.Drawing.Point(-18, -9);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(240, 70);
+            this.button5.Size = new System.Drawing.Size(240, 90);
             this.button5.TabIndex = 1;
             this.button5.Text = "                      CURRENCY EXCHANGE";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.button6);
-            this.panel6.Location = new System.Drawing.Point(3, 330);
+            this.panel6.Location = new System.Drawing.Point(3, 531);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(214, 48);
+            this.panel6.Size = new System.Drawing.Size(214, 97);
             this.panel6.TabIndex = 5;
             // 
             // button6
@@ -255,9 +264,9 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(-15, -13);
+            this.button6.Location = new System.Drawing.Point(-17, -3);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(240, 70);
+            this.button6.Size = new System.Drawing.Size(240, 100);
             this.button6.TabIndex = 1;
             this.button6.Text = "                      WITHDRAW MONEY";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -385,18 +394,60 @@
             // 
             // commonInterface1
             // 
-            this.commonInterface1.Location = new System.Drawing.Point(234, 12);
+            this.commonInterface1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.commonInterface1.Location = new System.Drawing.Point(223, -2);
             this.commonInterface1.Name = "commonInterface1";
-            this.commonInterface1.Size = new System.Drawing.Size(892, 594);
+            this.commonInterface1.Size = new System.Drawing.Size(903, 606);
             this.commonInterface1.TabIndex = 21;
             // 
             // depositMoney1
             // 
-            this.depositMoney1.Location = new System.Drawing.Point(234, 0);
+            this.depositMoney1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.depositMoney1.Location = new System.Drawing.Point(223, 0);
             this.depositMoney1.Name = "depositMoney1";
-            this.depositMoney1.Size = new System.Drawing.Size(923, 628);
+            this.depositMoney1.Size = new System.Drawing.Size(934, 628);
             this.depositMoney1.TabIndex = 22;
             this.depositMoney1.Visible = false;
+            // 
+            // purchase1
+            // 
+            this.purchase1.Location = new System.Drawing.Point(223, 0);
+            this.purchase1.Name = "purchase1";
+            this.purchase1.Size = new System.Drawing.Size(927, 522);
+            this.purchase1.TabIndex = 23;
+            this.purchase1.Visible = false;
+            // 
+            // sendMoney1
+            // 
+            this.sendMoney1.Location = new System.Drawing.Point(223, 0);
+            this.sendMoney1.Name = "sendMoney1";
+            this.sendMoney1.Size = new System.Drawing.Size(934, 522);
+            this.sendMoney1.TabIndex = 24;
+            this.sendMoney1.Visible = false;
+            // 
+            // applyLoan1
+            // 
+            this.applyLoan1.Location = new System.Drawing.Point(223, -2);
+            this.applyLoan1.Name = "applyLoan1";
+            this.applyLoan1.Size = new System.Drawing.Size(927, 522);
+            this.applyLoan1.TabIndex = 25;
+            this.applyLoan1.Visible = false;
+            // 
+            // currencyExchange1
+            // 
+            this.currencyExchange1.Location = new System.Drawing.Point(223, -2);
+            this.currencyExchange1.Name = "currencyExchange1";
+            this.currencyExchange1.Size = new System.Drawing.Size(934, 524);
+            this.currencyExchange1.TabIndex = 26;
+            this.currencyExchange1.Visible = false;
+            // 
+            // withdrawMoney1
+            // 
+            this.withdrawMoney1.Location = new System.Drawing.Point(223, 0);
+            this.withdrawMoney1.Name = "withdrawMoney1";
+            this.withdrawMoney1.Size = new System.Drawing.Size(927, 522);
+            this.withdrawMoney1.TabIndex = 27;
+            this.withdrawMoney1.Visible = false;
             // 
             // GeneralMenu
             // 
@@ -407,6 +458,11 @@
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.commonInterface1);
             this.Controls.Add(this.depositMoney1);
+            this.Controls.Add(this.purchase1);
+            this.Controls.Add(this.sendMoney1);
+            this.Controls.Add(this.applyLoan1);
+            this.Controls.Add(this.currencyExchange1);
+            this.Controls.Add(this.withdrawMoney1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GeneralMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -446,9 +502,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer sidebarTimer;
         private ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
-        private ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
         private System.Windows.Forms.Button button7;
         private CommonInterface commonInterface1;
         private DepositMoney depositMoney1;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
+        private Purchase purchase1;
+        private SendMoney sendMoney1;
+        private ApplyLoan applyLoan1;
+        private CurrencyExchange currencyExchange1;
+        private WithdrawMoney withdrawMoney1;
     }
 }
