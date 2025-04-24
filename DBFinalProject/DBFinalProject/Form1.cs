@@ -83,8 +83,12 @@ namespace DBFinalProject
             //adminDashboard.Show();
             //this.Hide();
 
-            ManagerDashboard managerDashboard = new ManagerDashboard();
-            managerDashboard.Show();
+            //ManagerDashboard managerDashboard = new ManagerDashboard();
+            //managerDashboard.Show();
+            //this.Hide();
+
+            CashierDashboard cashierDashboard = new CashierDashboard();
+            cashierDashboard.Show();
             this.Hide();
         }
     }
