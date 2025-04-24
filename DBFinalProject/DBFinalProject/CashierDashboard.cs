@@ -29,5 +29,40 @@ namespace DBFinalProject
             moneyTransfer.Show();
             this.Hide();
         }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            DepositMoney depositMoney = new DepositMoney();
+            depositMoney.Show();
+            this.Hide();
+        }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            PayBill payBill = new PayBill();
+            payBill.Show();
+            this.Hide();
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            ExchaangeCurr_Cashier exchangeCurr_Cashier = new ExchaangeCurr_Cashier();
+            exchangeCurr_Cashier.Show();
+            this.Hide();
+        }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
+            ApplyLoan applyLoan = new ApplyLoan();
+            applyLoan.Show();
+            this.Hide();
+        }
+
+        private void kryptonButton8_Click(object sender, EventArgs e)
+        {
+            MainInterface mainInterface = new MainInterface();
+            mainInterface.Show();
+            this.Hide();
+        }
     }
 }
