@@ -110,11 +110,35 @@
     <Compile Include="CashierDashboard.Designer.cs">
       <DependentUpon>CashierDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientCurrencyExchange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientCurrencyExchange.Designer.cs">
+      <DependentUpon>ClientCurrencyExchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientDepositMoney.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientDepositMoney.Designer.cs">
+      <DependentUpon>ClientDepositMoney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientLoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientLoan.Designer.cs">
+      <DependentUpon>ClientLoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClientManagement.Designer.cs">
       <DependentUpon>ClientManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientBill.Designer.cs">
+      <DependentUpon>ClientBill.cs</DependentUpon>
     </Compile>
     <Compile Include="CommonInterface.cs">
       <SubType>UserControl</SubType>
@@ -191,6 +215,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendMoney.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SendMoney.Designer.cs">
+      <DependentUpon>SendMoney.cs</DependentUpon>
+    </Compile>
     <Compile Include="TransactionRecord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +232,12 @@
     </Compile>
     <Compile Include="ViewBranchInfo.Designer.cs">
       <DependentUpon>ViewBranchInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Withdraw.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Withdraw.Designer.cs">
+      <DependentUpon>Withdraw.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
@@ -233,8 +269,20 @@
     <EmbeddedResource Include="CashierDashboard.resx">
       <DependentUpon>CashierDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClientCurrencyExchange.resx">
+      <DependentUpon>ClientCurrencyExchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientDepositMoney.resx">
+      <DependentUpon>ClientDepositMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientLoan.resx">
+      <DependentUpon>ClientLoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientManagement.resx">
       <DependentUpon>ClientManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientBill.resx">
+      <DependentUpon>ClientBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommonInterface.resx">
       <DependentUpon>CommonInterface.cs</DependentUpon>
@@ -281,11 +329,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SendMoney.resx">
+      <DependentUpon>SendMoney.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TransactionRecord.resx">
       <DependentUpon>TransactionRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewBranchInfo.resx">
       <DependentUpon>ViewBranchInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Withdraw.resx">
+      <DependentUpon>Withdraw.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
