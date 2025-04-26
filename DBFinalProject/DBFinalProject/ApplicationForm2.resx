@@ -121,7 +121,7 @@
   <data name="panel4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGjPSURBVHhe7d0H
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGjPSURBVHhe7d0H
         lBTF1gdwJOecc85xAQkCoqIg6lOfghEwACrqE1SCIopgQCWIEkRAEQMZkaRIzjnHJQeRoC/qS77vvfru
         7XFwxbu7PdNd1V2z/3vO7xzOstvd1TPTdae7qm4mBAKBQCAQCAQCkXiRjdQnXcmLZASZRGb9jP/NP+P/
         60L4d/lvEAgEAoFAWBYNyVCyjfybqBj9i2wlQ0gDgkAgEAgEIqRRiPC3+KNE6tS9OEIGEd4HAoFAIBCI
@@ -572,4 +572,10 @@
         /wcpiFLFCjwgdwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="myPallet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="kryptonManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>151, 24</value>
+  </metadata>
 </root>

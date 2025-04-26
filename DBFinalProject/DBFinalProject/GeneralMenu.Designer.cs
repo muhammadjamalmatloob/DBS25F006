@@ -368,33 +368,34 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button7.Location = new System.Drawing.Point(1106, -2);
+            this.button7.Location = new System.Drawing.Point(1106, 0);
             this.button7.Margin = new System.Windows.Forms.Padding(0);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(34, 35);
             this.button7.TabIndex = 20;
             this.button7.Text = "X";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // commonInterface1
             // 
-            this.commonInterface1.Location = new System.Drawing.Point(234, 12);
+            this.commonInterface1.Location = new System.Drawing.Point(211, 101);
             this.commonInterface1.Name = "commonInterface1";
-            this.commonInterface1.Size = new System.Drawing.Size(892, 594);
+            this.commonInterface1.Size = new System.Drawing.Size(929, 594);
             this.commonInterface1.TabIndex = 21;
             // 
             // depositMoney1
             // 
-            this.depositMoney1.Location = new System.Drawing.Point(234, 0);
+            this.depositMoney1.Location = new System.Drawing.Point(217, 0);
             this.depositMoney1.Name = "depositMoney1";
-            this.depositMoney1.Size = new System.Drawing.Size(923, 628);
+            this.depositMoney1.Size = new System.Drawing.Size(923, 640);
             this.depositMoney1.TabIndex = 22;
             this.depositMoney1.Visible = false;
             // 

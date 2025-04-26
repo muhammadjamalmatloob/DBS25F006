@@ -552,7 +552,7 @@
   <data name="panel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAMNtSURBVHhe7J0F
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAMNtSURBVHhe7J0F
         uBXV2sc93d0ddHd3d3dJd3e3iCiCCiIpggqKIgpY2Ao2dicqtre91r3fXd96l85xn83/7JndM3u//+f5
         Pd/95MzsWTNr5l3xxmUsFovFYrFYLBaLxWKxjCtCMk1yXvKN5AXJBEmYhMVisVgsVoDqmEQA3pR0l7BY
         LBaLxQowDZIg42/LGUl9CYvFYrFYrABQpORDCTL69vyfhFYKiiUsFovFYrEsrCUSZOwd8ZPkKkmShMVi
@@ -1430,5 +1430,11 @@
   </metadata>
   <metadata name="Column7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="myPallet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>328, 17</value>
+  </metadata>
+  <metadata name="kryptonManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>428, 17</value>
   </metadata>
 </root>
