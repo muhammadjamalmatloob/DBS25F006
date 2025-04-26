@@ -62,6 +62,12 @@
     <Compile Include="ApplicationForm.Designer.cs">
       <DependentUpon>ApplicationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationForm03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForm03.Designer.cs">
+      <DependentUpon>ApplicationForm03.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationForm2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,7 @@
     <Compile Include="DepositMoney.Designer.cs">
       <DependentUpon>DepositMoney.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmailSender.cs" />
     <Compile Include="EmployeeManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationForm.resx">
       <DependentUpon>ApplicationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForm03.resx">
+      <DependentUpon>ApplicationForm03.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationForm2.resx">
       <DependentUpon>ApplicationForm2.cs</DependentUpon>
