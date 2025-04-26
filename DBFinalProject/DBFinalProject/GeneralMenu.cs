@@ -13,7 +13,6 @@ namespace DBFinalProject
 {
     public partial class GeneralMenu : KryptonForm
     {
-        bool sidebarExpand;
         public GeneralMenu()
         {
             InitializeComponent();
@@ -26,30 +25,10 @@ namespace DBFinalProject
 
         private void sidebarTimer_Tick(object sender, EventArgs e)
         {
-            if(sidebarExpand)
-            {
-                sidebar.Width -= 10;
-                if(sidebar.Width == sidebar.MinimumSize.Width)
-                {
-                    sidebarExpand = false;
-                    sidebarTimer.Stop();
-                }
-            }
-            else
-            {
-                sidebar.Width += 10;
-                if(sidebar.Width == sidebar.MaximumSize.Width)
-                {
-                    sidebarExpand = true;
-                    sidebarTimer.Stop();
-                }
-
-            }
         }
 
         private void menuButton_Click(object sender, EventArgs e)
         {
-            sidebarTimer.Start();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
@@ -65,7 +44,12 @@ namespace DBFinalProject
         private void button1_Click(object sender, EventArgs e)
         {
             commonInterface1.Visible = false;
-            depositMoney1.Visible = true;
+            clientDepositMoney1.Visible = true;
+            sendMoney1.Visible = false;
+            withdraw1.Visible = false;
+            clientLoan1.Visible = false;
+            clientCurrencyExchange1.Visible = false;
+            clientBill1.Visible = false;
         }
 
         private void Closebtn_Click_2(object sender, EventArgs e)
@@ -75,9 +59,13 @@ namespace DBFinalProject
 
         private void button6_Click(object sender, EventArgs e)
         {
-            ApplicationForm applicationForm = new ApplicationForm();
-            applicationForm.Show(); 
-            this.Hide();
+            withdraw1.Visible = true;
+            commonInterface1.Visible = false;
+            clientDepositMoney1.Visible = false;
+            sendMoney1.Visible = false;
+            clientLoan1.Visible = false;
+            clientCurrencyExchange1.Visible = false;
+            clientBill1.Visible = false;
         }
 
         private void kryptonPalette1_PalettePaint(object sender, ComponentFactory.Krypton.Toolkit.PaletteLayoutEventArgs e)
@@ -88,12 +76,73 @@ namespace DBFinalProject
         private void label1_Click(object sender, EventArgs e)
         {
             commonInterface1.Visible = true;
-            depositMoney1.Visible = false;
+            clientDepositMoney1.Visible = false;
+            sendMoney1.Visible = false;
+            withdraw1.Visible = false;
+            clientLoan1.Visible = false;
+            clientCurrencyExchange1.Visible = false;
+            clientBill1.Visible = false;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void sendMoney1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            sendMoney1.Visible = true;
+            commonInterface1.Visible = false;
+            clientDepositMoney1.Visible = false;
+            withdraw1.Visible = false;
+            clientLoan1.Visible = false;
+            clientCurrencyExchange1.Visible = false;
+            clientBill1.Visible = false;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            MainInterface mi = new MainInterface();
+            mi.Show();
+            Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            clientLoan1.Visible = true;
+            sendMoney1.Visible = false;
+            commonInterface1.Visible = false;
+            clientDepositMoney1.Visible = false;
+            withdraw1.Visible = false;
+            clientCurrencyExchange1.Visible = false;
+            clientBill1.Visible = false;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            clientCurrencyExchange1.Visible = true;
+            clientLoan1.Visible = false;
+            sendMoney1.Visible = false;
+            commonInterface1.Visible = false;
+            clientDepositMoney1.Visible = false;
+            withdraw1.Visible = false;
+            clientBill1.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            clientBill1.Visible = true;
+            clientCurrencyExchange1.Visible = false;
+            clientLoan1.Visible = false;
+            sendMoney1.Visible = false;
+            commonInterface1.Visible = false;
+            clientDepositMoney1.Visible = false;
+            withdraw1.Visible = false;
         }
     }
 }
