@@ -7,25 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
 
 namespace DBFinalProject
 {
-    public partial class DepositMoney : KryptonForm
+    public partial class ApplyLoan : Form
     {
-        public DepositMoney()
+        public ApplyLoan()
         {
             InitializeComponent();
-        }
-
-        private void DepositMoney_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GrpRecieve_Panel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void kryptonButton14_Click(object sender, EventArgs e)
@@ -38,6 +27,11 @@ namespace DBFinalProject
         private void Closebtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void kryptonComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

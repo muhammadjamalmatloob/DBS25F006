@@ -72,5 +72,12 @@ namespace DBFinalProject
             mainInterface.Show();
             this.Hide();
         }
+
+        private void kryptonButton7_Click(object sender, EventArgs e)
+        {
+            ApproveApplicationscs approveApplicationscs = new ApproveApplicationscs();
+            approveApplicationscs.Show();
+            this.Hide();
+        }
     }
 }

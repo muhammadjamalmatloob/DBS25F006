@@ -1,4 +1,4 @@
-﻿namespace DBFinalProject
+namespace DBFinalProject
 {
     partial class ManagerDashboard
     {
