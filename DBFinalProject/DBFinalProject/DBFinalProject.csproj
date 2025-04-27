@@ -33,12 +33,70 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.5.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
       <HintPath>..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
+    <Reference Include="Google.Protobuf, Version=3.30.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.30.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.8.0.2\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=9.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.9.3.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlConnector.2.4.0\lib\net471\MySqlConnector.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,276 +106,280 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ZstdSharp, Version=0.8.5.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZstdSharp.Port.0.8.5\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminDashboard.cs">
+    <Compile Include="UI\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminDashboard.Designer.cs">
+    <Compile Include="UI\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="ApplicationForm.cs">
+    <Compile Include="UI\ApplicationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApplicationForm.Designer.cs">
+    <Compile Include="UI\ApplicationForm.Designer.cs">
       <DependentUpon>ApplicationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ApplicationForm03.cs">
+    <Compile Include="UI\ApplicationForm03.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApplicationForm03.Designer.cs">
+    <Compile Include="UI\ApplicationForm03.Designer.cs">
       <DependentUpon>ApplicationForm03.cs</DependentUpon>
     </Compile>
-    <Compile Include="ApplicationForm2.cs">
+    <Compile Include="UI\ApplicationForm2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApplicationForm2.Designer.cs">
+    <Compile Include="UI\ApplicationForm2.Designer.cs">
       <DependentUpon>ApplicationForm2.cs</DependentUpon>
     </Compile>
-    <Compile Include="ApplyLoan.cs">
+    <Compile Include="UI\ApplyLoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApplyLoan.Designer.cs">
+    <Compile Include="UI\ApplyLoan.Designer.cs">
       <DependentUpon>ApplyLoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="ApproveApplicationscs.cs">
+    <Compile Include="UI\ApproveApplicationscs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApproveApplicationscs.Designer.cs">
+    <Compile Include="UI\ApproveApplicationscs.Designer.cs">
       <DependentUpon>ApproveApplicationscs.cs</DependentUpon>
     </Compile>
-    <Compile Include="BillPayments.cs">
+    <Compile Include="UI\BillPayments.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BillPayments.Designer.cs">
+    <Compile Include="UI\BillPayments.Designer.cs">
       <DependentUpon>BillPayments.cs</DependentUpon>
     </Compile>
-    <Compile Include="BranchEmployees.cs">
+    <Compile Include="UI\BranchEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BranchEmployees.Designer.cs">
+    <Compile Include="UI\BranchEmployees.Designer.cs">
       <DependentUpon>BranchEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="BranchManagement.cs">
+    <Compile Include="UI\BranchManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BranchManagement.Designer.cs">
+    <Compile Include="UI\BranchManagement.Designer.cs">
       <DependentUpon>BranchManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="CashierDashboard.cs">
+    <Compile Include="UI\CashierDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CashierDashboard.Designer.cs">
+    <Compile Include="UI\CashierDashboard.Designer.cs">
       <DependentUpon>CashierDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientCurrencyExchange.cs">
+    <Compile Include="UI\ClientCurrencyExchange.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ClientCurrencyExchange.Designer.cs">
+    <Compile Include="UI\ClientCurrencyExchange.Designer.cs">
       <DependentUpon>ClientCurrencyExchange.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientDepositMoney.cs">
+    <Compile Include="UI\ClientDepositMoney.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ClientDepositMoney.Designer.cs">
+    <Compile Include="UI\ClientDepositMoney.Designer.cs">
       <DependentUpon>ClientDepositMoney.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientLoan.cs">
+    <Compile Include="UI\ClientLoan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ClientLoan.Designer.cs">
+    <Compile Include="UI\ClientLoan.Designer.cs">
       <DependentUpon>ClientLoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientManagement.cs">
+    <Compile Include="UI\ClientManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientManagement.Designer.cs">
+    <Compile Include="UI\ClientManagement.Designer.cs">
       <DependentUpon>ClientManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientBill.cs">
+    <Compile Include="UI\ClientBill.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ClientBill.Designer.cs">
+    <Compile Include="UI\ClientBill.Designer.cs">
       <DependentUpon>ClientBill.cs</DependentUpon>
     </Compile>
-    <Compile Include="CommonInterface.cs">
+    <Compile Include="UI\CommonInterface.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CommonInterface.Designer.cs">
+    <Compile Include="UI\CommonInterface.Designer.cs">
       <DependentUpon>CommonInterface.cs</DependentUpon>
     </Compile>
-    <Compile Include="CurrencyExchange.cs">
+    <Compile Include="UI\CurrencyExchange.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CurrencyExchange.Designer.cs">
+    <Compile Include="UI\CurrencyExchange.Designer.cs">
       <DependentUpon>CurrencyExchange.cs</DependentUpon>
     </Compile>
-    <Compile Include="DepositMoney.cs">
+    <Compile Include="UI\DepositMoney.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DepositMoney.Designer.cs">
+    <Compile Include="UI\DepositMoney.Designer.cs">
       <DependentUpon>DepositMoney.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmailSender.cs" />
-    <Compile Include="EmployeeManagement.cs">
+    <Compile Include="Utility\DatabaseHelper.cs" />
+    <Compile Include="Utility\EmailSender.cs" />
+    <Compile Include="UI\EmployeeManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmployeeManagement.Designer.cs">
+    <Compile Include="UI\EmployeeManagement.Designer.cs">
       <DependentUpon>EmployeeManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExchaangeCurr_Cashier.cs">
+    <Compile Include="UI\ExchaangeCurr_Cashier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExchaangeCurr_Cashier.Designer.cs">
+    <Compile Include="UI\ExchaangeCurr_Cashier.Designer.cs">
       <DependentUpon>ExchaangeCurr_Cashier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="UI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="UI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GeneralMenu.cs">
+    <Compile Include="UI\GeneralMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GeneralMenu.Designer.cs">
+    <Compile Include="UI\GeneralMenu.Designer.cs">
       <DependentUpon>GeneralMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoanApplications.cs">
+    <Compile Include="UI\LoanApplications.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoanApplications.Designer.cs">
+    <Compile Include="UI\LoanApplications.Designer.cs">
       <DependentUpon>LoanApplications.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoanManagement.cs">
+    <Compile Include="UI\LoanManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoanManagement.Designer.cs">
+    <Compile Include="UI\LoanManagement.Designer.cs">
       <DependentUpon>LoanManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagerDashboard.cs">
+    <Compile Include="UI\ManagerDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagerDashboard.Designer.cs">
+    <Compile Include="UI\ManagerDashboard.Designer.cs">
       <DependentUpon>ManagerDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="MoneyTransfer.cs">
+    <Compile Include="UI\MoneyTransfer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MoneyTransfer.Designer.cs">
+    <Compile Include="UI\MoneyTransfer.Designer.cs">
       <DependentUpon>MoneyTransfer.cs</DependentUpon>
     </Compile>
-    <Compile Include="PayBill.cs">
+    <Compile Include="UI\PayBill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PayBill.Designer.cs">
+    <Compile Include="UI\PayBill.Designer.cs">
       <DependentUpon>PayBill.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SendMoney.cs">
+    <Compile Include="UI\SendMoney.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SendMoney.Designer.cs">
+    <Compile Include="UI\SendMoney.Designer.cs">
       <DependentUpon>SendMoney.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransactionRecord.cs">
+    <Compile Include="UI\TransactionRecord.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TransactionRecord.Designer.cs">
+    <Compile Include="UI\TransactionRecord.Designer.cs">
       <DependentUpon>TransactionRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewBranchInfo.cs">
+    <Compile Include="UI\ViewBranchInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewBranchInfo.Designer.cs">
+    <Compile Include="UI\ViewBranchInfo.Designer.cs">
       <DependentUpon>ViewBranchInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Withdraw.cs">
+    <Compile Include="UI\Withdraw.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Withdraw.Designer.cs">
+    <Compile Include="UI\Withdraw.Designer.cs">
       <DependentUpon>Withdraw.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminDashboard.resx">
+    <EmbeddedResource Include="UI\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ApplicationForm.resx">
+    <EmbeddedResource Include="UI\ApplicationForm.resx">
       <DependentUpon>ApplicationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ApplicationForm03.resx">
+    <EmbeddedResource Include="UI\ApplicationForm03.resx">
       <DependentUpon>ApplicationForm03.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ApplicationForm2.resx">
+    <EmbeddedResource Include="UI\ApplicationForm2.resx">
       <DependentUpon>ApplicationForm2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ApplyLoan.resx">
+    <EmbeddedResource Include="UI\ApplyLoan.resx">
       <DependentUpon>ApplyLoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ApproveApplicationscs.resx">
+    <EmbeddedResource Include="UI\ApproveApplicationscs.resx">
       <DependentUpon>ApproveApplicationscs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BillPayments.resx">
+    <EmbeddedResource Include="UI\BillPayments.resx">
       <DependentUpon>BillPayments.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BranchEmployees.resx">
+    <EmbeddedResource Include="UI\BranchEmployees.resx">
       <DependentUpon>BranchEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BranchManagement.resx">
+    <EmbeddedResource Include="UI\BranchManagement.resx">
       <DependentUpon>BranchManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CashierDashboard.resx">
+    <EmbeddedResource Include="UI\CashierDashboard.resx">
       <DependentUpon>CashierDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientCurrencyExchange.resx">
+    <EmbeddedResource Include="UI\ClientCurrencyExchange.resx">
       <DependentUpon>ClientCurrencyExchange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientDepositMoney.resx">
+    <EmbeddedResource Include="UI\ClientDepositMoney.resx">
       <DependentUpon>ClientDepositMoney.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientLoan.resx">
+    <EmbeddedResource Include="UI\ClientLoan.resx">
       <DependentUpon>ClientLoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientManagement.resx">
+    <EmbeddedResource Include="UI\ClientManagement.resx">
       <DependentUpon>ClientManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientBill.resx">
+    <EmbeddedResource Include="UI\ClientBill.resx">
       <DependentUpon>ClientBill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CommonInterface.resx">
+    <EmbeddedResource Include="UI\CommonInterface.resx">
       <DependentUpon>CommonInterface.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CurrencyExchange.resx">
+    <EmbeddedResource Include="UI\CurrencyExchange.resx">
       <DependentUpon>CurrencyExchange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DepositMoney.resx">
+    <EmbeddedResource Include="UI\DepositMoney.resx">
       <DependentUpon>DepositMoney.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeManagement.resx">
+    <EmbeddedResource Include="UI\EmployeeManagement.resx">
       <DependentUpon>EmployeeManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExchaangeCurr_Cashier.resx">
+    <EmbeddedResource Include="UI\ExchaangeCurr_Cashier.resx">
       <DependentUpon>ExchaangeCurr_Cashier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="UI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GeneralMenu.resx">
+    <EmbeddedResource Include="UI\GeneralMenu.resx">
       <DependentUpon>GeneralMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoanApplications.resx">
+    <EmbeddedResource Include="UI\LoanApplications.resx">
       <DependentUpon>LoanApplications.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoanManagement.resx">
+    <EmbeddedResource Include="UI\LoanManagement.resx">
       <DependentUpon>LoanManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagerDashboard.resx">
+    <EmbeddedResource Include="UI\ManagerDashboard.resx">
       <DependentUpon>ManagerDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MoneyTransfer.resx">
+    <EmbeddedResource Include="UI\MoneyTransfer.resx">
       <DependentUpon>MoneyTransfer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PayBill.resx">
+    <EmbeddedResource Include="UI\PayBill.resx">
       <DependentUpon>PayBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -329,18 +391,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SendMoney.resx">
+    <EmbeddedResource Include="UI\SendMoney.resx">
       <DependentUpon>SendMoney.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransactionRecord.resx">
+    <EmbeddedResource Include="UI\TransactionRecord.resx">
       <DependentUpon>TransactionRecord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewBranchInfo.resx">
+    <EmbeddedResource Include="UI\ViewBranchInfo.resx">
       <DependentUpon>ViewBranchInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Withdraw.resx">
+    <EmbeddedResource Include="UI\Withdraw.resx">
       <DependentUpon>Withdraw.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -353,6 +416,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BL\" />
+    <Folder Include="DL\" />
+    <Folder Include="Reports\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
