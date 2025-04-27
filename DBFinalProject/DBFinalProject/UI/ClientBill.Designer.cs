@@ -145,6 +145,8 @@
             this.kryptonComboBox2.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonComboBox2.TabIndex = 34;
             this.kryptonComboBox2.Text = "Select Method";
+            this.kryptonComboBox2.Enter += new System.EventHandler(this.kryptonComboBox2_Enter);
+            this.kryptonComboBox2.Leave += new System.EventHandler(this.kryptonComboBox2_Leave);
             // 
             // kryptonTextBox2
             // 
@@ -164,6 +166,8 @@
             this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox2.TabIndex = 31;
             this.kryptonTextBox2.Text = "PIN";
+            this.kryptonTextBox2.Enter += new System.EventHandler(this.kryptonTextBox2_Enter);
+            this.kryptonTextBox2.Leave += new System.EventHandler(this.kryptonTextBox2_Leave);
             // 
             // kryptonTextBox1
             // 
@@ -183,6 +187,8 @@
             this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox1.TabIndex = 30;
             this.kryptonTextBox1.Text = "Amount";
+            this.kryptonTextBox1.Enter += new System.EventHandler(this.kryptonTextBox1_Enter);
+            this.kryptonTextBox1.Leave += new System.EventHandler(this.kryptonTextBox1_Leave);
             // 
             // kryptonComboBox1
             // 
@@ -203,6 +209,8 @@
             this.kryptonComboBox1.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonComboBox1.TabIndex = 28;
             this.kryptonComboBox1.Text = "Select Payment Type";
+            this.kryptonComboBox1.Enter += new System.EventHandler(this.kryptonComboBox1_Enter);
+            this.kryptonComboBox1.Leave += new System.EventHandler(this.kryptonComboBox1_Leave);
             // 
             // kryptonButton1
             // 

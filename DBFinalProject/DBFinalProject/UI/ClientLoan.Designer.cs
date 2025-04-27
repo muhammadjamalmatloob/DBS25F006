@@ -142,6 +142,8 @@
             this.kryptonComboBox2.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonComboBox2.TabIndex = 34;
             this.kryptonComboBox2.Text = "Select Loan Type";
+            this.kryptonComboBox2.Enter += new System.EventHandler(this.kryptonComboBox2_Enter);
+            this.kryptonComboBox2.Leave += new System.EventHandler(this.kryptonComboBox2_Leave);
             // 
             // kryptonTextBox2
             // 
@@ -162,6 +164,8 @@
             this.kryptonTextBox2.TabIndex = 31;
             this.kryptonTextBox2.Text = "Description";
             this.kryptonTextBox2.TextChanged += new System.EventHandler(this.kryptonTextBox2_TextChanged);
+            this.kryptonTextBox2.Enter += new System.EventHandler(this.kryptonTextBox2_Enter);
+            this.kryptonTextBox2.Leave += new System.EventHandler(this.kryptonTextBox2_Leave);
             // 
             // kryptonTextBox1
             // 
@@ -181,6 +185,8 @@
             this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox1.TabIndex = 30;
             this.kryptonTextBox1.Text = "Amount Request";
+            this.kryptonTextBox1.Enter += new System.EventHandler(this.kryptonTextBox1_Enter);
+            this.kryptonTextBox1.Leave += new System.EventHandler(this.kryptonTextBox1_Leave);
             // 
             // kryptonButton1
             // 

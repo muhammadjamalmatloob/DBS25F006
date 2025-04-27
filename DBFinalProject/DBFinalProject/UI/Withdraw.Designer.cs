@@ -34,10 +34,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.GrpSender = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonTextBox4 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpSender)).BeginInit();
@@ -122,6 +122,14 @@
             this.GrpSender.TabIndex = 41;
             this.GrpSender.Values.Heading = "WITHDRAW";
             // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(158, 30);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(69, 20);
+            this.kryptonLabel1.TabIndex = 34;
+            this.kryptonLabel1.Values.Text = "BALANCE :";
+            // 
             // kryptonTextBox4
             // 
             this.kryptonTextBox4.Location = new System.Drawing.Point(68, 192);
@@ -140,6 +148,8 @@
             this.kryptonTextBox4.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox4.TabIndex = 33;
             this.kryptonTextBox4.Text = "PIN";
+            this.kryptonTextBox4.Enter += new System.EventHandler(this.kryptonTextBox4_Enter);
+            this.kryptonTextBox4.Leave += new System.EventHandler(this.kryptonTextBox4_Leave);
             // 
             // kryptonTextBox3
             // 
@@ -159,6 +169,8 @@
             this.kryptonTextBox3.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox3.TabIndex = 32;
             this.kryptonTextBox3.Text = "Amount";
+            this.kryptonTextBox3.Enter += new System.EventHandler(this.kryptonTextBox3_Enter);
+            this.kryptonTextBox3.Leave += new System.EventHandler(this.kryptonTextBox3_Leave);
             // 
             // kryptonButton11
             // 
@@ -169,14 +181,6 @@
             this.kryptonButton11.TabIndex = 25;
             this.kryptonButton11.Values.Text = "WITHDRAW";
             this.kryptonButton11.Click += new System.EventHandler(this.kryptonButton11_Click);
-            // 
-            // kryptonLabel1
-            // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(173, 29);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(113, 20);
-            this.kryptonLabel1.TabIndex = 34;
-            this.kryptonLabel1.Values.Text = "BALANCE : ********";
             // 
             // Withdraw
             // 

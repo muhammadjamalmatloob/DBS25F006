@@ -36,16 +36,14 @@
             this.GrpRecieve = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpRecieve)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrpRecieve.Panel)).BeginInit();
             this.GrpRecieve.Panel.SuspendLayout();
             this.GrpRecieve.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -111,7 +109,6 @@
             this.GrpRecieve.Panel.Controls.Add(this.kryptonTextBox2);
             this.GrpRecieve.Panel.Controls.Add(this.kryptonTextBox1);
             this.GrpRecieve.Panel.Controls.Add(this.kryptonTextBox3);
-            this.GrpRecieve.Panel.Controls.Add(this.kryptonComboBox1);
             this.GrpRecieve.Panel.Controls.Add(this.kryptonButton1);
             this.GrpRecieve.Size = new System.Drawing.Size(614, 365);
             this.GrpRecieve.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -127,7 +124,7 @@
             // 
             // kryptonTextBox2
             // 
-            this.kryptonTextBox2.Location = new System.Drawing.Point(320, 179);
+            this.kryptonTextBox2.Location = new System.Drawing.Point(160, 197);
             this.kryptonTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonTextBox2.Name = "kryptonTextBox2";
             this.kryptonTextBox2.Size = new System.Drawing.Size(262, 37);
@@ -143,10 +140,12 @@
             this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox2.TabIndex = 31;
             this.kryptonTextBox2.Text = "PIN";
+            this.kryptonTextBox2.Enter += new System.EventHandler(this.kryptonTextBox2_Enter);
+            this.kryptonTextBox2.Leave += new System.EventHandler(this.kryptonTextBox2_Leave);
             // 
             // kryptonTextBox1
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(320, 83);
+            this.kryptonTextBox1.Location = new System.Drawing.Point(160, 114);
             this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
             this.kryptonTextBox1.Size = new System.Drawing.Size(262, 37);
@@ -162,10 +161,21 @@
             this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox1.TabIndex = 30;
             this.kryptonTextBox1.Text = "Amount";
+            this.kryptonTextBox1.Enter += new System.EventHandler(this.kryptonTextBox1_Enter);
+            this.kryptonTextBox1.Leave += new System.EventHandler(this.kryptonTextBox1_Leave);
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Location = new System.Drawing.Point(235, 294);
+            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(112, 41);
+            this.kryptonButton1.TabIndex = 24;
+            this.kryptonButton1.Values.Text = "Deposit";
             // 
             // kryptonTextBox3
             // 
-            this.kryptonTextBox3.Location = new System.Drawing.Point(16, 179);
+            this.kryptonTextBox3.Location = new System.Drawing.Point(160, 33);
             this.kryptonTextBox3.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonTextBox3.Name = "kryptonTextBox3";
             this.kryptonTextBox3.Size = new System.Drawing.Size(262, 37);
@@ -181,35 +191,8 @@
             this.kryptonTextBox3.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox3.TabIndex = 29;
             this.kryptonTextBox3.Text = "Enter Account Number";
-            // 
-            // kryptonComboBox1
-            // 
-            this.kryptonComboBox1.DropDownWidth = 227;
-            this.kryptonComboBox1.Location = new System.Drawing.Point(16, 83);
-            this.kryptonComboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.kryptonComboBox1.Name = "kryptonComboBox1";
-            this.kryptonComboBox1.Size = new System.Drawing.Size(262, 33);
-            this.kryptonComboBox1.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Navy;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Navy;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Rounding = 15;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Width = 3;
-            this.kryptonComboBox1.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
-            this.kryptonComboBox1.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonComboBox1.TabIndex = 28;
-            this.kryptonComboBox1.Text = "Select Branch";
-            // 
-            // kryptonButton1
-            // 
-            this.kryptonButton1.Location = new System.Drawing.Point(235, 294);
-            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(112, 41);
-            this.kryptonButton1.TabIndex = 24;
-            this.kryptonButton1.Values.Text = "Deposit";
+            this.kryptonTextBox3.Enter += new System.EventHandler(this.kryptonTextBox3_Enter);
+            this.kryptonTextBox3.Leave += new System.EventHandler(this.kryptonTextBox3_Leave);
             // 
             // ClientDepositMoney
             // 
@@ -228,7 +211,6 @@
             this.GrpRecieve.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpRecieve)).EndInit();
             this.GrpRecieve.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -242,8 +224,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox GrpRecieve;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
     }
 }
