@@ -145,6 +145,8 @@
             this.kryptonComboBox2.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonComboBox2.TabIndex = 34;
             this.kryptonComboBox2.Text = "Select Base Currency";
+            this.kryptonComboBox2.Enter += new System.EventHandler(this.kryptonComboBox2_Enter);
+            this.kryptonComboBox2.Leave += new System.EventHandler(this.kryptonComboBox2_Leave);
             // 
             // kryptonTextBox2
             // 
@@ -164,12 +166,15 @@
             this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox2.TabIndex = 31;
             this.kryptonTextBox2.Text = "Amount";
+            this.kryptonTextBox2.Enter += new System.EventHandler(this.kryptonTextBox2_Enter);
+            this.kryptonTextBox2.Leave += new System.EventHandler(this.kryptonTextBox2_Leave);
             // 
             // kryptonTextBox1
             // 
             this.kryptonTextBox1.Location = new System.Drawing.Point(281, 244);
             this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.ReadOnly = true;
             this.kryptonTextBox1.Size = new System.Drawing.Size(262, 37);
             this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
@@ -182,7 +187,7 @@
             this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox1.TabIndex = 30;
-            this.kryptonTextBox1.Text = "Exchange Rate: *****";
+            this.kryptonTextBox1.Text = "Exchange Rate: ";
             // 
             // kryptonComboBox1
             // 
@@ -203,6 +208,8 @@
             this.kryptonComboBox1.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonComboBox1.TabIndex = 28;
             this.kryptonComboBox1.Text = "Select Target Currency";
+            this.kryptonComboBox1.Enter += new System.EventHandler(this.kryptonComboBox1_Enter);
+            this.kryptonComboBox1.Leave += new System.EventHandler(this.kryptonComboBox1_Leave);
             // 
             // kryptonButton1
             // 

@@ -45,6 +45,7 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.menuButton = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.commonInterface1 = new DBFinalProject.CommonInterface();
             this.clientDepositMoney1 = new DBFinalProject.ClientDepositMoney();
             this.sendMoney1 = new DBFinalProject.SendMoney();
@@ -52,7 +53,6 @@
             this.clientLoan1 = new DBFinalProject.ClientLoan();
             this.clientCurrencyExchange1 = new DBFinalProject.ClientCurrencyExchange();
             this.clientBill1 = new DBFinalProject.ClientBill();
-            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -337,6 +337,21 @@
             this.label1.Text = "MENU";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // kryptonPanel1
+            // 
+            this.kryptonPanel1.Controls.Add(this.flowLayoutPanel2);
+            this.kryptonPanel1.Controls.Add(this.button8);
+            this.kryptonPanel1.Controls.Add(this.button1);
+            this.kryptonPanel1.Controls.Add(this.button5);
+            this.kryptonPanel1.Controls.Add(this.button3);
+            this.kryptonPanel1.Controls.Add(this.button4);
+            this.kryptonPanel1.Controls.Add(this.button6);
+            this.kryptonPanel1.Controls.Add(this.button2);
+            this.kryptonPanel1.Location = new System.Drawing.Point(-1, 0);
+            this.kryptonPanel1.Name = "kryptonPanel1";
+            this.kryptonPanel1.Size = new System.Drawing.Size(224, 640);
+            this.kryptonPanel1.TabIndex = 28;
+            // 
             // commonInterface1
             // 
             this.commonInterface1.Location = new System.Drawing.Point(217, 0);
@@ -392,21 +407,6 @@
             this.clientBill1.Size = new System.Drawing.Size(923, 640);
             this.clientBill1.TabIndex = 27;
             this.clientBill1.Visible = false;
-            // 
-            // kryptonPanel1
-            // 
-            this.kryptonPanel1.Controls.Add(this.flowLayoutPanel2);
-            this.kryptonPanel1.Controls.Add(this.button8);
-            this.kryptonPanel1.Controls.Add(this.button1);
-            this.kryptonPanel1.Controls.Add(this.button5);
-            this.kryptonPanel1.Controls.Add(this.button3);
-            this.kryptonPanel1.Controls.Add(this.button4);
-            this.kryptonPanel1.Controls.Add(this.button6);
-            this.kryptonPanel1.Controls.Add(this.button2);
-            this.kryptonPanel1.Location = new System.Drawing.Point(-1, 0);
-            this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(224, 640);
-            this.kryptonPanel1.TabIndex = 28;
             // 
             // GeneralMenu
             // 
