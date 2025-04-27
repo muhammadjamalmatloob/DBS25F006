@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using DBFinalProject.BL;
+using DBFinalProject.DL;
 
 namespace DBFinalProject
 {
@@ -86,6 +88,54 @@ namespace DBFinalProject
         private void kryptonButton11_Click(object sender, EventArgs e)
         {
             GrpDelete.Visible = false;
+        }
+
+        private void kryptonTextBox2_TextChanged(object sender, EventArgs e)
+        {
+         
+        }
+        private void kryptonTextBox2_Enter(object sender, EventArgs e)
+        {
+            if (kryptonButton2.Text == "Branch Name")
+            {
+                kryptonButton2.Text = "";
+                kryptonButton2.ForeColor = Color.Black;
+            }
+        }
+        private void kryptonTextBox2_Leave(object sender, EventArgs e)
+        {
+            if (kryptonButton2.Text == "")
+            {
+                kryptonButton2.Text = "Branch Name";
+                kryptonButton2.ForeColor = Color.Gray;
+            }
+        }
+
+
+        // add branch
+        private void kryptonButton7_Click(object sender, EventArgs e)
+        {
+            BranchBL branch = new BranchBL();
+
+            branch.set_branch_name(kryptonButton2.Text);
+            branch.set_branch_code(Convert.ToInt32(kryptonTextBox3.Text));
+            branch.set_address(kryptonTextBox4.Text);
+            branch.set_contact(kryptonTextBox5.Text);
+            branch.set_city(kryptonTextBox6.Text);
+            branch.set_country(kryptonTextBox9.Text);
+
+            BranchDL.AddBranch(branch);
+
+            if (BranchDL.AddBranchInDb(branch))
+            {
+                MessageBox.Show("Branch Added Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Failed to Add Branch");
+            }
+
+                GrpAdd.Visible = false;
         }
     }
 }
