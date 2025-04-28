@@ -18,6 +18,13 @@ namespace DBFinalProject
         public BranchManagement()
         {
             InitializeComponent();
+
+            BranchDL.LoadAllDataInList();
+            BranchDL.LoadAllBranchesInComboBox(kryptonComboBox1);
+            BranchDL.LoadAllBranchesInComboBox(kryptonComboBox2);
+
+
+            
             GrpBox.Visible = false;
             GrpUpdate.Visible = false;
             GrpAdd.Visible = false;
@@ -96,18 +103,18 @@ namespace DBFinalProject
         }
         private void kryptonTextBox2_Enter(object sender, EventArgs e)
         {
-            if (kryptonButton2.Text == "Branch Name")
+            if (kryptonTextBox2.Text == "Branch Name")
             {
-                kryptonButton2.Text = "";
-                kryptonButton2.ForeColor = Color.Black;
+                kryptonTextBox2.Text = "";
+                kryptonTextBox2.ForeColor = Color.Black;
             }
         }
         private void kryptonTextBox2_Leave(object sender, EventArgs e)
         {
-            if (kryptonButton2.Text == "")
+            if (kryptonTextBox2.Text == "")
             {
-                kryptonButton2.Text = "Branch Name";
-                kryptonButton2.ForeColor = Color.Gray;
+                kryptonTextBox2.Text = "Branch Name";
+                kryptonTextBox2.ForeColor = Color.Gray;
             }
         }
 
@@ -117,25 +124,102 @@ namespace DBFinalProject
         {
             BranchBL branch = new BranchBL();
 
-            branch.set_branch_name(kryptonButton2.Text);
+            branch.set_branch_name(kryptonTextBox2.Text);
             branch.set_branch_code(Convert.ToInt32(kryptonTextBox3.Text));
             branch.set_address(kryptonTextBox4.Text);
             branch.set_contact(kryptonTextBox5.Text);
             branch.set_city(kryptonTextBox6.Text);
             branch.set_country(kryptonTextBox9.Text);
 
-            BranchDL.AddBranch(branch);
+            
 
             if (BranchDL.AddBranchInDb(branch))
             {
-                MessageBox.Show("Branch Added Successfully");
+                MessageBox.Show("Branch Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                branch.set_branch_id(BranchDL.GetBranchIdByCode(branch.get_branch_code()));
+                BranchDL.AddBranch(branch);
             }
             else
             {
-                MessageBox.Show("Failed to Add Branch");
+                MessageBox.Show("Failed to Add Branch", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
 
-                GrpAdd.Visible = false;
+            GrpAdd.Visible = false;
+        }
+
+        private void kryptonButton2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox3_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "Branch Code ")
+            {
+                kryptonTextBox3.Text = "";
+                kryptonTextBox3.ForeColor = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox3_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "")
+            {
+                kryptonTextBox3.Text = "Branch Code ";
+                kryptonTextBox3.ForeColor = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox4_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox4.Text == "Address ")
+            {
+                kryptonTextBox4.Text = "";
+                
+                kryptonButton4.StateCommon.Content.ShortText.Color1 = Color.Black;
+
+            }
+        }
+
+        private void kryptonTextBox4_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "")
+            {
+                kryptonTextBox3.Text = "Address ";
+                kryptonButton4.StateCommon.Content.ShortText.Color1 = Color.Black;
+            }
+        }
+
+
+        // delete branch
+        private void kryptonButton10_Click(object sender, EventArgs e)
+        {
+            string selectedBranchName = kryptonComboBox1.Text.Trim();
+            if (kryptonComboBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a branch first.");
+                return;
+            }
+            BranchBL branch = new BranchBL();
+            int branch_id = Convert.ToInt32(BranchDL.GetBranchIdByName(selectedBranchName));
+            branch.set_branch_id(branch_id);
+ 
+            if (BranchDL.DeleteBranchInDb(branch_id))
+            {
+                MessageBox.Show("Branch Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //BranchDL.RemoveBranch(branch);
+            }
+            else
+            {
+                MessageBox.Show("Failed to Delete Branch", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

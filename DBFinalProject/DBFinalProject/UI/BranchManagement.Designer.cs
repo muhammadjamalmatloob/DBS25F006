@@ -398,7 +398,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox9.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox9.StateCommon.Border.Width = 1;
-            this.kryptonTextBox9.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox9.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox9.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox9.TabIndex = 34;
             this.kryptonTextBox9.Text = "Country";
@@ -449,7 +449,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox6.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox6.StateCommon.Border.Width = 1;
-            this.kryptonTextBox6.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox6.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox6.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox6.TabIndex = 22;
             this.kryptonTextBox6.Text = "City";
@@ -468,7 +468,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox5.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox5.StateCommon.Border.Width = 1;
-            this.kryptonTextBox5.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox5.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox5.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox5.TabIndex = 20;
             this.kryptonTextBox5.Text = "Contact";
@@ -487,10 +487,12 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox4.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox4.StateCommon.Border.Width = 1;
-            this.kryptonTextBox4.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox4.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox4.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox4.TabIndex = 17;
             this.kryptonTextBox4.Text = "Address ";
+            this.kryptonTextBox4.Enter += new System.EventHandler(this.kryptonTextBox4_Enter);
+            this.kryptonTextBox4.Leave += new System.EventHandler(this.kryptonTextBox4_Leave);
             // 
             // kryptonTextBox3
             // 
@@ -506,10 +508,13 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox3.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox3.StateCommon.Border.Width = 1;
-            this.kryptonTextBox3.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox3.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox3.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox3.TabIndex = 16;
             this.kryptonTextBox3.Text = "Branch Code ";
+            this.kryptonTextBox3.TextChanged += new System.EventHandler(this.kryptonTextBox3_TextChanged);
+            this.kryptonTextBox3.Enter += new System.EventHandler(this.kryptonTextBox3_Enter);
+            this.kryptonTextBox3.Leave += new System.EventHandler(this.kryptonTextBox3_Leave);
             // 
             // kryptonTextBox2
             // 
@@ -530,7 +535,8 @@
             this.kryptonTextBox2.TabIndex = 15;
             this.kryptonTextBox2.Text = "Branch Name";
             this.kryptonTextBox2.TextChanged += new System.EventHandler(this.kryptonTextBox2_TextChanged);
-            this.kryptonTextBox2.Enter += new System.EventHandler(this.kryptonButton2_Click);
+            this.kryptonTextBox2.Enter += new System.EventHandler(this.kryptonTextBox2_Enter);
+            this.kryptonTextBox2.Leave += new System.EventHandler(this.kryptonTextBox2_Leave);
             // 
             // GrpUpdate
             // 
@@ -661,6 +667,7 @@
             this.kryptonComboBox2.StateCommon.ComboBox.Border.Rounding = 15;
             this.kryptonComboBox2.StateCommon.ComboBox.Border.Width = 3;
             this.kryptonComboBox2.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
+            this.kryptonComboBox2.StateCommon.Item.Content.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonComboBox2.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonComboBox2.TabIndex = 26;
             this.kryptonComboBox2.Text = "Select Branch";
@@ -858,6 +865,7 @@
             this.kryptonComboBox1.StateCommon.ComboBox.Border.Rounding = 15;
             this.kryptonComboBox1.StateCommon.ComboBox.Border.Width = 3;
             this.kryptonComboBox1.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
+            this.kryptonComboBox1.StateCommon.Item.Content.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonComboBox1.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonComboBox1.TabIndex = 27;
             this.kryptonComboBox1.Text = "Select Branch";
@@ -880,6 +888,7 @@
             this.kryptonButton10.Size = new System.Drawing.Size(111, 41);
             this.kryptonButton10.TabIndex = 23;
             this.kryptonButton10.Values.Text = "DELETE";
+            this.kryptonButton10.Click += new System.EventHandler(this.kryptonButton10_Click);
             // 
             // myPallet
             // 
