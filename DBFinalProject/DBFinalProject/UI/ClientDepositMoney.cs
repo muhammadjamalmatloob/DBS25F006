@@ -81,5 +81,26 @@ namespace DBFinalProject
                 kryptonTextBox2.PasswordChar = '\0';
             }
         }
+
+        private void kryptonTextBox4_Enter(object sender, EventArgs e)
+        {
+            if(kryptonTextBox4.Text == "Description")
+            {
+                kryptonTextBox4.Text = "";
+            }
+        }
+
+        private void kryptonTextBox4_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox4.Text == "")
+            {
+                kryptonTextBox4.Text = "Description";
+            }
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -112,7 +112,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\BranchBL.cs" />
+    <Compile Include="BL\ClientBL.cs" />
+    <Compile Include="BL\CurrencyExchangeBL.cs" />
+    <Compile Include="BL\LoanApplicationBL.cs" />
+    <Compile Include="BL\PaymentBL.cs" />
+    <Compile Include="BL\TransactionBL.cs" />
     <Compile Include="DL\BranchDL.cs" />
+    <Compile Include="DL\ClientDL.cs" />
+    <Compile Include="DL\CurrencyExchangeDL.cs" />
+    <Compile Include="DL\LoanApplicationDL.cs" />
+    <Compile Include="DL\PaymentDL.cs" />
+    <Compile Include="DL\TransactionDL.cs" />
     <Compile Include="UI\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
