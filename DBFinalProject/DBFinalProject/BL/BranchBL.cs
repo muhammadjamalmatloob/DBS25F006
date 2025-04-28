@@ -8,6 +8,7 @@ namespace DBFinalProject.BL
 {
     internal class BranchBL
     {
+        private int branch_id;
         private string branch_name;
         private int branch_code;
         private string address;
@@ -25,14 +26,24 @@ namespace DBFinalProject.BL
             this.country = "";
         }
 
-        public BranchBL(string branch_name, int branch_code, string address, string contact, string city, string country)
+        public BranchBL(int branch_id,string branch_name, int branch_code, string address, string contact, string city, string country)
         {
+            this.branch_id = branch_id;
             this.branch_name = branch_name;
             this.branch_code = branch_code;
             this.address = address;
             this.contact = contact;
             this.city = city;
             this.country = country;
+        }
+
+        public void set_branch_id(int branch_id)
+        {
+            this.branch_id = branch_id;
+        }
+        public int get_branch_id()
+        {
+            return this.branch_id;
         }
 
         public void set_branch_name(string branch_name)
@@ -92,6 +103,7 @@ namespace DBFinalProject.BL
         {
             return this.country;
         }
+
 
     }
 }
