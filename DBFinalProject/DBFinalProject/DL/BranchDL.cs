@@ -88,6 +88,7 @@ namespace DBFinalProject.DL
         public static void LoadAllBranchesInComboBox(KryptonComboBox comboBox)
         {
             comboBox.Items.Clear();
+            comboBox.Items.Add("Select Branch");
             foreach (var branch in branchList)
             {
                 comboBox.Items.Add(branch.get_branch_name());

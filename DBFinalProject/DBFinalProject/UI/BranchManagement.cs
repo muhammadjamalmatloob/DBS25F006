@@ -24,7 +24,7 @@ namespace DBFinalProject
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox1);
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox2);
             BranchDL.LoadDataGrid(BranchDL.branchList,dgvBranch);
-
+            kryptonComboBox1.SelectedIndex = 0;
 
 
             GrpBox.Visible = false;
@@ -149,6 +149,8 @@ namespace DBFinalProject
             }
 
             apply_filters();
+            BranchDL.LoadAllBranchesInComboBox(kryptonComboBox1);
+            BranchDL.LoadAllBranchesInComboBox(kryptonComboBox2);
             GrpAdd.Visible = false;
         }
 
@@ -228,6 +230,8 @@ namespace DBFinalProject
             }
 
             apply_filters();
+            BranchDL.LoadAllBranchesInComboBox(kryptonComboBox1);
+            BranchDL.LoadAllBranchesInComboBox(kryptonComboBox2);
             GrpDelete.Visible = false;
         }
 
@@ -260,6 +264,8 @@ namespace DBFinalProject
             }
 
             apply_filters();
+            BranchDL.LoadAllBranchesInComboBox(kryptonComboBox1);
+            BranchDL.LoadAllBranchesInComboBox(kryptonComboBox2);
             GrpUpdate.Visible = false;
 
         }
@@ -293,6 +299,11 @@ namespace DBFinalProject
 
             BranchDL.LoadDataGrid(branchList, dgvBranch);
             GrpBox.Visible = false;
+        }
+
+        private void kryptonComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
