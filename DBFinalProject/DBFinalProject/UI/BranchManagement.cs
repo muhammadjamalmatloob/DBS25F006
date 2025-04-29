@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace DBFinalProject
 {
@@ -22,9 +23,10 @@ namespace DBFinalProject
             BranchDL.LoadAllDataInList();
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox1);
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox2);
+            BranchDL.LoadDataGrid(BranchDL.branchList,dgvBranch);
 
 
-            
+
             GrpBox.Visible = false;
             GrpUpdate.Visible = false;
             GrpAdd.Visible = false;
@@ -137,7 +139,7 @@ namespace DBFinalProject
             {
                 MessageBox.Show("Branch Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                branch.set_branch_id(BranchDL.GetBranchIdByCode(branch.get_branch_code()));
+                branch.set_branch_id(BranchDL.GetBranchIdByName(branch.get_branch_name()));
                 BranchDL.AddBranch(branch);
             }
             else
@@ -146,6 +148,7 @@ namespace DBFinalProject
 
             }
 
+            apply_filters();
             GrpAdd.Visible = false;
         }
 
@@ -210,16 +213,86 @@ namespace DBFinalProject
             BranchBL branch = new BranchBL();
             int branch_id = Convert.ToInt32(BranchDL.GetBranchIdByName(selectedBranchName));
             branch.set_branch_id(branch_id);
- 
+
+            BranchBL b = BranchDL.GetBranchById(branch_id);
             if (BranchDL.DeleteBranchInDb(branch_id))
             {
                 MessageBox.Show("Branch Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //BranchDL.RemoveBranch(branch);
+                MessageBox.Show($"{BranchDL.branchList.Count}");
+                BranchDL.RemoveBranch(b, branch_id);
+                MessageBox.Show($"{BranchDL.branchList.Count}");
             }
             else
             {
                 MessageBox.Show("Failed to Delete Branch", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            apply_filters();
+            GrpDelete.Visible = false;
+        }
+
+        // update 
+        private void kryptonButton9_Click(object sender, EventArgs e)
+        {
+            string selectedBranchName = kryptonComboBox2.Text.Trim();
+            if (kryptonComboBox2.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a branch first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            int branch_id = Convert.ToInt32(BranchDL.GetBranchIdByName(selectedBranchName));
+            BranchBL branch = new BranchBL();
+            branch.set_branch_id(branch_id);
+
+            branch.set_address(kryptonTextBox11.Text);
+            branch.set_city(kryptonTextBox10.Text);
+            branch.set_contact(kryptonTextBox8.Text);
+            branch.set_country(kryptonTextBox7.Text);
+
+            if (BranchDL.UpdateBranchInDb(branch))
+            {
+                MessageBox.Show("Branch Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BranchDL.UpdateBranch(branch_id,branch);
+            }
+            else
+            {
+                MessageBox.Show("Failed to Update Branch", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            apply_filters();
+            GrpUpdate.Visible = false;
+
+        }
+
+        private void kryptonButton8_Click(object sender, EventArgs e)
+        {
+            apply_filters();
+        }
+
+        public void apply_filters()
+        {
+            dgvBranch.Rows.Clear();
+            List<BranchBL> branchList = BranchDL.branchList;
+
+            if (radioButton1.Checked && radioButton4.Checked)
+            {
+                branchList = branchList.OrderBy(branch => branch.get_branch_id()).ToList();
+            }
+            else if (radioButton1.Checked && radioButton2.Checked)
+            {
+                branchList = branchList.OrderByDescending(branch => branch.get_branch_id()).ToList();
+            }
+            else if (radioButton3.Checked && radioButton4.Checked)
+            {
+                branchList = branchList.OrderBy(branch => branch.get_branch_name()).ToList();
+            }
+            else if (radioButton3.Checked && radioButton2.Checked)
+            {
+                branchList = branchList.OrderByDescending(branch => branch.get_branch_name()).ToList();
+            }
+
+            BranchDL.LoadDataGrid(branchList, dgvBranch);
+            GrpBox.Visible = false;
         }
     }
 }
