@@ -24,7 +24,7 @@ namespace DBFinalProject
             //MainInterface mainForm = new MainInterface();
             //kryptonManager.GlobalPalette = mainForm.myPallet;
 
-            Application.Run(new BranchManagement());
+            Application.Run(new GeneralMenu());
         }
     }
 }
