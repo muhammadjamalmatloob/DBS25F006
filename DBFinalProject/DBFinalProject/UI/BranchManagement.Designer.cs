@@ -853,7 +853,10 @@
             // 
             // kryptonComboBox1
             // 
+            this.kryptonComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.kryptonComboBox1.DropDownWidth = 227;
+            this.kryptonComboBox1.Items.AddRange(new object[] {
+            ""});
             this.kryptonComboBox1.Location = new System.Drawing.Point(24, 54);
             this.kryptonComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonComboBox1.Name = "kryptonComboBox1";
@@ -870,7 +873,7 @@
             this.kryptonComboBox1.StateCommon.Item.Content.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonComboBox1.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonComboBox1.TabIndex = 27;
-            this.kryptonComboBox1.Text = "Select Branch";
+            this.kryptonComboBox1.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBox1_SelectedIndexChanged);
             // 
             // kryptonButton11
             // 

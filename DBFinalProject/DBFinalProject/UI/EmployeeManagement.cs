@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using DBFinalProject.BL;
+using DBFinalProject.DL;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace DBFinalProject
 {
@@ -20,8 +23,15 @@ namespace DBFinalProject
             GrpBox.Visible = false;
             GrpUpdate.Visible = false;
             GrpDelete.Visible = false;
+            GrpAccount.Visible = false;
             radioButton1.Checked = true;
             radioButton4.Checked = true;
+            BranchDL.LoadAllDataInList();
+            BranchDL.LoadAllBranchesInComboBox(kryptonComboBox1);
+
+            kryptonComboBox1.SelectedIndex = 0;
+            kryptonComboBox2.SelectedIndex = 0;
+            kryptonComboBox8.SelectedIndex = 0;
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
@@ -60,9 +70,12 @@ namespace DBFinalProject
             GrpBox.Visible = false;
         }
 
+
+        // add employee
         private void kryptonButton7_Click(object sender, EventArgs e)
         {
             GrpAdd.Visible = false;
+            GrpAccount.Visible = true;
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)
@@ -116,6 +129,51 @@ namespace DBFinalProject
         private void kryptonButton13_Click_1(object sender, EventArgs e)
         {
             GrpAdd.Visible = false;
+        }
+
+
+        // create account 
+        private void kryptonButton16_Click(object sender, EventArgs e)
+        {
+            EmployeeBL employee = new EmployeeBL();
+
+            employee.set_first_name(kryptonTextBox2.Text);
+            employee.set_last_name(kryptonTextBox3.Text);
+            employee.set_department(kryptonComboBox8.Text);
+            employee.set_branch_id(BranchDL.GetBranchIdByName(kryptonComboBox1.Text));
+            employee.set_gender(kryptonComboBox2.Text);
+            employee.set_salary(float.Parse(kryptonTextBox6.Text));
+            employee.set_contact(kryptonTextBox5.Text);
+            employee.set_position(UserDL.get_role_id(kryptonComboBox7.Text));
+
+            employee.set_role_id(UserDL.get_role_id(kryptonComboBox7.Text));
+            employee.set_username(kryptonTextBox9.Text);
+            employee.set_email(kryptonTextBox10.Text);
+            employee.set_password_hash(kryptonTextBox11.Text);
+
+            if (EmployeeDL.AddEmployeeAccountInDb(employee))
+            {
+                employee.set_user_id(UserDL.get_user_id(employee.get_username()));
+                if (EmployeeDL.AddEmployeeInDb(employee))
+                {
+                    MessageBox.Show("Employee Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to Add Employee", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Failed to Add Employee Account", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            GrpAccount.Visible = false;
+        }
+
+        private void kryptonButton15_Click(object sender, EventArgs e)
+        {
+            GrpAccount.Visible = false;
         }
     }
 }
