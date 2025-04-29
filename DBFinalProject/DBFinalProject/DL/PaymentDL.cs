@@ -18,7 +18,7 @@ namespace DBFinalProject.DL
             DatabaseHelper.Instance.Update(query);
         }
 
-        public static DeletePayment(PaymentBL payment)
+        public static void DeletePayment(PaymentBL payment)
         {
             string query = $"DELETE FROM payments WHERE client_id = '{payment.getClientId()}'";
             DatabaseHelper.Instance.Update(query);
