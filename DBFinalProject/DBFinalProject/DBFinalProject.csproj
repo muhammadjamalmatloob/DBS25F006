@@ -289,6 +289,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+
+    <Compile Include="ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.Designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPassword01.Designer.cs">
+      <DependentUpon>ResetPassword01.cs</DependentUpon>
+    </Compile>
+    
     <Compile Include="UI\SendMoney.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -296,6 +310,7 @@
       <DependentUpon>SendMoney.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\TransactionRecord.cs">
+
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\TransactionRecord.Designer.cs">
@@ -403,10 +418,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+
+    <EmbeddedResource Include="ResetPassword.resx">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetPassword01.resx">
+      <DependentUpon>ResetPassword01.cs</DependentUpon>
+    </EmbeddedResource>
+    
+
     <EmbeddedResource Include="UI\SendMoney.resx">
       <DependentUpon>SendMoney.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TransactionRecord.resx">
+
       <DependentUpon>TransactionRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ViewBranchInfo.resx">
