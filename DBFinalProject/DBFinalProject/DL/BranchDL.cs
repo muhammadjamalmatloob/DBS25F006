@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.Utility;
@@ -19,9 +20,22 @@ namespace DBFinalProject.DL
             branchList.Add(branch);
         }
 
-        public static void RemoveBranch(BranchBL branch)
+        public static void UpdateBranch(int branch_id_to_update, BranchBL updatedBranch)
         {
-            branchList.Remove(branch);
+            foreach (BranchBL branch in branchList)
+            {
+                if (branch.get_branch_id() == branch_id_to_update)
+                {
+                    branch.set_address(updatedBranch.get_address());
+                    branch.set_city(updatedBranch.get_city());
+                    branch.set_contact(updatedBranch.get_contact());
+                    branch.set_country(updatedBranch.get_country());
+                }
+            }
+        }
+        public static void RemoveBranch(BranchBL branchToRemove, int branch_id_to_delete)
+        {
+            branchList.RemoveAll(b => b.get_branch_id() == branch_id_to_delete);
         }
         public static bool AddBranchInDb(BranchBL branch)
         {
@@ -61,7 +75,14 @@ namespace DBFinalProject.DL
             string query = $"DELETE FROM branches WHERE branch_id = {branch_id}";
             int rowsAffected = DatabaseHelper.Instance.Update(query);
             return rowsAffected > 0;
-            
+
+        }
+
+        public static bool UpdateBranchInDb(BranchBL branch)
+        {
+            string query = $"UPDATE branches SET  address = '{branch.get_address()}', contact = '{branch.get_contact()}', city = '{branch.get_city()}', country = '{branch.get_country()}' WHERE branch_id = {branch.get_branch_id()}";
+            int rowsAffected = DatabaseHelper.Instance.Update(query);
+            return rowsAffected > 0;
         }
 
         public static void LoadAllBranchesInComboBox(KryptonComboBox comboBox)
@@ -86,6 +107,47 @@ namespace DBFinalProject.DL
             }
             return branch_id;
 
+        }
+
+        public static BranchBL GetBranchById(int branch_id)
+        {
+            string query = $"SELECT * FROM branches WHERE branch_id = {branch_id}";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    return new BranchBL(
+                        Convert.ToInt32(reader["branch_id"]),
+                        reader["branch_name"].ToString(),
+                        Convert.ToInt32(reader["branch_code"]),
+                        reader["address"].ToString(),
+                        reader["contact"].ToString(),
+                        reader["city"].ToString(),
+                        reader["country"].ToString()
+                    );
+                }
+            }
+            return null;
+        }
+
+        public static void LoadDataGrid(List<BranchBL> branchList, KryptonDataGridView dvgBranch)
+        {
+            //foreach (DataGridViewRow row in dvgBranch.Rows)
+            //{
+            //    row.Height = 50;
+            //}
+            foreach (var branch in branchList)
+            {
+                dvgBranch.Rows.Add(
+                    branch.get_branch_id(),
+                    branch.get_branch_name(),
+                    branch.get_branch_code(),
+                    branch.get_address(),
+                    branch.get_contact(),
+                    branch.get_city(),
+                    branch.get_country()
+                );
+            }
         }
     }
 }
