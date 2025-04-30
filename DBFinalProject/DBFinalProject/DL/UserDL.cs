@@ -3,14 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DBFinalProject.BL;
 using DBFinalProject.Utility;
 
 namespace DBFinalProject.DL
 {
     internal class UserDL
     {
+        public static List<UserBL> users = new List<UserBL>();
 
-        
+        public static void AddUser(UserBL user)
+        {
+            users.Add(user);
+        }
+
+
         public static int get_role_id(string role_name)
         {
             string query = $"SELECT lookup_id FROM lookup WHERE value = '{role_name}'";
@@ -23,6 +30,20 @@ namespace DBFinalProject.DL
                 }
             }
             return role_id;
+        }
+
+        public static string get_role(int role_id)
+        {
+            string query = $"SELECT value FROM lookup WHERE lookup_id = {role_id}";
+            string role_name = "";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    role_name = reader["value"].ToString();
+                }
+            }
+            return role_name;
         }
         public static int get_user_id(string username)
         {

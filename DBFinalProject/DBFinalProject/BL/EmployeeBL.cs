@@ -8,6 +8,7 @@ namespace DBFinalProject.BL
 {
     internal class EmployeeBL : UserBL
     {
+        private int employee_id;
         private string first_name;
         private string last_name;
         private string gender;
@@ -33,9 +34,35 @@ namespace DBFinalProject.BL
             this.contact = contact;
         }
 
+        public EmployeeBL(int employee_id, string first_name, string last_name, string gender, int position, string department, int branch_id, float salary, string contact)
+        {
+            this.employee_id = employee_id;
+            this.first_name = first_name;
+            this.last_name = last_name;
+            this.gender = gender;
+            this.position = position;
+            this.department = department;
+            this.branch_id = branch_id;
+            this.salary = salary;
+            this.contact = contact;
+        }
+
         public EmployeeBL()
         {
 
+        }
+
+        public string get_employee_name()
+        {
+            return this.first_name + " " + this.last_name;
+        }
+        public void set_employee_id(int employee_id)
+        {
+            this.employee_id = employee_id;
+        }
+        public int get_employee_id()
+        {
+            return this.employee_id;
         }
 
         public void set_first_name(string f_name)
