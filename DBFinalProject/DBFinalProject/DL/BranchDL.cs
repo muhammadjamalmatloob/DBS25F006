@@ -110,6 +110,19 @@ namespace DBFinalProject.DL
 
         }
 
+        public static string GetBranchNameById(int branch_id)
+        {
+            string query = $"SELECT branch_name FROM branches WHERE branch_id = {branch_id}";
+            string branch_name = "";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    branch_name = reader["branch_name"].ToString();
+                }
+            }
+            return branch_name;
+        }
         public static BranchBL GetBranchById(int branch_id)
         {
             string query = $"SELECT * FROM branches WHERE branch_id = {branch_id}";
