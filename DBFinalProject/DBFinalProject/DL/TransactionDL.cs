@@ -23,5 +23,19 @@ namespace DBFinalProject.DL
             string query = $"DELETE FROM transactions WHERE client_id = '{transaction.getClientId()}'";
             DatabaseHelper.Instance.Update(query);
         }
+
+        public static int GetTransactionTypeIDFromLookup(string type)
+        {
+            string query = $"SELECT lookup_id FROM lookup WHERE category = 'transaction_type' AND value = '{type}'";
+            int type_id = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    type_id = Convert.ToInt32(reader["branch_id"].ToString());
+                }
+            }
+            return type_id;
+        }
     }
 }

@@ -24,10 +24,6 @@ namespace DBFinalProject.BL
         {
             this.target_currency = target_currency;
         }
-        public void setExchangeRate(decimal exchange_rate)
-        {
-            this.exchange_rate = exchange_rate;
-        }
         public void setAmountBase(decimal amount_base)
         {
             this.amount_base = amount_base;
@@ -59,6 +55,22 @@ namespace DBFinalProject.BL
         public decimal getAmountTarget()
         {
             return this.amount_target;
+        }
+
+        public void setExchangeRate(string bcurrency,string tcurrency)
+        {
+            if (bcurrency == "Rupees" && tcurrency == "Dollars")
+            {
+                this.exchange_rate = 281.2m;
+            }
+            else if (bcurrency == "Rupees" && tcurrency == "Pounds")
+            {
+                this.exchange_rate = 374.43m;
+            }
+            else if (bcurrency == "Rupees" && tcurrency == "Euros")
+            {
+                this.exchange_rate = 74.89m;
+            }
         }
     }
 }
