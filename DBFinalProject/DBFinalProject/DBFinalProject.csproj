@@ -115,14 +115,31 @@
     <Compile Include="BL\ClientBL.cs" />
     <Compile Include="BL\CurrencyExchangeBL.cs" />
     <Compile Include="BL\LoanApplicationBL.cs" />
+    <Compile Include="BL\LoginBL.cs" />
     <Compile Include="BL\PaymentBL.cs" />
     <Compile Include="BL\TransactionBL.cs" />
     <Compile Include="DL\BranchDL.cs" />
     <Compile Include="DL\ClientDL.cs" />
     <Compile Include="DL\CurrencyExchangeDL.cs" />
     <Compile Include="DL\LoanApplicationDL.cs" />
+    <Compile Include="DL\LoginDL.cs" />
+    <Compile Include="DL\password.cs" />
     <Compile Include="DL\PaymentDL.cs" />
+    <Compile Include="DL\ResetPasswordDL.cs" />
+    <Compile Include="DL\SignUpDL.cs" />
     <Compile Include="DL\TransactionDL.cs" />
+    <Compile Include="UI\SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SignUp02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SignUp02.Designer.cs">
+      <DependentUpon>SignUp02.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,8 +260,12 @@
     <Compile Include="UI\ResetPassword01.Designer.cs">
       <DependentUpon>ResetPassword01.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utility\DatabaseHelper.cs" />
-    <Compile Include="Utility\EmailSender.cs" />
+    <Compile Include="UI\SignUpORApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SignUpORApply.Designer.cs">
+      <DependentUpon>SignUpORApply.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\EmployeeManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,6 +346,8 @@
     <Compile Include="UI\Withdraw.Designer.cs">
       <DependentUpon>Withdraw.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utility\DatabaseHelper.cs" />
+    <Compile Include="Utility\EmailSender.cs" />
     <EmbeddedResource Include="UI\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -423,6 +446,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SendMoney.resx">
       <DependentUpon>SendMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SignUp02.resx">
+      <DependentUpon>SignUp02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SignUpORApply.resx">
+      <DependentUpon>SignUpORApply.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TransactionRecord.resx">
       <DependentUpon>TransactionRecord.cs</DependentUpon>
