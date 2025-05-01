@@ -1,26 +1,86 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\STUDY\\DB Final Project\\DBS25F006\\DBFinalProject\\",
+  "WorkspaceRootPath": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|f:\\study\\db final project\\dbs25f006\\dbfinalproject\\dbfinalproject\\generalmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\generalmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|d:\\2nd semester\\dbsl\\dbfinal\\dbs25f006\\dbfinalproject\\dbfinalproject\\ui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|F:\\STUDY\\DB Final Project\\DBS25F006\\DBFinalProject\\dbfinalproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|d:\\2nd semester\\dbsl\\dbfinal\\dbs25f006\\dbfinalproject\\dbfinalproject\\ui\\signuporapply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\signuporapply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|F:\\STUDY\\DB Final Project\\DBS25F006\\DBFinalProject\\dbfinalproject\\generalmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\generalmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|F:\\STUDY\\DB Final Project\\DBS25F006\\DBFinalProject\\dbfinalproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|f:\\study\\db final project\\dbs25f006\\dbfinalproject\\dbfinalproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|d:\\2nd semester\\dbsl\\dbfinal\\dbs25f006\\dbfinalproject\\dbfinalproject\\ui\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|d:\\2nd semester\\dbsl\\dbfinal\\dbs25f006\\dbfinalproject\\dbfinalproject\\ui\\resetpassword01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\resetpassword01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\signuporapply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\signuporapply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\resetpassword01.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\resetpassword01.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\resetpassword.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\resetpassword.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\resetpassword01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\resetpassword01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\dl\\password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\dl\\password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\utility\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\utility\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\dl\\resetpassworddl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\dl\\resetpassworddl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\utility\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\utility\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\signup02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\signup02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\signup02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\signup02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,17 +90,81 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\Form1.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\Form1.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\Form1.cs",
+              "RelativeToolTip": "DBFinalProject\\UI\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T08:07:32.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SignUpORApply.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\SignUpORApply.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\SignUpORApply.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\SignUpORApply.cs",
+              "RelativeToolTip": "DBFinalProject\\UI\\SignUpORApply.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAD4vx8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T08:05:47.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ResetPassword.cs [Design]",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ResetPassword.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\ResetPassword.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ResetPassword.cs [Design]",
+              "RelativeToolTip": "DBFinalProject\\UI\\ResetPassword.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T06:32:53.831Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ResetPassword.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ResetPassword.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\ResetPassword.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ResetPassword.cs",
+              "RelativeToolTip": "DBFinalProject\\UI\\ResetPassword.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAtwDQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T01:34:59.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResetPassword01.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ResetPassword01.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\ResetPassword01.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ResetPassword01.cs",
+              "RelativeToolTip": "DBFinalProject\\UI\\ResetPassword01.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAAD4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T03:10:08.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "F:\\STUDY\\DB Final Project\\DBS25F006\\DBFinalProject\\DBFinalProject\\Program.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\Program.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\Program.cs",
-              "ToolTip": "F:\\STUDY\\DB Final Project\\DBS25F006\\DBFinalProject\\DBFinalProject\\Program.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\Program.cs",
               "RelativeToolTip": "DBFinalProject\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAQwBoAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-14T03:23:19.443Z",
               "EditorCaption": ""
@@ -48,52 +172,172 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GeneralMenu.cs",
-              "DocumentMoniker": "F:\\STUDY\\DB Final Project\\DBS25F006\\DBFinalProject\\DBFinalProject\\GeneralMenu.cs",
-              "RelativeDocumentMoniker": "DBFinalProject\\GeneralMenu.cs",
-              "ToolTip": "F:\\STUDY\\DB Final Project\\DBS25F006\\DBFinalProject\\DBFinalProject\\GeneralMenu.cs",
-              "RelativeToolTip": "DBFinalProject\\GeneralMenu.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAlwEIAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T15:50:22.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GeneralMenu.cs [Design]",
-              "DocumentMoniker": "F:\\STUDY\\DB Final Project\\DBS25F006\\DBFinalProject\\DBFinalProject\\GeneralMenu.cs",
-              "RelativeDocumentMoniker": "DBFinalProject\\GeneralMenu.cs",
-              "ToolTip": "F:\\STUDY\\DB Final Project\\DBS25F006\\DBFinalProject\\DBFinalProject\\GeneralMenu.cs [Design]",
-              "RelativeToolTip": "DBFinalProject\\GeneralMenu.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T15:38:40.07Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "F:\\STUDY\\DB Final Project\\DBS25F006\\DBFinalProject\\DBFinalProject\\Form1.cs",
-              "RelativeDocumentMoniker": "DBFinalProject\\Form1.cs",
-              "ToolTip": "F:\\STUDY\\DB Final Project\\DBS25F006\\DBFinalProject\\DBFinalProject\\Form1.cs",
-              "RelativeToolTip": "DBFinalProject\\Form1.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAawCcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T07:35:48.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "F:\\STUDY\\DB Final Project\\DBS25F006\\DBFinalProject\\DBFinalProject\\Form1.cs",
-              "RelativeDocumentMoniker": "DBFinalProject\\Form1.cs",
-              "ToolTip": "F:\\STUDY\\DB Final Project\\DBS25F006\\DBFinalProject\\DBFinalProject\\Form1.cs [Design]",
-              "RelativeToolTip": "DBFinalProject\\Form1.cs [Design]",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\Form1.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\Form1.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\Form1.cs [Design]",
+              "RelativeToolTip": "DBFinalProject\\UI\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T04:14:46.102Z",
+              "WhenOpened": "2025-04-29T06:33:16.562Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\Form1.Designer.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\Form1.Designer.cs",
+              "RelativeToolTip": "DBFinalProject\\UI\\Form1.Designer.cs",
+              "ViewState": "AgIAAMYAAAAAAAAAAAD4v8YAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T08:12:12.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SignUp.cs [Design]",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\SignUp.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\SignUp.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\SignUp.cs [Design]",
+              "RelativeToolTip": "DBFinalProject\\UI\\SignUp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T06:30:58.186Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ResetPassword.Designer.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ResetPassword.Designer.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\ResetPassword.Designer.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ResetPassword.Designer.cs",
+              "RelativeToolTip": "DBFinalProject\\UI\\ResetPassword.Designer.cs",
+              "ViewState": "AgIAAHIAAACA//////8nwIkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T02:23:00.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SignUpORApply.cs [Design]",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\SignUpORApply.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\SignUpORApply.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\SignUpORApply.cs [Design]",
+              "RelativeToolTip": "DBFinalProject\\UI\\SignUpORApply.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T16:07:10.735Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ResetPassword01.Designer.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ResetPassword01.Designer.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\ResetPassword01.Designer.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ResetPassword01.Designer.cs",
+              "RelativeToolTip": "DBFinalProject\\UI\\ResetPassword01.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T03:51:56.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ResetPassword01.cs [Design]",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ResetPassword01.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\ResetPassword01.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ResetPassword01.cs [Design]",
+              "RelativeToolTip": "DBFinalProject\\UI\\ResetPassword01.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T03:09:06.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "password.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\password.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\DL\\password.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\password.cs",
+              "RelativeToolTip": "DBFinalProject\\DL\\password.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T08:15:15.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\Utility\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\Utility\\DatabaseHelper.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\Utility\\DatabaseHelper.cs",
+              "RelativeToolTip": "DBFinalProject\\Utility\\DatabaseHelper.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAvwC8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T01:22:32.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ResetPasswordDL.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\ResetPasswordDL.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\DL\\ResetPasswordDL.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\ResetPasswordDL.cs",
+              "RelativeToolTip": "DBFinalProject\\DL\\ResetPasswordDL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T06:52:30.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\Utility\\EmailSender.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\Utility\\EmailSender.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\Utility\\EmailSender.cs",
+              "RelativeToolTip": "DBFinalProject\\Utility\\EmailSender.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA9wBQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T01:22:48.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SignUp02.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\SignUp02.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\SignUp02.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\SignUp02.cs",
+              "RelativeToolTip": "DBFinalProject\\UI\\SignUp02.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T06:40:49.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SignUp.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\SignUp.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\SignUp.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\SignUp.cs",
+              "RelativeToolTip": "DBFinalProject\\UI\\SignUp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T06:33:35.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SignUp02.cs [Design]",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\SignUp02.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\SignUp02.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\SignUp02.cs [Design]",
+              "RelativeToolTip": "DBFinalProject\\UI\\SignUp02.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T06:31:24.511Z"
             }
           ]
         }

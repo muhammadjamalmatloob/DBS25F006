@@ -13,6 +13,9 @@ namespace DBFinalProject
 {
     public partial class GeneralMenu : KryptonForm
     {
+        public int client_id;
+        public string acc_num;
+        public decimal balance;
         public GeneralMenu()
         {
             InitializeComponent();
@@ -44,6 +47,7 @@ namespace DBFinalProject
         private void button1_Click(object sender, EventArgs e)
         {
             commonInterface1.Visible = false;
+            ClientDepositMoney clientDepositMoney = new ClientDepositMoney(client_id,acc_num,balance);
             clientDepositMoney1.Visible = true;
             sendMoney1.Visible = false;
             withdraw1.Visible = false;
