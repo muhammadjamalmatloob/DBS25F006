@@ -114,13 +114,16 @@
     <Compile Include="BL\BranchBL.cs" />
     <Compile Include="BL\ClientBL.cs" />
     <Compile Include="BL\CurrencyExchangeBL.cs" />
+    <Compile Include="BL\EmployeeBL.cs" />
     <Compile Include="BL\LoanApplicationBL.cs" />
     <Compile Include="BL\LoginBL.cs" />
     <Compile Include="BL\PaymentBL.cs" />
     <Compile Include="BL\TransactionBL.cs" />
+    <Compile Include="BL\UserBL.cs" />
     <Compile Include="DL\BranchDL.cs" />
     <Compile Include="DL\ClientDL.cs" />
     <Compile Include="DL\CurrencyExchangeDL.cs" />
+    <Compile Include="DL\EmployeeDL.cs" />
     <Compile Include="DL\LoanApplicationDL.cs" />
     <Compile Include="DL\LoginDL.cs" />
     <Compile Include="DL\password.cs" />
@@ -128,7 +131,6 @@
     <Compile Include="DL\ResetPasswordDL.cs" />
     <Compile Include="DL\SignUpDL.cs" />
     <Compile Include="DL\TransactionDL.cs" />
-
     <Compile Include="UI\SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,11 +143,7 @@
     <Compile Include="UI\SignUp02.Designer.cs">
       <DependentUpon>SignUp02.cs</DependentUpon>
     </Compile>
-
-
     <Compile Include="DL\UserDL.cs" />
-
-
     <Compile Include="UI\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -471,6 +469,8 @@
     <EmbeddedResource Include="UI\Withdraw.resx">
       <DependentUpon>Withdraw.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".vs\DBFinalProject.csproj.dtbcache.json" />
+    <None Include="bin\Debug\DBFinalProject.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -487,6 +487,49 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\BouncyCastle.Cryptography.dll" />
+    <Content Include="bin\Debug\BouncyCastle.Cryptography.xml" />
+    <Content Include="bin\Debug\ComponentFactory.Krypton.Toolkit.dll" />
+    <Content Include="bin\Debug\DBFinalProject.exe" />
+    <Content Include="bin\Debug\DBFinalProject.pdb" />
+    <Content Include="bin\Debug\Google.Protobuf.dll" />
+    <Content Include="bin\Debug\Google.Protobuf.pdb" />
+    <Content Include="bin\Debug\Google.Protobuf.xml" />
+    <Content Include="bin\Debug\K4os.Compression.LZ4.dll" />
+    <Content Include="bin\Debug\K4os.Compression.LZ4.Streams.dll" />
+    <Content Include="bin\Debug\K4os.Compression.LZ4.Streams.xml" />
+    <Content Include="bin\Debug\K4os.Compression.LZ4.xml" />
+    <Content Include="bin\Debug\K4os.Hash.xxHash.dll" />
+    <Content Include="bin\Debug\K4os.Hash.xxHash.xml" />
+    <Content Include="bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <Content Include="bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml" />
+    <Content Include="bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+    <Content Include="bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml" />
+    <Content Include="bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll" />
+    <Content Include="bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml" />
+    <Content Include="bin\Debug\MySql.Data.dll" />
+    <Content Include="bin\Debug\MySql.Data.xml" />
+    <Content Include="bin\Debug\MySqlConnector.dll" />
+    <Content Include="bin\Debug\MySqlConnector.xml" />
+    <Content Include="bin\Debug\System.Buffers.dll" />
+    <Content Include="bin\Debug\System.Buffers.xml" />
+    <Content Include="bin\Debug\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="bin\Debug\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="bin\Debug\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\Debug\System.Diagnostics.DiagnosticSource.xml" />
+    <Content Include="bin\Debug\System.IO.Pipelines.dll" />
+    <Content Include="bin\Debug\System.IO.Pipelines.xml" />
+    <Content Include="bin\Debug\System.Memory.dll" />
+    <Content Include="bin\Debug\System.Memory.xml" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.dll" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.xml" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.xml" />
+    <Content Include="bin\Debug\ZstdSharp.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
