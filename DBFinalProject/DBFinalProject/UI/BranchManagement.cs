@@ -127,7 +127,7 @@ namespace DBFinalProject
             BranchBL branch = new BranchBL();
 
             branch.set_branch_name(kryptonTextBox2.Text);
-            branch.set_branch_code(Convert.ToInt32(kryptonTextBox3.Text));
+            //branch.set_branch_code(Convert.ToInt32(kryptonTextBox3.Text));
             branch.set_address(kryptonTextBox4.Text);
             branch.set_contact(kryptonTextBox5.Text);
             branch.set_city(kryptonTextBox6.Text);
@@ -138,8 +138,10 @@ namespace DBFinalProject
             if (BranchDL.AddBranchInDb(branch))
             {
                 MessageBox.Show("Branch Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                int branch_id = 0;
                 branch.set_branch_id(BranchDL.GetBranchIdByName(branch.get_branch_name()));
+                branch_id = branch.get_branch_id();
+                branch.set_branch_code(BranchDL.getCodeById(branch_id));
                 BranchDL.AddBranch(branch);
             }
             else
@@ -159,23 +161,23 @@ namespace DBFinalProject
 
         }
 
-        private void kryptonTextBox3_Enter(object sender, EventArgs e)
-        {
-            if (kryptonTextBox3.Text == "Branch Code ")
-            {
-                kryptonTextBox3.Text = "";
-                kryptonTextBox3.ForeColor = Color.Black;
-            }
-        }
+        //private void kryptonTextBox3_Enter(object sender, EventArgs e)
+        //{
+        //    if (kryptonTextBox3.Text == "Branch Code ")
+        //    {
+        //        kryptonTextBox3.Text = "";
+        //        kryptonTextBox3.ForeColor = Color.Black;
+        //    }
+        //}
 
-        private void kryptonTextBox3_Leave(object sender, EventArgs e)
-        {
-            if (kryptonTextBox3.Text == "")
-            {
-                kryptonTextBox3.Text = "Branch Code ";
-                kryptonTextBox3.ForeColor = Color.Black;
-            }
-        }
+        //private void kryptonTextBox3_Leave(object sender, EventArgs e)
+        //{
+        //    if (kryptonTextBox3.Text == "")
+        //    {
+        //        kryptonTextBox3.Text = "Branch Code ";
+        //        kryptonTextBox3.ForeColor = Color.Black;
+        //    }
+        //}
 
         private void kryptonTextBox3_TextChanged(object sender, EventArgs e)
         {
@@ -187,18 +189,18 @@ namespace DBFinalProject
             if (kryptonTextBox4.Text == "Address ")
             {
                 kryptonTextBox4.Text = "";
-                
-                kryptonButton4.StateCommon.Content.ShortText.Color1 = Color.Black;
+
+                kryptonTextBox4.StateCommon.Content.Color1 = Color.Black;
 
             }
         }
 
         private void kryptonTextBox4_Leave(object sender, EventArgs e)
         {
-            if (kryptonTextBox3.Text == "")
+            if (kryptonTextBox4.Text == "")
             {
-                kryptonTextBox3.Text = "Address ";
-                kryptonButton4.StateCommon.Content.ShortText.Color1 = Color.Black;
+                kryptonTextBox4.Text = "Address ";
+                kryptonTextBox4.StateCommon.Content.Color1 = Color.Gray;
             }
         }
 

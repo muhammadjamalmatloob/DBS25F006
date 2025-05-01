@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using DBFinalProject.UI;
 
 namespace DBFinalProject
 {
@@ -47,6 +48,10 @@ namespace DBFinalProject
             //ApproveApplicationscs approveApplicationscs = new ApproveApplicationscs();
             //approveApplicationscs.Show();
             //this.Hide();
+
+            AccountTypeManagement accountType = new AccountTypeManagement();
+            accountType.Show();
+            this.Hide();
         }
 
         private void kryptonButton4_Click(object sender, EventArgs e)

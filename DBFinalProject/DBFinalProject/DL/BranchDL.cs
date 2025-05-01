@@ -39,9 +39,24 @@ namespace DBFinalProject.DL
         }
         public static bool AddBranchInDb(BranchBL branch)
         {
-            string query = $"INSERT INTO branches (branch_name, branch_code, address, contact, city, country) VALUES ('{branch.get_branch_name()}', {branch.get_branch_code()}, '{branch.get_address()}', '{branch.get_contact()}', '{branch.get_city()}', '{branch.get_country()}')";
+            string query = $"INSERT INTO branches (branch_name, branch_code, address, contact, city, country) VALUES ('{branch.get_branch_name()}', 0, '{branch.get_address()}', '{branch.get_contact()}', '{branch.get_city()}', '{branch.get_country()}')";
             return DatabaseHelper.Instance.Update(query) > 0;
         }
+
+        public static int getCodeById(int branch_id)
+        {
+            string query = $"SELECT branch_code FROM branches WHERE branch_id = {branch_id}";
+            int branch_code = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    branch_code = Convert.ToInt32(reader["branch_code"].ToString());
+                }
+            }
+            return branch_code;
+        }
+
 
         public static int GetBranchIdByCode(int branch_code)
         {
