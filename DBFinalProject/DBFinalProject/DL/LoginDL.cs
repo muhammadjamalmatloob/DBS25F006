@@ -8,7 +8,7 @@ using DBFinalProject.Utility;
 
 namespace DBFinalProject.DL
 {
-    public class LoginDL : password
+    public class LoginDL : PasswordFunc
     {
         public static LoginBL user;
         public static bool LoadData(string username, string password)

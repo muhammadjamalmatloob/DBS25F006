@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DBFinalProject.DL
 {
-    public class password
+    public class PasswordFunc
     {
         public static string HashPassword(string password)
         {

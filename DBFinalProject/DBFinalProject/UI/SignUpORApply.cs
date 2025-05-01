@@ -27,7 +27,7 @@ namespace DBFinalProject.UI
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new SignUp02().Show();
+            new ApplicationForm().Show();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)

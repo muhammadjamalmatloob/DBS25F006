@@ -19,6 +19,7 @@ namespace DBFinalProject
         string otp;
         public static string email;
         private int timeLeft = 120;
+        int numberOfverification = 0;
         public ResetPassword()
         {
             
@@ -67,7 +68,7 @@ namespace DBFinalProject
                 otp = GenerateRandomOtp();
                 string subject = "Password Reset OTP";
                 string body = $"Your OTP is {otp}." +
-                    $"\nPlease don't share it with anyone.";
+                    $"\nPlease don't share it with anyone. It will expire in 2 minutes.";
                 Task<bool> result = EmailSender.SendEmailAsync(email, subject, body);
                 kryptonButton1.Text = "Sending...";
                 kryptonButton1.Enabled = false;
@@ -89,7 +90,9 @@ namespace DBFinalProject
                 else
                 {
                     MessageBox.Show("Failed to send OTP. Please check your email and try again.");
+                    ResetOtpFields();
                 }
+                
             }
             
         }
@@ -106,16 +109,22 @@ namespace DBFinalProject
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
+            numberOfverification++;
             string entered_otp = kryptonTextBox2.Text;
-            if (entered_otp == otp)
+            if(numberOfverification >= 3)
+            {
+                MessageBox.Show("No more option left. Invalid attempt to access an account.");
+            }
+            else if (entered_otp == otp)
             {
                 MessageBox.Show("OTP verified. You can now reset your password.");
                 new ResetPassword01().Show();
                 this.Hide();
+                otp = null;
             }
             else
             {
-                MessageBox.Show("Incorrect OTP. Please try again.");
+                MessageBox.Show($"Incorrect OTP.{3 - numberOfverification} more option(s) left. Please try again.");
             }
         }
 
@@ -129,9 +138,9 @@ namespace DBFinalProject
             timeLeft--;
 
             
-            timerLabel.Text = $"Time left: {timeLeft / 60}:{timeLeft % 60:D2}";
+            timerLabel.Text = $"Time left: {timeLeft / 60:D2}:{timeLeft % 60:D2}";
 
-            if (timeLeft <= 0)
+            if (timeLeft <= 0 && otp != null)
             {
                 timer1.Stop();
                 MessageBox.Show("OTP has expired. Please request a new one.", "OTP Expired", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -145,8 +154,11 @@ namespace DBFinalProject
             timerLabel.Visible = false;
             kryptonLabel1.Visible = false;
             kryptonTextBox1.Enabled = true;
+            kryptonTextBox1.Text = "Enter Email";
+            kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             kryptonButton1.Enabled = true;
             kryptonButton1.Text = "Resend OTP";
+            numberOfverification = 0;
             timeLeft = 120; 
             otp = null; 
         }

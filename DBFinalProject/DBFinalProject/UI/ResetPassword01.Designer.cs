@@ -40,8 +40,17 @@
             this.pass = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.PasswordInstructions = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonButton12 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PasswordInstructions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PasswordInstructions.Panel)).BeginInit();
+            this.PasswordInstructions.Panel.SuspendLayout();
+            this.PasswordInstructions.SuspendLayout();
             this.SuspendLayout();
             // 
             // myPallet
@@ -139,7 +148,6 @@
             // 
             // kryptonManager1
             // 
-            this.kryptonManager1.GlobalPalette = this.myPallet;
             this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
             // 
             // Closebtn
@@ -256,11 +264,85 @@
             this.kryptonTextBox1.GotFocus += new System.EventHandler(this.kryptonTextBox1_Focus);
             this.kryptonTextBox1.LostFocus += new System.EventHandler(this.kryptonTextBox1_LostFocus);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(497, 323);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(83, 13);
+            this.linkLabel1.TabIndex = 30;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "See Instructions";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // PasswordInstructions
+            // 
+            this.PasswordInstructions.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.HeaderDockActive;
+            this.PasswordInstructions.Location = new System.Drawing.Point(137, 97);
+            this.PasswordInstructions.Margin = new System.Windows.Forms.Padding(2);
+            this.PasswordInstructions.Name = "PasswordInstructions";
+            this.PasswordInstructions.Palette = this.myPallet;
+            this.PasswordInstructions.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            // 
+            // PasswordInstructions.Panel
+            // 
+            this.PasswordInstructions.Panel.Controls.Add(this.label1);
+            this.PasswordInstructions.Panel.Controls.Add(this.label2);
+            this.PasswordInstructions.Panel.Controls.Add(this.kryptonButton12);
+            this.PasswordInstructions.Size = new System.Drawing.Size(403, 239);
+            this.PasswordInstructions.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.PasswordInstructions.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
+            this.PasswordInstructions.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
+            this.PasswordInstructions.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PasswordInstructions.StateCommon.Border.Rounding = 15;
+            this.PasswordInstructions.StateCommon.Border.Width = 3;
+            this.PasswordInstructions.TabIndex = 36;
+            this.PasswordInstructions.Values.Heading = "PASSWORD INSTRUCTIONS";
+            this.PasswordInstructions.Visible = false;
+            // 
+            // kryptonButton12
+            // 
+            this.kryptonButton12.Location = new System.Drawing.Point(289, 160);
+            this.kryptonButton12.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonButton12.Name = "kryptonButton12";
+            this.kryptonButton12.Palette = this.myPallet;
+            this.kryptonButton12.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kryptonButton12.Size = new System.Drawing.Size(83, 33);
+            this.kryptonButton12.TabIndex = 25;
+            this.kryptonButton12.Values.Text = "Ok";
+            this.kryptonButton12.Click += new System.EventHandler(this.kryptonButton12_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label2.Location = new System.Drawing.Point(3, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 26);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Instructions";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label1.Location = new System.Drawing.Point(3, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(364, 120);
+            this.label1.TabIndex = 28;
+            this.label1.Text = resources.GetString("label1.Text");
+            // 
             // ResetPassword01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 450);
+            this.Controls.Add(this.PasswordInstructions);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.kryptonTextBox1);
             this.Controls.Add(this.pass);
             this.Controls.Add(this.checkBox1);
@@ -270,6 +352,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.kryptonButton2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.HelpButton = true;
             this.Name = "ResetPassword01";
             this.Palette = this.myPallet;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
@@ -277,6 +360,11 @@
             this.Text = "ResetPassword01";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PasswordInstructions.Panel)).EndInit();
+            this.PasswordInstructions.Panel.ResumeLayout(false);
+            this.PasswordInstructions.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PasswordInstructions)).EndInit();
+            this.PasswordInstructions.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,5 +382,10 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox pass;
         private System.Windows.Forms.CheckBox checkBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox PasswordInstructions;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton12;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

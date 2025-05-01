@@ -23,7 +23,7 @@ namespace DBFinalProject.BL
         {
             this.username = username;
             this.email = email;
-            this.password_hash = password_hash;
+            this.password = password_hash;
             this.role_id = role_id;
             this.first_name = first_name;
             this.last_name = last_name;

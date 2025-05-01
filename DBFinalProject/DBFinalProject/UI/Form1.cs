@@ -151,6 +151,7 @@ namespace DBFinalProject
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             pass.PasswordChar = '•';
+            
         }
 
         private void forgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
