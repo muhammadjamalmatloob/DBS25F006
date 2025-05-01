@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace DBFinalProject.BL
@@ -14,7 +15,7 @@ namespace DBFinalProject.BL
 
         protected string email;
 
-        protected string password_hash;
+        protected string password;
 
         protected int role_id;
 
@@ -24,14 +25,14 @@ namespace DBFinalProject.BL
             user_id = 0;
             username = "";
             email = "";
-            password_hash = "";
+            password = "";
             role_id = 0;
         }
-        public UserBL(string username, string email, string password_hash, int role_id)
+        public UserBL(string username, string email, string password, int role_id)
         {
             this.username = username;
             this.email = email;
-            this.password_hash = password_hash;
+            this.password = password;
             this.role_id = role_id;
         }
 
@@ -44,9 +45,26 @@ namespace DBFinalProject.BL
             return this.user_id;
         }
 
-        public void set_username(string username)
+        public (bool isValid, string errorMessage) set_username(string username)
         {
+            if (string.IsNullOrEmpty(password))
+            {
+                return (false, "Username cannot be empty.");
+            }
+            else if (username.Length < 8)
+            {
+                return (false, $"Username must be at least 8 characters long.");
+            }
+            else if (!Regex.IsMatch(username, "[A-Z],[a-z]"))
+            {
+                return (false, "Username must contain at least one letter.");
+            }
+            if (!Regex.IsMatch(username, "[0-9]"))
+            {
+                return (false, "Username must contain at least one digit.");
+            }
             this.username = username;
+            return (true, "");
         }
         public string get_username()
         {
@@ -63,13 +81,43 @@ namespace DBFinalProject.BL
             return this.email;
         }
 
-        public void set_password_hash(string password_hash)
+        public (bool isValid, string errorMessage) set_password(string password)
         {
-            this.password_hash = password_hash;
+            if (string.IsNullOrEmpty(password))
+            {
+                return (false, "Password cannot be empty.");
+            }
+
+            if (password.Length < 8)
+            {
+                return (false, $"Password must be at least 8 characters long.");
+            }
+
+            if (!Regex.IsMatch(password, "[A-Z]"))
+            {
+                return (false, "Password must contain at least one uppercase letter.");
+            }
+
+            if (!Regex.IsMatch(password, "[a-z]"))
+            {
+                return (false, "Password must contain at least one lowercase letter.");
+            }
+
+            if (!Regex.IsMatch(password, "[0-9]"))
+            {
+                return (false, "Password must contain at least one digit.");
+            }
+
+            if (!Regex.IsMatch(password, "[^a-zA-Z0-9]"))
+            {
+                return (false, "Password must contain at least one special character.");
+            }
+            this.password = password;
+            return (true, "");
         }
-        public string get_password_hash()
+        public string get_password()
         {
-            return this.password_hash;
+            return this.password;
         }
         public void set_role_id(int role_id)
         {
