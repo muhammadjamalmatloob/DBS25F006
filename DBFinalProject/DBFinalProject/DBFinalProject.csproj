@@ -111,24 +111,37 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="BL\AccountApplicationBL.cs" />
     <Compile Include="BL\AccountType.cs" />
+
+    <Compile Include="BL\AccountTypeBL.cs" />
+
     <Compile Include="BL\BranchBL.cs" />
     <Compile Include="BL\ClientBL.cs" />
     <Compile Include="BL\CurrencyExchangeBL.cs" />
     <Compile Include="BL\EmployeeBL.cs" />
     <Compile Include="BL\LoanApplicationBL.cs" />
+
+    <Compile Include="BL\LoanTypeBL.cs" />
     <Compile Include="BL\LoginBL.cs" />
+
     <Compile Include="BL\PaymentBL.cs" />
     <Compile Include="BL\TransactionBL.cs" />
     <Compile Include="BL\UserBL.cs" />
+    <Compile Include="DL\AccountTypeDL.cs" />
     <Compile Include="DL\BranchDL.cs" />
     <Compile Include="DL\ClientDL.cs" />
     <Compile Include="DL\CurrencyExchangeDL.cs" />
     <Compile Include="DL\EmployeeDL.cs" />
     <Compile Include="DL\LoanApplicationDL.cs" />
+
+    <Compile Include="DL\LoanTypeDL.cs" />
+
     <Compile Include="DL\LoginDL.cs" />
+
     <Compile Include="DL\PasswordFunc.cs" />
+
     <Compile Include="DL\PaymentDL.cs" />
     <Compile Include="DL\ResetPasswordDL.cs" />
     <Compile Include="DL\SignUpDL.cs" />
@@ -147,6 +160,12 @@
       <DependentUpon>SignUp02.cs</DependentUpon>
     </Compile>
     <Compile Include="DL\UserDL.cs" />
+    <Compile Include="UI\AccountTypeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AccountTypeManagement.Designer.cs">
+      <DependentUpon>AccountTypeManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -353,8 +372,14 @@
     <Compile Include="UI\Withdraw.Designer.cs">
       <DependentUpon>Withdraw.cs</DependentUpon>
     </Compile>
+
+    <EmbeddedResource Include="UI\AccountTypeManagement.resx">
+      <DependentUpon>AccountTypeManagement.cs</DependentUpon>
+    </EmbeddedResource>
+
     <Compile Include="Utility\DatabaseHelper.cs" />
     <Compile Include="Utility\EmailSender.cs" />
+
     <EmbeddedResource Include="UI\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>

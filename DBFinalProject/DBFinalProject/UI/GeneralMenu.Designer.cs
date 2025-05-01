@@ -47,11 +47,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.commonInterface1 = new DBFinalProject.CommonInterface();
-            this.clientDepositMoney1 = new DBFinalProject.ClientDepositMoney();
+            //this.clientDepositMoney1 = new DBFinalProject.ClientDepositMoney();
             this.sendMoney1 = new DBFinalProject.SendMoney();
             this.withdraw1 = new DBFinalProject.Withdraw();
             this.clientLoan1 = new DBFinalProject.ClientLoan();
-            this.clientCurrencyExchange1 = new DBFinalProject.ClientCurrencyExchange();
+            //this.clientCurrencyExchange1 = new DBFinalProject.ClientCurrencyExchange();
             this.clientBill1 = new DBFinalProject.ClientBill();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();

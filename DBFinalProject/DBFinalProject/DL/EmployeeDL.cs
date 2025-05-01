@@ -105,6 +105,21 @@ namespace DBFinalProject.DL
             }
         }
 
+        public static bool isDublicateContact(string contact)
+        {
+            string query = $"SELECT * FROM employees WHERE contact = '{contact}'";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
 
         public static int get_employee_id(string contact)
         {
@@ -166,6 +181,7 @@ namespace DBFinalProject.DL
 
         public static void LoadAllEmployeeInList()
         {
+            employees.Clear();
             string query = "SELECT * FROM employees";
             using (var reader = DatabaseHelper.Instance.getData(query))
             {

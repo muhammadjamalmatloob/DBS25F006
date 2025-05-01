@@ -15,33 +15,30 @@ namespace DBFinalProject.DL
     {
         public static List<BranchBL> branchList = new List<BranchBL>();
 
-        public static void AddBranch(BranchBL branch)
-        {
-            branchList.Add(branch);
-        }
+       
 
-        public static void UpdateBranch(int branch_id_to_update, BranchBL updatedBranch)
-        {
-            foreach (BranchBL branch in branchList)
-            {
-                if (branch.get_branch_id() == branch_id_to_update)
-                {
-                    branch.set_address(updatedBranch.get_address());
-                    branch.set_city(updatedBranch.get_city());
-                    branch.set_contact(updatedBranch.get_contact());
-                    branch.set_country(updatedBranch.get_country());
-                }
-            }
-        }
-        public static void RemoveBranch(BranchBL branchToRemove, int branch_id_to_delete)
-        {
-            branchList.RemoveAll(b => b.get_branch_id() == branch_id_to_delete);
-        }
+        
+       
         public static bool AddBranchInDb(BranchBL branch)
         {
-            string query = $"INSERT INTO branches (branch_name, branch_code, address, contact, city, country) VALUES ('{branch.get_branch_name()}', {branch.get_branch_code()}, '{branch.get_address()}', '{branch.get_contact()}', '{branch.get_city()}', '{branch.get_country()}')";
+            string query = $"INSERT INTO branches (branch_name, branch_code, address, contact, city, country) VALUES ('{branch.get_branch_name()}', 0, '{branch.get_address()}', '{branch.get_contact()}', '{branch.get_city()}', '{branch.get_country()}')";
             return DatabaseHelper.Instance.Update(query) > 0;
         }
+
+        public static int getCodeById(int branch_id)
+        {
+            string query = $"SELECT branch_code FROM branches WHERE branch_id = {branch_id}";
+            int branch_code = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    branch_code = Convert.ToInt32(reader["branch_code"].ToString());
+                }
+            }
+            return branch_code;
+        }
+
 
         public static int GetBranchIdByCode(int branch_code)
         {
@@ -51,6 +48,7 @@ namespace DBFinalProject.DL
 
         public static void LoadAllDataInList()
         {
+            branchList.Clear();
             string query = "SELECT * FROM branches";
             using (var reader = DatabaseHelper.Instance.getData(query))
             {
@@ -161,6 +159,38 @@ namespace DBFinalProject.DL
                     branch.get_city(),
                     branch.get_country()
                 );
+            }
+        }
+
+        public static bool isDublicateBranch(string name)
+        {
+            string query = $"SELECT * FROM branches WHERE branch_name = '{name}'";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public static bool isDublicateContact(string contact)
+        {
+            string query = $"SELECT * FROM branches WHERE contact = '{contact}'";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
     }

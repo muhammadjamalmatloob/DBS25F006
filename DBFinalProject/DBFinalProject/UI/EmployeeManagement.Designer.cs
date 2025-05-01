@@ -50,6 +50,14 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.dataGrid = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GrpAdd = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.kryptonComboBox2 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
@@ -88,14 +96,6 @@
             this.kryptonButton16 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonTextBox9 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox10 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpBox)).BeginInit();
@@ -460,6 +460,62 @@
             this.dataGrid.Size = new System.Drawing.Size(1197, 629);
             this.dataGrid.TabIndex = 1;
             // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Employee Id";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // col1
+            // 
+            this.col1.HeaderText = "Name";
+            this.col1.MinimumWidth = 6;
+            this.col1.Name = "col1";
+            this.col1.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Username";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // col2
+            // 
+            this.col2.HeaderText = "Email";
+            this.col2.MinimumWidth = 6;
+            this.col2.Name = "col2";
+            this.col2.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Department";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Position";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Branch ";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Salary";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
+            // 
             // GrpAdd
             // 
             this.GrpAdd.Location = new System.Drawing.Point(553, 114);
@@ -542,7 +598,13 @@
             this.kryptonComboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.kryptonComboBox8.DropDownWidth = 227;
             this.kryptonComboBox8.Items.AddRange(new object[] {
-            "Select Department"});
+            "Select Department",
+            "Finance",
+            "Loans",
+            "Customer Service",
+            "IT Support",
+            "Operations",
+            "Compliance"});
             this.kryptonComboBox8.Location = new System.Drawing.Point(354, 191);
             this.kryptonComboBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonComboBox8.Name = "kryptonComboBox8";
@@ -822,7 +884,13 @@
             this.kryptonComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.kryptonComboBox4.DropDownWidth = 227;
             this.kryptonComboBox4.Items.AddRange(new object[] {
-            "Select Department"});
+            "Select Department",
+            "Finance",
+            "Loans",
+            "Customer Service",
+            "IT Support",
+            "Operations",
+            "Compliance"});
             this.kryptonComboBox4.Location = new System.Drawing.Point(138, 239);
             this.kryptonComboBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonComboBox4.Name = "kryptonComboBox4";
@@ -1113,62 +1181,6 @@
             this.kryptonTextBox10.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox10.TabIndex = 20;
             this.kryptonTextBox10.Text = "Email";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Employee Id";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // col1
-            // 
-            this.col1.HeaderText = "Name";
-            this.col1.MinimumWidth = 6;
-            this.col1.Name = "col1";
-            this.col1.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Username";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // col2
-            // 
-            this.col2.HeaderText = "Email";
-            this.col2.MinimumWidth = 6;
-            this.col2.Name = "col2";
-            this.col2.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Department";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Position";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Branch ";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Salary";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
             // 
             // EmployeeManagement
             // 

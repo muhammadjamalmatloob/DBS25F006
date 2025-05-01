@@ -60,7 +60,6 @@
             this.kryptonTextBox6 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox5 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox4 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.GrpUpdate = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.kryptonTextBox7 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -370,7 +369,6 @@
             this.GrpAdd.Panel.Controls.Add(this.kryptonTextBox6);
             this.GrpAdd.Panel.Controls.Add(this.kryptonTextBox5);
             this.GrpAdd.Panel.Controls.Add(this.kryptonTextBox4);
-            this.GrpAdd.Panel.Controls.Add(this.kryptonTextBox3);
             this.GrpAdd.Panel.Controls.Add(this.kryptonTextBox2);
             this.GrpAdd.Size = new System.Drawing.Size(676, 481);
             this.GrpAdd.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -437,7 +435,7 @@
             // 
             // kryptonTextBox6
             // 
-            this.kryptonTextBox6.Location = new System.Drawing.Point(355, 278);
+            this.kryptonTextBox6.Location = new System.Drawing.Point(355, 235);
             this.kryptonTextBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonTextBox6.Name = "kryptonTextBox6";
             this.kryptonTextBox6.Size = new System.Drawing.Size(272, 40);
@@ -475,7 +473,7 @@
             // 
             // kryptonTextBox4
             // 
-            this.kryptonTextBox4.Location = new System.Drawing.Point(355, 190);
+            this.kryptonTextBox4.Location = new System.Drawing.Point(355, 139);
             this.kryptonTextBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonTextBox4.Name = "kryptonTextBox4";
             this.kryptonTextBox4.Size = new System.Drawing.Size(272, 40);
@@ -494,31 +492,9 @@
             this.kryptonTextBox4.Enter += new System.EventHandler(this.kryptonTextBox4_Enter);
             this.kryptonTextBox4.Leave += new System.EventHandler(this.kryptonTextBox4_Leave);
             // 
-            // kryptonTextBox3
-            // 
-            this.kryptonTextBox3.Location = new System.Drawing.Point(355, 103);
-            this.kryptonTextBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonTextBox3.Name = "kryptonTextBox3";
-            this.kryptonTextBox3.Size = new System.Drawing.Size(272, 40);
-            this.kryptonTextBox3.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox3.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
-            this.kryptonTextBox3.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
-            this.kryptonTextBox3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox3.StateCommon.Border.Rounding = 15;
-            this.kryptonTextBox3.StateCommon.Border.Width = 1;
-            this.kryptonTextBox3.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.kryptonTextBox3.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox3.TabIndex = 16;
-            this.kryptonTextBox3.Text = "Branch Code ";
-            this.kryptonTextBox3.TextChanged += new System.EventHandler(this.kryptonTextBox3_TextChanged);
-            this.kryptonTextBox3.Enter += new System.EventHandler(this.kryptonTextBox3_Enter);
-            this.kryptonTextBox3.Leave += new System.EventHandler(this.kryptonTextBox3_Leave);
-            // 
             // kryptonTextBox2
             // 
-            this.kryptonTextBox2.Location = new System.Drawing.Point(355, 28);
+            this.kryptonTextBox2.Location = new System.Drawing.Point(355, 54);
             this.kryptonTextBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonTextBox2.Name = "kryptonTextBox2";
             this.kryptonTextBox2.Size = new System.Drawing.Size(272, 40);
@@ -1080,7 +1056,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox6;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox5;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox GrpUpdate;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton12;
