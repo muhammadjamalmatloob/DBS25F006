@@ -129,6 +129,12 @@
             // kryptonComboBox2
             // 
             this.kryptonComboBox2.DropDownWidth = 227;
+            this.kryptonComboBox2.Items.AddRange(new object[] {
+            "Rupees",
+            "Dollars",
+            "Euros",
+            "Pounds",
+            "Riyal"});
             this.kryptonComboBox2.Location = new System.Drawing.Point(281, 47);
             this.kryptonComboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonComboBox2.Name = "kryptonComboBox2";
@@ -192,6 +198,12 @@
             // kryptonComboBox1
             // 
             this.kryptonComboBox1.DropDownWidth = 227;
+            this.kryptonComboBox1.Items.AddRange(new object[] {
+            "Rupees",
+            "Dollars",
+            "Euros",
+            "Pounds",
+            "Riyal"});
             this.kryptonComboBox1.Location = new System.Drawing.Point(281, 116);
             this.kryptonComboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonComboBox1.Name = "kryptonComboBox1";
@@ -219,6 +231,7 @@
             this.kryptonButton1.Size = new System.Drawing.Size(112, 41);
             this.kryptonButton1.TabIndex = 24;
             this.kryptonButton1.Values.Text = "EXCHANGE";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // ClientCurrencyExchange
             // 
