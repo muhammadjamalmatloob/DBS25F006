@@ -126,23 +126,26 @@ namespace DBFinalProject
         {
             BranchBL branch = new BranchBL();
 
-            branch.set_branch_name(kryptonTextBox2.Text);
-            //branch.set_branch_code(Convert.ToInt32(kryptonTextBox3.Text));
-            branch.set_address(kryptonTextBox4.Text);
-            branch.set_contact(kryptonTextBox5.Text);
-            branch.set_city(kryptonTextBox6.Text);
-            branch.set_country(kryptonTextBox9.Text);
+            try
+            {
+                branch.set_branch_name(kryptonTextBox2.Text);
+                //branch.set_branch_code(Convert.ToInt32(kryptonTextBox3.Text));
+                branch.set_address(kryptonTextBox4.Text);
+                branch.set_contact(kryptonTextBox5.Text);
+                branch.set_city(kryptonTextBox6.Text);
+                branch.set_country(kryptonTextBox9.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            
 
             if (BranchDL.AddBranchInDb(branch))
             {
                 MessageBox.Show("Branch Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                int branch_id = 0;
-                branch.set_branch_id(BranchDL.GetBranchIdByName(branch.get_branch_name()));
-                branch_id = branch.get_branch_id();
-                branch.set_branch_code(BranchDL.getCodeById(branch_id));
-                BranchDL.AddBranch(branch);
+                BranchDL.LoadAllDataInList();
             }
             else
             {
@@ -222,9 +225,10 @@ namespace DBFinalProject
             if (BranchDL.DeleteBranchInDb(branch_id))
             {
                 MessageBox.Show("Branch Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show($"{BranchDL.branchList.Count}");
-                BranchDL.RemoveBranch(b, branch_id);
-                MessageBox.Show($"{BranchDL.branchList.Count}");
+                
+                BranchDL.LoadAllDataInList();
+                
+                
             }
             else
             {
@@ -250,15 +254,24 @@ namespace DBFinalProject
             BranchBL branch = new BranchBL();
             branch.set_branch_id(branch_id);
 
-            branch.set_address(kryptonTextBox11.Text);
-            branch.set_city(kryptonTextBox10.Text);
-            branch.set_contact(kryptonTextBox8.Text);
-            branch.set_country(kryptonTextBox7.Text);
+            try
+            {
+                branch.set_address(kryptonTextBox11.Text);
+                branch.set_city(kryptonTextBox10.Text);
+                branch.set_contact(kryptonTextBox8.Text);
+                branch.set_country(kryptonTextBox7.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
 
             if (BranchDL.UpdateBranchInDb(branch))
             {
                 MessageBox.Show("Branch Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                BranchDL.UpdateBranch(branch_id,branch);
+                BranchDL.LoadAllDataInList();
             }
             else
             {

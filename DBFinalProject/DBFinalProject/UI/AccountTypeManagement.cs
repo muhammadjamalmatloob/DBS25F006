@@ -37,11 +37,19 @@ namespace DBFinalProject.UI
         {
             AccountTypeBL accountType = new AccountTypeBL();
 
-            accountType.set_type_name(kryptonTextBox2.Text);
-            accountType.set_descryprtion(kryptonTextBox5.Text);
-            accountType.set_min_balance(Convert.ToInt32(kryptonTextBox3.Text));
-            accountType.set_transaction_limit(Convert.ToInt32(kryptonTextBox7.Text));
-            accountType.set_withdrawl_limit(Convert.ToInt32(kryptonTextBox6.Text));
+            try
+            {
+                accountType.set_type_name(kryptonTextBox2.Text);
+                accountType.set_descryprtion(kryptonTextBox5.Text);
+                accountType.set_min_balance(Convert.ToInt32(kryptonTextBox3.Text));
+                accountType.set_transaction_limit(Convert.ToInt32(kryptonTextBox7.Text));
+                accountType.set_withdrawl_limit(Convert.ToInt32(kryptonTextBox6.Text));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             if (AccountTypeDL.AddAccountTypeInDb(accountType))
             {
@@ -124,15 +132,33 @@ namespace DBFinalProject.UI
         // update accout type 
         private void kryptonButton9_Click(object sender, EventArgs e)
         {
-            string selectedName = kryptonComboBox3.SelectedItem.ToString();
+            string selectedName = "";
+            try
+            {
+                selectedName = kryptonComboBox3.SelectedItem.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Select Account Type first", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             AccountTypeBL accountType = new AccountTypeBL();
             int account_type_id = AccountTypeDL.getIdByName(selectedName);
 
-            accountType.set_type_name(selectedName);
-            accountType.set_descryprtion(kryptonTextBox12.Text);
-            accountType.set_min_balance(Convert.ToInt32(kryptonTextBox10.Text));
-            accountType.set_transaction_limit(Convert.ToInt32(kryptonTextBox11.Text));
-            accountType.set_withdrawl_limit(Convert.ToInt32(kryptonTextBox9.Text));
+            
+
+            try
+            {
+                accountType.set_type_name(selectedName);
+                accountType.set_descryprtion(kryptonTextBox12.Text);
+                accountType.set_min_balance(Convert.ToInt32(kryptonTextBox10.Text));
+                accountType.set_transaction_limit(Convert.ToInt32(kryptonTextBox11.Text));
+                accountType.set_withdrawl_limit(Convert.ToInt32(kryptonTextBox9.Text));
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             if (AccountTypeDL.UpdateAccountTypeInDb(accountType, account_type_id))
             {
@@ -151,10 +177,20 @@ namespace DBFinalProject.UI
             GrpUpdate.Visible = false;
         }
 
+
+        // delete
         private void kryptonButton10_Click(object sender, EventArgs e)
         {
 
-            string selectedName = kryptonComboBox2.SelectedItem.ToString();
+            string selectedName = "";
+            try
+            {
+                selectedName = kryptonComboBox2.SelectedItem.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Select Account Type first", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             int account_type_id = AccountTypeDL.getIdByName(selectedName);
             if (AccountTypeDL.DeleteAccountTypeInDb(account_type_id))
             {
@@ -167,6 +203,7 @@ namespace DBFinalProject.UI
             else
             {
                 MessageBox.Show("Failed to Delete Account Type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
             GrpDelete.Visible = false;
         }
