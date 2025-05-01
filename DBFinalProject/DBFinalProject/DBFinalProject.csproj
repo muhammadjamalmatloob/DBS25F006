@@ -131,6 +131,7 @@
     <Compile Include="DL\ResetPasswordDL.cs" />
     <Compile Include="DL\SignUpDL.cs" />
     <Compile Include="DL\TransactionDL.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="UI\SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
