@@ -4,7 +4,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySqlConnector;
+using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Tls;
 
 namespace DBFinalProject.Utility
 {
@@ -14,8 +15,10 @@ namespace DBFinalProject.Utility
         private String port = "3306";
         private String databaseName = "bank_management";
         private String databaseUser = "root";
-        private String databasePassword = "1234567890-=1234567890-=";
+        private String databasePassword = "jamal251@uet";
+
         private DatabaseHelper() { }
+
         private static DatabaseHelper _instance;
         public static DatabaseHelper Instance
         {
@@ -29,7 +32,8 @@ namespace DBFinalProject.Utility
         public MySqlConnection getConnection()
         {
             string connectionString = $"server={serverName};port={port};user={databaseUser};database ={databaseName}; password ={databasePassword}; SslMode = Required; ";
-            var connection = new MySqlConnection(connectionString);
+            var connection = new
+MySqlConnection(connectionString);
             connection.Open();
             return connection;
         }
@@ -39,7 +43,7 @@ namespace DBFinalProject.Utility
             using (var connection = getConnection())
             {
                 using (var command = new MySqlCommand(query,
-               getConnection()))
+getConnection()))
                 {
                     return command.ExecuteReader();
                 }
@@ -51,14 +55,12 @@ namespace DBFinalProject.Utility
             using (var connection = getConnection())
             {
                 using (var command = new MySqlCommand(query,
-               getConnection()))
+getConnection()))
                 {
                     return command.ExecuteNonQuery();
                 }
             }
+
         }
-
-
-
     }
 }
