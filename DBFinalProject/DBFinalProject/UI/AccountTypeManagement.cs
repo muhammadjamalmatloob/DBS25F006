@@ -257,5 +257,10 @@ namespace DBFinalProject.UI
             apply_filters();
             GrpBox.Visible = false;
         }
+
+        private void myPallet_PalettePaint(object sender, PaletteLayoutEventArgs e)
+        {
+
+        }
     }
 }

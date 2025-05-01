@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="myPallet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="kryptonManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>117, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panel4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -578,6 +572,15 @@
         /wcpiFLFCjwgdwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="myPallet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="kryptonManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>117, 17</value>
+  </metadata>
+  <metadata name="GreenTheme.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 54</value>
+  </metadata>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>265, 17</value>
   </metadata>
@@ -1851,7 +1854,7 @@
   <data name="CnicF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAJsAAACWCAIAAABGnW0FAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAABUxJREFUeF7tnL1y6jAQRu+bpb0PQsV70PAgzOQ9mKFJ65KCYSYlLWWubfSztley
+        wQAADsEBuJFr7QAABUxJREFUeF7tnL1y6jAQRu+bpb0PQsV70PAgzOQ9mKFJ65KCYSYlLWWubfSztley
         pZiw98t3ZpvIwig6rCzbsv98ESxoFA0aRYNG0aBRNGgUDRpFg0bRoFE0aBQNGkWDRtGgUTRoFA0aRYNG
         0aBRNGgUDRpFg0bRoFE0aBQNGkWDRtGgUTRoFA0aRYNG0aBRNGgUDRpFg0bRoFE0aBQNGkWDRtGgUTRo
         FA0aRYNG0bBn9Ho/vp8324+3vy422/PhdL+4zZ7r5yZUeL+7wgmX96avcz66As/p/Pjs7uQKFBa2xBim
@@ -1880,7 +1883,7 @@
   <data name="CnicB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAJsAAACWCAIAAABGnW0FAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAABTpJREFUeF7tnDtu6zAQRd/O0r6FuPI+1GQhBrwPA25eq1KFYSClW5d5+vAnakiJ
+        wQAADsEBuJFr7QAABTpJREFUeF7tnDtu6zAQRd/O0r6FuPI+1GQhBrwPA25eq1KFYSClW5d5+vAnakiJ
         dGKPL+4Bi0SxpQGPZkhFlP58EyxoFA0aRYNG0aBRNGgUDRpFg0bRoFE0aBQNGkWDRtGgUTRoFA0aRYNG
         0aBRNGgUDRpFg0bRoFE0aBQNGkWDRtGgUTRoFA0aRYNG0aBRNGgUDRpFg0bRoFE0aBQNGkWDRtGgUTRo
         FA19Rq/307Hb7f99/DVtt+8O5/vF/Nly/dq5DxzvZuOCy7EdP9OdzAbLuZu+25zNBoGNkShDldH76XMS
