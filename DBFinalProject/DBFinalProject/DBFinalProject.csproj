@@ -128,6 +128,7 @@
     <Compile Include="DL\ResetPasswordDL.cs" />
     <Compile Include="DL\SignUpDL.cs" />
     <Compile Include="DL\TransactionDL.cs" />
+
     <Compile Include="UI\SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +141,11 @@
     <Compile Include="UI\SignUp02.Designer.cs">
       <DependentUpon>SignUp02.cs</DependentUpon>
     </Compile>
+
+
+    <Compile Include="DL\UserDL.cs" />
+
+
     <Compile Include="UI\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
