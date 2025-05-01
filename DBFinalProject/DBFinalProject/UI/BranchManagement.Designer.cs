@@ -43,7 +43,7 @@
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.dgvBranch = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,7 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBranch)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrpAdd.Panel)).BeginInit();
@@ -274,10 +274,10 @@
             this.kryptonButton1.Values.Text = "Apply Filters";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
-            // kryptonDataGridView1
+            // dgvBranch
             // 
-            this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kryptonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvBranch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBranch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column7,
             this.Column1,
             this.Column2,
@@ -285,14 +285,14 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonDataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonDataGridView1.Name = "kryptonDataGridView1";
-            this.kryptonDataGridView1.RowHeadersWidth = 51;
-            this.kryptonDataGridView1.RowTemplate.Height = 24;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(1199, 645);
-            this.kryptonDataGridView1.TabIndex = 5;
+            this.dgvBranch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBranch.Location = new System.Drawing.Point(0, 0);
+            this.dgvBranch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvBranch.Name = "dgvBranch";
+            this.dgvBranch.RowHeadersWidth = 51;
+            this.dgvBranch.RowTemplate.Height = 24;
+            this.dgvBranch.Size = new System.Drawing.Size(1199, 645);
+            this.dgvBranch.TabIndex = 5;
             // 
             // Column7
             // 
@@ -348,7 +348,7 @@
             this.panel3.Controls.Add(this.GrpAdd);
             this.panel3.Controls.Add(this.GrpUpdate);
             this.panel3.Controls.Add(this.GrpBox);
-            this.panel3.Controls.Add(this.kryptonDataGridView1);
+            this.panel3.Controls.Add(this.dgvBranch);
             this.panel3.Location = new System.Drawing.Point(309, 145);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
@@ -540,7 +540,7 @@
             // 
             // GrpUpdate
             // 
-            this.GrpUpdate.Location = new System.Drawing.Point(47, 2);
+            this.GrpUpdate.Location = new System.Drawing.Point(75, 2);
             this.GrpUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GrpUpdate.Name = "GrpUpdate";
             // 
@@ -680,6 +680,7 @@
             this.kryptonButton9.Size = new System.Drawing.Size(116, 41);
             this.kryptonButton9.TabIndex = 23;
             this.kryptonButton9.Values.Text = "UPDATE";
+            this.kryptonButton9.Click += new System.EventHandler(this.kryptonButton9_Click);
             // 
             // GrpBox
             // 
@@ -713,6 +714,7 @@
             this.kryptonButton8.Size = new System.Drawing.Size(140, 48);
             this.kryptonButton8.TabIndex = 29;
             this.kryptonButton8.Values.Text = "Apply";
+            this.kryptonButton8.Click += new System.EventHandler(this.kryptonButton8_Click);
             // 
             // panel5
             // 
@@ -851,7 +853,10 @@
             // 
             // kryptonComboBox1
             // 
+            this.kryptonComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.kryptonComboBox1.DropDownWidth = 227;
+            this.kryptonComboBox1.Items.AddRange(new object[] {
+            ""});
             this.kryptonComboBox1.Location = new System.Drawing.Point(24, 54);
             this.kryptonComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonComboBox1.Name = "kryptonComboBox1";
@@ -868,7 +873,7 @@
             this.kryptonComboBox1.StateCommon.Item.Content.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonComboBox1.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonComboBox1.TabIndex = 27;
-            this.kryptonComboBox1.Text = "Select Branch";
+            this.kryptonComboBox1.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBox1_SelectedIndexChanged);
             // 
             // kryptonButton11
             // 
@@ -1006,7 +1011,7 @@
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBranch)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GrpAdd.Panel)).EndInit();
             this.GrpAdd.Panel.ResumeLayout(false);
@@ -1051,7 +1056,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dgvBranch;
         private System.Windows.Forms.Panel panel3;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox GrpDelete;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton11;
