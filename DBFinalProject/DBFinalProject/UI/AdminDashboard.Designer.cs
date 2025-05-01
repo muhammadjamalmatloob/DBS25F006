@@ -39,7 +39,6 @@ namespace DBFinalProject
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.kryptonButton8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -231,7 +230,6 @@ namespace DBFinalProject
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.panel1.Controls.Add(this.kryptonButton8);
-            this.panel1.Controls.Add(this.kryptonButton4);
             this.panel1.Controls.Add(this.kryptonButton3);
             this.panel1.Controls.Add(this.kryptonButton2);
             this.panel1.Controls.Add(this.kryptonButton5);
@@ -244,26 +242,16 @@ namespace DBFinalProject
             // 
             // kryptonButton8
             // 
-            this.kryptonButton8.Location = new System.Drawing.Point(11, 592);
+            this.kryptonButton8.Location = new System.Drawing.Point(11, 551);
             this.kryptonButton8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonButton8.Name = "kryptonButton8";
             this.kryptonButton8.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton8.TabIndex = 6;
             this.kryptonButton8.Values.Text = "Logout";
             // 
-            // kryptonButton4
-            // 
-            this.kryptonButton4.Location = new System.Drawing.Point(11, 269);
-            this.kryptonButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonButton4.Name = "kryptonButton4";
-            this.kryptonButton4.Size = new System.Drawing.Size(297, 50);
-            this.kryptonButton4.TabIndex = 5;
-            this.kryptonButton4.Values.Text = "Client Management";
-            this.kryptonButton4.Click += new System.EventHandler(this.kryptonButton4_Click);
-            // 
             // kryptonButton3
             // 
-            this.kryptonButton3.Location = new System.Drawing.Point(11, 370);
+            this.kryptonButton3.Location = new System.Drawing.Point(11, 310);
             this.kryptonButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonButton3.Name = "kryptonButton3";
             this.kryptonButton3.Size = new System.Drawing.Size(297, 50);
@@ -273,7 +261,7 @@ namespace DBFinalProject
             // 
             // kryptonButton2
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(11, 165);
+            this.kryptonButton2.Location = new System.Drawing.Point(11, 185);
             this.kryptonButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonButton2.Name = "kryptonButton2";
             this.kryptonButton2.Size = new System.Drawing.Size(297, 50);
@@ -283,7 +271,7 @@ namespace DBFinalProject
             // 
             // kryptonButton5
             // 
-            this.kryptonButton5.Location = new System.Drawing.Point(11, 478);
+            this.kryptonButton5.Location = new System.Drawing.Point(11, 434);
             this.kryptonButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonButton5.Name = "kryptonButton5";
             this.kryptonButton5.Size = new System.Drawing.Size(297, 50);
@@ -293,7 +281,7 @@ namespace DBFinalProject
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(11, 59);
+            this.kryptonButton1.Location = new System.Drawing.Point(11, 73);
             this.kryptonButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.Size = new System.Drawing.Size(297, 50);
@@ -617,7 +605,6 @@ namespace DBFinalProject
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton8;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;

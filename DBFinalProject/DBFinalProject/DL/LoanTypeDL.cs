@@ -117,31 +117,27 @@ namespace DBFinalProject.DL
             }
         }
 
-        public static List<LoanTypeBL> LoadAllLoanTypes()
+       
+        public static void LoadAllLoanTypes()
         {
-            loanTypeList.Clear();
-            try
+            string query = "SELECT * FROM loan_type";
+            using (var reader = DatabaseHelper.Instance.getData(query))
             {
-                string query = "SELECT * FROM loan_type";
-                var reader = DatabaseHelper.Instance.getData(query);
+                loanTypeList.Clear();
                 while (reader.Read())
                 {
-                    LoanTypeBL loanType = new LoanTypeBL();
-                    loanType.set_loan_type_id(reader.GetInt32(0));
-                    loanType.set_type_name(reader.GetString(1));
-                    loanType.set_descryptions(reader.GetString(2));
-                    loanType.set_loan_terms(reader.GetString(3));
-                    loanType.set_interest_rate(reader.GetInt32(4));
-                    loanType.set_repayment_frequency(reader.GetString(5));
-                    loanType.set_eligibility(reader.GetString(6));
-                    loanTypeList.Add(loanType);
+                    loanTypeList.Add(new LoanTypeBL
+
+                        (
+                        Convert.ToInt32(reader["loan_type_id"]),
+                        reader["type_name"].ToString(),
+                        reader["description"].ToString(),
+                        reader["loan_terms"].ToString(),
+                        Convert.ToInt32(reader["interest_rate"]),
+                        (reader["repayment_frequency"]).ToString(),
+                        reader["eligibilty"].ToString()
+                    ));
                 }
-                return loanTypeList;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return null;
             }
         }
     }

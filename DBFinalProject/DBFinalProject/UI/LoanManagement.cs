@@ -106,12 +106,21 @@ namespace DBFinalProject
         private void kryptonButton7_Click(object sender, EventArgs e)
         {
             LoanTypeBL loanTypeBL = new LoanTypeBL();
-            loanTypeBL.set_type_name(kryptonTextBox2.Text);
-            loanTypeBL.set_descryptions(kryptonTextBox5.Text);
-            loanTypeBL.set_loan_terms(kryptonTextBox3.Text);
-            loanTypeBL.set_interest_rate(Convert.ToInt32(kryptonTextBox7.Text));
-            loanTypeBL.set_repayment_frequency(kryptonTextBox6.Text);
-            loanTypeBL.set_eligibility(kryptonTextBox8.Text);
+
+            try
+            {
+                loanTypeBL.set_type_name(kryptonTextBox2.Text);
+                loanTypeBL.set_descryptions(kryptonTextBox5.Text);
+                loanTypeBL.set_loan_terms(kryptonTextBox3.Text);
+                loanTypeBL.set_interest_rate(Convert.ToInt32(kryptonTextBox7.Text));
+                loanTypeBL.set_repayment_frequency(kryptonTextBox6.Text);
+                loanTypeBL.set_eligibility(kryptonTextBox8.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             if (LoanTypeDL.addLoanType(loanTypeBL))
             {
@@ -135,15 +144,29 @@ namespace DBFinalProject
         // update loan type
         private void kryptonButton9_Click(object sender, EventArgs e)
         {
-            string selectedItem = kryptonComboBox3.SelectedItem.ToString();
+            string selectedItem = "";
+
+                selectedItem = kryptonComboBox3.SelectedItem.ToString();
+            
+            
             int loan_type_id = LoanTypeDL.getIdByName(selectedItem);
             LoanTypeBL loanTypeBL = new LoanTypeBL();
+
             loanTypeBL.set_type_name(LoanTypeDL.getNameByID(loan_type_id));
-            loanTypeBL.set_descryptions(kryptonTextBox12.Text);
-            loanTypeBL.set_loan_terms(kryptonTextBox10.Text);
-            loanTypeBL.set_interest_rate(Convert.ToInt32(kryptonTextBox11.Text));
-            loanTypeBL.set_eligibility(kryptonTextBox9.Text);
-            loanTypeBL.set_repayment_frequency(LoanTypeDL.getRepaymentFrequencyByID(loan_type_id));
+            try
+            {
+                loanTypeBL.set_descryptions(kryptonTextBox12.Text);
+                loanTypeBL.set_loan_terms(kryptonTextBox10.Text);
+                loanTypeBL.set_interest_rate(Convert.ToInt32(kryptonTextBox11.Text));
+                loanTypeBL.set_eligibility(kryptonTextBox9.Text);
+                loanTypeBL.set_repayment_frequency(LoanTypeDL.getRepaymentFrequencyByID(loan_type_id));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
 
             if (LoanTypeDL.UpdateLoanTypeInDb(loan_type_id, loanTypeBL))
             {
@@ -163,7 +186,15 @@ namespace DBFinalProject
         // delete loan type
         private void kryptonButton10_Click(object sender, EventArgs e)
         {
-            string selectedItem = kryptonComboBox2.SelectedItem.ToString();
+            string selectedItem = "";
+            try
+            {
+                selectedItem = kryptonComboBox2.SelectedItem.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Select Loan Type first", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             int loan_type_id = LoanTypeDL.getIdByName(selectedItem);
 
             if (LoanTypeDL.DeleteLoanTypeInDb(loan_type_id))

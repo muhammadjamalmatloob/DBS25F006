@@ -58,6 +58,7 @@ namespace DBFinalProject.DL
             }
             return user_id;
         }
+
         public static int get_user_id_by_email(string email)
         {
             string query = $"SELECT user_id FROM users WHERE email = '{email}'";
@@ -70,6 +71,38 @@ namespace DBFinalProject.DL
                 }
             }
             return user_id;
+        }
+
+        public static bool isDublicateUserName(string user_name)
+        {
+            string query = $"SELECT * FROM users WHERE username = '{user_name}'";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public static bool isDublicateEmail(string email)
+        {
+            string query = $"SELECT * FROM users WHERE email = '{email}'";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
     }
 }
