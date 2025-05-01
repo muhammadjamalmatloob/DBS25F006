@@ -1,6 +1,6 @@
-﻿namespace DBFinalProject
+﻿namespace DBFinalProject.UI
 {
-    partial class MainInterface
+    partial class SignUpORApply
     {
         /// <summary>
         /// Required designer variable.
@@ -29,29 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainInterface));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpORApply));
             this.myPallet = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.login = new System.Windows.Forms.Label();
             this.Closebtn = new System.Windows.Forms.Button();
-            this.user_panel = new System.Windows.Forms.Panel();
-            this.user_name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.user = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.forgot = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.login = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.login_btn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pass = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.password_panel = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.user_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.user)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.password_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // myPallet
@@ -147,38 +136,6 @@
             this.myPallet.PanelStyles.PanelCommon.StateCommon.ColorAngle = 45F;
             this.myPallet.PanelStyles.PanelCommon.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-3, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(287, 501);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(442, 48);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(102, 92);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // login
-            // 
-            this.login.AutoSize = true;
-            this.login.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.login.Location = new System.Drawing.Point(373, 155);
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(241, 26);
-            this.login.TabIndex = 2;
-            this.login.Text = "Login To Your Account ";
-            this.login.Click += new System.EventHandler(this.login_Click);
-            // 
             // Closebtn
             // 
             this.Closebtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -187,97 +144,45 @@
             this.Closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Closebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Closebtn.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Closebtn.Location = new System.Drawing.Point(667, 0);
+            this.Closebtn.Location = new System.Drawing.Point(666, -1);
             this.Closebtn.Margin = new System.Windows.Forms.Padding(0);
             this.Closebtn.Name = "Closebtn";
             this.Closebtn.Size = new System.Drawing.Size(34, 35);
-            this.Closebtn.TabIndex = 3;
+            this.Closebtn.TabIndex = 15;
             this.Closebtn.Text = "X";
             this.Closebtn.UseVisualStyleBackColor = true;
             this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click);
             // 
-            // user_panel
+            // login
             // 
-            this.user_panel.BackColor = System.Drawing.Color.White;
-            this.user_panel.Controls.Add(this.user_name);
-            this.user_panel.Controls.Add(this.user);
-            this.user_panel.Location = new System.Drawing.Point(360, 207);
-            this.user_panel.Name = "user_panel";
-            this.user_panel.Size = new System.Drawing.Size(254, 37);
-            this.user_panel.TabIndex = 6;
+            this.login.AutoSize = true;
+            this.login.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.login.Location = new System.Drawing.Point(360, 130);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(298, 26);
+            this.login.TabIndex = 14;
+            this.login.Text = "SingUp or Apply For Account";
             // 
-            // user_name
+            // pictureBox2
             // 
-            this.user_name.Location = new System.Drawing.Point(48, 2);
-            this.user_name.Margin = new System.Windows.Forms.Padding(2);
-            this.user_name.Name = "user_name";
-            this.user_name.Size = new System.Drawing.Size(204, 37);
-            this.user_name.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.user_name.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
-            this.user_name.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
-            this.user_name.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.user_name.StateCommon.Border.Rounding = 15;
-            this.user_name.StateCommon.Border.Width = 1;
-            this.user_name.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.user_name.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.user_name.TabIndex = 12;
-            this.user_name.Text = "Enter Username";
-            this.user_name.TextChanged += new System.EventHandler(this.kryptonTextBox1_TextChanged);
-            this.user_name.GotFocus += new System.EventHandler(this.user_name_Focus);
-            this.user_name.LostFocus += new System.EventHandler(this.user_name_LostFocus);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(443, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(102, 92);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
             // 
-            // user
+            // pictureBox1
             // 
-            this.user.Image = ((System.Drawing.Image)(resources.GetObject("user.Image")));
-            this.user.Location = new System.Drawing.Point(7, 5);
-            this.user.Name = "user";
-            this.user.Size = new System.Drawing.Size(31, 30);
-            this.user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.user.TabIndex = 5;
-            this.user.TabStop = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(360, 322);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(102, 17);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Show Password";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.pass_TextChanged);
-            // 
-            // forgot
-            // 
-            this.forgot.ActiveLinkColor = System.Drawing.Color.MediumSlateBlue;
-            this.forgot.AutoSize = true;
-            this.forgot.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.forgot.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forgot.LinkColor = System.Drawing.Color.Blue;
-            this.forgot.Location = new System.Drawing.Point(522, 322);
-            this.forgot.Name = "forgot";
-            this.forgot.Size = new System.Drawing.Size(92, 13);
-            this.forgot.TabIndex = 8;
-            this.forgot.TabStop = true;
-            this.forgot.Text = "Forgot Password?";
-            this.forgot.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.forgot_LinkClicked);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.MediumSlateBlue;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.Blue;
-            this.linkLabel1.Location = new System.Drawing.Point(492, 376);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(122, 13);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Don\'t have an account?";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(287, 501);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // kryptonManager1
             // 
@@ -286,109 +191,67 @@
             // 
             // login_btn
             // 
-            this.login_btn.Location = new System.Drawing.Point(352, 363);
+            this.login_btn.Location = new System.Drawing.Point(443, 194);
             this.login_btn.Margin = new System.Windows.Forms.Padding(2);
             this.login_btn.Name = "login_btn";
             this.login_btn.Size = new System.Drawing.Size(101, 35);
-            this.login_btn.TabIndex = 11;
-            this.login_btn.Values.Text = "Login";
+            this.login_btn.TabIndex = 21;
+            this.login_btn.Values.Text = "SignUP";
             this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
-            // pass
+            // kryptonButton1
             // 
-            this.pass.Location = new System.Drawing.Point(48, 2);
-            this.pass.Margin = new System.Windows.Forms.Padding(2);
-            this.pass.Name = "pass";
-            this.pass.Size = new System.Drawing.Size(204, 37);
-            this.pass.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.pass.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
-            this.pass.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
-            this.pass.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.pass.StateCommon.Border.Rounding = 15;
-            this.pass.StateCommon.Border.Width = 1;
-            this.pass.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.pass.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pass.TabIndex = 13;
-            this.pass.Text = "Enter Password";
-            this.pass.TextChanged += new System.EventHandler(this.pass_TextChanged);
-            this.pass.GotFocus += new System.EventHandler(this.pass_Focus);
-            this.pass.LostFocus += new System.EventHandler(this.pass_LostFocus);
+            this.kryptonButton1.Location = new System.Drawing.Point(416, 305);
+            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(161, 47);
+            this.kryptonButton1.TabIndex = 22;
+            this.kryptonButton1.Values.Text = "Apply For Account";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
-            // pictureBox3
+            // label1
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(7, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(31, 27);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(474, 251);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 26);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "OR";
             // 
-            // password_panel
-            // 
-            this.password_panel.BackColor = System.Drawing.Color.White;
-            this.password_panel.Controls.Add(this.pass);
-            this.password_panel.Controls.Add(this.pictureBox3);
-            this.password_panel.Location = new System.Drawing.Point(360, 268);
-            this.password_panel.Name = "password_panel";
-            this.password_panel.Size = new System.Drawing.Size(254, 37);
-            this.password_panel.TabIndex = 5;
-            // 
-            // MainInterface
+            // SignUpORApply
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(700, 450);
-            this.Controls.Add(this.login_btn);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.forgot);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.user_panel);
-            this.Controls.Add(this.password_panel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.Closebtn);
             this.Controls.Add(this.login);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.login_btn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MainInterface";
-            this.Palette = this.myPallet;
-            this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.MainInterface_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Name = "SignUpORApply";
+            this.Text = "SignUpORApply";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.user_panel.ResumeLayout(false);
-            this.user_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.user)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.password_panel.ResumeLayout(false);
-            this.password_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label login;
+
+        public ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
         private System.Windows.Forms.Button Closebtn;
-        private System.Windows.Forms.Panel user_panel;
-        private System.Windows.Forms.PictureBox user;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.LinkLabel forgot;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label login;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton login_btn;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox user_name;
-        public ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox pass;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel password_panel;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private System.Windows.Forms.Label label1;
     }
 }
-

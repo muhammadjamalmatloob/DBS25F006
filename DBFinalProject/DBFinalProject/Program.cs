@@ -24,7 +24,7 @@ namespace DBFinalProject
             //MainInterface mainForm = new MainInterface();
             //kryptonManager.GlobalPalette = mainForm.myPallet;
 
-            Application.Run(new ResetPassword());
+            Application.Run(new MainInterface());
         }
     }
 }

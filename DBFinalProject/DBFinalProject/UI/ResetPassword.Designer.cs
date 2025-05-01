@@ -37,11 +37,13 @@
             this.user = new System.Windows.Forms.PictureBox();
             this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.myPallet = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.Closebtn = new System.Windows.Forms.Button();
-            this.myPallet = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timerLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.user)).BeginInit();
@@ -80,9 +82,12 @@
             // 
             // kryptonTextBox1
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(375, 177);
+            this.kryptonTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.kryptonTextBox1.Location = new System.Drawing.Point(375, 164);
             this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.Palette = this.myPallet;
+            this.kryptonTextBox1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.kryptonTextBox1.Size = new System.Drawing.Size(204, 37);
             this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
@@ -92,15 +97,17 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox1.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox1.StateCommon.Border.Width = 1;
-            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox1.TabIndex = 12;
-            this.kryptonTextBox1.Text = "Enter email";
+            this.kryptonTextBox1.Text = "Enter Email";
+            this.kryptonTextBox1.GotFocus += new System.EventHandler(this.kryptonTextBox1_Focus);
+            this.kryptonTextBox1.LostFocus += new System.EventHandler(this.kryptonTextBox1_LostFocus);
             // 
             // user
             // 
             this.user.Image = ((System.Drawing.Image)(resources.GetObject("user.Image")));
-            this.user.Location = new System.Drawing.Point(333, 180);
+            this.user.Location = new System.Drawing.Point(333, 167);
             this.user.Name = "user";
             this.user.Size = new System.Drawing.Size(31, 30);
             this.user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -109,8 +116,10 @@
             // 
             // kryptonTextBox2
             // 
-            this.kryptonTextBox2.Location = new System.Drawing.Point(375, 333);
+            this.kryptonTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.kryptonTextBox2.Location = new System.Drawing.Point(375, 342);
             this.kryptonTextBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonTextBox2.MaxLength = 5;
             this.kryptonTextBox2.Name = "kryptonTextBox2";
             this.kryptonTextBox2.Size = new System.Drawing.Size(204, 35);
             this.kryptonTextBox2.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -125,53 +134,19 @@
             this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox2.TabIndex = 12;
             this.kryptonTextBox2.Visible = false;
+            this.kryptonTextBox2.TextChanged += new System.EventHandler(this.kryptonTextBox2_TextChanged);
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(408, 233);
+            this.kryptonButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kryptonButton1.Location = new System.Drawing.Point(408, 215);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.Palette = this.myPallet;
             this.kryptonButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.kryptonButton1.Size = new System.Drawing.Size(138, 41);
             this.kryptonButton1.TabIndex = 13;
             this.kryptonButton1.Values.Text = "Send OTP";
-            // 
-            // kryptonButton2
-            // 
-            this.kryptonButton2.Location = new System.Drawing.Point(407, 387);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Palette = this.myPallet;
-            this.kryptonButton2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonButton2.Size = new System.Drawing.Size(138, 41);
-            this.kryptonButton2.TabIndex = 14;
-            this.kryptonButton2.Values.Text = "Verify";
-            this.kryptonButton2.Visible = false;
-            // 
-            // kryptonLabel1
-            // 
-            this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel1.Location = new System.Drawing.Point(427, 296);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(100, 29);
-            this.kryptonLabel1.TabIndex = 15;
-            this.kryptonLabel1.Values.Text = "Enter OTP";
-            this.kryptonLabel1.Visible = false;
-            // 
-            // Closebtn
-            // 
-            this.Closebtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Closebtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Closebtn.FlatAppearance.BorderSize = 0;
-            this.Closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Closebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Closebtn.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Closebtn.Location = new System.Drawing.Point(666, -1);
-            this.Closebtn.Margin = new System.Windows.Forms.Padding(0);
-            this.Closebtn.Name = "Closebtn";
-            this.Closebtn.Size = new System.Drawing.Size(34, 35);
-            this.Closebtn.TabIndex = 16;
-            this.Closebtn.Text = "X";
-            this.Closebtn.UseVisualStyleBackColor = true;
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // myPallet
             // 
@@ -266,16 +241,69 @@
             this.myPallet.PanelStyles.PanelCommon.StateCommon.ColorAngle = 45F;
             this.myPallet.PanelStyles.PanelCommon.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
             // 
-            // kryptonManager1
+            // kryptonButton2
             // 
-            this.kryptonManager1.GlobalPalette = this.myPallet;
-            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
+            this.kryptonButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kryptonButton2.Location = new System.Drawing.Point(407, 391);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.Palette = this.myPallet;
+            this.kryptonButton2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kryptonButton2.Size = new System.Drawing.Size(138, 41);
+            this.kryptonButton2.TabIndex = 14;
+            this.kryptonButton2.Values.Text = "Verify";
+            this.kryptonButton2.Visible = false;
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.kryptonLabel1.Location = new System.Drawing.Point(427, 311);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(100, 29);
+            this.kryptonLabel1.TabIndex = 15;
+            this.kryptonLabel1.Values.Text = "Enter OTP";
+            this.kryptonLabel1.Visible = false;
+            // 
+            // Closebtn
+            // 
+            this.Closebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Closebtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Closebtn.FlatAppearance.BorderSize = 0;
+            this.Closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Closebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Closebtn.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.Closebtn.Location = new System.Drawing.Point(668, -1);
+            this.Closebtn.Margin = new System.Windows.Forms.Padding(0);
+            this.Closebtn.Name = "Closebtn";
+            this.Closebtn.Size = new System.Drawing.Size(34, 35);
+            this.Closebtn.TabIndex = 16;
+            this.Closebtn.Text = "X";
+            this.Closebtn.UseVisualStyleBackColor = true;
+            this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timerLabel
+            // 
+            this.timerLabel.AutoSize = true;
+            this.timerLabel.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timerLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.timerLabel.Location = new System.Drawing.Point(401, 273);
+            this.timerLabel.Name = "timerLabel";
+            this.timerLabel.Size = new System.Drawing.Size(17, 26);
+            this.timerLabel.TabIndex = 17;
+            this.timerLabel.Text = " ";
+            this.timerLabel.Visible = false;
             // 
             // ResetPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 450);
+            this.Controls.Add(this.timerLabel);
             this.Controls.Add(this.Closebtn);
             this.Controls.Add(this.user);
             this.Controls.Add(this.kryptonTextBox1);
@@ -313,5 +341,7 @@
         private System.Windows.Forms.Button Closebtn;
         public ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
         private ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label timerLabel;
     }
 }
