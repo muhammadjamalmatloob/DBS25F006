@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace DBFinalProject.BL
 {
-    internal class ClientBL
+    public class ClientBL : UserBL
     {
         private int client_id { get; set; }
-        private int user_id { get; set; }
         private int application_id { get; set; }
 
         public ClientBL() { }

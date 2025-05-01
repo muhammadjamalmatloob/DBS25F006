@@ -111,6 +111,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\AccountApplicationBL.cs" />
+    <Compile Include="BL\AccountType.cs" />
     <Compile Include="BL\BranchBL.cs" />
     <Compile Include="BL\ClientBL.cs" />
     <Compile Include="BL\CurrencyExchangeBL.cs" />
@@ -126,7 +128,7 @@
     <Compile Include="DL\EmployeeDL.cs" />
     <Compile Include="DL\LoanApplicationDL.cs" />
     <Compile Include="DL\LoginDL.cs" />
-    <Compile Include="DL\password.cs" />
+    <Compile Include="DL\PasswordFunc.cs" />
     <Compile Include="DL\PaymentDL.cs" />
     <Compile Include="DL\ResetPasswordDL.cs" />
     <Compile Include="DL\SignUpDL.cs" />

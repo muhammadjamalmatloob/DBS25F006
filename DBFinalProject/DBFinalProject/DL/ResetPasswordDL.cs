@@ -9,7 +9,7 @@ using DBFinalProject.Utility;
 
 namespace DBFinalProject.DL
 {
-    internal class ResetPasswordDL : password
+    internal class ResetPasswordDL : PasswordFunc
     {
         public static int UpdatePassword(string password, string email)
         {

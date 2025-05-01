@@ -161,5 +161,15 @@ namespace DBFinalProject
                 }
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PasswordInstructions.Visible = true;
+        }
+
+        private void kryptonButton12_Click(object sender, EventArgs e)
+        {
+            PasswordInstructions.Visible = false;
+        }
     }
 }

@@ -47,7 +47,7 @@ namespace DBFinalProject.BL
 
         public (bool isValid, string errorMessage) set_username(string username)
         {
-            if (string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(username) || username == "Enter Username")
             {
                 return (false, "Username cannot be empty.");
             }
@@ -55,13 +55,21 @@ namespace DBFinalProject.BL
             {
                 return (false, $"Username must be at least 8 characters long.");
             }
-            else if (!Regex.IsMatch(username, "[A-Z],[a-z]"))
+            else if (!Regex.IsMatch(username, "[a-z]") && !Regex.IsMatch(username, "[A-Z]"))
             {
                 return (false, "Username must contain at least one letter.");
+            }
+            else if (Regex.IsMatch(username[0].ToString(), "[0-9]"))
+            {
+                return (false, "Username can't start with a digit.");
             }
             if (!Regex.IsMatch(username, "[0-9]"))
             {
                 return (false, "Username must contain at least one digit.");
+            }
+            if (Regex.IsMatch(username, "[^a-zA-Z0-9]"))
+            {
+                return (false, "Username can't contain special character.");
             }
             this.username = username;
             return (true, "");
@@ -81,9 +89,9 @@ namespace DBFinalProject.BL
             return this.email;
         }
 
-        public (bool isValid, string errorMessage) set_password(string password)
+        public (bool isValid, string errorMessage) set_password_hash(string password)
         {
-            if (string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(password) || password == "Enter Password" )
             {
                 return (false, "Password cannot be empty.");
             }
@@ -115,7 +123,7 @@ namespace DBFinalProject.BL
             this.password = password;
             return (true, "");
         }
-        public string get_password()
+        public string get_password_hash()
         {
             return this.password;
         }
