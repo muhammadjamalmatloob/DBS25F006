@@ -11,6 +11,7 @@ using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace DBFinalProject
@@ -118,6 +119,25 @@ namespace DBFinalProject
                 employee.set_contact(kryptonTextBox8.Text);
                 employee.set_department(kryptonComboBox4.Text);
                 employee.set_branch_id(BranchDL.GetBranchIdByName(kryptonComboBox3.Text));
+                employee.set_position(EmployeeDL.get_position_by_id(employee_Id));
+
+
+                // check this position function
+                if (!EmployeeDL.isDoublicateRole(employee.get_position(),employee.get_branch_id()))
+                {
+                    if (employee.get_position() == 2)
+                    {
+                        MessageBox.Show("Error:  Manager Already Exists in this Branch !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: Branch can not contain more than 8 cashiers !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                   
+                }
+
             }
             catch (Exception ex)
             {
@@ -199,7 +219,28 @@ namespace DBFinalProject
                 employee.set_gender(kryptonComboBox2.Text);
                 employee.set_salary(float.Parse(kryptonTextBox6.Text));
                 employee.set_contact(kryptonTextBox5.Text);
+                if (EmployeeDL.isDublicateContact(kryptonTextBox5.Text))
+                {
+                    MessageBox.Show("Error:  Contact Number Already Exists !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 employee.set_position(UserDL.get_role_id(kryptonComboBox7.Text));
+
+                if (!EmployeeDL.isDoublicateRole(employee.get_position(),employee.get_branch_id()))
+                {
+                    if (employee.get_position() == 2)
+                    {
+                        MessageBox.Show("Error:  Manager Already Exists in this Branch !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: Branch can not contain more than 8 cashiers !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                   
+                }
             }
             catch (Exception ex)
             {
@@ -207,19 +248,31 @@ namespace DBFinalProject
                 return;
             }
 
-            try
+            employee.set_role_id(UserDL.get_role_id(kryptonComboBox7.Text));
+                //employee.set_username(kryptonTextBox9.Text);
+            employee.set_email(kryptonTextBox10.Text);
+            if (EmployeeDL.isDublicateEmail(kryptonTextBox10.Text))
             {
-                employee.set_role_id(UserDL.get_role_id(kryptonComboBox7.Text));
-                employee.set_username(kryptonTextBox9.Text);
-                employee.set_email(kryptonTextBox10.Text);
-                employee.set_password_hash(kryptonTextBox11.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error:  Email Already Exists !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            //employee.set_password_hash(kryptonTextBox11.Text);
 
+            if (!employee.set_username(kryptonTextBox9.Text).isValid)
+            {
+                MessageBox.Show(employee.set_username(kryptonTextBox9.Text).errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (EmployeeDL.isDublicateUsername(kryptonTextBox9.Text))
+            {
+                MessageBox.Show("Error:  User Name Already Exists !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (!employee.set_password_hash(kryptonTextBox11.Text).isValid)
+            {
+                MessageBox.Show(employee.set_password_hash(kryptonTextBox11.Text).errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             if (EmployeeDL.AddEmployeeAccountInDb(employee))
             {

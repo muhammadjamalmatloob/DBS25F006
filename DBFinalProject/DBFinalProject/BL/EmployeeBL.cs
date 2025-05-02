@@ -177,10 +177,6 @@ namespace DBFinalProject.BL
             {
                 throw new Exception("Contact Number can not be a string");
             }
-            else if (EmployeeDL.isDublicateContact(contact))
-            {
-                throw new Exception("The Contact Number already exists");
-            }
             else if (contact[0] != '0' && contact[1] != '3')
             {
                 throw new Exception("Invalid Format !!! 03XX XXXXXXX");
