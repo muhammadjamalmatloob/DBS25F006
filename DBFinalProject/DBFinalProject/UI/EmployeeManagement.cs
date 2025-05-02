@@ -39,6 +39,10 @@ namespace DBFinalProject
 
             kryptonComboBox1.SelectedIndex = 0;
             kryptonComboBox2.SelectedIndex = 0;
+            kryptonComboBox3.SelectedIndex = 0;
+            kryptonComboBox4.SelectedIndex = 0;
+            kryptonComboBox5.SelectedIndex = 0;
+            kryptonComboBox6.SelectedIndex = 0;
             kryptonComboBox8.SelectedIndex = 0;
         }
 
@@ -373,6 +377,174 @@ namespace DBFinalProject
         private void kryptonButton8_Click(object sender, EventArgs e)
         {
             apply_employee_filters();
+        }
+
+        private void kryptonTextBox2_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox2.Text == "First Name")
+            {
+                kryptonTextBox2.Text = "";
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox2_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox2.Text))
+            {
+                kryptonTextBox2.Text = "First Name";
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox3_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "Last Name")
+            {
+                kryptonTextBox3.Text = "";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox3_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox3.Text))
+            {
+                kryptonTextBox3.Text = "Last Name";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox9_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox9.Text == "User Name")
+            {
+                kryptonTextBox9.Text = "";
+                kryptonTextBox9.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox9_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox9.Text))
+            {
+                kryptonTextBox9.Text = "User Name";
+                kryptonTextBox9.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox10_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox10.Text == "Email")
+            {
+                kryptonTextBox10.Text = "";
+                kryptonTextBox10.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox10_Leave(object senider, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox10.Text))
+            {
+                kryptonTextBox10.Text = "Email";
+                kryptonTextBox10.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox11_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox11.Text == "Password")
+            {
+                kryptonTextBox11.Text = "";
+                kryptonTextBox11.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox11_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox11.Text))
+            {
+                kryptonTextBox11.Text = "Password";
+                kryptonTextBox11.StateCommon.Content.Color1 = Color.Gray;
+                
+            }
+        }
+
+        private void kryptonTextBox7_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox7.Text == "Salary")
+            {
+                kryptonTextBox7.Text = "";
+                kryptonTextBox7.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox7_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox7.Text))
+            {
+                kryptonTextBox7.Text = "Salary";
+                kryptonTextBox7.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox6_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox6.Text == "Salary")
+            {
+                kryptonTextBox6.Text = "";
+                kryptonTextBox6.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox6_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox6.Text))
+            {
+                kryptonTextBox6.Text = "Salary";
+                kryptonTextBox6.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox5_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox5.Text == "Contact")
+            {
+                kryptonTextBox5.Text = "";
+                kryptonTextBox5.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox5_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox5.Text))
+            {
+                kryptonTextBox5.Text = "Contact";
+                kryptonTextBox5.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox8_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox8.Text == "Contact")
+            {
+                kryptonTextBox8.Text = "";
+                kryptonTextBox8.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox8_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox8.Text))
+            {
+                kryptonTextBox8.Text = "Contact";
+                kryptonTextBox8.StateCommon.Content.Color1 = Color.Gray;
+            }
         }
     }
 }

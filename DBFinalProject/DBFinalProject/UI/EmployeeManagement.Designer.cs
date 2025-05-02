@@ -666,10 +666,13 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox6.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox6.StateCommon.Border.Width = 1;
-            this.kryptonTextBox6.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox6.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox6.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox6.TabIndex = 22;
             this.kryptonTextBox6.Text = "Salary";
+            this.kryptonTextBox6.TextChanged += new System.EventHandler(this.kryptonTextBox6_TextChanged);
+            this.kryptonTextBox6.Enter += new System.EventHandler(this.kryptonTextBox6_Enter);
+            this.kryptonTextBox6.Leave += new System.EventHandler(this.kryptonTextBox6_Leave);
             // 
             // kryptonTextBox5
             // 
@@ -684,10 +687,12 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox5.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox5.StateCommon.Border.Width = 1;
-            this.kryptonTextBox5.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox5.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox5.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox5.TabIndex = 20;
             this.kryptonTextBox5.Text = "Contact";
+            this.kryptonTextBox5.Enter += new System.EventHandler(this.kryptonTextBox5_Enter);
+            this.kryptonTextBox5.Leave += new System.EventHandler(this.kryptonTextBox5_Leave);
             // 
             // kryptonTextBox3
             // 
@@ -702,10 +707,12 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox3.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox3.StateCommon.Border.Width = 1;
-            this.kryptonTextBox3.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox3.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox3.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox3.TabIndex = 16;
             this.kryptonTextBox3.Text = "Last Name";
+            this.kryptonTextBox3.Enter += new System.EventHandler(this.kryptonTextBox3_Enter);
+            this.kryptonTextBox3.Leave += new System.EventHandler(this.kryptonTextBox3_Leave);
             // 
             // kryptonTextBox2
             // 
@@ -720,10 +727,12 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox2.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox2.StateCommon.Border.Width = 1;
-            this.kryptonTextBox2.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox2.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox2.TabIndex = 15;
             this.kryptonTextBox2.Text = "First Name";
+            this.kryptonTextBox2.Enter += new System.EventHandler(this.kryptonTextBox2_Enter);
+            this.kryptonTextBox2.Leave += new System.EventHandler(this.kryptonTextBox2_Leave);
             // 
             // kryptonPanel1
             // 
@@ -966,10 +975,12 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox7.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox7.StateCommon.Border.Width = 1;
-            this.kryptonTextBox7.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox7.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox7.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox7.TabIndex = 22;
             this.kryptonTextBox7.Text = "Salary";
+            this.kryptonTextBox7.Enter += new System.EventHandler(this.kryptonTextBox7_Enter);
+            this.kryptonTextBox7.Leave += new System.EventHandler(this.kryptonTextBox7_Leave);
             // 
             // kryptonTextBox8
             // 
@@ -984,10 +995,12 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox8.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox8.StateCommon.Border.Width = 1;
-            this.kryptonTextBox8.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox8.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox8.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox8.TabIndex = 20;
             this.kryptonTextBox8.Text = "Contact";
+            this.kryptonTextBox8.Enter += new System.EventHandler(this.kryptonTextBox8_Enter);
+            this.kryptonTextBox8.Leave += new System.EventHandler(this.kryptonTextBox8_Leave);
             // 
             // GrpDelete
             // 
@@ -1058,7 +1071,7 @@
             // 
             // GrpAccount
             // 
-            this.GrpAccount.Location = new System.Drawing.Point(544, 114);
+            this.GrpAccount.Location = new System.Drawing.Point(543, 114);
             this.GrpAccount.Name = "GrpAccount";
             // 
             // GrpAccount.Panel
@@ -1119,10 +1132,12 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox11.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox11.StateCommon.Border.Width = 1;
-            this.kryptonTextBox11.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox11.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox11.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox11.TabIndex = 27;
             this.kryptonTextBox11.Text = "Password";
+            this.kryptonTextBox11.Enter += new System.EventHandler(this.kryptonTextBox11_Enter);
+            this.kryptonTextBox11.Leave += new System.EventHandler(this.kryptonTextBox11_Leave);
             // 
             // kryptonButton15
             // 
@@ -1159,10 +1174,12 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox9.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox9.StateCommon.Border.Width = 1;
-            this.kryptonTextBox9.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox9.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox9.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox9.TabIndex = 22;
             this.kryptonTextBox9.Text = "Username";
+            this.kryptonTextBox9.Enter += new System.EventHandler(this.kryptonTextBox9_Enter);
+            this.kryptonTextBox9.Leave += new System.EventHandler(this.kryptonTextBox9_Leave);
             // 
             // kryptonTextBox10
             // 
@@ -1177,10 +1194,12 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox10.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox10.StateCommon.Border.Width = 1;
-            this.kryptonTextBox10.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox10.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox10.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox10.TabIndex = 20;
             this.kryptonTextBox10.Text = "Email";
+            this.kryptonTextBox10.Enter += new System.EventHandler(this.kryptonTextBox10_Enter);
+            this.kryptonTextBox10.Leave += new System.EventHandler(this.kryptonTextBox10_Leave);
             // 
             // EmployeeManagement
             // 
