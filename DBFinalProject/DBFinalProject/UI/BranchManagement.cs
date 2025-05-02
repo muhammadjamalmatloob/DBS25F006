@@ -108,7 +108,7 @@ namespace DBFinalProject
             if (kryptonTextBox2.Text == "Branch Name")
             {
                 kryptonTextBox2.Text = "";
-                kryptonTextBox2.ForeColor = Color.Black;
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
             }
         }
         private void kryptonTextBox2_Leave(object sender, EventArgs e)
@@ -116,7 +116,7 @@ namespace DBFinalProject
             if (kryptonTextBox2.Text == "")
             {
                 kryptonTextBox2.Text = "Branch Name";
-                kryptonTextBox2.ForeColor = Color.Gray;
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Gray;
             }
         }
 
@@ -319,6 +319,132 @@ namespace DBFinalProject
         private void kryptonComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void kryptonTextBox5_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox5.Text == "Contact")
+            {
+                kryptonTextBox5.Text = "";
+                kryptonTextBox5.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox5_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox5.Text == "")
+            {
+                kryptonTextBox5.Text = "Contact";
+                kryptonTextBox5.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox9_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox9.Text == "Country")
+            {
+                kryptonTextBox9.Text = "";
+                kryptonTextBox9.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox9_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox9.Text == "")
+            {
+                kryptonTextBox9.Text = "Country";
+                kryptonTextBox9.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox6_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox6.Text == "City")
+            {
+                kryptonTextBox6.Text = "";
+                kryptonTextBox6.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox6_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox6.Text == "")
+            {
+                kryptonTextBox6.Text = "City";
+                kryptonTextBox6.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox11_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox11.Text == "Address ")
+            {
+                kryptonTextBox11.Text = "";
+                kryptonTextBox11.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox11_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox11.Text == "")
+            {
+                kryptonTextBox11.Text = "Address ";
+                kryptonTextBox11.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox10_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox10.Text == "City")
+            {
+                kryptonTextBox10.Text = "";
+                kryptonTextBox10.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox10_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox10.Text == "")
+            {
+                kryptonTextBox10.Text = "City";
+                kryptonTextBox10.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox8_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox8.Text == "Contact")
+            {
+                kryptonTextBox8.Text = "";
+                kryptonTextBox8.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox8_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox8.Text == "")
+            {
+                kryptonTextBox8.Text = "Contact";
+                kryptonTextBox8.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox7_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox7.Text == "Country")
+            {
+                kryptonTextBox7.Text = "";
+                kryptonTextBox7.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox7_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox7.Text == "")
+            {
+                kryptonTextBox7.Text = "Country";
+                kryptonTextBox7.StateCommon.Content.Color1 = Color.Gray;
+            }
         }
     }
 }

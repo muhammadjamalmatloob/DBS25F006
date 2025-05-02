@@ -140,6 +140,7 @@ namespace DBFinalProject.DL
         {
             LoadAllEmployeeInList();
             comboBox.Items.Clear();
+            comboBox.Items.Add("Select Employee");
             foreach (var employee in employees)
             {
                 comboBox.Items.Add(employee.get_employee_id() + "  " + employee.get_employee_name());
