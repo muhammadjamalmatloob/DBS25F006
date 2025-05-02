@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.Utility;
@@ -42,7 +43,7 @@ namespace DBFinalProject.DL
                 }
             }
         }
-        public static void RemoveEmployee( int employee_id_to_delete)
+        public static void RemoveEmployee(int employee_id_to_delete)
         {
             employees.RemoveAll(e => e.get_employee_id() == employee_id_to_delete);
         }
@@ -97,8 +98,8 @@ namespace DBFinalProject.DL
                         username,
                         email,
                         department,
-                        UserDL.get_role(position),             
-                        BranchDL.GetBranchNameById(branch_id), 
+                        UserDL.get_role(position),
+                        BranchDL.GetBranchNameById(branch_id),
                         salary
                     );
                 }
@@ -141,7 +142,7 @@ namespace DBFinalProject.DL
             comboBox.Items.Clear();
             foreach (var employee in employees)
             {
-                comboBox.Items.Add(employee.get_employee_id() + "  "+employee.get_employee_name());
+                comboBox.Items.Add(employee.get_employee_id() + "  " + employee.get_employee_name());
             }
         }
 
@@ -161,23 +162,23 @@ namespace DBFinalProject.DL
                 JOIN users u ON e.user_id = u.user_id
                 {condition};";
 
-                    using (var reader = DatabaseHelper.Instance.getData(query))
-                    {
-                        while (reader.Read())
-                        {
-                            dataGrid.Rows.Add(
-                                Convert.ToInt32(reader["employee_id"]),
-                                reader["employee_name"].ToString(),
-                                reader["username"].ToString(),
-                                reader["email"].ToString(),
-                                reader["department"].ToString(),
-                                UserDL.get_role(Convert.ToInt32(reader["position"])),
-                                BranchDL.GetBranchNameById(Convert.ToInt32(reader["branch_id"])),
-                                float.Parse(reader["salary"].ToString())
-                            );
-                        }
-                    }
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                while (reader.Read())
+                {
+                    dataGrid.Rows.Add(
+                        Convert.ToInt32(reader["employee_id"]),
+                        reader["employee_name"].ToString(),
+                        reader["username"].ToString(),
+                        reader["email"].ToString(),
+                        reader["department"].ToString(),
+                        UserDL.get_role(Convert.ToInt32(reader["position"])),
+                        BranchDL.GetBranchNameById(Convert.ToInt32(reader["branch_id"])),
+                        float.Parse(reader["salary"].ToString())
+                    );
                 }
+            }
+        }
 
         public static void LoadAllEmployeeInList()
         {
@@ -196,11 +197,87 @@ namespace DBFinalProject.DL
                     Convert.ToInt32(reader["position"]),
                     reader["department"].ToString(),
                     Convert.ToInt32(reader["position"]),
-                    Convert.ToSingle(reader["salary"]), 
+                    Convert.ToSingle(reader["salary"]),
                     reader["contact"].ToString()
                 ));
                 }
+            }
+        }
+
+        public static bool isDublicateEmail(string email)
+        {
+            string query = $"SELECT * FROM users WHERE email = '{email}'";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    return true;
                 }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public static bool isDublicateUsername(string username)
+        {
+            string query = $"SELECT * FROM users WHERE username = '{username}'";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+
+        public static bool isDoublicateRole(int employee_type, int branch_id)
+        {
+            string query = $"SELECT COUNT(*) FROM employees WHERE position = {employee_type} AND branch_id = {branch_id}";
+
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    int count = Convert.ToInt32(reader[0]);
+
+
+                    if (employee_type == 2 && count >= 1)
+                    {
+                        // Only 1 manager allowed per branch
+                        return false;
+                    }
+
+                    if (employee_type == 3 && count >= 8)
+                    {
+                        // Max 8 cashiers allowed per branch
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+        public static int get_position_by_id(int emp_id)
+        {
+            string query = $"SELECT position FROM employees WHERE employee_id = {emp_id}";
+            int position = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    position = Convert.ToInt32(reader["position"].ToString());
+                }
+            }
+            return position;
+
         }
     }
 }
