@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.DL;
 using DBFinalProject.UI;
+using DBFinalProject.BL;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DBFinalProject
@@ -17,6 +18,9 @@ namespace DBFinalProject
     public partial class MainInterface : KryptonForm
     {
         public KryptonPalette kryptonPalette1;
+
+        public static string UserName;
+        public static string Email;
 
         public MainInterface()
         {
@@ -99,6 +103,8 @@ namespace DBFinalProject
 
                     string role = LoginDL.user.getRole();
 
+                    UserName = LoginDL.user.getUsername();
+                    Email = LoginDL.user.getemail();
 
                     switch (role)
                     {

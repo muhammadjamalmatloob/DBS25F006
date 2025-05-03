@@ -29,5 +29,19 @@ namespace DBFinalProject.DL
             string query = $"DELETE FROM clients WHERE user_id = '{client.getUserId()}'";
             DatabaseHelper.Instance.Update(query);
         }
+
+        public static string TotalClients()
+        {
+            string query = "SELECT COUNT(*) FROM clients";
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+        }
     }
 }

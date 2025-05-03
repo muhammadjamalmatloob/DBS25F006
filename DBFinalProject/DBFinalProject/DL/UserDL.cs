@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using DBFinalProject.BL;
 using DBFinalProject.Utility;
+using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DBFinalProject.DL
 {
@@ -31,20 +35,46 @@ namespace DBFinalProject.DL
             }
             return role_id;
         }
-
         public static string get_role(int role_id)
         {
-            string query = $"SELECT value FROM lookup WHERE lookup_id = {role_id}";
+            string query = $"SELECT value FROM lookup WHERE lookup_id = '{role_id}'";
             string role_name = "";
             using (var reader = DatabaseHelper.Instance.getData(query))
             {
                 if (reader.Read())
                 {
-                    role_name = reader["value"].ToString();
+                    role_name = (reader["value"].ToString());
                 }
             }
             return role_name;
         }
+
+
+        //public static string get_role(int role_id)
+        //{
+        //    string query = "CALL GetRoleName(@role_id, @role_name); SELECT @role_name AS employee_position;";
+        //    using (var connection = DatabaseHelper.Instance.getConnection())
+        //    {
+        //        if (connection.State == ConnectionState.Open)
+        //        {
+        //            connection.Close();
+        //        }
+
+        //        using (var command = new MySqlCommand(query, connection))
+        //        {
+        //            command.Parameters.AddWithValue("@role_id", role_id);
+        //            command.Parameters.Add(new MySqlParameter("@role_name", MySqlDbType.VarChar) { Direction = ParameterDirection.Output });
+
+        //            connection.Open();
+        //            command.ExecuteNonQuery();
+        //            return command.Parameters["@role_name"].Value.ToString();
+        //        }
+        //    }
+        //}
+
+        
+
+
         public static int get_user_id(string username)
         {
             string query = $"SELECT user_id FROM users WHERE username = '{username}'";

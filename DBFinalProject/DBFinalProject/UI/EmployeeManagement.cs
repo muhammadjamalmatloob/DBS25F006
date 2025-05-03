@@ -253,7 +253,8 @@ namespace DBFinalProject
             }
 
             employee.set_role_id(UserDL.get_role_id(kryptonComboBox7.Text));
-                //employee.set_username(kryptonTextBox9.Text);
+            MessageBox.Show(employee.get_role_id().ToString());
+            //employee.set_username(kryptonTextBox9.Text);
             employee.set_email(kryptonTextBox10.Text);
             if (EmployeeDL.isDublicateEmail(kryptonTextBox10.Text))
             {
