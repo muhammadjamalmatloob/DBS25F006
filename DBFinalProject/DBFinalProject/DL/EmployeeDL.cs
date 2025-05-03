@@ -280,5 +280,48 @@ namespace DBFinalProject.DL
             return position;
 
         }
+
+
+        public static string TotalEmployees()
+        {
+            string query = "SELECT COUNT(*) FROM employees";
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+        }
+
+        public static string TotalManagers()
+        {
+            string query = "SELECT COUNT(*) FROM employees WHERE position = 3";// manager ki id
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+        }
+
+        public static string TotalCashiers()
+        {
+            string query = "SELECT COUNT(*) FROM employees WHERE position = 2";// cashier ki id
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+        }
     }
 }

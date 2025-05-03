@@ -193,5 +193,19 @@ namespace DBFinalProject.DL
                 }
             }
         }
+
+        public static string TotalBranches()
+        {
+            string query = "SELECT COUNT(*) FROM branches";
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+        }
     }
 }

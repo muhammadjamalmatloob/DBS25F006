@@ -37,5 +37,19 @@ namespace DBFinalProject.DL
             }
             return type_id;
         }
+
+        public static string TotalTransactions()
+        {
+            string query = "SELECT COUNT(*) FROM transactions";
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+        }
     }
 }

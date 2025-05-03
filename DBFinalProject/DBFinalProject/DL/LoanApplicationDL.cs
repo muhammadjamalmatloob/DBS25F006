@@ -23,5 +23,19 @@ namespace DBFinalProject.DL
             string query = $"DELETE FROM loan_application WHERE client_id = '{application.getClientId()}'";
             DatabaseHelper.Instance.Update(query);
         }
+
+        public static string TotalLoanApplications()
+        {
+            string query = "SELECT COUNT(*) FROM loan_application";
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+        }
     }
 }

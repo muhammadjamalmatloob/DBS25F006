@@ -9,7 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using DBFinalProject.BL;
 using DBFinalProject.UI;
+using DBFinalProject.DL;
 
 namespace DBFinalProject
 {
@@ -18,6 +20,25 @@ namespace DBFinalProject
         public AdminDashboard()
         {
             InitializeComponent();
+
+            username.Text = MainInterface.UserName;
+            email.Text = MainInterface.Email;
+
+            totalBranches.Text = BranchDL.TotalBranches();
+            totalEmployee.Text = EmployeeDL.TotalEmployees();
+            totalManager.Text = EmployeeDL.TotalManagers();
+            totalCashier.Text = EmployeeDL.TotalCashiers();
+
+            totalClients.Text = ClientDL.TotalClients();
+            totalTrans.Text = TransactionDL.TotalTransactions();
+            totalBill.Text = PaymentDL.TotalPayments();
+            totalLoanReq.Text = LoanApplicationDL.TotalLoanApplications();
+
+            totalAccountsActive.Text = AccountTypeDL.TotalActiveAccounts();
+            totalAccountsInactive.Text = AccountTypeDL.TotalInActiveAccounts();
+            totalAccountsClosed.Text = AccountTypeDL.TotalClosedAccounts();
+            TotalAccountApplications.Text = AccountApplicationDL.TotalAccountApplications();
+            
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
@@ -25,10 +46,6 @@ namespace DBFinalProject
             BranchManagement branchManagement = new BranchManagement();
             branchManagement.Show();
             this.Hide();
-
-            //ApplicationForm applicationForm = new ApplicationForm();
-            //applicationForm.Show();
-            //this.Hide();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
@@ -66,6 +83,11 @@ namespace DBFinalProject
             LoanManagement loanManagement = new LoanManagement();
             loanManagement.Show();
             this.Hide();
+        }
+
+        private void username_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
