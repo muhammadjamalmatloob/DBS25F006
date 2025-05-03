@@ -35,7 +35,7 @@ namespace DBFinalProject
             EmployeeDL.LoadAllEmployeeInList();
             EmployeeDL.LoadEmployeeCombobox(kryptonComboBox5);
             EmployeeDL.LoadEmployeeCombobox(kryptonComboBox6);
-            EmployeeDL.LoadDataGrid(dataGrid);
+            EmployeeDL.LoadDataGrid(dataGrid,"");
 
             kryptonComboBox1.SelectedIndex = 0;
             kryptonComboBox2.SelectedIndex = 0;
@@ -152,7 +152,7 @@ namespace DBFinalProject
             if (EmployeeDL.updateEmployeeInDb(employee, employee_Id))
             {
                 
-                EmployeeDL.LoadDataGrid(dataGrid);
+                EmployeeDL.LoadDataGrid(dataGrid,"");
                 //EmployeeDL.UpdateEmployee(employee_Id, employee);
                 EmployeeDL.LoadAllEmployeeInList();
                 MessageBox.Show("Employee Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -287,7 +287,7 @@ namespace DBFinalProject
                     EmployeeDL.LoadAllEmployeeInList();
                     EmployeeDL.LoadEmployeeCombobox(kryptonComboBox5);
                     EmployeeDL.LoadEmployeeCombobox(kryptonComboBox6);
-                    EmployeeDL.LoadDataGrid(dataGrid);
+                    EmployeeDL.LoadDataGrid(dataGrid, "");
                     //employee.set_employee_id(EmployeeDL.get_employee_id(employee.get_contact()));
                     //EmployeeDL.AddEmployeeToList(employee);
 
@@ -335,7 +335,7 @@ namespace DBFinalProject
             {
                 EmployeeDL.LoadAllEmployeeInList();
                 //EmployeeDL.RemoveEmployee(employee_Id);
-                EmployeeDL.LoadDataGrid(dataGrid);
+                EmployeeDL.LoadDataGrid(dataGrid,"");
                 
                 EmployeeDL.LoadEmployeeCombobox(kryptonComboBox5);
                 EmployeeDL.LoadEmployeeCombobox(kryptonComboBox6);
@@ -546,6 +546,12 @@ namespace DBFinalProject
                 kryptonTextBox8.Text = "Contact";
                 kryptonTextBox8.StateCommon.Content.Color1 = Color.Gray;
             }
+        }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            string search = kryptonTextBox1.Text.Trim();
+            EmployeeDL.LoadDataGrid(dataGrid, search);
         }
     }
 }

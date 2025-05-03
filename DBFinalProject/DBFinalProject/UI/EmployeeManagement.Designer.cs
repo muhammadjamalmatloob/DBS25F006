@@ -798,6 +798,7 @@
             this.kryptonButton5.Size = new System.Drawing.Size(176, 52);
             this.kryptonButton5.TabIndex = 6;
             this.kryptonButton5.Values.Text = "SEARCH";
+            this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
             // 
             // kryptonTextBox1
             // 

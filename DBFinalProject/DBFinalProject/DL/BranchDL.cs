@@ -148,6 +148,7 @@ namespace DBFinalProject.DL
             //{
             //    row.Height = 50;
             //}
+            dvgBranch.Rows.Clear();
             foreach (var branch in branchList)
             {
                 dvgBranch.Rows.Add(

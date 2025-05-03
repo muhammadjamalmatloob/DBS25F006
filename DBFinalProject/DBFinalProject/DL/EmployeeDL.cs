@@ -60,9 +60,55 @@ namespace DBFinalProject.DL
             return DatabaseHelper.Instance.Update(query) > 0;
         }
 
-        public static void LoadDataGrid(KryptonDataGridView dgvEmployeeh)
+        //    public static void LoadDataGrid(KryptonDataGridView dgvEmployeeh)
+        //    {
+        //        string query = @"
+        //    SELECT 
+        //        e.employee_id,
+        //        e.first_name,
+        //        e.last_name,
+        //        e.position,
+        //        e.department,
+        //        e.branch_id,
+        //        e.salary,
+        //        u.username,
+        //        u.email
+        //    FROM Employees e
+        //    INNER JOIN Users u ON e.user_id = u.user_id
+
+        //";
+
+        //        dgvEmployeeh.Rows.Clear();
+
+        //        using (var reader = DatabaseHelper.Instance.getData(query))
+        //        {
+        //            while (reader.Read())
+        //            {
+        //                int employee_id = Convert.ToInt32(reader["employee_id"]);
+        //                string full_name = reader["first_name"] + " " + reader["last_name"];
+        //                string username = reader["username"].ToString();
+        //                string email = reader["email"].ToString();
+        //                string department = reader["department"].ToString();
+        //                int position = Convert.ToInt32(reader["position"]);
+        //                int branch_id = Convert.ToInt32(reader["branch_id"]);
+        //                float salary = float.Parse(reader["salary"].ToString());
+
+        //                dgvEmployeeh.Rows.Add(
+        //                    employee_id,
+        //                    full_name,
+        //                    username,
+        //                    email,
+        //                    department,
+        //                    UserDL.get_role(position),
+        //                    BranchDL.GetBranchNameById(branch_id),
+        //                    salary
+        //                );
+        //            }
+        //        }
+        //    }
+        public static void LoadDataGrid(KryptonDataGridView dgvEmployee,string search)
         {
-            string query = @"
+            string query = $@"
         SELECT 
             e.employee_id,
             e.first_name,
@@ -75,9 +121,10 @@ namespace DBFinalProject.DL
             u.email
         FROM Employees e
         INNER JOIN Users u ON e.user_id = u.user_id
+        WHERE e.first_name like '%{search}%' OR e.last_name like '%{search}%';
     ";
 
-            dgvEmployeeh.Rows.Clear();
+            dgvEmployee.Rows.Clear();
 
             using (var reader = DatabaseHelper.Instance.getData(query))
             {
@@ -92,7 +139,7 @@ namespace DBFinalProject.DL
                     int branch_id = Convert.ToInt32(reader["branch_id"]);
                     float salary = float.Parse(reader["salary"].ToString());
 
-                    dgvEmployeeh.Rows.Add(
+                    dgvEmployee.Rows.Add(
                         employee_id,
                         full_name,
                         username,
@@ -105,6 +152,8 @@ namespace DBFinalProject.DL
                 }
             }
         }
+
+
 
         public static bool isDublicateContact(string contact)
         {

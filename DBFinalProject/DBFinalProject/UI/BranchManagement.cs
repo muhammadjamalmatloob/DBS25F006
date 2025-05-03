@@ -446,5 +446,40 @@ namespace DBFinalProject
                 kryptonTextBox7.StateCommon.Content.Color1 = Color.Gray;
             }
         }
+
+        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox1_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "Search Branch")
+            {
+                kryptonTextBox1.Text = "";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox1_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "")
+            {
+                kryptonTextBox1.Text = "Search Branch";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            string search = kryptonTextBox1.Text.Trim();
+            if (string.IsNullOrEmpty(search)  || search == "Search Branch")
+            {
+                return;
+            }
+
+            var filteredList = BranchDL.branchList.Where(b => b.get_branch_name().ToLower().Contains(search)).ToList();
+            BranchDL.LoadDataGrid(filteredList, dgvBranch);
+        }
     }
 }

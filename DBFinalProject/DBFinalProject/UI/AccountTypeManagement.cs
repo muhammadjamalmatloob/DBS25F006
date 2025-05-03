@@ -429,5 +429,37 @@ namespace DBFinalProject.UI
                 kryptonTextBox9.StateCommon.Content.Color1 = Color.Gray;
             }
         }
+
+        private void kryptonTextBox1_Enter(object sender, EventArgs e)
+        {
+            
+            if (kryptonButton1.Text.Trim() == "Search Account Type")
+            {
+                kryptonTextBox1.Text = "";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox1_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "")
+            {
+                kryptonTextBox1.Text = "Search Account Type";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            string search = kryptonTextBox1.Text.Trim();
+
+            if (string.IsNullOrEmpty(search) || search == "Search Account Type")
+            {
+                return;
+            }
+
+            var filteredList = AccountTypeDL.accountTypes.Where(a => a.get_type_name().ToLower().Contains(search)).ToList();
+            AccountTypeDL.LoadDataGrid(filteredList, dgvAccount);
+        }
     }
 }
