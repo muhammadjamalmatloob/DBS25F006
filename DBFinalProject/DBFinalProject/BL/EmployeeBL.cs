@@ -153,9 +153,9 @@ namespace DBFinalProject.BL
             {
                 throw new Exception("Salary Cannot Be Negative");
             }
-            else if (salary > 100000)
+            else if (salary > 500000)
             {
-                throw new Exception("Salary Cannot Be Greater Than 100000");
+                throw new Exception("Salary Cannot Be Greater Than 500000");
             }
             this.salary = salary;
         }

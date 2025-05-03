@@ -24,9 +24,10 @@ namespace DBFinalProject.DL
 
         public static int get_role_id(string role_name)
         {
-            string query = $"SELECT lookup_id FROM lookup WHERE value = '{role_name}'";
+            //string query = $"SELECT lookup_id FROM lookup WHERE value = '{role_name}'";
+            string stored_procedure = $"CALL sp_GetRoleId('{role_name}')";
             int role_id = 0;
-            using (var reader = DatabaseHelper.Instance.getData(query))
+            using (var reader = DatabaseHelper.Instance.getData(stored_procedure))
             {
                 if (reader.Read())
                 {
@@ -37,9 +38,10 @@ namespace DBFinalProject.DL
         }
         public static string get_role(int role_id)
         {
-            string query = $"SELECT value FROM lookup WHERE lookup_id = '{role_id}'";
+            //string query = $"SELECT value FROM lookup WHERE lookup_id = '{role_id}'";
+            string stored_procedure = $"CALL sp_GetRoleName({role_id})";
             string role_name = "";
-            using (var reader = DatabaseHelper.Instance.getData(query))
+            using (var reader = DatabaseHelper.Instance.getData(stored_procedure))
             {
                 if (reader.Read())
                 {
@@ -50,36 +52,16 @@ namespace DBFinalProject.DL
         }
 
 
-        //public static string get_role(int role_id)
-        //{
-        //    string query = "CALL GetRoleName(@role_id, @role_name); SELECT @role_name AS employee_position;";
-        //    using (var connection = DatabaseHelper.Instance.getConnection())
-        //    {
-        //        if (connection.State == ConnectionState.Open)
-        //        {
-        //            connection.Close();
-        //        }
-
-        //        using (var command = new MySqlCommand(query, connection))
-        //        {
-        //            command.Parameters.AddWithValue("@role_id", role_id);
-        //            command.Parameters.Add(new MySqlParameter("@role_name", MySqlDbType.VarChar) { Direction = ParameterDirection.Output });
-
-        //            connection.Open();
-        //            command.ExecuteNonQuery();
-        //            return command.Parameters["@role_name"].Value.ToString();
-        //        }
-        //    }
-        //}
-
+  
         
 
 
         public static int get_user_id(string username)
         {
-            string query = $"SELECT user_id FROM users WHERE username = '{username}'";
+            //string query = $"SELECT user_id FROM users WHERE username = '{username}'";
+            string stored_procedure = $"CALL sp_GetUserIdByUserName('{username}')";
             int user_id = 0;
-            using (var reader = DatabaseHelper.Instance.getData(query))
+            using (var reader = DatabaseHelper.Instance.getData(stored_procedure))
             {
                 if (reader.Read())
                 {
@@ -91,9 +73,10 @@ namespace DBFinalProject.DL
 
         public static int get_user_id_by_email(string email)
         {
-            string query = $"SELECT user_id FROM users WHERE email = '{email}'";
+            //string query = $"SELECT user_id FROM users WHERE email = '{email}'";
+            string stored_procedure = $"CALL sp_GetUserIdByEmail('{email}')";
             int user_id = 0;
-            using (var reader = DatabaseHelper.Instance.getData(query))
+            using (var reader = DatabaseHelper.Instance.getData(stored_procedure))
             {
                 if (reader.Read())
                 {
