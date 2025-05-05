@@ -16,6 +16,8 @@ namespace DBFinalProject
         public CashierDashboard()
         {
             InitializeComponent();
+            hide_accounts();
+            hide_client();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
@@ -63,6 +65,86 @@ namespace DBFinalProject
             MainInterface mainInterface = new MainInterface();
             mainInterface.Show();
             this.Hide();
+        }
+
+       
+
+        private void hide_client()
+        {
+            panel5.Visible = true;
+            label10.Visible = false;
+            label11.Visible = false;
+            label12.Visible = false;
+
+            totalTrans.Visible = false;
+            totalBill.Visible = false;
+            totalLoanReq.Visible = false;
+
+            kryptonButton9.Visible = false;
+        }
+        private void show_client()
+        {
+            panel5.Visible = false;
+            label10.Visible = true;
+            label11.Visible = true;
+            label12.Visible = true;
+
+            totalTrans.Visible = true;
+            totalBill.Visible = true;
+            totalLoanReq.Visible = true;
+
+            kryptonButton9.Visible = true;
+        }
+
+        private void hide_accounts()
+        {
+            panel6.Visible = true;
+            label16.Visible = false;
+            label15.Visible = false;
+            label12.Visible = false;
+            label7.Visible = false;
+
+            totalAccountsActive.Visible = false;
+            totalAccountsInactive.Visible = false;
+            totalAccountsClosed.Visible = false;
+            TotalAccountApplications.Visible = false;
+
+            kryptonButton11.Visible = false;
+        }
+        private void show_accounts()
+        {
+            panel6.Visible = false;
+            label16.Visible = true;
+            label15.Visible = true;
+            label12.Visible = true;
+            label7.Visible = true;
+
+            totalAccountsActive.Visible = true;
+            totalAccountsInactive.Visible = true;
+            totalAccountsClosed.Visible = true;
+            TotalAccountApplications.Visible = true;
+
+            kryptonButton11.Visible = true;
+        }
+
+        private void kryptonButton10_Click(object sender, EventArgs e)
+        {
+            show_client();
+        }
+
+        private void kryptonButton9_Click(object sender, EventArgs e)
+        {
+            hide_client();
+        }
+
+        private void kryptonButton12_Click(object sender, EventArgs e)
+        {
+            show_accounts();
+        }
+
+        private void kryptonButton11_Click(object sender, EventArgs e)
+        {
+            hide_accounts();
         }
     }
 }
