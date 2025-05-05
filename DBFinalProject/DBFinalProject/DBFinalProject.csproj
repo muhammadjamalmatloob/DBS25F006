@@ -122,10 +122,12 @@
     <Compile Include="BL\LoanTypeBL.cs" />
     <Compile Include="BL\LoginBL.cs" />
     <Compile Include="BL\PaymentBL.cs" />
+    <Compile Include="BL\SystemLogsBL.cs" />
     <Compile Include="BL\TransactionBL.cs" />
     <Compile Include="BL\UserBL.cs" />
     <Compile Include="DL\AccountApplicationDL.cs" />
     <Compile Include="DL\AccountTypeDL.cs" />
+    <Compile Include="DL\AuditDL.cs" />
     <Compile Include="DL\BranchDL.cs" />
     <Compile Include="DL\ClientDL.cs" />
     <Compile Include="DL\CurrencyExchangeDL.cs" />
@@ -137,8 +139,15 @@
     <Compile Include="DL\PaymentDL.cs" />
     <Compile Include="DL\ResetPasswordDL.cs" />
     <Compile Include="DL\SignUpDL.cs" />
+    <Compile Include="DL\SystemLogsDL.cs" />
     <Compile Include="DL\TransactionDL.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="UI\Audit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Audit.Designer.cs">
+      <DependentUpon>Audit.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -346,6 +355,12 @@
     <Compile Include="UI\SendMoney.Designer.cs">
       <DependentUpon>SendMoney.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\SysttemLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SysttemLogs.Designer.cs">
+      <DependentUpon>SysttemLogs.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TransactionRecord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -386,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ApproveApplicationscs.resx">
       <DependentUpon>ApproveApplicationscs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Audit.resx">
+      <DependentUpon>Audit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\BillPayments.resx">
       <DependentUpon>BillPayments.cs</DependentUpon>
@@ -476,6 +494,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SignUpORApply.resx">
       <DependentUpon>SignUpORApply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SysttemLogs.resx">
+      <DependentUpon>SysttemLogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TransactionRecord.resx">
       <DependentUpon>TransactionRecord.cs</DependentUpon>

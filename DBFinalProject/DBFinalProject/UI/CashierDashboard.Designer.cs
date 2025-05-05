@@ -41,31 +41,45 @@
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
+            this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.kryptonButton11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton12 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.TotalAccountApplications = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.totalAccountsActive = new System.Windows.Forms.Label();
+            this.totalAccounts = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.totalAccountsClosed = new System.Windows.Forms.Label();
+            this.totalAccountsInactive = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.kryptonPanel5 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.totalBill = new System.Windows.Forms.Label();
+            this.kryptonButton9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.totalLoanReq = new System.Windows.Forms.Label();
+            this.kryptonButton10 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.totalTrans = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.totalClients = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
-            this.kryptonPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel5)).BeginInit();
+            this.kryptonPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -186,156 +200,6 @@
             this.kryptonButton1.Values.Text = "Money Transfer";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
-            // kryptonPanel3
-            // 
-            this.kryptonPanel3.Controls.Add(this.label7);
-            this.kryptonPanel3.Controls.Add(this.label8);
-            this.kryptonPanel3.Controls.Add(this.label14);
-            this.kryptonPanel3.Controls.Add(this.label16);
-            this.kryptonPanel3.Controls.Add(this.label15);
-            this.kryptonPanel3.Location = new System.Drawing.Point(940, 406);
-            this.kryptonPanel3.Name = "kryptonPanel3";
-            this.kryptonPanel3.Size = new System.Drawing.Size(358, 373);
-            this.kryptonPanel3.StateCommon.Color1 = System.Drawing.Color.SkyBlue;
-            this.kryptonPanel3.StateCommon.Color2 = System.Drawing.Color.LightSteelBlue;
-            this.kryptonPanel3.StateCommon.ColorAngle = 45F;
-            this.kryptonPanel3.TabIndex = 18;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Navy;
-            this.label7.Location = new System.Drawing.Point(25, 263);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(197, 25);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Account Applications:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Navy;
-            this.label8.Location = new System.Drawing.Point(48, 36);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(252, 36);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "ACCOUNTS DETAIL";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Navy;
-            this.label14.Location = new System.Drawing.Point(25, 215);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(209, 25);
-            this.label14.TabIndex = 7;
-            this.label14.Text = "Total Saving Accounts: ";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Navy;
-            this.label16.Location = new System.Drawing.Point(25, 119);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(147, 25);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "Total Accounts: ";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Navy;
-            this.label15.Location = new System.Drawing.Point(25, 171);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(216, 25);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "Total Current Accounts: ";
-            // 
-            // kryptonPanel2
-            // 
-            this.kryptonPanel2.Controls.Add(this.label12);
-            this.kryptonPanel2.Controls.Add(this.label11);
-            this.kryptonPanel2.Controls.Add(this.label10);
-            this.kryptonPanel2.Controls.Add(this.label9);
-            this.kryptonPanel2.Controls.Add(this.label6);
-            this.kryptonPanel2.Location = new System.Drawing.Point(450, 406);
-            this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(358, 373);
-            this.kryptonPanel2.StateCommon.Color1 = System.Drawing.Color.SkyBlue;
-            this.kryptonPanel2.StateCommon.Color2 = System.Drawing.Color.LightSteelBlue;
-            this.kryptonPanel2.StateCommon.ColorAngle = 45F;
-            this.kryptonPanel2.TabIndex = 16;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Navy;
-            this.label12.Location = new System.Drawing.Point(21, 263);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(140, 25);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Total Payment:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Navy;
-            this.label11.Location = new System.Drawing.Point(21, 215);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(196, 25);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Total Loan Requests: ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Navy;
-            this.label10.Location = new System.Drawing.Point(21, 171);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(178, 25);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Total Transactions: ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Navy;
-            this.label9.Location = new System.Drawing.Point(21, 119);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(127, 25);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Total Clients: ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Navy;
-            this.label6.Location = new System.Drawing.Point(64, 36);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(219, 36);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "CLIENTS DETAIL";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -385,13 +249,351 @@
             this.panel3.Size = new System.Drawing.Size(306, 213);
             this.panel3.TabIndex = 11;
             // 
+            // kryptonManager1
+            // 
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
+            // 
+            // kryptonPanel2
+            // 
+            this.kryptonPanel2.Controls.Add(this.panel6);
+            this.kryptonPanel2.Controls.Add(this.kryptonButton11);
+            this.kryptonPanel2.Controls.Add(this.kryptonButton12);
+            this.kryptonPanel2.Controls.Add(this.TotalAccountApplications);
+            this.kryptonPanel2.Controls.Add(this.label21);
+            this.kryptonPanel2.Controls.Add(this.label16);
+            this.kryptonPanel2.Controls.Add(this.totalAccountsActive);
+            this.kryptonPanel2.Controls.Add(this.totalAccounts);
+            this.kryptonPanel2.Controls.Add(this.label7);
+            this.kryptonPanel2.Controls.Add(this.totalAccountsClosed);
+            this.kryptonPanel2.Controls.Add(this.totalAccountsInactive);
+            this.kryptonPanel2.Controls.Add(this.label14);
+            this.kryptonPanel2.Controls.Add(this.label15);
+            this.kryptonPanel2.Location = new System.Drawing.Point(928, 406);
+            this.kryptonPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonPanel2.Name = "kryptonPanel2";
+            this.kryptonPanel2.Size = new System.Drawing.Size(380, 373);
+            this.kryptonPanel2.StateCommon.Color1 = System.Drawing.Color.Navy;
+            this.kryptonPanel2.StateCommon.Color2 = System.Drawing.Color.LightSteelBlue;
+            this.kryptonPanel2.StateCommon.ColorAngle = 45F;
+            this.kryptonPanel2.TabIndex = 17;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel6.Location = new System.Drawing.Point(42, 88);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(286, 180);
+            this.panel6.TabIndex = 10;
+            // 
+            // kryptonButton11
+            // 
+            this.kryptonButton11.Location = new System.Drawing.Point(82, 304);
+            this.kryptonButton11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonButton11.Name = "kryptonButton11";
+            this.kryptonButton11.Size = new System.Drawing.Size(131, 50);
+            this.kryptonButton11.StateCommon.Back.Color1 = System.Drawing.Color.Gainsboro;
+            this.kryptonButton11.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton11.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.MidnightBlue;
+            this.kryptonButton11.TabIndex = 9;
+            this.kryptonButton11.Values.Text = "BACK";
+            this.kryptonButton11.Click += new System.EventHandler(this.kryptonButton11_Click);
+            // 
+            // kryptonButton12
+            // 
+            this.kryptonButton12.Location = new System.Drawing.Point(235, 304);
+            this.kryptonButton12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonButton12.Name = "kryptonButton12";
+            this.kryptonButton12.Size = new System.Drawing.Size(131, 50);
+            this.kryptonButton12.StateCommon.Back.Color1 = System.Drawing.Color.Gainsboro;
+            this.kryptonButton12.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton12.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.MidnightBlue;
+            this.kryptonButton12.TabIndex = 8;
+            this.kryptonButton12.Values.Text = "VIEW";
+            this.kryptonButton12.Click += new System.EventHandler(this.kryptonButton12_Click);
+            // 
+            // TotalAccountApplications
+            // 
+            this.TotalAccountApplications.AutoSize = true;
+            this.TotalAccountApplications.BackColor = System.Drawing.Color.Transparent;
+            this.TotalAccountApplications.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalAccountApplications.ForeColor = System.Drawing.Color.AliceBlue;
+            this.TotalAccountApplications.Location = new System.Drawing.Point(261, 234);
+            this.TotalAccountApplications.Name = "TotalAccountApplications";
+            this.TotalAccountApplications.Size = new System.Drawing.Size(46, 23);
+            this.TotalAccountApplications.TabIndex = 12;
+            this.TotalAccountApplications.Text = "num";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Franklin Gothic Medium", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label21.Location = new System.Drawing.Point(3, 32);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(286, 36);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Customer\'s Accounts";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label16.Location = new System.Drawing.Point(46, 88);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(203, 25);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "Total Active Accounts: ";
+            // 
+            // totalAccountsActive
+            // 
+            this.totalAccountsActive.AutoSize = true;
+            this.totalAccountsActive.BackColor = System.Drawing.Color.Transparent;
+            this.totalAccountsActive.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalAccountsActive.ForeColor = System.Drawing.Color.AliceBlue;
+            this.totalAccountsActive.Location = new System.Drawing.Point(268, 94);
+            this.totalAccountsActive.Name = "totalAccountsActive";
+            this.totalAccountsActive.Size = new System.Drawing.Size(46, 23);
+            this.totalAccountsActive.TabIndex = 10;
+            this.totalAccountsActive.Text = "num";
+            // 
+            // totalAccounts
+            // 
+            this.totalAccounts.AutoSize = true;
+            this.totalAccounts.BackColor = System.Drawing.Color.Transparent;
+            this.totalAccounts.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalAccounts.ForeColor = System.Drawing.Color.AliceBlue;
+            this.totalAccounts.Location = new System.Drawing.Point(315, 39);
+            this.totalAccounts.Name = "totalAccounts";
+            this.totalAccounts.Size = new System.Drawing.Size(51, 25);
+            this.totalAccounts.TabIndex = 7;
+            this.totalAccounts.Text = "num";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label7.Location = new System.Drawing.Point(46, 232);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(197, 25);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Account Applications:";
+            // 
+            // totalAccountsClosed
+            // 
+            this.totalAccountsClosed.AutoSize = true;
+            this.totalAccountsClosed.BackColor = System.Drawing.Color.Transparent;
+            this.totalAccountsClosed.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalAccountsClosed.ForeColor = System.Drawing.Color.AliceBlue;
+            this.totalAccountsClosed.Location = new System.Drawing.Point(261, 184);
+            this.totalAccountsClosed.Name = "totalAccountsClosed";
+            this.totalAccountsClosed.Size = new System.Drawing.Size(46, 23);
+            this.totalAccountsClosed.TabIndex = 10;
+            this.totalAccountsClosed.Text = "num";
+            // 
+            // totalAccountsInactive
+            // 
+            this.totalAccountsInactive.AutoSize = true;
+            this.totalAccountsInactive.BackColor = System.Drawing.Color.Transparent;
+            this.totalAccountsInactive.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalAccountsInactive.ForeColor = System.Drawing.Color.AliceBlue;
+            this.totalAccountsInactive.Location = new System.Drawing.Point(268, 140);
+            this.totalAccountsInactive.Name = "totalAccountsInactive";
+            this.totalAccountsInactive.Size = new System.Drawing.Size(46, 23);
+            this.totalAccountsInactive.TabIndex = 11;
+            this.totalAccountsInactive.Text = "num";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label14.Location = new System.Drawing.Point(46, 184);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(210, 25);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Total Closed Accounts: ";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label15.Location = new System.Drawing.Point(46, 140);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(218, 25);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Total Inactive Accounts: ";
+            // 
+            // kryptonPanel5
+            // 
+            this.kryptonPanel5.Controls.Add(this.panel5);
+            this.kryptonPanel5.Controls.Add(this.totalBill);
+            this.kryptonPanel5.Controls.Add(this.kryptonButton9);
+            this.kryptonPanel5.Controls.Add(this.totalLoanReq);
+            this.kryptonPanel5.Controls.Add(this.kryptonButton10);
+            this.kryptonPanel5.Controls.Add(this.totalTrans);
+            this.kryptonPanel5.Controls.Add(this.label13);
+            this.kryptonPanel5.Controls.Add(this.label12);
+            this.kryptonPanel5.Controls.Add(this.totalClients);
+            this.kryptonPanel5.Controls.Add(this.label11);
+            this.kryptonPanel5.Controls.Add(this.label10);
+            this.kryptonPanel5.Location = new System.Drawing.Point(404, 406);
+            this.kryptonPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonPanel5.Name = "kryptonPanel5";
+            this.kryptonPanel5.Size = new System.Drawing.Size(357, 373);
+            this.kryptonPanel5.StateCommon.Color1 = System.Drawing.Color.Navy;
+            this.kryptonPanel5.StateCommon.Color2 = System.Drawing.Color.LightSteelBlue;
+            this.kryptonPanel5.StateCommon.ColorAngle = 45F;
+            this.kryptonPanel5.TabIndex = 16;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel5.Location = new System.Drawing.Point(42, 98);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(286, 180);
+            this.panel5.TabIndex = 10;
+            // 
+            // totalBill
+            // 
+            this.totalBill.AutoSize = true;
+            this.totalBill.BackColor = System.Drawing.Color.Transparent;
+            this.totalBill.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalBill.ForeColor = System.Drawing.Color.AliceBlue;
+            this.totalBill.Location = new System.Drawing.Point(237, 213);
+            this.totalBill.Name = "totalBill";
+            this.totalBill.Size = new System.Drawing.Size(46, 23);
+            this.totalBill.TabIndex = 11;
+            this.totalBill.Text = "num";
+            // 
+            // kryptonButton9
+            // 
+            this.kryptonButton9.Location = new System.Drawing.Point(51, 304);
+            this.kryptonButton9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonButton9.Name = "kryptonButton9";
+            this.kryptonButton9.Size = new System.Drawing.Size(131, 50);
+            this.kryptonButton9.StateCommon.Back.Color1 = System.Drawing.Color.Gainsboro;
+            this.kryptonButton9.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton9.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.MidnightBlue;
+            this.kryptonButton9.TabIndex = 9;
+            this.kryptonButton9.Values.Text = "BACK";
+            this.kryptonButton9.Click += new System.EventHandler(this.kryptonButton9_Click);
+            // 
+            // totalLoanReq
+            // 
+            this.totalLoanReq.AutoSize = true;
+            this.totalLoanReq.BackColor = System.Drawing.Color.Transparent;
+            this.totalLoanReq.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLoanReq.ForeColor = System.Drawing.Color.AliceBlue;
+            this.totalLoanReq.Location = new System.Drawing.Point(259, 165);
+            this.totalLoanReq.Name = "totalLoanReq";
+            this.totalLoanReq.Size = new System.Drawing.Size(46, 23);
+            this.totalLoanReq.TabIndex = 9;
+            this.totalLoanReq.Text = "num";
+            // 
+            // kryptonButton10
+            // 
+            this.kryptonButton10.Location = new System.Drawing.Point(197, 304);
+            this.kryptonButton10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonButton10.Name = "kryptonButton10";
+            this.kryptonButton10.Size = new System.Drawing.Size(131, 50);
+            this.kryptonButton10.StateCommon.Back.Color1 = System.Drawing.Color.Gainsboro;
+            this.kryptonButton10.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton10.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.MidnightBlue;
+            this.kryptonButton10.TabIndex = 8;
+            this.kryptonButton10.Values.Text = "VIEW";
+            this.kryptonButton10.Click += new System.EventHandler(this.kryptonButton10_Click);
+            // 
+            // totalTrans
+            // 
+            this.totalTrans.AutoSize = true;
+            this.totalTrans.BackColor = System.Drawing.Color.Transparent;
+            this.totalTrans.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalTrans.ForeColor = System.Drawing.Color.AliceBlue;
+            this.totalTrans.Location = new System.Drawing.Point(237, 121);
+            this.totalTrans.Name = "totalTrans";
+            this.totalTrans.Size = new System.Drawing.Size(46, 23);
+            this.totalTrans.TabIndex = 8;
+            this.totalTrans.Text = "num";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Franklin Gothic Medium", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label13.Location = new System.Drawing.Point(20, 36);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(193, 36);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "OUR CLIENTS ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label12.Location = new System.Drawing.Point(57, 213);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(172, 25);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Total Bill Payment:";
+            // 
+            // totalClients
+            // 
+            this.totalClients.AutoSize = true;
+            this.totalClients.BackColor = System.Drawing.Color.Transparent;
+            this.totalClients.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalClients.ForeColor = System.Drawing.Color.AliceBlue;
+            this.totalClients.Location = new System.Drawing.Point(282, 41);
+            this.totalClients.Name = "totalClients";
+            this.totalClients.Size = new System.Drawing.Size(46, 23);
+            this.totalClients.TabIndex = 7;
+            this.totalClients.Text = "num";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label11.Location = new System.Drawing.Point(57, 165);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(196, 25);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Total Loan Requests: ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label10.Location = new System.Drawing.Point(57, 121);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(178, 25);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Total Transactions: ";
+            // 
             // CashierDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1520, 802);
-            this.Controls.Add(this.kryptonPanel3);
             this.Controls.Add(this.kryptonPanel2);
+            this.Controls.Add(this.kryptonPanel5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -407,12 +609,12 @@
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).EndInit();
-            this.kryptonPanel3.ResumeLayout(false);
-            this.kryptonPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);
             this.kryptonPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel5)).EndInit();
+            this.kryptonPanel5.ResumeLayout(false);
+            this.kryptonPanel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -431,23 +633,39 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
+        public ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
+        public ComponentFactory.Krypton.Toolkit.KryptonPalette GreenTheme;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
+        private System.Windows.Forms.Panel panel6;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton11;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton12;
+        private System.Windows.Forms.Label TotalAccountApplications;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label totalAccountsActive;
+        private System.Windows.Forms.Label totalAccounts;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label totalAccountsClosed;
+        private System.Windows.Forms.Label totalAccountsInactive;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel5;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label totalBill;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton9;
+        private System.Windows.Forms.Label totalLoanReq;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton10;
+        private System.Windows.Forms.Label totalTrans;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label totalClients;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
     }
 }
