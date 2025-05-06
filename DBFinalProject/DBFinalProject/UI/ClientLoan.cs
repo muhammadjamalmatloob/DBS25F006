@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBFinalProject.BL;
 
 namespace DBFinalProject
 {
@@ -67,6 +68,39 @@ namespace DBFinalProject
             if (kryptonTextBox1.Text == "")
             {
                 kryptonTextBox1.Text = "Amount Request";
+            }
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            string loan_type = kryptonComboBox2.SelectedItem.ToString();
+            string purpose = kryptonTextBox2.Text;
+            decimal amount = Convert.ToDecimal(kryptonTextBox1.Text);
+            LoanApplicationBL application = new LoanApplicationBL();
+            //application.setClientId();
+            //application.setLoanTypeId();
+            //application.setAccountId();
+            application.SetRequestAmount(amount);
+            application.setPurpose(purpose);
+            //application.setEmployementStatus();
+            //application.setLoanStatus();
+            application.setApplyDate(DateTime.Now);
+
+        }
+
+        private void kryptonComboBox1_Enter(object sender, EventArgs e)
+        {
+            if(kryptonComboBox1.Text == "Employment Status")
+            {
+                kryptonComboBox1.Text = "";
+            }
+        }
+
+        private void kryptonComboBox1_Leave(object sender, EventArgs e)
+        {
+            if (kryptonComboBox1.Text == "")
+            {
+                kryptonComboBox1.Text = "Employment Status";
             }
         }
     }

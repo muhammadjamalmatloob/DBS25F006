@@ -14,7 +14,7 @@ namespace DBFinalProject.DL
 
         public static void AddTransaction(TransactionBL transaction)
         {
-            string query = $"INSERT INTO transactions VALUES ('{transaction.getTransactionId()}','{transaction.getClientId()}', '{transaction.getFromAccount()}','{transaction.getToAccount()}','{transaction.getTransactionType()}','{transaction.getAmount()}','{transaction.getDate()}','{transaction.getdescription()}','{transaction.getCharges()}')";
+            string query = $"INSERT INTO transactions VALUES ('{transaction.getTransactionId()}','{transaction.getClientId()}', '{transaction.getTransactionType()}','{transaction.getDate()}','{transaction.getCharges()}')";
             DatabaseHelper.Instance.Update(query);
         }
 
@@ -32,7 +32,7 @@ namespace DBFinalProject.DL
             {
                 if (reader.Read())
                 {
-                    type_id = Convert.ToInt32(reader["branch_id"].ToString());
+                    type_id = Convert.ToInt32(reader["lookup_id"].ToString());
                 }
             }
             return type_id;

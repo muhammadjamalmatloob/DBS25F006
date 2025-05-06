@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBFinalProject.BL;
 
 namespace DBFinalProject
 {
@@ -19,7 +20,10 @@ namespace DBFinalProject
 
         private void kryptonButton11_Click(object sender, EventArgs e)
         {
-
+            decimal amount = Convert.ToDecimal(kryptonTextBox3.Text);
+            WithdrawalBL withdrawal = new WithdrawalBL();
+            //withdrawal.setFromAccID();
+            withdrawal.setAmount(amount);
         }
 
         private void kryptonTextBox3_Enter(object sender, EventArgs e)
