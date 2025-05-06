@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBFinalProject.BL;
 
 namespace DBFinalProject
 {
@@ -121,6 +122,17 @@ namespace DBFinalProject
                 kryptonTextBox4.Text = "PIN";
                 kryptonTextBox4.PasswordChar = '\0';
             }
+        }
+
+        private void kryptonButton11_Click(object sender, EventArgs e)
+        {
+            decimal amount = Convert.ToDecimal(kryptonTextBox3.Text);
+            string fromAccNum = kryptonTextBox1.Text;
+            string toAccNum = kryptonTextBox2.Text;
+            TransferBL transfer = new TransferBL();
+            //transfer.setFromAccID();
+            //transfer.setToAccID();
+            transfer.setAmount(amount);
         }
     }
 }

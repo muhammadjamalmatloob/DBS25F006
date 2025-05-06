@@ -124,7 +124,9 @@
     <Compile Include="BL\PaymentBL.cs" />
     <Compile Include="BL\SystemLogsBL.cs" />
     <Compile Include="BL\TransactionBL.cs" />
+    <Compile Include="BL\TransferBL.cs" />
     <Compile Include="BL\UserBL.cs" />
+    <Compile Include="BL\WithdrawalBL.cs" />
     <Compile Include="DL\AccountApplicationDL.cs" />
     <Compile Include="DL\AccountTypeDL.cs" />
     <Compile Include="DL\AuditDL.cs" />
@@ -141,6 +143,8 @@
     <Compile Include="DL\SignUpDL.cs" />
     <Compile Include="DL\SystemLogsDL.cs" />
     <Compile Include="DL\TransactionDL.cs" />
+    <Compile Include="DL\TransferDL.cs" />
+    <Compile Include="DL\WithdrawalDL.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="UI\Audit.cs">
       <SubType>Form</SubType>
@@ -232,12 +236,6 @@
     </Compile>
     <Compile Include="UI\ClientCurrencyExchange.Designer.cs">
       <DependentUpon>ClientCurrencyExchange.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\ClientDepositMoney.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\ClientDepositMoney.Designer.cs">
-      <DependentUpon>ClientDepositMoney.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ClientLoan.cs">
       <SubType>UserControl</SubType>
@@ -419,9 +417,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ClientCurrencyExchange.resx">
       <DependentUpon>ClientCurrencyExchange.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\ClientDepositMoney.resx">
-      <DependentUpon>ClientDepositMoney.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ClientLoan.resx">
       <DependentUpon>ClientLoan.cs</DependentUpon>
