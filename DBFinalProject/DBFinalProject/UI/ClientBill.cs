@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBFinalProject.BL;
+using MySqlConnector;
 
 namespace DBFinalProject
 {
@@ -51,18 +53,10 @@ namespace DBFinalProject
 
         private void kryptonComboBox2_Enter(object sender, EventArgs e)
         {
-            if(kryptonComboBox2.Text == "Select Method")
-            {
-                kryptonComboBox2.Text = "";
-            }
         }
 
         private void kryptonComboBox2_Leave(object sender, EventArgs e)
         {
-            if (kryptonComboBox2.Text == "")
-            {
-                kryptonComboBox2.Text = "Select Method";
-            }
         }
 
         private void kryptonTextBox2_Enter(object sender, EventArgs e)
@@ -81,6 +75,29 @@ namespace DBFinalProject
                 kryptonTextBox2.Text = "PIN";
                 kryptonTextBox2.PasswordChar = '\0';
             }
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            DateTime date_recorded = DateTime.Now;
+            decimal amount = Convert.ToDecimal(kryptonTextBox1.Text);
+            string payment_type = kryptonComboBox1.SelectedItem.ToString();
+            TransactionBL transaction = new TransactionBL();
+            //transaction.setClientId();
+            //transaction.setTransactionType();
+            transaction.setDate(date_recorded);
+            transaction.setCharges(amount);
+            PaymentBL payment = new PaymentBL();
+            payment.setAmount(amount);
+            /*if(balance - amount < 0)
+            {
+                payment.setStatus();
+            }
+            else
+            {
+                payment.setStatus();
+            }*/
+            //payment.setType(payment_type);
         }
     }
 }

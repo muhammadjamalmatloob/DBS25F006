@@ -134,8 +134,8 @@ namespace DBFinalProject
                             break;
                         case "Client":
                             MessageBox.Show("Login successful! Opening Administrative Staff Dashboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            ClientManagement clientManagement = new ClientManagement();
-                            clientManagement.Show();
+                            GeneralMenu clientDashboard = new GeneralMenu();
+                            clientDashboard.Show();
                             this.Hide();
                             break;
                         default:
