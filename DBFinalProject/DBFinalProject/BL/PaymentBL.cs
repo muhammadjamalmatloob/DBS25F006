@@ -9,17 +9,11 @@ namespace DBFinalProject.BL
     internal class PaymentBL : TransactionBL
     {
         private int payment_id {  get; set; }
-        private string method { get; set; }
         private int status { get; set; }
+        private decimal amount { get; set; }
         private int payment_type { get; set; }
-        private string currency { get; set; }
 
         public PaymentBL() { }
-
-        public void setMethod(string method)
-        {
-            this.method = method;
-        }
         public void setStatus(int status)
         {
             this.status = status;
@@ -28,17 +22,17 @@ namespace DBFinalProject.BL
         {
             this.payment_type = payment_type;
         }
-        public void setCurrency(string currency)
+        public void setAmount(decimal amount)
         {
-            this.currency = currency;
+            this.amount = amount;
+        }
+        public decimal getAmount()
+        {
+            return this.amount;
         }
         public int getPaymentId()
         {
             return this.payment_id;
-        }
-        public string getMethod()
-        {
-            return this.method;
         }
         public int getStatus()
         {
@@ -47,10 +41,6 @@ namespace DBFinalProject.BL
         public int getPaymentType()
         {
             return this.payment_type;
-        }
-        public string getCurrency()
-        {
-            return this.currency;
         }
     }
 }
