@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using DBFinalProject.BL;
 using DBFinalProject.Utility;
+
 
 namespace DBFinalProject.DL
 {
     internal class TransferDL
     {
+
         public static List<TransferBL> transfers = new List<TransferBL>();
 
         public static void AddTransfer(TransferBL transfer)

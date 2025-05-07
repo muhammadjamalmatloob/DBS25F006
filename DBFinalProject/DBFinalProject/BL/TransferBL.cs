@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DBFinalProject.BL
 {
+
     internal class TransferBL : TransactionBL
     {
         private int transfer_id {  get; set; }
