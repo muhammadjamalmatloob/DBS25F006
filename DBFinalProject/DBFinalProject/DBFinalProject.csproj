@@ -112,11 +112,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\AccountApplicationBL.cs" />
+    <Compile Include="BL\AccountBL.cs" />
     <Compile Include="BL\AccountType.cs" />
     <Compile Include="BL\AccountTypeBL.cs" />
     <Compile Include="BL\BranchBL.cs" />
     <Compile Include="BL\ClientBL.cs" />
     <Compile Include="BL\CurrencyExchangeBL.cs" />
+    <Compile Include="BL\DepositsBL.cs" />
     <Compile Include="BL\EmployeeBL.cs" />
     <Compile Include="BL\LoanApplicationBL.cs" />
     <Compile Include="BL\LoanTypeBL.cs" />
@@ -128,11 +130,13 @@
     <Compile Include="BL\UserBL.cs" />
     <Compile Include="BL\WithdrawalBL.cs" />
     <Compile Include="DL\AccountApplicationDL.cs" />
+    <Compile Include="DL\AccountDL.cs" />
     <Compile Include="DL\AccountTypeDL.cs" />
     <Compile Include="DL\AuditDL.cs" />
     <Compile Include="DL\BranchDL.cs" />
     <Compile Include="DL\ClientDL.cs" />
     <Compile Include="DL\CurrencyExchangeDL.cs" />
+    <Compile Include="DL\DepositsDL.cs" />
     <Compile Include="DL\EmployeeDL.cs" />
     <Compile Include="DL\LoanApplicationDL.cs" />
     <Compile Include="DL\LoanTypeDL.cs" />

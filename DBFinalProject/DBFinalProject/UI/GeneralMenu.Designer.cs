@@ -361,11 +361,11 @@
             // 
             // clientDepositMoney1
             // 
-            this.clientDepositMoney1.Location = new System.Drawing.Point(217, 0);
-            this.clientDepositMoney1.Name = "clientDepositMoney1";
-            this.clientDepositMoney1.Size = new System.Drawing.Size(923, 668);
-            this.clientDepositMoney1.TabIndex = 22;
-            this.clientDepositMoney1.Visible = false;
+            //this.clientDepositMoney1.Location = new System.Drawing.Point(217, 0);
+            //this.clientDepositMoney1.Name = "clientDepositMoney1";
+            //this.clientDepositMoney1.Size = new System.Drawing.Size(923, 668);
+            //this.clientDepositMoney1.TabIndex = 22;
+            //this.clientDepositMoney1.Visible = false;
             // 
             // sendMoney1
             // 
@@ -416,7 +416,7 @@
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.commonInterface1);
-            this.Controls.Add(this.clientDepositMoney1);
+            //this.Controls.Add(this.clientDepositMoney1);
             this.Controls.Add(this.sendMoney1);
             this.Controls.Add(this.withdraw1);
             this.Controls.Add(this.clientLoan1);
@@ -443,7 +443,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
         private System.Windows.Forms.Button button7;
         private CommonInterface commonInterface1;
-        private ClientDepositMoney clientDepositMoney1;
+        //private ClientDepositMoney clientDepositMoney1;
         private SendMoney sendMoney1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button5;
