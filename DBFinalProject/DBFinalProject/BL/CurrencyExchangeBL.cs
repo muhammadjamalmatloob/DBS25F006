@@ -9,13 +9,26 @@ namespace DBFinalProject.BL
     internal class CurrencyExchangeBL
     {
         private int exchange_id {  get; set; }
+
+        private int client_id { get; set; }
         private string base_currency {  get; set; }
         private string target_currency { get; set; }
         private decimal exchange_rate { get; set; }
         private decimal amount_base { get; set; }
         private decimal amount_target { get; set; }
 
+        private DateTime date { get; set; }
+
         public CurrencyExchangeBL() { }
+
+        public void setClientId(int client_id)
+        {
+            this.client_id = client_id;
+        }
+        public int getClientId()
+        {
+            return this.client_id;
+        }
         public void setBaseCurrency(string base_currency)
         {
             this.base_currency = base_currency;
@@ -57,6 +70,14 @@ namespace DBFinalProject.BL
             return this.amount_target;
         }
 
+        public void setDate(DateTime date)
+        {
+            this.date = date;
+        }
+        public DateTime getDate()
+        {
+            return this.date;
+        }
         public void setExchangeRate(string bcurrency,string tcurrency)
         {
             if (bcurrency == "Rupees" && tcurrency == "Dollars")
