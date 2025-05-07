@@ -9,13 +9,13 @@ namespace DBFinalProject.BL
     internal class CurrencyExchangeBL
     {
         private int exchange_id {  get; set; }
-
         private int client_id { get; set; }
         private string base_currency {  get; set; }
         private string target_currency { get; set; }
         private decimal exchange_rate { get; set; }
         private decimal amount_base { get; set; }
         private decimal amount_target { get; set; }
+        private DateTime date_recorded { get; set; }
 
         private DateTime date { get; set; }
 
@@ -45,6 +45,14 @@ namespace DBFinalProject.BL
         {
             this.amount_target = amount_target;
         }
+        public void setClientId(int client_id)
+        {
+            this.client_id = client_id;
+        }
+        public void setDate(DateTime date)
+        {
+            this.date_recorded = date;
+        }
         public int getExchangeId()
         {
             return this.exchange_id;
@@ -68,6 +76,14 @@ namespace DBFinalProject.BL
         public decimal getAmountTarget()
         {
             return this.amount_target;
+        }
+        public int getClientId()
+        {
+            return client_id;
+        }
+        public DateTime getDate()
+        {
+            return date_recorded;
         }
 
         public void setDate(DateTime date)

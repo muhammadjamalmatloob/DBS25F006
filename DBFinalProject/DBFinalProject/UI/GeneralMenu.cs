@@ -46,13 +46,12 @@ namespace DBFinalProject
 
         private void button1_Click(object sender, EventArgs e)
         {
+            clientTransactionRecord1.Visible = true;
             commonInterface1.Visible = false;
-            //ClientDepositMoney clientDepositMoney = new ClientDepositMoney(client_id,acc_num,balance);
-            //clientDepositMoney1.Visible = true;
+            clientCurrencyExchange1.Visible = false;
             sendMoney1.Visible = false;
             withdraw1.Visible = false;
             clientLoan1.Visible = false;
-            clientCurrencyExchange1.Visible = false;
             clientBill1.Visible = false;
         }
 
@@ -64,11 +63,11 @@ namespace DBFinalProject
         private void button6_Click(object sender, EventArgs e)
         {
             withdraw1.Visible = true;
+            clientTransactionRecord1.Visible = false;
             commonInterface1.Visible = false;
-            //clientDepositMoney1.Visible = false;
+            clientCurrencyExchange1.Visible = false;
             sendMoney1.Visible = false;
             clientLoan1.Visible = false;
-            clientCurrencyExchange1.Visible = false;
             clientBill1.Visible = false;
         }
 
@@ -80,11 +79,11 @@ namespace DBFinalProject
         private void label1_Click(object sender, EventArgs e)
         {
             commonInterface1.Visible = true;
-            //clientDepositMoney1.Visible = false;
+            clientTransactionRecord1.Visible = false;
+            clientCurrencyExchange1.Visible = false;
             sendMoney1.Visible = false;
             withdraw1.Visible = false;
             clientLoan1.Visible = false;
-            clientCurrencyExchange1.Visible = false;
             clientBill1.Visible = false;
         }
 
@@ -101,11 +100,11 @@ namespace DBFinalProject
         private void button3_Click(object sender, EventArgs e)
         {
             sendMoney1.Visible = true;
+            clientTransactionRecord1.Visible = false;
+            clientCurrencyExchange1.Visible = false;
             commonInterface1.Visible = false;
-            //clientDepositMoney1.Visible = false;
             withdraw1.Visible = false;
             clientLoan1.Visible = false;
-            clientCurrencyExchange1.Visible = false;
             clientBill1.Visible = false;
         }
 
@@ -119,21 +118,21 @@ namespace DBFinalProject
         private void button4_Click(object sender, EventArgs e)
         {
             clientLoan1.Visible = true;
+            clientTransactionRecord1.Visible = false;
+            clientCurrencyExchange1.Visible = false;
             sendMoney1.Visible = false;
             commonInterface1.Visible = false;
-            //clientDepositMoney1.Visible = false;
             withdraw1.Visible = false;
-            clientCurrencyExchange1.Visible = false;
             clientBill1.Visible = false;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             clientCurrencyExchange1.Visible = true;
+            clientTransactionRecord1.Visible = false;
             clientLoan1.Visible = false;
             sendMoney1.Visible = false;
             commonInterface1.Visible = false;
-            //clientDepositMoney1.Visible = false;
             withdraw1.Visible = false;
             clientBill1.Visible = false;
         }
@@ -142,10 +141,10 @@ namespace DBFinalProject
         {
             clientBill1.Visible = true;
             clientCurrencyExchange1.Visible = false;
+            clientTransactionRecord1.Visible = false;
             clientLoan1.Visible = false;
             sendMoney1.Visible = false;
             commonInterface1.Visible = false;
-            //clientDepositMoney1.Visible = false;
             withdraw1.Visible = false;
         }
     }
