@@ -40,23 +40,22 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.GrpRecieve = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.grpReciept = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.Label();
-            this.account_num = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.amount = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.charges = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.charges = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.amount = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.account_num = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpRecieve)).BeginInit();
@@ -72,6 +71,8 @@
             // 
             // kryptonManager1
             // 
+            this.kryptonManager1.GlobalPalette = this.GreenTheme;
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
             // 
             // GreenTheme
             // 
@@ -167,8 +168,6 @@
             this.GreenTheme.PanelStyles.PanelCommon.StateCommon.Color2 = System.Drawing.Color.LimeGreen;
             this.GreenTheme.PanelStyles.PanelCommon.StateCommon.ColorAngle = 45F;
             this.GreenTheme.PanelStyles.PanelCommon.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
-            this.kryptonManager1.GlobalPalette = this.GreenTheme;
-            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
             // 
             // myPallet
             // 
@@ -340,7 +339,6 @@
             // 
             // GrpRecieve.Panel
             // 
-            this.GrpRecieve.Panel.Controls.Add(this.kryptonButton2);
             this.GrpRecieve.Panel.Controls.Add(this.kryptonComboBox1);
             this.GrpRecieve.Panel.Controls.Add(this.kryptonTextBox2);
             this.GrpRecieve.Panel.Controls.Add(this.kryptonTextBox1);
@@ -358,6 +356,28 @@
             this.GrpRecieve.StateCommon.Border.Width = 3;
             this.GrpRecieve.TabIndex = 38;
             this.GrpRecieve.Values.Heading = "";
+            // 
+            // kryptonComboBox1
+            // 
+            this.kryptonComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.kryptonComboBox1.DropDownWidth = 227;
+            this.kryptonComboBox1.Items.AddRange(new object[] {
+            "Select Branch"});
+            this.kryptonComboBox1.Location = new System.Drawing.Point(59, 62);
+            this.kryptonComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonComboBox1.Name = "kryptonComboBox1";
+            this.kryptonComboBox1.Size = new System.Drawing.Size(349, 37);
+            this.kryptonComboBox1.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonComboBox1.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Navy;
+            this.kryptonComboBox1.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Navy;
+            this.kryptonComboBox1.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonComboBox1.StateCommon.ComboBox.Border.Rounding = 15;
+            this.kryptonComboBox1.StateCommon.ComboBox.Border.Width = 3;
+            this.kryptonComboBox1.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
+            this.kryptonComboBox1.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonComboBox1.TabIndex = 32;
             // 
             // kryptonTextBox2
             // 
@@ -395,28 +415,6 @@
             this.kryptonTextBox1.TabIndex = 30;
             this.kryptonTextBox1.Text = "Amount";
             // 
-            // kryptonComboBox1
-            // 
-            this.kryptonComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.kryptonComboBox1.DropDownWidth = 227;
-            this.kryptonComboBox1.Items.AddRange(new object[] {
-            "Select Branch"});
-            this.kryptonComboBox1.Location = new System.Drawing.Point(59, 62);
-            this.kryptonComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonComboBox1.Name = "kryptonComboBox1";
-            this.kryptonComboBox1.Size = new System.Drawing.Size(349, 37);
-            this.kryptonComboBox1.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Navy;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Navy;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Rounding = 15;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Width = 3;
-            this.kryptonComboBox1.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
-            this.kryptonComboBox1.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonComboBox1.TabIndex = 32;
-            // 
             // kryptonTextBox3
             // 
             this.kryptonTextBox3.Location = new System.Drawing.Point(58, 149);
@@ -434,16 +432,6 @@
             this.kryptonTextBox3.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox3.TabIndex = 29;
             this.kryptonTextBox3.Text = "Enter Account Number";
-            // 
-            // kryptonButton2
-            // 
-            this.kryptonButton2.Location = new System.Drawing.Point(309, 463);
-            this.kryptonButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(189, 50);
-            this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.Silver;
-            this.kryptonButton2.TabIndex = 33;
-            this.kryptonButton2.Values.Text = "Generate Reciept";
             // 
             // grpReciept
             // 
@@ -476,89 +464,29 @@
             this.grpReciept.TabIndex = 39;
             this.grpReciept.Values.Heading = "";
             // 
-            // label2
+            // date
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label2.Location = new System.Drawing.Point(145, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(260, 38);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "DEPOSIT RECIEPT";
+            this.date.AutoSize = true;
+            this.date.BackColor = System.Drawing.Color.Transparent;
+            this.date.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date.ForeColor = System.Drawing.Color.SteelBlue;
+            this.date.Location = new System.Drawing.Point(277, 427);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(56, 29);
+            this.date.TabIndex = 13;
+            this.date.Text = "date";
             // 
-            // label3
+            // label14
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label3.Location = new System.Drawing.Point(70, 137);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 29);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "CLIENT NAME:";
-            // 
-            // name
-            // 
-            this.name.AutoSize = true;
-            this.name.BackColor = System.Drawing.Color.Transparent;
-            this.name.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.ForeColor = System.Drawing.Color.SteelBlue;
-            this.name.Location = new System.Drawing.Point(268, 137);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(72, 29);
-            this.name.TabIndex = 3;
-            this.name.Text = "NAME";
-            // 
-            // account_num
-            // 
-            this.account_num.AutoSize = true;
-            this.account_num.BackColor = System.Drawing.Color.Transparent;
-            this.account_num.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.account_num.ForeColor = System.Drawing.Color.SteelBlue;
-            this.account_num.Location = new System.Drawing.Point(315, 220);
-            this.account_num.Name = "account_num";
-            this.account_num.Size = new System.Drawing.Size(60, 29);
-            this.account_num.TabIndex = 5;
-            this.account_num.Text = "Num";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label6.Location = new System.Drawing.Point(70, 220);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(225, 29);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "ACCOUNT NUMBER:";
-            // 
-            // amount
-            // 
-            this.amount.AutoSize = true;
-            this.amount.BackColor = System.Drawing.Color.Transparent;
-            this.amount.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.amount.ForeColor = System.Drawing.Color.SteelBlue;
-            this.amount.Location = new System.Drawing.Point(268, 294);
-            this.amount.Name = "amount";
-            this.amount.Size = new System.Drawing.Size(88, 29);
-            this.amount.TabIndex = 7;
-            this.amount.Text = "amount";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label8.Location = new System.Drawing.Point(70, 294);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(192, 29);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Deposit Amount:";
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label14.Location = new System.Drawing.Point(70, 427);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(159, 29);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "Deposit Date:";
             // 
             // charges
             // 
@@ -584,29 +512,89 @@
             this.label10.TabIndex = 8;
             this.label10.Text = "CHARGES:";
             // 
-            // date
+            // amount
             // 
-            this.date.AutoSize = true;
-            this.date.BackColor = System.Drawing.Color.Transparent;
-            this.date.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date.ForeColor = System.Drawing.Color.SteelBlue;
-            this.date.Location = new System.Drawing.Point(277, 427);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(56, 29);
-            this.date.TabIndex = 13;
-            this.date.Text = "date";
+            this.amount.AutoSize = true;
+            this.amount.BackColor = System.Drawing.Color.Transparent;
+            this.amount.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.amount.ForeColor = System.Drawing.Color.SteelBlue;
+            this.amount.Location = new System.Drawing.Point(268, 294);
+            this.amount.Name = "amount";
+            this.amount.Size = new System.Drawing.Size(88, 29);
+            this.amount.TabIndex = 7;
+            this.amount.Text = "amount";
             // 
-            // label14
+            // label8
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label14.Location = new System.Drawing.Point(70, 427);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(159, 29);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "Deposit Date:";
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label8.Location = new System.Drawing.Point(70, 294);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(192, 29);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Deposit Amount:";
+            // 
+            // account_num
+            // 
+            this.account_num.AutoSize = true;
+            this.account_num.BackColor = System.Drawing.Color.Transparent;
+            this.account_num.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.account_num.ForeColor = System.Drawing.Color.SteelBlue;
+            this.account_num.Location = new System.Drawing.Point(315, 220);
+            this.account_num.Name = "account_num";
+            this.account_num.Size = new System.Drawing.Size(60, 29);
+            this.account_num.TabIndex = 5;
+            this.account_num.Text = "Num";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label6.Location = new System.Drawing.Point(70, 220);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(225, 29);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "ACCOUNT NUMBER:";
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.BackColor = System.Drawing.Color.Transparent;
+            this.name.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.ForeColor = System.Drawing.Color.SteelBlue;
+            this.name.Location = new System.Drawing.Point(315, 137);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(72, 29);
+            this.name.TabIndex = 3;
+            this.name.Text = "NAME";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label3.Location = new System.Drawing.Point(70, 137);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(230, 29);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "CLIENT USER NAME:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label2.Location = new System.Drawing.Point(145, 34);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(260, 38);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "DEPOSIT RECIEPT";
             // 
             // DepositMoney
             // 
@@ -654,7 +642,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         public ComponentFactory.Krypton.Toolkit.KryptonPalette GreenTheme;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox grpReciept;
         private System.Windows.Forms.Label label2;

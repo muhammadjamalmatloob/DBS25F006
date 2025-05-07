@@ -39,19 +39,18 @@
             this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.GrpRecieve = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.GrpVerify = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.UserName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.kryptonButton9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.GrpSender = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonComboBox2 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonTextBox4 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonButton11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.myPallet = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.GreenTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonComboBox2 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
@@ -209,7 +208,7 @@
             // 
             // GrpVerify.Panel
             // 
-            this.GrpVerify.Panel.Controls.Add(this.label3);
+            this.GrpVerify.Panel.Controls.Add(this.UserName);
             this.GrpVerify.Panel.Controls.Add(this.label2);
             this.GrpVerify.Size = new System.Drawing.Size(533, 318);
             this.GrpVerify.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -223,17 +222,17 @@
             this.GrpVerify.TabIndex = 35;
             this.GrpVerify.Values.Heading = "";
             // 
-            // label3
+            // UserName
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label3.Location = new System.Drawing.Point(159, 124);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 29);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "NAME";
+            this.UserName.AutoSize = true;
+            this.UserName.BackColor = System.Drawing.Color.Transparent;
+            this.UserName.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserName.ForeColor = System.Drawing.Color.SteelBlue;
+            this.UserName.Location = new System.Drawing.Point(159, 124);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(72, 29);
+            this.UserName.TabIndex = 1;
+            this.UserName.Text = "NAME";
             // 
             // label2
             // 
@@ -265,12 +264,11 @@
             // 
             // GrpSender.Panel
             // 
+            this.GrpSender.Panel.Controls.Add(this.kryptonButton2);
             this.GrpSender.Panel.Controls.Add(this.kryptonComboBox2);
-            this.GrpSender.Panel.Controls.Add(this.kryptonButton1);
             this.GrpSender.Panel.Controls.Add(this.kryptonTextBox4);
             this.GrpSender.Panel.Controls.Add(this.kryptonTextBox3);
             this.GrpSender.Panel.Controls.Add(this.kryptonTextBox1);
-            this.GrpSender.Panel.Controls.Add(this.kryptonButton11);
             this.GrpSender.Size = new System.Drawing.Size(645, 575);
             this.GrpSender.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.GrpSender.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
@@ -283,9 +281,31 @@
             this.GrpSender.TabIndex = 38;
             this.GrpSender.Values.Heading = "SENDER";
             // 
+            // kryptonComboBox2
+            // 
+            this.kryptonComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.kryptonComboBox2.DropDownWidth = 227;
+            this.kryptonComboBox2.Items.AddRange(new object[] {
+            "Select Branch"});
+            this.kryptonComboBox2.Location = new System.Drawing.Point(50, 58);
+            this.kryptonComboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonComboBox2.Name = "kryptonComboBox2";
+            this.kryptonComboBox2.Size = new System.Drawing.Size(349, 37);
+            this.kryptonComboBox2.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonComboBox2.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Navy;
+            this.kryptonComboBox2.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Navy;
+            this.kryptonComboBox2.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonComboBox2.StateCommon.ComboBox.Border.Rounding = 15;
+            this.kryptonComboBox2.StateCommon.ComboBox.Border.Width = 3;
+            this.kryptonComboBox2.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
+            this.kryptonComboBox2.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonComboBox2.TabIndex = 36;
+            // 
             // kryptonTextBox4
             // 
-            this.kryptonTextBox4.Location = new System.Drawing.Point(59, 413);
+            this.kryptonTextBox4.Location = new System.Drawing.Point(59, 349);
             this.kryptonTextBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonTextBox4.Name = "kryptonTextBox4";
             this.kryptonTextBox4.Size = new System.Drawing.Size(349, 40);
@@ -343,15 +363,6 @@
             this.kryptonTextBox1.Text = "Enter Account Number";
             this.kryptonTextBox1.Enter += new System.EventHandler(this.kryptonTextBox1_Enter);
             this.kryptonTextBox1.Leave += new System.EventHandler(this.kryptonTextBox1_Leave);
-            // 
-            // kryptonButton11
-            // 
-            this.kryptonButton11.Location = new System.Drawing.Point(468, 218);
-            this.kryptonButton11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonButton11.Name = "kryptonButton11";
-            this.kryptonButton11.Size = new System.Drawing.Size(111, 41);
-            this.kryptonButton11.TabIndex = 25;
-            this.kryptonButton11.Values.Text = "SEND";
             // 
             // myPallet
             // 
@@ -546,36 +557,15 @@
             this.kryptonManager1.GlobalPalette = this.GreenTheme;
             this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
             // 
-            // kryptonButton1
+            // kryptonButton2
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(386, 484);
-            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(171, 41);
-            this.kryptonButton1.TabIndex = 34;
-            this.kryptonButton1.Values.Text = "Transfer";
-            // 
-            // kryptonComboBox2
-            // 
-            this.kryptonComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.kryptonComboBox2.DropDownWidth = 227;
-            this.kryptonComboBox2.Items.AddRange(new object[] {
-            "Select Branch"});
-            this.kryptonComboBox2.Location = new System.Drawing.Point(50, 58);
-            this.kryptonComboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonComboBox2.Name = "kryptonComboBox2";
-            this.kryptonComboBox2.Size = new System.Drawing.Size(349, 37);
-            this.kryptonComboBox2.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Navy;
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Navy;
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.Rounding = 15;
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.Width = 3;
-            this.kryptonComboBox2.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
-            this.kryptonComboBox2.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonComboBox2.TabIndex = 36;
+            this.kryptonButton2.Location = new System.Drawing.Point(312, 470);
+            this.kryptonButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.Size = new System.Drawing.Size(173, 41);
+            this.kryptonButton2.TabIndex = 37;
+            this.kryptonButton2.Values.Text = "TRANSFER";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // MoneyTransfer
             // 
@@ -626,17 +616,16 @@
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox GrpRecieve;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton9;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox GrpVerify;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label UserName;
         private System.Windows.Forms.Label label2;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox GrpSender;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton11;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
         public ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
         public ComponentFactory.Krypton.Toolkit.KryptonPalette GreenTheme;
         private ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox2;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
     }
 }

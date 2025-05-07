@@ -13,13 +13,10 @@ namespace DBFinalProject.BL
         private int account_type_id { get; set; }
         private string account_number { get; set; }
         private decimal balance { get; set; }
-
-        private string currency { get; set; }   
-
+        private string currency { get; set; }
         private int status { get; set; }
         private DateTime opening_date { get; set; }
         private int branch_id { get; set; }
-
         private string PIN { get; set; }
         public AccountBL() { }
         public void setAccountId(int account_id)
@@ -42,7 +39,6 @@ namespace DBFinalProject.BL
         {
             this.branch_id = branch_id;
         }
-     
         public int getAccountId()
         {
             return this.account_id;
@@ -62,7 +58,6 @@ namespace DBFinalProject.BL
         public int getBranchId()
         {
             return this.branch_id;
-        }
-      
+        } 
     }
 }

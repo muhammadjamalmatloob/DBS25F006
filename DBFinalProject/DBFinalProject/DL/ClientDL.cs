@@ -43,5 +43,18 @@ namespace DBFinalProject.DL
             }
             return total.ToString();
         }
-    }
+        public static int getUserIdByClientId(int client_id)
+        {
+            string query = $"SELECT user_id FROM clients WHERE client_id = {client_id}";
+            int userId = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    userId = Convert.ToInt32(reader[0]);
+                }
+            }
+            return userId;
+        }
+        }
 }

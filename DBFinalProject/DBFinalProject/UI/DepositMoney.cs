@@ -21,9 +21,11 @@ namespace DBFinalProject
             BranchDL.LoadAllDataInList();
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox1);
             kryptonComboBox1.SelectedIndex = 0;
-            kryptonButton2.Visible = false;
+            
             grpReciept.Visible = false;
         }
+
+         
 
         private void DepositMoney_Load(object sender, EventArgs e)
         {
@@ -80,7 +82,7 @@ namespace DBFinalProject
                         {
                             MessageBox.Show("Deposit successful.");
                             // jab confirm deposit ho jaye ga phr 
-                            kryptonButton2.Visible = true;
+                            generate_reciept(deposits,account_number);
                         }
                         else
                         {
@@ -106,6 +108,20 @@ namespace DBFinalProject
 
         private void kryptonGroupBox1_Panel_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void generate_reciept(DepositsBL deposits,string account_number)
+        {
+
+            grpReciept.Visible = true;
+            int user_id = ClientDL.getUserIdByClientId(deposits.getClientId());
+            string user_name = UserDL.getUserNameById(user_id);
+            name.Text = user_name;
+            account_num.Text = account_number;
+            amount.Text = deposits.getAmount().ToString();
+            charges.Text = deposits.getCharges().ToString();
+            date.Text = deposits.getDate().ToString();
 
         }
     }

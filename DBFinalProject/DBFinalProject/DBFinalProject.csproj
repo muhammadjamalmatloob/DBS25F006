@@ -113,7 +113,6 @@
   <ItemGroup>
     <Compile Include="BL\AccountApplicationBL.cs" />
     <Compile Include="BL\AccountBL.cs" />
-    <Compile Include="BL\AccountType.cs" />
     <Compile Include="BL\AccountTypeBL.cs" />
     <Compile Include="BL\BranchBL.cs" />
     <Compile Include="BL\ClientBL.cs" />
@@ -390,6 +389,12 @@
     <EmbeddedResource Include="UI\AccountTypeManagement.resx">
       <DependentUpon>AccountTypeManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="UI\WithdrawMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WithdrawMoney.Designer.cs">
+      <DependentUpon>WithdrawMoney.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utility\DatabaseHelper.cs" />
     <Compile Include="Utility\EmailSender.cs" />
     <EmbeddedResource Include="UI\AdminDashboard.resx">
@@ -514,6 +519,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Withdraw.resx">
       <DependentUpon>Withdraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WithdrawMoney.resx">
+      <DependentUpon>WithdrawMoney.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".vs\DBFinalProject.csproj.dtbcache.json" />
     <None Include="bin\Debug\DBFinalProject.exe.config" />
