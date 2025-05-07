@@ -117,5 +117,19 @@ namespace DBFinalProject.DL
                 }
             }
         }
+
+        public static string getUserNameById(int user_id)
+        {
+            string query = $"SELECT username FROM users WHERE user_id = '{user_id}'";
+            string user_name = "";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    user_name = (reader["username"].ToString());
+                }
+            }
+            return user_name;
+        }
     }
 }

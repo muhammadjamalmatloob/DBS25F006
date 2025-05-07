@@ -26,5 +26,16 @@ namespace DBFinalProject.DL
             string query = $"DELETE FROM transfers WHERE transfer_id = '{transfer.getTransfer_id()}'";
             DatabaseHelper.Instance.Update(query);
         }
+
+        public static void transferAmmount(TransferBL transfer)
+        {
+            string query = $"Start Transaction" +
+                $"Insert into transactions VALUES (null,{transfer.getClientId()},{transfer.getTransactionType()},'{transfer.getDate()}',{transfer.getCharges()})" +
+                $"Insert into transfers VALUES (null,{transfer.getFromAccountId()},{transfer.getToAccounId()},{TransactionDL.getTransactionIdByDate(transfer.getDate(), transfer.getClientId())})" +
+                $"UPDATE accounts SET balance = balance + {transfer.getAmount()} WHERE account_id = {transfer.getToAccounId()}" +
+                $"UPDATE accounts SET balance = balance + {transfer.getAmount()}  - {transfer.getCharges()} WHERE account_id = {transfer.getFromAccountId()}" +
+                $"Commit";
+            DatabaseHelper.Instance.Update(query);
+        }
     }
 }

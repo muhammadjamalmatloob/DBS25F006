@@ -14,9 +14,12 @@ namespace DBFinalProject.DL
         {
             string query = $"Start Transaction" +
                 $"Insert into transactions VALUES (null,{deposits.getClientId()},{deposits.getTransactionType()},'{deposits.getDate()}',{deposits.getCharges()})" +
-                $"Insert into deposits VALUES (null,{deposits.getToAccountId()},{deposits.getAmount()},{TransactionDL.getTransactionIdByDate(deposits.getDate(), deposits.getClientId())})" + 
-                $"Commit";
+                $"Insert into deposits VALUES (null,{deposits.getToAccountId()},{deposits.getAmount()},{TransactionDL.getTransactionIdByDate(deposits.getDate(), deposits.getClientId())})" +
+                $"UPDATE accounts SET balance = balance + {deposits.getAmount()} - {deposits.getCharges()} WHERE account_id = {deposits.getToAccountId()}" + 
+            $"Commit";
             return DatabaseHelper.Instance.Update(query) > 0;
         }
+
+       
     }
 }
