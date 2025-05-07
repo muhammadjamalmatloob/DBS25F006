@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DBFinalProject.BL
 {
-    internal class CurrencyExchangeBL : TransactionBL
+    internal class CurrencyExchangeBL
     {
         private int exchange_id {  get; set; }
         private string base_currency {  get; set; }

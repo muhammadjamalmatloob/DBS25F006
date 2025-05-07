@@ -209,6 +209,7 @@
             this.kryptonButton11.Size = new System.Drawing.Size(83, 33);
             this.kryptonButton11.TabIndex = 25;
             this.kryptonButton11.Values.Text = "SEND";
+            this.kryptonButton11.Click += new System.EventHandler(this.kryptonButton11_Click);
             // 
             // GrpRecieve
             // 

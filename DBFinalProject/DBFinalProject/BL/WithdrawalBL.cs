@@ -6,41 +6,34 @@ using System.Threading.Tasks;
 
 namespace DBFinalProject.BL
 {
-
-    internal class TransferBL : TransactionBL
+    internal class WithdrawalBL : TransactionBL
     {
-        private int transfer_id {  get; set; }
-        private int from_account_id {  get; set; }
-        private int to_account_id { get; set;}
+        private int withdrawal_id {  get; set; }
+        private int from_account_id { get; set; }
         private decimal amount { get; set; }
-        public TransferBL() { }
+
+        public WithdrawalBL() { }
+
         public void setFromAccID(int accID)
         {
             from_account_id = accID;
-        }
-        public void setToAccID(int accID)
-        {
-            to_account_id = accID;
         }
         public void setAmount(decimal amount)
         {
             this.amount = amount;
         }
-        public int getTransfer_id()
+        public int getwithdrawal_id()
         {
-            return transfer_id;
+            return withdrawal_id;
         }
-        public int getFromAccountId()
+        public int getfrom_account_id()
         {
             return from_account_id;
-        }
-        public int getToAccounId()
-        {
-            return to_account_id;
         }
         public decimal getAmount()
         {
             return amount;
         }
+
     }
 }

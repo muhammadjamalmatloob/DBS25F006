@@ -38,6 +38,7 @@
             this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpRecieve)).BeginInit();
@@ -45,6 +46,7 @@
             this.GrpRecieve.Panel.SuspendLayout();
             this.GrpRecieve.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -107,6 +109,7 @@
             // 
             // GrpRecieve.Panel
             // 
+            this.GrpRecieve.Panel.Controls.Add(this.kryptonComboBox1);
             this.GrpRecieve.Panel.Controls.Add(this.kryptonComboBox2);
             this.GrpRecieve.Panel.Controls.Add(this.kryptonTextBox2);
             this.GrpRecieve.Panel.Controls.Add(this.kryptonTextBox1);
@@ -126,7 +129,7 @@
             // kryptonComboBox2
             // 
             this.kryptonComboBox2.DropDownWidth = 227;
-            this.kryptonComboBox2.Location = new System.Drawing.Point(281, 41);
+            this.kryptonComboBox2.Location = new System.Drawing.Point(281, 31);
             this.kryptonComboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonComboBox2.Name = "kryptonComboBox2";
             this.kryptonComboBox2.Size = new System.Drawing.Size(262, 33);
@@ -147,7 +150,7 @@
             // 
             // kryptonTextBox2
             // 
-            this.kryptonTextBox2.Location = new System.Drawing.Point(281, 132);
+            this.kryptonTextBox2.Location = new System.Drawing.Point(281, 160);
             this.kryptonTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonTextBox2.Name = "kryptonTextBox2";
             this.kryptonTextBox2.Size = new System.Drawing.Size(262, 37);
@@ -162,7 +165,7 @@
             this.kryptonTextBox2.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox2.TabIndex = 31;
-            this.kryptonTextBox2.Text = "Description";
+            this.kryptonTextBox2.Text = "Purpose";
             this.kryptonTextBox2.TextChanged += new System.EventHandler(this.kryptonTextBox2_TextChanged);
             this.kryptonTextBox2.Enter += new System.EventHandler(this.kryptonTextBox2_Enter);
             this.kryptonTextBox2.Leave += new System.EventHandler(this.kryptonTextBox2_Leave);
@@ -196,6 +199,32 @@
             this.kryptonButton1.Size = new System.Drawing.Size(112, 41);
             this.kryptonButton1.TabIndex = 24;
             this.kryptonButton1.Values.Text = "Apply";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
+            // 
+            // kryptonComboBox1
+            // 
+            this.kryptonComboBox1.DropDownWidth = 227;
+            this.kryptonComboBox1.Items.AddRange(new object[] {
+            "Employed",
+            "Unemployed"});
+            this.kryptonComboBox1.Location = new System.Drawing.Point(281, 97);
+            this.kryptonComboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonComboBox1.Name = "kryptonComboBox1";
+            this.kryptonComboBox1.Size = new System.Drawing.Size(262, 33);
+            this.kryptonComboBox1.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonComboBox1.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Navy;
+            this.kryptonComboBox1.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Navy;
+            this.kryptonComboBox1.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonComboBox1.StateCommon.ComboBox.Border.Rounding = 15;
+            this.kryptonComboBox1.StateCommon.ComboBox.Border.Width = 3;
+            this.kryptonComboBox1.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
+            this.kryptonComboBox1.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonComboBox1.TabIndex = 35;
+            this.kryptonComboBox1.Text = "Employment Status";
+            this.kryptonComboBox1.Enter += new System.EventHandler(this.kryptonComboBox1_Enter);
+            this.kryptonComboBox1.Leave += new System.EventHandler(this.kryptonComboBox1_Leave);
             // 
             // ClientLoan
             // 
@@ -214,6 +243,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GrpRecieve)).EndInit();
             this.GrpRecieve.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -229,5 +259,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
     }
 }
