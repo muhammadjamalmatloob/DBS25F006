@@ -14,7 +14,7 @@ namespace DBFinalProject.DL
 
         public static void AddExchange(CurrencyExchangeBL exchange)
         {
-            string query = $"INSERT INTO currency_exchange VALUES ('{exchange.getExchangeId()}','{exchange.getClientId()}', '{exchange.getBaseCurrency()}','{exchange.getTargetCurrency()}','{exchange.getExchangeRate()}','{exchange.getAmountBase()}','{exchange.getAmountTarget()}','{exchange.getDate()}','{exchange.getTransactionId()}')";
+            string query = $"INSERT INTO currency_exchange VALUES ('{exchange.getExchangeId()}','{exchange.getClientId()}', '{exchange.getBaseCurrency()}','{exchange.getTargetCurrency()}','{exchange.getExchangeRate()}','{exchange.getAmountBase()}','{exchange.getAmountTarget()}','{exchange.getDate()}')";
             DatabaseHelper.Instance.Update(query);
         }
 

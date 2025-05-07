@@ -152,6 +152,12 @@
     <Compile Include="UI\Audit.Designer.cs">
       <DependentUpon>Audit.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ClientTransactionRecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ClientTransactionRecord.Designer.cs">
+      <DependentUpon>ClientTransactionRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -426,6 +432,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ClientBill.resx">
       <DependentUpon>ClientBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ClientTransactionRecord.resx">
+      <DependentUpon>ClientTransactionRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CommonInterface.resx">
       <DependentUpon>CommonInterface.cs</DependentUpon>

@@ -47,12 +47,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.commonInterface1 = new DBFinalProject.CommonInterface();
-            //this.clientDepositMoney1 = new DBFinalProject.ClientDepositMoney();
             this.sendMoney1 = new DBFinalProject.SendMoney();
             this.withdraw1 = new DBFinalProject.Withdraw();
             this.clientLoan1 = new DBFinalProject.ClientLoan();
-            //this.clientCurrencyExchange1 = new DBFinalProject.ClientCurrencyExchange();
             this.clientBill1 = new DBFinalProject.ClientBill();
+            this.clientTransactionRecord1 = new DBFinalProject.UI.ClientTransactionRecord();
+            this.clientCurrencyExchange1 = new DBFinalProject.UI.ClientCurrencyExchange();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -292,11 +292,11 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(-4, 91);
+            this.button1.Location = new System.Drawing.Point(-22, 91);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 71);
+            this.button1.Size = new System.Drawing.Size(253, 71);
             this.button1.TabIndex = 1;
-            this.button1.Text = "                       DEPOSIT MONEY";
+            this.button1.Text = "                      TRANSACTION HISTORY";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -359,14 +359,6 @@
             this.commonInterface1.Size = new System.Drawing.Size(923, 695);
             this.commonInterface1.TabIndex = 21;
             // 
-            // clientDepositMoney1
-            // 
-            this.clientDepositMoney1.Location = new System.Drawing.Point(217, 0);
-            this.clientDepositMoney1.Name = "clientDepositMoney1";
-            this.clientDepositMoney1.Size = new System.Drawing.Size(923, 668);
-            this.clientDepositMoney1.TabIndex = 22;
-            this.clientDepositMoney1.Visible = false;
-            // 
             // sendMoney1
             // 
             this.sendMoney1.Location = new System.Drawing.Point(217, 0);
@@ -392,14 +384,6 @@
             this.clientLoan1.TabIndex = 25;
             this.clientLoan1.Visible = false;
             // 
-            // clientCurrencyExchange1
-            // 
-            this.clientCurrencyExchange1.Location = new System.Drawing.Point(217, -2);
-            this.clientCurrencyExchange1.Name = "clientCurrencyExchange1";
-            this.clientCurrencyExchange1.Size = new System.Drawing.Size(923, 642);
-            this.clientCurrencyExchange1.TabIndex = 26;
-            this.clientCurrencyExchange1.Visible = false;
-            // 
             // clientBill1
             // 
             this.clientBill1.Location = new System.Drawing.Point(217, 0);
@@ -407,6 +391,22 @@
             this.clientBill1.Size = new System.Drawing.Size(923, 640);
             this.clientBill1.TabIndex = 27;
             this.clientBill1.Visible = false;
+            // 
+            // clientTransactionRecord1
+            // 
+            this.clientTransactionRecord1.Location = new System.Drawing.Point(217, 0);
+            this.clientTransactionRecord1.Name = "clientTransactionRecord1";
+            this.clientTransactionRecord1.Size = new System.Drawing.Size(962, 640);
+            this.clientTransactionRecord1.TabIndex = 29;
+            this.clientTransactionRecord1.Visible = false;
+            // 
+            // clientCurrencyExchange1
+            // 
+            this.clientCurrencyExchange1.Location = new System.Drawing.Point(217, -2);
+            this.clientCurrencyExchange1.Name = "clientCurrencyExchange1";
+            this.clientCurrencyExchange1.Size = new System.Drawing.Size(950, 642);
+            this.clientCurrencyExchange1.TabIndex = 30;
+            this.clientCurrencyExchange1.Visible = false;
             // 
             // GeneralMenu
             // 
@@ -416,12 +416,12 @@
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.commonInterface1);
-            this.Controls.Add(this.clientDepositMoney1);
             this.Controls.Add(this.sendMoney1);
             this.Controls.Add(this.withdraw1);
             this.Controls.Add(this.clientLoan1);
-            this.Controls.Add(this.clientCurrencyExchange1);
             this.Controls.Add(this.clientBill1);
+            this.Controls.Add(this.clientTransactionRecord1);
+            this.Controls.Add(this.clientCurrencyExchange1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GeneralMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -443,7 +443,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
         private System.Windows.Forms.Button button7;
         private CommonInterface commonInterface1;
-        private ClientDepositMoney clientDepositMoney1;
         private SendMoney sendMoney1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button5;
@@ -457,8 +456,9 @@
         private System.Windows.Forms.Label label1;
         private Withdraw withdraw1;
         private ClientLoan clientLoan1;
-        private ClientCurrencyExchange clientCurrencyExchange1;
         private ClientBill clientBill1;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
+        private UI.ClientTransactionRecord clientTransactionRecord1;
+        private UI.ClientCurrencyExchange clientCurrencyExchange1;
     }
 }
