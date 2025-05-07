@@ -42,5 +42,9 @@ namespace DBFinalProject.BL
         {
             return this.payment_type;
         }
+        public override void setCharges(decimal amount)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace DBFinalProject.DL
 
         public static void AddPayment(PaymentBL payment)
         {
-            string query = $"INSERT INTO payments VALUES ('{payment.getPaymentId()}','{payment.getDate()}', '{payment.getAmount()}','{payment.getMethod()}','{payment.getStatus()}','{payment.getPaymentType()}','{payment.getTransactionId()}','{payment.getCurrency()}')";
+            string query = $"INSERT INTO payments VALUES ('{payment.getPaymentId()}','{payment.getDate()}', '{payment.getAmount()}','{payment.getStatus()}','{payment.getPaymentType()}','{payment.getTransactionId()}')";
             DatabaseHelper.Instance.Update(query);
         }
 

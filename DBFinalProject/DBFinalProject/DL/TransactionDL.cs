@@ -51,5 +51,19 @@ namespace DBFinalProject.DL
             }
             return total.ToString();
         }
+
+        public static int getTransactionIdByDate(DateTime date,int client_id)
+        {
+            string query = $"SELECT transaction_id FROM transactions WHERE date_recorded = '{date}'  and client_id = {client_id}";
+            int transaction_id = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    transaction_id = Convert.ToInt32(reader["transaction_id"].ToString());
+                }
+            }
+            return transaction_id;
+        }
     }
 }

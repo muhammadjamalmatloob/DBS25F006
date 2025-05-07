@@ -17,7 +17,18 @@ namespace DBFinalProject.BL
         private decimal amount_target { get; set; }
         private DateTime date_recorded { get; set; }
 
+        private DateTime date { get; set; }
+
         public CurrencyExchangeBL() { }
+
+        public void setClientId(int client_id)
+        {
+            this.client_id = client_id;
+        }
+        public int getClientId()
+        {
+            return this.client_id;
+        }
         public void setBaseCurrency(string base_currency)
         {
             this.base_currency = base_currency;
@@ -75,6 +86,14 @@ namespace DBFinalProject.BL
             return date_recorded;
         }
 
+        public void setDate(DateTime date)
+        {
+            this.date = date;
+        }
+        public DateTime getDate()
+        {
+            return this.date;
+        }
         public void setExchangeRate(string bcurrency,string tcurrency)
         {
             if (bcurrency == "Rupees" && tcurrency == "Dollars")

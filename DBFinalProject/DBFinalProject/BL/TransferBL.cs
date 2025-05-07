@@ -42,5 +42,10 @@ namespace DBFinalProject.BL
         {
             return amount;
         }
+
+        public override void setCharges(decimal amount)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
