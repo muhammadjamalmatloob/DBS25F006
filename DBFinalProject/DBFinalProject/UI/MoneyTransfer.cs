@@ -46,5 +46,64 @@ namespace DBFinalProject
             }
             
         }
+
+        private void GrpRecieve_Panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox2_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox2.Text == "Enter Account Number")
+            {
+                kryptonTextBox2.Text = "";
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox2_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox2.Text))
+            {
+                kryptonTextBox2.Text = "Enter Account Number";
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox1_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "Enter Account Number")
+            {
+                kryptonTextBox1.Text = "";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox1_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox1.Text))
+            {
+                kryptonTextBox1.Text = "Enter Account Number";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox3_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "Enter Amount")
+            {
+                kryptonTextBox3.Text = "";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox3_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox3.Text))
+            {
+                kryptonTextBox3.Text = "Enter Amount";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
     }
 }
