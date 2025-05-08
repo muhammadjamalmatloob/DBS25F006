@@ -59,9 +59,20 @@ namespace DBFinalProject
                 return;
             }
             int branch_id = Convert.ToInt32(BranchDL.GetBranchIdByName(selectedBranchName));
-            string account_number = kryptonTextBox3.Text.Trim();
-            string amount = kryptonTextBox1.Text.Trim();
-            string pin = kryptonTextBox2.Text.Trim();
+            string account_number = "";
+            string amount = "";
+            string pin = "";
+            try
+            {
+                account_number = kryptonTextBox3.Text.Trim();
+                amount = kryptonTextBox1.Text.Trim();
+                pin = kryptonTextBox2.Text.Trim();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
+            }
 
             if (AccountDL.isAccount(account_number, branch_id))
             {

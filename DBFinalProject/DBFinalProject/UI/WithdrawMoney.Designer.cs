@@ -83,6 +83,7 @@
             this.kryptonButton14.Size = new System.Drawing.Size(111, 41);
             this.kryptonButton14.TabIndex = 26;
             this.kryptonButton14.Values.Text = "Back";
+            this.kryptonButton14.Click += new System.EventHandler(this.kryptonButton14_Click);
             // 
             // Closebtn
             // 
@@ -100,6 +101,7 @@
             this.Closebtn.TabIndex = 12;
             this.Closebtn.Text = "X";
             this.Closebtn.UseVisualStyleBackColor = false;
+            this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click);
             // 
             // panel2
             // 
@@ -223,7 +225,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(198, 29);
             this.label8.TabIndex = 6;
-            this.label8.Text = "Charges Amount:";
+            this.label8.Text = "Withraw Amount:";
             // 
             // account_num
             // 

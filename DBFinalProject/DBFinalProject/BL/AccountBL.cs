@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using DBFinalProject.DL;
 
 namespace DBFinalProject.BL
 {
@@ -59,5 +61,18 @@ namespace DBFinalProject.BL
         {
             return this.branch_id;
         } 
+
+        public static bool isSufficientBalance(string account_number,decimal amount,decimal charges)
+        {
+            decimal balance = AccountDL.getBalanceByNumber(account_number);
+            if (balance >= amount + charges)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
