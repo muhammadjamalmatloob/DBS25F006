@@ -37,5 +37,15 @@ namespace DBFinalProject.DL
             }
             return total.ToString();
         }
+
+        public static bool payAmmount(PaymentBL payment)
+        {
+            string query = $"Start Transaction" +
+                $"Insert into transactions VALUES (null,{payment.getClientId()},{payment.getTransactionType()},'{payment.getDate()}',{payment.getCharges()})" +
+                $"Insert into deposits VALUES (null,{payment.getAccountId()},{payment.getAmount()},{TransactionDL.getTransactionIdByDate(payment.getDate(), payment.getClientId())})" +
+                $"UPDATE accounts SET balance = balance - {payment.getAmount()}  - {payment.getCharges()}  WHERE account_id = {payment.getAccountId()}" +
+            $"Commit";
+            return DatabaseHelper.Instance.Update(query) > 0;
+        }
     }
 }

@@ -20,6 +20,19 @@ namespace DBFinalProject.DL
             string query = $"SELECT client_id FROM accounts WHERE account_number = '{account_number}'";
             return DatabaseHelper.Instance.Update(query);
         }
+        public static decimal getBalanceByNumber(string account_number)
+        {
+            string query = $"SELECT balance FROM accounts WHERE account_number = '{account_number}'";
+            decimal balance = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    balance = Convert.ToDecimal(reader["balance"].ToString());
+                }
+            }
+            return balance;
+        }
 
         public static bool isAccount(string account_number, int branch_id)
         {

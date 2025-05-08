@@ -145,11 +145,24 @@ namespace DBFinalProject
                 MessageBox.Show("Please select a branch first.");
                 return;
             }
-            string to_account_number = kryptonTextBox3.Text.Trim();
-            int from_branch_id = Convert.ToInt32(BranchDL.GetBranchIdByName(selectedBranchName2));
-            string from_account_number = kryptonTextBox3.Text.Trim();
-            decimal amount = Convert.ToDecimal(kryptonTextBox3.Text.Trim());
-            string pin = kryptonTextBox4.Text.Trim();
+            string to_account_number = "";
+            int from_branch_id = 0;
+            string from_account_number = "";
+            decimal amount = 0;
+            string pin = "";
+            try
+            {
+                to_account_number = kryptonTextBox3.Text.Trim();
+                from_branch_id = Convert.ToInt32(BranchDL.GetBranchIdByName(selectedBranchName2));
+                from_account_number = kryptonTextBox3.Text.Trim();
+                amount = Convert.ToDecimal(kryptonTextBox3.Text.Trim());
+                pin = kryptonTextBox4.Text.Trim();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
+            }
             if (AccountDL.isAccount(from_account_number, from_branch_id))
             {
                 if (pin == AccountDL.getPinByNumber(from_account_number))
