@@ -75,7 +75,7 @@ namespace DBFinalProject
             this.Purple = new System.Windows.Forms.RadioButton();
             this.Blue = new System.Windows.Forms.RadioButton();
             this.kryptonButton12 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton13 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            
 
             this.kryptonPanel5 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -1525,7 +1525,7 @@ namespace DBFinalProject
             this.ClientSize = new System.Drawing.Size(1141, 640);
             this.Controls.Add(this.ThemeMenu);
             this.Controls.Add(this.kryptonButton7);
-            this.Controls.Add(this.kryptonPanel3);
+            
 
             
 
@@ -1552,9 +1552,7 @@ namespace DBFinalProject
             this.kryptonPanel2.ResumeLayout(false);
             this.kryptonPanel2.PerformLayout();
 
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).EndInit();
-            this.kryptonPanel3.ResumeLayout(false);
-            this.kryptonPanel3.PerformLayout();
+            
             ((System.ComponentModel.ISupportInitialize)(this.ThemeMenu.Panel)).EndInit();
             this.ThemeMenu.Panel.ResumeLayout(false);
             this.ThemeMenu.Panel.PerformLayout();
@@ -1608,7 +1606,7 @@ namespace DBFinalProject
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
         private System.Windows.Forms.Panel panel6;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton11;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton12;
+        
         private System.Windows.Forms.Label TotalAccountApplications;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label16;
@@ -1633,8 +1631,7 @@ namespace DBFinalProject
         private System.Windows.Forms.Label label10;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel4;
         private System.Windows.Forms.Panel panel4;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton7;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton13;
+        
         private System.Windows.Forms.Label totalBranches;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label totalCashier;

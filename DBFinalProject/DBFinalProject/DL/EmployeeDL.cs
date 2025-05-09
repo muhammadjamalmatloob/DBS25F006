@@ -322,7 +322,7 @@ namespace DBFinalProject.DL
                     departments.Add(reader["department"].ToString());
                 }
             }
-
+        }
 
         public static bool isDublicateEmail(string email)
         {
