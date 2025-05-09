@@ -56,5 +56,19 @@ namespace DBFinalProject.DL
             }
             return userId;
         }
+
+        public static int getClientIdbyUserId(int user_id)
+        {
+            string stored_procedure = $"CALL sp_GetClientId('{user_id}')";
+            int client_id = 0;
+            using (var reader = DatabaseHelper.Instance.getData(stored_procedure))
+            {
+                if (reader.Read())
+                {
+                    client_id = Convert.ToInt32(reader["client_id"].ToString());
+                }
+            }
+            return client_id;
         }
+    }
 }
