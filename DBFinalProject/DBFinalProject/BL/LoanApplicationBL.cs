@@ -17,12 +17,58 @@ namespace DBFinalProject.BL
         private string purpose {  get; set; }
         private int employment_status { get; set; }
         private int loan_status { get; set; }
-        private Timestamp apply_date { get; set; }
+        private DateTime apply_date { get; set; }
         private Timestamp approve_date { get; set; }
         private int reviewed_by { get; set; }
         private Timestamp review_date { get; set; }
+        private string client_name { get; set; }
+        private string loan_type { get; set; } 
+        private string status { get; set; }
+        
 
         public LoanApplicationBL(){ }
+
+        public LoanApplicationBL(int loan_application_id, decimal requested_amount, string purpose, string status, DateTime apply_date, string client_name, string loan_type)
+        {
+            this.loan_application_id = loan_application_id;
+            this.requested_amount = requested_amount;
+            this.purpose = purpose;
+            this.status = status;
+            this.apply_date = apply_date;
+            this.client_name = client_name;
+            this.loan_type = loan_type;
+        }
+
+        public void setClientName(string client_name)
+        {
+            this.client_name = client_name;
+        }
+
+        public string GetClientName()
+        {
+            return client_name;
+        }
+
+        public void setStatus(string status)
+        {
+            this.status = status;
+        }
+
+        public string GetStatus()
+        {
+            return status;
+        }
+
+
+        public string GetLoanType()
+        {
+            return loan_type;
+        }
+        public void setLoanType(string loan_type)
+        {
+            this.loan_type = loan_type;
+        }
+
 
         public void setClientId(int client_id)
         {
@@ -52,7 +98,7 @@ namespace DBFinalProject.BL
         {
             this.loan_status = loan_status;
         }
-        public void setApplyDate(Timestamp apply_date)
+        public void setApplyDate(DateTime apply_date)
         {
             this.apply_date = apply_date;
         }
@@ -100,7 +146,7 @@ namespace DBFinalProject.BL
         {
             return this.loan_status;
         }
-        public Timestamp getApplyDate()
+        public DateTime getApplyDate()
         {
             return this.apply_date;
         }

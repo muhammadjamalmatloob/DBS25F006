@@ -16,6 +16,8 @@ namespace DBFinalProject
 {
     public partial class MainInterface : KryptonForm
     {
+        public static string username;
+        public static string password;
         public KryptonPalette kryptonPalette1;
 
         public MainInterface()
@@ -80,8 +82,8 @@ namespace DBFinalProject
         {
 
 
-            string username = user_name.Text.Trim();
-            string password = pass.Text.Trim();
+            username = user_name.Text.Trim();
+            password = pass.Text.Trim();
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
@@ -112,15 +114,15 @@ namespace DBFinalProject
                             string position = LoginDL.GetPosition(username);
                             switch (position)
                             {
-                                case "Cashier":
+                                case "Manager":
                                     MessageBox.Show("Login successful! Opening Manager Dashboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    CashierDashboard cashierDashboard = new CashierDashboard();
+                                    ManagerDashboard cashierDashboard = new ManagerDashboard();
                                     cashierDashboard.Show();
                                     this.Hide();
                                     break;
-                                case "Manager":
+                                case "Cashier":
                                     MessageBox.Show("Login successful! Opening Cashier Dashboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    ManagerDashboard managerDashboard = new ManagerDashboard();
+                                    CashierDashboard managerDashboard = new CashierDashboard();
                                     managerDashboard.Show();
                                     this.Hide();
                                     break;
@@ -128,8 +130,8 @@ namespace DBFinalProject
                             break;
                         case "Client":
                             MessageBox.Show("Login successful! Opening Administrative Staff Dashboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            ClientManagement clientManagement = new ClientManagement();
-                            clientManagement.Show();
+                            GeneralMenu clientMenu = new GeneralMenu();
+                            clientMenu.Show();
                             this.Hide();
                             break;
                         default:
@@ -202,7 +204,6 @@ namespace DBFinalProject
             {
                 user_name.Text = "Enter Username";
                 user_name.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-                user_name.PasswordChar = '\0';
             }
 
         }

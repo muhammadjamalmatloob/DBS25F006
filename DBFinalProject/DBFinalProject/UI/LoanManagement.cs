@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
+using DBFinalProject.Utility;
 
 namespace DBFinalProject
 {
     public partial class LoanManagement : KryptonForm
     {
-        public LoanManagement()
+        AdminDashboard admin;
+        public LoanManagement(AdminDashboard admin)
         {
             InitializeComponent();
             GrpBox.Visible = false;
@@ -31,13 +33,14 @@ namespace DBFinalProject
             LoanTypeDL.LoadLoanTypeInComboBox(kryptonComboBox2);
             LoanTypeDL.LoadLoanTypeInComboBox(kryptonComboBox3);
             LoanTypeDL.LoadDataGrid(LoanTypeDL.loanTypeList, dgvLoan);
+            this.admin = admin;
+            this.kryptonManager1.GlobalPalette = Theme.theme;
         }
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
-            AdminDashboard adminDashboard = new AdminDashboard();
-            adminDashboard.Show();
             this.Hide();
+            admin.Show();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
@@ -240,6 +243,16 @@ namespace DBFinalProject
         private void kryptonButton8_Click(object sender, EventArgs e)
         {
             apply_filters();
+        }
+
+        private void dgvLoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void GrpBox_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -117,14 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="myPallet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>328, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHlOSURBVHhe7b0F
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHlOSURBVHhe7b0F
         /BRl1/+/++3uQro7JERAQAlBJQSR7hbpEBMwCBEVTDAQ7M7nVhS7QFQEW0xMQkBKBcTrOWcY7ts4fHd2
         Znb3mt3P+/V6v/6//3MjzF45c8U5PgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAy6SQVckW
         ZBdyCDmNnE8uI+8lnyCfJ98hPyO/JH8id5r+QapjeIg8+ue+Ivm//YB8m1xNPkTeTl5LXkpOJHuTbcha
@@ -651,7 +648,7 @@
   <data name="panel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAIRhSURBVHhe7d0F
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAIRhSURBVHhe7d0F
         1NzG1QZg+zMzMzMzM7MdMzNTjLETO3Ych5nRYXQYGmZoqA023FAbatOU0qRM//z33c3nbuxrWyONdiXt
         e895zslxbK000mruSndmiuRxVBa9xExxjLhU3C2eFe+Ir8QfxTfCfO9f3/8ZfCZeE4+KveIssVaME21E
         CcFgZDsaiiFisThBXCfuFy+KD8TvBa7fv4jC6xr/jT/D/8Pfwd/Fv8G/3S0WicGigWAwsh24l7YV48WR
@@ -1221,5 +1218,14 @@
   </data>
   <metadata name="kryptonManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>428, 17</value>
+  </metadata>
+  <metadata name="GreenTheme.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>328, 17</value>
+  </metadata>
+  <metadata name="GreenTheme.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>328, 17</value>
+  </metadata>
+  <metadata name="PurpleTheme.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 52</value>
   </metadata>
 </root>

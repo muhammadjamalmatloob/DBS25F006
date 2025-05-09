@@ -10,20 +10,22 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
+using DBFinalProject.Utility;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace DBFinalProject
 {
     public partial class BranchManagement : KryptonForm
     {
-        public BranchManagement()
+        AdminDashboard admin;
+        public BranchManagement(AdminDashboard admin)
         {
             InitializeComponent();
 
             BranchDL.LoadAllDataInList();
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox1);
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox2);
-            BranchDL.LoadDataGrid(BranchDL.branchList,dgvBranch);
+            BranchDL.LoadDataGrid(BranchDL.branchList, dgvBranch);
             kryptonComboBox1.SelectedIndex = 0;
 
 
@@ -33,6 +35,8 @@ namespace DBFinalProject
             GrpDelete.Visible = false;
             radioButton1.Checked = true;
             radioButton4.Checked = true;
+            this.admin = admin;
+            this.kryptonManager1.GlobalPalette = Theme.theme;
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
@@ -42,9 +46,8 @@ namespace DBFinalProject
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
-            AdminDashboard adminDashboard = new AdminDashboard();
-            adminDashboard.Show();
             this.Hide();
+            admin.Show();
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)

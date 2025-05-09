@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
+using DBFinalProject.Utility;
 
 namespace DBFinalProject.UI
 {
     public partial class AccountTypeManagement : KryptonForm
     {
-        public AccountTypeManagement()
+        AdminDashboard admin;
+        public AccountTypeManagement(AdminDashboard admin)
         {
             InitializeComponent();
             AccountTypeDL.LoadAllDataInList();
@@ -29,6 +31,8 @@ namespace DBFinalProject.UI
             GrpDelete.Visible = false;
             radioButton1.Checked = true;
             radioButton4.Checked = true;
+            this.admin = admin;
+            this.kryptonManager1.GlobalPalette = Theme.theme;
         }
 
 
@@ -119,9 +123,8 @@ namespace DBFinalProject.UI
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
-            AdminDashboard admin = new AdminDashboard();
-            admin.Show();
             this.Hide();
+            admin.Show();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)

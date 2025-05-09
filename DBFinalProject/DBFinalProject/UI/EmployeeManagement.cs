@@ -10,14 +10,17 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
+using DBFinalProject.Utility;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace DBFinalProject
 {
+    
     public partial class EmployeeManagement : KryptonForm
     {
-        public EmployeeManagement()
+        AdminDashboard admin;
+        public EmployeeManagement(AdminDashboard admin)
         {
             InitializeComponent();
             GrpAdd.Visible = false;
@@ -39,6 +42,8 @@ namespace DBFinalProject
             kryptonComboBox1.SelectedIndex = 0;
             kryptonComboBox2.SelectedIndex = 0;
             kryptonComboBox8.SelectedIndex = 0;
+            this.admin = admin;
+            this.kryptonManager1.GlobalPalette = Theme.theme;
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
@@ -173,9 +178,8 @@ namespace DBFinalProject
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
-            AdminDashboard adminDashboard = new AdminDashboard();
-            adminDashboard.Show();
             this.Hide();
+            admin.Show();
         }
 
         private void kryptonButton13_Click_1(object sender, EventArgs e)
