@@ -50,7 +50,7 @@ namespace DBFinalProject.DL
 
         public static bool isAccount(string account_number)
         {
-            string query = $"SELECT COUNT(*) AS COUNT FROM accounts WHERE account_number = '{account_number}' AND branch_id = {branch_id}";
+            string query = $"SELECT COUNT(*) AS COUNT FROM accounts WHERE account_number = '{account_number}'";
             int count = 0;
             using (var reader = DatabaseHelper.Instance.getData(query))
             {

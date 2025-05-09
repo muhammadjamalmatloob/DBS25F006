@@ -17,12 +17,13 @@ namespace DBFinalProject
     public partial class ViewBranchInfo : KryptonForm
     {
         ManagerDashboard manager;
-        BranchBL managerBranch;
+        BranchBL managerBranch =  new BranchBL();
         public ViewBranchInfo(ManagerDashboard manager)
         {
             this.manager = manager;
             InitializeComponent();
             kryptonManager1.GlobalPalette = Theme.theme;
+            
             
         }
 
@@ -64,6 +65,7 @@ namespace DBFinalProject
         {
             try
             {
+                
                 managerBranch = BranchDL.GetManagerBranch();
                 ViewBranch();
             }

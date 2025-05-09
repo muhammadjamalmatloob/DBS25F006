@@ -11,11 +11,9 @@ using DBFinalProject.Utility;
 
 namespace DBFinalProject.DL
 {
-    public class BranchDL
+    internal class BranchDL
     {
-        private static List<BranchBL> branchList = new List<BranchBL>();
-
-
+        public static List<BranchBL> branchList = new List<BranchBL>();
 
 
 

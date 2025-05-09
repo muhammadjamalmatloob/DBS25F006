@@ -12,7 +12,7 @@ using Google.Protobuf.WellKnownTypes;
 
 namespace DBFinalProject.DL
 {
-    public class LoanApplicationDL
+    internal class LoanApplicationDL
     {
         public static List<LoanApplicationBL> applications = new List<LoanApplicationBL>();
 
