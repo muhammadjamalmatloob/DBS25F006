@@ -800,7 +800,7 @@ namespace DBFinalProject
             this.GreenTheme.PanelStyles.PanelCommon.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
             this.GreenTheme.PanelStyles.PanelCustom1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.GreenTheme.PanelStyles.PanelCustom1.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            //this.GreenTheme.PalettePaint += new System.EventHandler<ComponentFactory.Krypton.Toolkit.PaletteLayoutEventArgs>(this.GreenTheme_PalettePaint);
+            this.GreenTheme.PalettePaint += new System.EventHandler<ComponentFactory.Krypton.Toolkit.PaletteLayoutEventArgs>(this.GreenTheme_PalettePaint);
             // 
             // PurpleTheme
             // 
@@ -906,7 +906,7 @@ namespace DBFinalProject
             this.kryptonButton7.Size = new System.Drawing.Size(90, 35);
             this.kryptonButton7.TabIndex = 14;
             this.kryptonButton7.Values.Text = "Themes";
-            this.kryptonButton7.Click += new System.EventHandler(this.kryptonButton7_Click);
+            this.kryptonButton7.Click += new System.EventHandler(this.kryptonButton7_Click_1);
             // 
             // ThemeMenu
             // 
@@ -981,7 +981,7 @@ namespace DBFinalProject
             this.kryptonButton12.Size = new System.Drawing.Size(83, 33);
             this.kryptonButton12.TabIndex = 25;
             this.kryptonButton12.Values.Text = "Back";
-            //this.kryptonButton12.Click += new System.EventHandler(this.kryptonButton12_Click);
+            this.kryptonButton12.Click += new System.EventHandler(this.kryptonButton12_Click);
             // 
             // kryptonButton13
             // 
