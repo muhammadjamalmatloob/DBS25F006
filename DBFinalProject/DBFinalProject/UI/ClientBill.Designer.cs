@@ -38,6 +38,7 @@
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpRecieve)).BeginInit();
@@ -107,6 +108,7 @@
             // 
             // GrpRecieve.Panel
             // 
+            this.GrpRecieve.Panel.Controls.Add(this.kryptonTextBox3);
             this.GrpRecieve.Panel.Controls.Add(this.kryptonTextBox2);
             this.GrpRecieve.Panel.Controls.Add(this.kryptonTextBox1);
             this.GrpRecieve.Panel.Controls.Add(this.kryptonComboBox1);
@@ -125,7 +127,7 @@
             // 
             // kryptonTextBox2
             // 
-            this.kryptonTextBox2.Location = new System.Drawing.Point(219, 217);
+            this.kryptonTextBox2.Location = new System.Drawing.Point(219, 235);
             this.kryptonTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonTextBox2.Name = "kryptonTextBox2";
             this.kryptonTextBox2.Size = new System.Drawing.Size(262, 37);
@@ -146,7 +148,7 @@
             // 
             // kryptonTextBox1
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(219, 116);
+            this.kryptonTextBox1.Location = new System.Drawing.Point(219, 101);
             this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
             this.kryptonTextBox1.Size = new System.Drawing.Size(262, 37);
@@ -168,7 +170,7 @@
             // kryptonComboBox1
             // 
             this.kryptonComboBox1.DropDownWidth = 227;
-            this.kryptonComboBox1.Location = new System.Drawing.Point(219, 22);
+            this.kryptonComboBox1.Location = new System.Drawing.Point(219, 42);
             this.kryptonComboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonComboBox1.Name = "kryptonComboBox1";
             this.kryptonComboBox1.Size = new System.Drawing.Size(262, 33);
@@ -196,6 +198,27 @@
             this.kryptonButton1.TabIndex = 24;
             this.kryptonButton1.Values.Text = "Pay";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
+            // 
+            // kryptonTextBox3
+            // 
+            this.kryptonTextBox3.Location = new System.Drawing.Point(219, 166);
+            this.kryptonTextBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonTextBox3.Name = "kryptonTextBox3";
+            this.kryptonTextBox3.Size = new System.Drawing.Size(262, 37);
+            this.kryptonTextBox3.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonTextBox3.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
+            this.kryptonTextBox3.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
+            this.kryptonTextBox3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox3.StateCommon.Border.Rounding = 15;
+            this.kryptonTextBox3.StateCommon.Border.Width = 1;
+            this.kryptonTextBox3.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox3.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonTextBox3.TabIndex = 32;
+            this.kryptonTextBox3.Text = "Account Number";
+            this.kryptonTextBox3.Enter += new System.EventHandler(this.kryptonTextBox3_Enter);
+            this.kryptonTextBox3.Leave += new System.EventHandler(this.kryptonTextBox3_Leave);
             // 
             // ClientBill
             // 
@@ -228,5 +251,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
     }
 }

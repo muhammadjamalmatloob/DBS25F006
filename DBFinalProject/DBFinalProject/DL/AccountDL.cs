@@ -47,6 +47,20 @@ namespace DBFinalProject.DL
             }
             return count > 0;
         }
+
+        public static bool isAccount(string account_number)
+        {
+            string query = $"SELECT COUNT(*) AS COUNT FROM accounts WHERE account_number = '{account_number}' AND branch_id = {branch_id}";
+            int count = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    count = Convert.ToInt32(reader["COUNT"].ToString());
+                }
+            }
+            return count > 0;
+        }
         public static string getPinByNumber(string account_number)
         {
             string query = $"SELECT PIN FROM accounts WHERE account_number = '{account_number}'";

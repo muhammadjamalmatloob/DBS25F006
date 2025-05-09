@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
+using DBFinalProject.BL;
+using DBFinalProject.DL;
 using Org.BouncyCastle.Asn1.X509;
 
 namespace DBFinalProject.UI
@@ -20,18 +23,12 @@ namespace DBFinalProject.UI
 
         private void kryptonComboBox3_Enter(object sender, EventArgs e)
         {
-            if(kryptonComboBox3.Text == "Base Currency")
-            {
-                kryptonComboBox3.Text = "";
-            }
+            
         }
 
         private void kryptonComboBox3_Leave(object sender, EventArgs e)
         {
-            if (kryptonComboBox3.Text == "")
-            {
-                kryptonComboBox3.Text = "Base Currency";
-            }
+
         }
 
         private void kryptonComboBox4_Enter(object sender, EventArgs e)
@@ -64,6 +61,87 @@ namespace DBFinalProject.UI
             {
                 kryptonTextBox1.Text = "Amount";
             }
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            string account_number = "";
+            string base_currency = "";
+            string target_currency = "";
+            string amount = "";
+            string pin = "";
+            string CheckPin = "";
+            try
+            {
+                account_number = kryptonTextBox1.Text.Trim();
+                amount = kryptonTextBox2.Text.Trim();
+                pin = kryptonTextBox4.Text.Trim();
+                target_currency = kryptonComboBox4.SelectedItem.ToString();
+                base_currency = "Rupees";
+                CheckPin = DL.AccountDL.getPinByNumber(account_number);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+
+            }
+
+            if (pin == CheckPin)
+            {
+                CurrencyExchangeBL exchange = new CurrencyExchangeBL();
+                exchange.setBaseCurrency("Rupees");
+                exchange.setTargetCurrency(target_currency);
+                exchange.setAmountBase(Convert.ToDecimal(amount));
+                exchange.setExchangeRate("Rupees", target_currency);
+                exchange.setAmountTarget(exchange.getExchangeRate() * exchange.getAmountBase());
+
+                exchange.setClientId(AccountDL.getCleintIdByNumber(account_number));
+                exchange.setDate(DateTime.Now);
+                exchange.setTransactionType(9);   // exchange ki id from lookup
+                exchange.setCharges(exchange.getAmountBase());
+
+                if (pin == AccountDL.getPinByNumber(account_number))
+                {
+                    try
+                    {
+                        if (AccountBL.isSufficientBalance(account_number, exchange.getAmountBase(), exchange.getCharges()))
+                        {
+                            if (CurrencyExchangeDL.exchangeAmmount(exchange))
+                            {
+                                MessageBox.Show("Exchange successful.");
+                                generate_reciept(exchange, account_number);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Exchange failed.");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Insufficient balance.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void generate_reciept(CurrencyExchangeBL currency, string account_number)
+        {
+
+            grpReciept.Visible = true;
+            int user_id = ClientDL.getUserIdByClientId(currency.getClientId());
+            string user_name = UserDL.getUserNameById(user_id);
+            name.Text = user_name;
+            account_num.Text = account_number;
+            amount.Text = currency.getAmountBase().ToString();
+            charges.Text = currency.getCharges().ToString();
+            date.Text = currency.getDate().ToString();
+
         }
     }
 }
