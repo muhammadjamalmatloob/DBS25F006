@@ -76,7 +76,7 @@ namespace DBFinalProject.DL
                     count = Convert.ToInt32(reader["COUNT"].ToString());
                 }
             }
-            return count > 0;
+            return (count > 0);
         }
         public static string getPinByNumber(string account_number)
         {
