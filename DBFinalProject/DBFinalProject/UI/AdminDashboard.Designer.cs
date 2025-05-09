@@ -42,7 +42,7 @@ namespace DBFinalProject
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            
             this.kryptonButton8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -70,7 +70,7 @@ namespace DBFinalProject
             this.label15 = new System.Windows.Forms.Label();
             this.kryptonPanel4 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.kryptonButton7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            
             this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.totalBranches = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -80,8 +80,8 @@ namespace DBFinalProject
             this.Green = new System.Windows.Forms.RadioButton();
             this.Purple = new System.Windows.Forms.RadioButton();
             this.Blue = new System.Windows.Forms.RadioButton();
-            this.kryptonButton12 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton13 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            
+            
             this.PurpleTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.myPallet = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();

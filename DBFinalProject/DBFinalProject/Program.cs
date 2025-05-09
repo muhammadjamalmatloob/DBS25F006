@@ -24,7 +24,7 @@ namespace DBFinalProject
 
             
 
-            Application.Run(new MainInterface());
+            Application.Run(new ManagerDashboard());
         }
     }
 }
