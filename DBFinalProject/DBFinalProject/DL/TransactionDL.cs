@@ -14,7 +14,7 @@ namespace DBFinalProject.DL
 
         public static void AddTransaction(TransactionBL transaction)
         {
-            string query = $"INSERT INTO transactions VALUES ('{transaction.getTransactionId()}','{transaction.getClientId()}', '{transaction.getFromAccount()}','{transaction.getToAccount()}','{transaction.getTransactionType()}','{transaction.getAmount()}','{transaction.getDate()}','{transaction.getdescription()}','{transaction.getCharges()}')";
+            string query = $"INSERT INTO transactions VALUES ('{transaction.getTransactionId()}','{transaction.getClientId()}', '{transaction.getTransactionType()}','{transaction.getDate()}','{transaction.getCharges()}')";
             DatabaseHelper.Instance.Update(query);
         }
 
@@ -32,10 +32,38 @@ namespace DBFinalProject.DL
             {
                 if (reader.Read())
                 {
-                    type_id = Convert.ToInt32(reader["branch_id"].ToString());
+                    type_id = Convert.ToInt32(reader["lookup_id"].ToString());
                 }
             }
             return type_id;
+        }
+
+        public static string TotalTransactions()
+        {
+            string query = "SELECT COUNT(*) FROM transactions";
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+        }
+
+        public static int getTransactionIdByDate(DateTime date,int client_id)
+        {
+            string query = $"SELECT transaction_id FROM transactions WHERE date_recorded = '{date}'  and client_id = {client_id}";
+            int transaction_id = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    transaction_id = Convert.ToInt32(reader["transaction_id"].ToString());
+                }
+            }
+            return transaction_id;
         }
     }
 }

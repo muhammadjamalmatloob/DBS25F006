@@ -265,5 +265,204 @@ namespace DBFinalProject.UI
         {
 
         }
+
+        private void kryptonTextBox12_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox12.Text == "Descryption")
+            {
+                kryptonTextBox12.Text = "";
+                kryptonTextBox12.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox12_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox12_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox12.Text == "")
+            {
+                kryptonTextBox12.Text = "Descryption";
+                kryptonTextBox12.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox10_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox10.Text == "Minimum Balance")
+            {
+                kryptonTextBox10.Text = "";
+                kryptonTextBox10.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox10_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox10.Text == "")
+            {
+                kryptonTextBox10.Text = "Minimum Balance";
+                kryptonTextBox10.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox11_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox11.Text == "Transaction Limit")
+            {
+                kryptonTextBox11.Text = "";
+                kryptonTextBox11.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox11_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox11.Text == "")
+            {
+                kryptonTextBox11.Text = "Transaction Limit";
+                kryptonTextBox11.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox6_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox6.Text == "Withdrawl Limit")
+            {
+                kryptonTextBox6.Text = "";
+                kryptonTextBox6.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox6_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox6.Text == "")
+            {
+                kryptonTextBox6.Text = "Withdrawl Limit";
+                kryptonTextBox6.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox2_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox2.Text == "Type Name")
+            {
+                kryptonTextBox2.Text = "";
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox2_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox2.Text == "")
+            {
+                kryptonTextBox2.Text = "Type Name";
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox7_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox7.Text == "Transaction Limit")
+            {
+                kryptonTextBox7.Text = "";
+                kryptonTextBox7.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox7_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox7.Text == "")
+            {
+                kryptonTextBox7.Text = "Transaction Limit";
+                kryptonTextBox7.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox3_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "Minimum Balance")
+            {
+                kryptonTextBox3.Text = "";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox3_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "")
+            {
+                kryptonTextBox3.Text = "Minimum Balance";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox5_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox5.Text == "Descryption")
+            {
+                kryptonTextBox5.Text = "";
+                kryptonTextBox5.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox5_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox5.Text == "")
+            {
+                kryptonTextBox5.Text = "Descryption";
+                kryptonTextBox5.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox9_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox9.Text == "Withdrawl Limit")
+            {
+                kryptonTextBox9.Text = "";
+                kryptonTextBox9.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox9_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox9.Text == "")
+            {
+                kryptonTextBox9.Text = "Withdrawl Limit";
+                kryptonTextBox9.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox1_Enter(object sender, EventArgs e)
+        {
+            
+            if (kryptonButton1.Text.Trim() == "Search Account Type")
+            {
+                kryptonTextBox1.Text = "";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox1_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "")
+            {
+                kryptonTextBox1.Text = "Search Account Type";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            string search = kryptonTextBox1.Text.Trim();
+
+            if (string.IsNullOrEmpty(search) || search == "Search Account Type")
+            {
+                return;
+            }
+
+            var filteredList = AccountTypeDL.accountTypes.Where(a => a.get_type_name().ToLower().Contains(search)).ToList();
+            AccountTypeDL.LoadDataGrid(filteredList, dgvAccount);
+        }
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.DL;
 using DBFinalProject.UI;
+using DBFinalProject.BL;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DBFinalProject
@@ -19,6 +20,9 @@ namespace DBFinalProject
         public static string username;
         public static string password;
         public KryptonPalette kryptonPalette1;
+
+        public static string UserName;
+        public static string Email;
 
         public MainInterface()
         {
@@ -101,6 +105,8 @@ namespace DBFinalProject
 
                     string role = LoginDL.user.getRole();
 
+                    UserName = LoginDL.user.getUsername();
+                    Email = LoginDL.user.getemail();
 
                     switch (role)
                     {
@@ -130,8 +136,11 @@ namespace DBFinalProject
                             break;
                         case "Client":
                             MessageBox.Show("Login successful! Opening Administrative Staff Dashboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            GeneralMenu clientMenu = new GeneralMenu();
-                            clientMenu.Show();
+
+                            
+                            GeneralMenu clientDashboard = new GeneralMenu();
+                            clientDashboard.Show();
+
                             this.Hide();
                             break;
                         default:

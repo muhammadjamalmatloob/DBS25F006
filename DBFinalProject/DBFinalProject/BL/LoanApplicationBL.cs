@@ -18,13 +18,16 @@ namespace DBFinalProject.BL
         private int employment_status { get; set; }
         private int loan_status { get; set; }
         private DateTime apply_date { get; set; }
-        private Timestamp approve_date { get; set; }
-        private int reviewed_by { get; set; }
-        private Timestamp review_date { get; set; }
+
         private string client_name { get; set; }
         private string loan_type { get; set; } 
         private string status { get; set; }
         
+
+        private DateTime approve_date { get; set; }
+        private int reviewed_by { get; set; }
+        private DateTime review_date { get; set; }
+
 
         public LoanApplicationBL(){ }
 
@@ -102,7 +105,7 @@ namespace DBFinalProject.BL
         {
             this.apply_date = apply_date;
         }
-        public void setApproveDate(Timestamp approve_date)
+        public void setApproveDate(DateTime approve_date)
         {
             this.approve_date = approve_date;
         }
@@ -110,7 +113,7 @@ namespace DBFinalProject.BL
         {
             this.reviewed_by = reviewed_by;
         }
-        public void setReviewDate(Timestamp reviewed_date)
+        public void setReviewDate(DateTime reviewed_date)
         {
             this.review_date = reviewed_date;
         }
@@ -150,7 +153,7 @@ namespace DBFinalProject.BL
         {
             return this.apply_date;
         }
-        public Timestamp getApproveDate()
+        public DateTime getApproveDate()
         {
             return this.approve_date;
         }
@@ -158,7 +161,7 @@ namespace DBFinalProject.BL
         {
             return this.reviewed_by;
         }
-        public Timestamp getReviewedDate()
+        public DateTime getReviewedDate()
         {
             return this.review_date;
         }

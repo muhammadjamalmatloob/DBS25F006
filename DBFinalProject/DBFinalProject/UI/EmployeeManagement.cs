@@ -12,6 +12,7 @@ using DBFinalProject.BL;
 using DBFinalProject.DL;
 using DBFinalProject.Utility;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace DBFinalProject
@@ -37,10 +38,14 @@ namespace DBFinalProject
             EmployeeDL.LoadAllEmployeeInList();
             EmployeeDL.LoadEmployeeCombobox(kryptonComboBox5);
             EmployeeDL.LoadEmployeeCombobox(kryptonComboBox6);
-            EmployeeDL.LoadDataGrid(dataGrid);
+            EmployeeDL.LoadDataGrid(dataGrid,"");
 
             kryptonComboBox1.SelectedIndex = 0;
             kryptonComboBox2.SelectedIndex = 0;
+            kryptonComboBox3.SelectedIndex = 0;
+            kryptonComboBox4.SelectedIndex = 0;
+            kryptonComboBox5.SelectedIndex = 0;
+            kryptonComboBox6.SelectedIndex = 0;
             kryptonComboBox8.SelectedIndex = 0;
             this.admin = admin;
             this.kryptonManager1.GlobalPalette = Theme.theme;
@@ -123,6 +128,25 @@ namespace DBFinalProject
                 employee.set_contact(kryptonTextBox8.Text);
                 employee.set_department(kryptonComboBox4.Text);
                 employee.set_branch_id(BranchDL.GetBranchIdByName(kryptonComboBox3.Text));
+                employee.set_position(EmployeeDL.get_position_by_id(employee_Id));
+
+
+                // check this position function
+                if (!EmployeeDL.isDoublicateRole(employee.get_position(),employee.get_branch_id()))
+                {
+                    if (employee.get_position() == 2)
+                    {
+                        MessageBox.Show("Error:  Manager Already Exists in this Branch !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: Branch can not contain more than 8 cashiers !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                   
+                }
+
             }
             catch (Exception ex)
             {
@@ -133,7 +157,7 @@ namespace DBFinalProject
             if (EmployeeDL.updateEmployeeInDb(employee, employee_Id))
             {
                 
-                EmployeeDL.LoadDataGrid(dataGrid);
+                EmployeeDL.LoadDataGrid(dataGrid,"");
                 //EmployeeDL.UpdateEmployee(employee_Id, employee);
                 EmployeeDL.LoadAllEmployeeInList();
                 MessageBox.Show("Employee Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -203,7 +227,28 @@ namespace DBFinalProject
                 employee.set_gender(kryptonComboBox2.Text);
                 employee.set_salary(float.Parse(kryptonTextBox6.Text));
                 employee.set_contact(kryptonTextBox5.Text);
+                if (EmployeeDL.isDublicateContact(kryptonTextBox5.Text))
+                {
+                    MessageBox.Show("Error:  Contact Number Already Exists !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 employee.set_position(UserDL.get_role_id(kryptonComboBox7.Text));
+
+                if (!EmployeeDL.isDoublicateRole(employee.get_position(),employee.get_branch_id()))
+                {
+                    if (employee.get_position() == 2)
+                    {
+                        MessageBox.Show("Error:  Manager Already Exists in this Branch !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: Branch can not contain more than 8 cashiers !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                   
+                }
             }
             catch (Exception ex)
             {
@@ -211,19 +256,31 @@ namespace DBFinalProject
                 return;
             }
 
-            try
+            employee.set_role_id(UserDL.get_role_id(kryptonComboBox7.Text));
+            //employee.set_username(kryptonTextBox9.Text);
+            employee.set_email(kryptonTextBox10.Text);
+            if (EmployeeDL.isDublicateEmail(kryptonTextBox10.Text))
             {
-                employee.set_role_id(UserDL.get_role_id(kryptonComboBox7.Text));
-                employee.set_username(kryptonTextBox9.Text);
-                employee.set_email(kryptonTextBox10.Text);
-                employee.set_password_hash(kryptonTextBox11.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error:  Email Already Exists !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            //employee.set_password_hash(kryptonTextBox11.Text);
 
+            if (!employee.set_username(kryptonTextBox9.Text).isValid)
+            {
+                MessageBox.Show(employee.set_username(kryptonTextBox9.Text).errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (EmployeeDL.isDublicateUsername(kryptonTextBox9.Text))
+            {
+                MessageBox.Show("Error:  User Name Already Exists !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (!employee.set_password_hash(kryptonTextBox11.Text).isValid)
+            {
+                MessageBox.Show(employee.set_password_hash(kryptonTextBox11.Text).errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             if (EmployeeDL.AddEmployeeAccountInDb(employee))
             {
@@ -233,7 +290,7 @@ namespace DBFinalProject
                     EmployeeDL.LoadAllEmployeeInList();
                     EmployeeDL.LoadEmployeeCombobox(kryptonComboBox5);
                     EmployeeDL.LoadEmployeeCombobox(kryptonComboBox6);
-                    EmployeeDL.LoadDataGrid(dataGrid);
+                    EmployeeDL.LoadDataGrid(dataGrid, "");
                     //employee.set_employee_id(EmployeeDL.get_employee_id(employee.get_contact()));
                     //EmployeeDL.AddEmployeeToList(employee);
 
@@ -281,7 +338,7 @@ namespace DBFinalProject
             {
                 EmployeeDL.LoadAllEmployeeInList();
                 //EmployeeDL.RemoveEmployee(employee_Id);
-                EmployeeDL.LoadDataGrid(dataGrid);
+                EmployeeDL.LoadDataGrid(dataGrid,"");
                 
                 EmployeeDL.LoadEmployeeCombobox(kryptonComboBox5);
                 EmployeeDL.LoadEmployeeCombobox(kryptonComboBox6);
@@ -324,6 +381,180 @@ namespace DBFinalProject
         private void kryptonButton8_Click(object sender, EventArgs e)
         {
             apply_employee_filters();
+        }
+
+        private void kryptonTextBox2_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox2.Text == "First Name")
+            {
+                kryptonTextBox2.Text = "";
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox2_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox2.Text))
+            {
+                kryptonTextBox2.Text = "First Name";
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox3_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "Last Name")
+            {
+                kryptonTextBox3.Text = "";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox3_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox3.Text))
+            {
+                kryptonTextBox3.Text = "Last Name";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox9_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox9.Text == "User Name")
+            {
+                kryptonTextBox9.Text = "";
+                kryptonTextBox9.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox9_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox9.Text))
+            {
+                kryptonTextBox9.Text = "User Name";
+                kryptonTextBox9.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox10_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox10.Text == "Email")
+            {
+                kryptonTextBox10.Text = "";
+                kryptonTextBox10.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox10_Leave(object senider, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox10.Text))
+            {
+                kryptonTextBox10.Text = "Email";
+                kryptonTextBox10.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox11_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox11.Text == "Password")
+            {
+                kryptonTextBox11.Text = "";
+                kryptonTextBox11.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox11_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox11.Text))
+            {
+                kryptonTextBox11.Text = "Password";
+                kryptonTextBox11.StateCommon.Content.Color1 = Color.Gray;
+                
+            }
+        }
+
+        private void kryptonTextBox7_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox7.Text == "Salary")
+            {
+                kryptonTextBox7.Text = "";
+                kryptonTextBox7.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox7_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox7.Text))
+            {
+                kryptonTextBox7.Text = "Salary";
+                kryptonTextBox7.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox6_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox6.Text == "Salary")
+            {
+                kryptonTextBox6.Text = "";
+                kryptonTextBox6.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox6_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox6.Text))
+            {
+                kryptonTextBox6.Text = "Salary";
+                kryptonTextBox6.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox5_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox5.Text == "Contact")
+            {
+                kryptonTextBox5.Text = "";
+                kryptonTextBox5.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox5_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox5.Text))
+            {
+                kryptonTextBox5.Text = "Contact";
+                kryptonTextBox5.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox8_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox8.Text == "Contact")
+            {
+                kryptonTextBox8.Text = "";
+                kryptonTextBox8.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox8_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox8.Text))
+            {
+                kryptonTextBox8.Text = "Contact";
+                kryptonTextBox8.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            string search = kryptonTextBox1.Text.Trim();
+            EmployeeDL.LoadDataGrid(dataGrid, search);
         }
     }
 }

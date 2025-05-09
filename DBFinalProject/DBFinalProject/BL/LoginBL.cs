@@ -25,5 +25,13 @@ namespace DBFinalProject.BL
         {
             return this.role;
         }
+        public string getUsername()
+        {
+            return this.username;
+        }
+        public string getemail()
+        {
+            return this.email;
+        }
     }
 }

@@ -145,23 +145,37 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\AccountApplicationBL.cs" />
+
     <Compile Include="BL\AccountType.cs" />
+
+    <Compile Include="BL\AccountBL.cs" />
+
     <Compile Include="BL\AccountTypeBL.cs" />
     <Compile Include="BL\BranchBL.cs" />
     <Compile Include="BL\ClientBL.cs" />
     <Compile Include="BL\CurrencyExchangeBL.cs" />
+    <Compile Include="BL\DepositsBL.cs" />
     <Compile Include="BL\EmployeeBL.cs" />
     <Compile Include="BL\LoanApplicationBL.cs" />
     <Compile Include="BL\LoanTypeBL.cs" />
     <Compile Include="BL\LoginBL.cs" />
     <Compile Include="BL\PaymentBL.cs" />
+    <Compile Include="BL\SystemLogsBL.cs" />
     <Compile Include="BL\TransactionBL.cs" />
+    <Compile Include="BL\TransferBL.cs" />
     <Compile Include="BL\UserBL.cs" />
+    
+
+    <Compile Include="BL\WithdrawalBL.cs" />
     <Compile Include="DL\AccountApplicationDL.cs" />
+    <Compile Include="DL\AccountDL.cs" />
+
     <Compile Include="DL\AccountTypeDL.cs" />
+    <Compile Include="DL\AuditDL.cs" />
     <Compile Include="DL\BranchDL.cs" />
     <Compile Include="DL\ClientDL.cs" />
     <Compile Include="DL\CurrencyExchangeDL.cs" />
+    <Compile Include="DL\DepositsDL.cs" />
     <Compile Include="DL\EmployeeDL.cs" />
     <Compile Include="DL\LoanApplicationDL.cs" />
     <Compile Include="DL\LoanTypeDL.cs" />
@@ -170,8 +184,23 @@
     <Compile Include="DL\PaymentDL.cs" />
     <Compile Include="DL\ResetPasswordDL.cs" />
     <Compile Include="DL\SignUpDL.cs" />
+    <Compile Include="DL\SystemLogsDL.cs" />
     <Compile Include="DL\TransactionDL.cs" />
+    <Compile Include="DL\TransferDL.cs" />
+    <Compile Include="DL\WithdrawalDL.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="UI\Audit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Audit.Designer.cs">
+      <DependentUpon>Audit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ClientTransactionRecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ClientTransactionRecord.Designer.cs">
+      <DependentUpon>ClientTransactionRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,12 +285,6 @@
     </Compile>
     <Compile Include="UI\ClientCurrencyExchange.Designer.cs">
       <DependentUpon>ClientCurrencyExchange.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\ClientDepositMoney.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\ClientDepositMoney.Designer.cs">
-      <DependentUpon>ClientDepositMoney.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ClientLoan.cs">
       <SubType>UserControl</SubType>
@@ -379,6 +402,12 @@
     <Compile Include="UI\SendMoney.Designer.cs">
       <DependentUpon>SendMoney.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\SysttemLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SysttemLogs.Designer.cs">
+      <DependentUpon>SysttemLogs.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TransactionRecord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -397,11 +426,20 @@
     <Compile Include="UI\Withdraw.Designer.cs">
       <DependentUpon>Withdraw.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Utility\Theme.cs" />
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="UI\AccountTypeManagement.resx">
       <DependentUpon>AccountTypeManagement.cs</DependentUpon>
     </EmbeddedResource>
+
+    <Compile Include="UI\WithdrawMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WithdrawMoney.Designer.cs">
+      <DependentUpon>WithdrawMoney.cs</DependentUpon>
+    </Compile>
+
     <Compile Include="Utility\DatabaseHelper.cs" />
     <Compile Include="Utility\EmailSender.cs" />
     <EmbeddedResource Include="UI\AdminDashboard.resx">
@@ -422,6 +460,9 @@
     <EmbeddedResource Include="UI\ApproveApplicationscs.resx">
       <DependentUpon>ApproveApplicationscs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Audit.resx">
+      <DependentUpon>Audit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\BillPayments.resx">
       <DependentUpon>BillPayments.cs</DependentUpon>
     </EmbeddedResource>
@@ -437,9 +478,6 @@
     <EmbeddedResource Include="UI\ClientCurrencyExchange.resx">
       <DependentUpon>ClientCurrencyExchange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\ClientDepositMoney.resx">
-      <DependentUpon>ClientDepositMoney.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\ClientLoan.resx">
       <DependentUpon>ClientLoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -448,6 +486,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ClientBill.resx">
       <DependentUpon>ClientBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ClientTransactionRecord.resx">
+      <DependentUpon>ClientTransactionRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CommonInterface.resx">
       <DependentUpon>CommonInterface.cs</DependentUpon>
@@ -512,6 +553,9 @@
     <EmbeddedResource Include="UI\SignUpORApply.resx">
       <DependentUpon>SignUpORApply.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\SysttemLogs.resx">
+      <DependentUpon>SysttemLogs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\TransactionRecord.resx">
       <DependentUpon>TransactionRecord.cs</DependentUpon>
     </EmbeddedResource>
@@ -520,6 +564,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Withdraw.resx">
       <DependentUpon>Withdraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WithdrawMoney.resx">
+      <DependentUpon>WithdrawMoney.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".vs\DBFinalProject.csproj.dtbcache.json" />
     <None Include="bin\Debug\DBFinalProject.exe.config" />

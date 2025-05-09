@@ -42,6 +42,7 @@
             this.Closebtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +52,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(326, 410);
+            this.label4.Location = new System.Drawing.Point(322, 412);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(398, 20);
             this.label4.TabIndex = 23;
@@ -62,7 +63,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(373, 383);
+            this.label3.Location = new System.Drawing.Point(369, 385);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(284, 20);
             this.label3.TabIndex = 22;
@@ -85,9 +86,9 @@
             this.label1.Location = new System.Drawing.Point(609, 229);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 21);
+            this.label1.Size = new System.Drawing.Size(73, 21);
             this.label1.TabIndex = 26;
-            this.label1.Text = "TEXT";
+            this.label1.Text = "*******";
             // 
             // label5
             // 
@@ -107,9 +108,9 @@
             this.label6.Location = new System.Drawing.Point(611, 268);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 21);
+            this.label6.Size = new System.Drawing.Size(73, 21);
             this.label6.TabIndex = 28;
-            this.label6.Text = "TEXT";
+            this.label6.Text = "*******";
             // 
             // label7
             // 
@@ -129,9 +130,9 @@
             this.label2.Location = new System.Drawing.Point(611, 314);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 21);
+            this.label2.Size = new System.Drawing.Size(73, 21);
             this.label2.TabIndex = 30;
-            this.label2.Text = "TEXT";
+            this.label2.Text = "*******";
             // 
             // label8
             // 
@@ -196,10 +197,20 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "APEX BANK LIMITED";
             // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Location = new System.Drawing.Point(445, 470);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(87, 37);
+            this.kryptonButton1.TabIndex = 32;
+            this.kryptonButton1.Values.Text = "View";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
+            // 
             // CommonInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label8);
@@ -235,5 +246,6 @@
         private System.Windows.Forms.Button Closebtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label9;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }

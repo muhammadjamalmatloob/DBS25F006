@@ -29,5 +29,46 @@ namespace DBFinalProject.DL
             string query = $"DELETE FROM clients WHERE user_id = '{client.getUserId()}'";
             DatabaseHelper.Instance.Update(query);
         }
+
+        public static string TotalClients()
+        {
+            string query = "SELECT COUNT(*) FROM clients";
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+        }
+        public static int getUserIdByClientId(int client_id)
+        {
+            string query = $"SELECT user_id FROM clients WHERE client_id = {client_id}";
+            int userId = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    userId = Convert.ToInt32(reader[0]);
+                }
+            }
+            return userId;
+        }
+
+        public static int getClientIdbyUserId(int user_id)
+        {
+            string stored_procedure = $"CALL sp_GetClientId('{user_id}')";
+            int client_id = 0;
+            using (var reader = DatabaseHelper.Instance.getData(stored_procedure))
+            {
+                if (reader.Read())
+                {
+                    client_id = Convert.ToInt32(reader["client_id"].ToString());
+                }
+            }
+            return client_id;
+        }
     }
 }

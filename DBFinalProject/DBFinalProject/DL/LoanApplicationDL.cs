@@ -12,7 +12,7 @@ using Google.Protobuf.WellKnownTypes;
 
 namespace DBFinalProject.DL
 {
-    internal class LoanApplicationDL
+    public class LoanApplicationDL
     {
         public static List<LoanApplicationBL> applications = new List<LoanApplicationBL>();
 
@@ -27,6 +27,7 @@ namespace DBFinalProject.DL
             string query = $"DELETE FROM loan_application WHERE client_id = '{application.getClientId()}'";
             DatabaseHelper.Instance.Update(query);
         }
+
 
         public static void LoadAllBranchLoansInList()
         {
@@ -120,6 +121,7 @@ namespace DBFinalProject.DL
             foreach (var application in applications)
             {
                 if (application.getAmountRequested() > condition && Regex.IsMatch(application.GetClientName(), match))
+                {
                 Grid.Rows.Add(
                     application.getLoanApplicationId(),
                     application.GetClientName(),
@@ -130,11 +132,27 @@ namespace DBFinalProject.DL
                     "Approve",
                     "Reject"
                     );
+                }
             }
             foreach (DataGridViewRow row in Grid.Rows)
             {
                 row.Height = 50;
             }
+        }
+
+        public static string TotalLoanApplications()
+        {
+            string query = "SELECT COUNT(*) FROM loan_application";
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+
         }
     }
 }

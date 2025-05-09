@@ -116,5 +116,47 @@ namespace DBFinalProject.DL
                 comboBox.Items.Add(accountType.get_type_name());
             }
         }
+
+        public static string TotalActiveAccounts()
+        {
+            string query = "SELECT COUNT(*) from accounts where status = 23";
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+        }
+
+        public static string TotalInActiveAccounts()
+        {
+            string query = "SELECT COUNT(*) from accounts where status = 24";
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+        }
+
+        public static string TotalClosedAccounts()
+        {
+            string query = "SELECT COUNT(*) from accounts where status = 25";
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+        }
     }
 }

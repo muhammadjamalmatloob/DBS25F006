@@ -552,7 +552,7 @@
   <data name="panel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEP8SURBVHhe7d0H
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEP8SURBVHhe7d0H
         mFXV3fb/MwWGoQwMHaSDAoIw9A6CQ9HYK4Il+iioGIyIIokiVuzkib23x1hQxC4q2CCCBUUxxK5IMFgB
         pWPWu9biNTrOb585bfastc/3vq7P9X//1xOZc/bas3/3nLNLjBBCCCGEEEIIIYQQQgghhBBCCCGEEEII
         IYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYRUZvK1DtrvtKO1ido0AM45SuuqEUJIyumvXaAt
@@ -1225,6 +1225,6 @@
     <value>286, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>157</value>
+    <value>25</value>
   </metadata>
 </root>
