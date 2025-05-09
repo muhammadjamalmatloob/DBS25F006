@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using DBFinalProject.BL;
 using DBFinalProject.Utility;
 
@@ -26,11 +27,34 @@ namespace DBFinalProject.DL
 
         public static bool withdrawlAmmount(WithdrawalBL withdrawal)
         {
-            string query = $"Start Transaction" +
-                $"Insert into transactions VALUES (null,{withdrawal.getClientId()},{withdrawal.getTransactionType()},'{withdrawal.getDate()}',{withdrawal.getCharges()})" +
-                $"Insert into deposits VALUES (null,{withdrawal.getfrom_account_id()},{withdrawal.getAmount()},{TransactionDL.getTransactionIdByDate(withdrawal.getDate(), withdrawal.getClientId())})" +
-                $"UPDATE accounts SET balance = balance - {withdrawal.getAmount()}  - {withdrawal.getCharges()}  WHERE account_id = {withdrawal.getfrom_account_id()}" +
-            $"Commit";
+            string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            string query = $@"
+        START TRANSACTION;
+        
+        INSERT INTO transactions 
+            VALUES (
+                null,
+                {withdrawal.getClientId()},
+                {withdrawal.getTransactionType()},
+                '{date}',
+                {withdrawal.getCharges()}
+            );
+        
+        INSERT INTO withdrawals 
+            VALUES (
+                null,
+                {withdrawal.getfrom_account_id()},
+                {withdrawal.getAmount()},
+                LAST_INSERT_ID()
+            );
+        
+        UPDATE accounts 
+            SET balance = balance - ({withdrawal.getAmount()} + {withdrawal.getCharges()})
+            WHERE account_id = {withdrawal.getfrom_account_id()};
+        
+        COMMIT;
+    ";
+
             return DatabaseHelper.Instance.Update(query) > 0;
         }
     }

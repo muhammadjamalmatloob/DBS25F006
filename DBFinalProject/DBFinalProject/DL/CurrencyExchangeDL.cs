@@ -26,11 +26,35 @@ namespace DBFinalProject.DL
 
         public static bool exchangeAmmount(CurrencyExchangeBL exchange)
         {
-            string query = $"Start Transaction" +
-                $"Insert into transactions VALUES (null,{exchange.getClientId()},{exchange.getTransactionType()},'{exchange.getDate()}',{exchange.getCharges()})" +
-                $"Insert into currency_exchange VALUES (null,{exchange.getBaseCurrency()},{exchange.getTargetCurrency()},{exchange.getExchangeRate()},{exchange.getAmountBase()},{exchange.getAmountTarget()},{TransactionDL.getTransactionIdByDate(exchange.getDate(), exchange.getClientId())})" +
-                $"UPDATE accounts SET balance = balance - {exchange.getAmountBase()}  - {exchange.getCharges()}  WHERE account_id = {exchange.getClientId()}" +
-            $"Commit";
+            string query = $@"
+                    START TRANSACTION;
+    
+                    INSERT INTO transactions 
+                        VALUES (
+                            null,
+                            {exchange.getClientId()},
+                            {exchange.getTransactionType()},
+                            '{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}',
+                            {exchange.getCharges()}
+                        );
+    
+                    INSERT INTO currency_exchange 
+                        VALUES (
+                            null,
+                            '{exchange.getBaseCurrency()}',
+                            '{exchange.getTargetCurrency()}',
+                            {exchange.getExchangeRate()},
+                            {exchange.getAmountBase()},
+                            {exchange.getAmountTarget()},
+                            LAST_INSERT_ID()
+                        );
+    
+                    UPDATE accounts 
+                        SET balance = balance - ({exchange.getAmountBase()} + {exchange.getCharges()})
+                        WHERE account_id = {exchange.getClientId()};
+    
+                    COMMIT;
+                ";
             return DatabaseHelper.Instance.Update(query) > 0;
         }
     }

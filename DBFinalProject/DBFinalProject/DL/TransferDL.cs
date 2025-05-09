@@ -29,12 +29,37 @@ namespace DBFinalProject.DL
 
         public static void transferAmmount(TransferBL transfer)
         {
-            string query = $"Start Transaction" +
-                $"Insert into transactions VALUES (null,{transfer.getClientId()},{transfer.getTransactionType()},'{transfer.getDate()}',{transfer.getCharges()})" +
-                $"Insert into transfers VALUES (null,{transfer.getFromAccountId()},{transfer.getToAccounId()},{TransactionDL.getTransactionIdByDate(transfer.getDate(), transfer.getClientId())})" +
-                $"UPDATE accounts SET balance = balance + {transfer.getAmount()} WHERE account_id = {transfer.getToAccounId()}" +
-                $"UPDATE accounts SET balance = balance + {transfer.getAmount()}  - {transfer.getCharges()} WHERE account_id = {transfer.getFromAccountId()}" +
-                $"Commit";
+            string query = $@"
+            START TRANSACTION;
+    
+            INSERT INTO transactions 
+                VALUES (
+                    null,
+                    {transfer.getClientId()},
+                    {transfer.getTransactionType()},
+                    '{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}',
+                    {transfer.getCharges()}
+                );
+    
+            INSERT INTO transfers 
+                VALUES (
+                    null,
+                    {transfer.getFromAccountId()},
+                    {transfer.getToAccounId()},
+                    LAST_INSERT_ID(),
+                    {transfer.getClientId()}
+                );
+    
+            UPDATE accounts 
+                SET balance = balance + {transfer.getAmount()}
+                WHERE account_id = {transfer.getToAccounId()};
+    
+            UPDATE accounts 
+                SET balance = balance - ({transfer.getAmount()} + {transfer.getCharges()})
+                WHERE account_id = {transfer.getFromAccountId()};
+    
+            COMMIT;
+        ";
             DatabaseHelper.Instance.Update(query);
         }
     }

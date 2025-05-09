@@ -22,6 +22,7 @@ namespace DBFinalProject
             BranchDL.LoadAllDataInList();
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox1);
             kryptonComboBox1.SelectedIndex = 0;
+            kryptonComboBox4.SelectedIndex = 0;
         }
 
         private void kryptonComboBox3_SelectedIndexChanged(object sender, EventArgs e)
@@ -130,6 +131,60 @@ namespace DBFinalProject
             charges.Text = currency.getCharges().ToString();
             date.Text = currency.getDate().ToString();
 
+        }
+
+        private void kryptonTextBox3_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "Account Number")
+            {
+                kryptonTextBox3.Text = "";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox3_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "")
+            {
+                kryptonTextBox3.Text = "Account Number";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox1_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "Amount Paid")
+            {
+                kryptonTextBox3.Text = "";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox1_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "")
+            {
+                kryptonTextBox1.Text = "Amount Paid";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox2_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox2.Text == "PIN")
+            {
+                kryptonTextBox2.Text = "";
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox2_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox2.Text == "")
+            {
+                kryptonTextBox2.Text = "PIN";
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Gray;
+            }
         }
     }
 }

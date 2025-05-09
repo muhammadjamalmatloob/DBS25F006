@@ -91,6 +91,11 @@ namespace DBFinalProject.UI
                         return;
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Invalid PIN.");
+                    return;
+                }
             }
             else
             {
@@ -122,6 +127,60 @@ namespace DBFinalProject.UI
             AdminDashboard adminDashboard = new AdminDashboard();
             adminDashboard.Show();
             this.Hide();
+        }
+
+        private void kryptonTextBox3_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "Account Number")
+            {
+                kryptonTextBox3.Text = "";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox3_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "")
+            {
+                kryptonTextBox3.Text = "Account Number";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox1_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "Amount")
+            {
+                kryptonTextBox1.Text = "";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox1_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "")
+            {
+                kryptonTextBox1.Text = "Amount";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox2_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox2.Text == "PIN")
+            {
+                kryptonTextBox2.Text = "";
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox2_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox2.Text == "")
+            {
+                kryptonTextBox2.Text = "PIN";
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Gray;
+            }
         }
     }
 }

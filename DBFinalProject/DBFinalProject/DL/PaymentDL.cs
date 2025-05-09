@@ -40,12 +40,50 @@ namespace DBFinalProject.DL
 
         public static bool payAmmount(PaymentBL payment)
         {
-            string query = $"Start Transaction" +
-                $"Insert into transactions VALUES (null,{payment.getClientId()},{payment.getTransactionType()},'{payment.getDate()}',{payment.getCharges()})" +
-                $"Insert into deposits VALUES (null,{payment.getAccountId()},{payment.getAmount()},{TransactionDL.getTransactionIdByDate(payment.getDate(), payment.getClientId())})" +
-                $"UPDATE accounts SET balance = balance - {payment.getAmount()}  - {payment.getCharges()}  WHERE account_id = {payment.getAccountId()}" +
-            $"Commit";
+            string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            string query = $@"
+    START TRANSACTION;
+    
+    INSERT INTO transactions 
+        VALUES (
+            null,
+            {payment.getClientId()},
+            {payment.getTransactionType()},
+            '{date}',
+            {payment.getCharges()}
+        );
+    
+    INSERT INTO payments 
+        VALUES (
+            null,
+            {payment.getAmount()},
+            {payment.getStatus()},
+            {payment.getPaymentType()},
+            LAST_INSERT_ID()
+        );
+    
+    UPDATE accounts 
+        SET balance = balance - ({payment.getAmount()} - {payment.getCharges()})
+        WHERE account_id = {payment.getAccountId()};
+    
+    COMMIT;
+";
             return DatabaseHelper.Instance.Update(query) > 0;
+        }
+
+        public static int getPaymentTypeId(string payment_type)
+        {
+            string query = $"SELECT lookup_id FROM lookup WHERE value = '{payment_type}'";
+            int payment_id = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    payment_id = Convert.ToInt32(reader[0]);
+                }
+            }
+            return payment_id;
         }
     }
 }

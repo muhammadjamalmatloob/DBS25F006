@@ -79,9 +79,11 @@ namespace DBFinalProject
                 DepositsBL deposits = new DepositsBL();
                 deposits.setToAccountId(AccountDL.getAccountIdByNumber(account_number));
                 deposits.setClientId(AccountDL.getCleintIdByNumber(account_number));
+                MessageBox.Show($"{deposits.getClientId()}");
                 deposits.setAmount(Convert.ToDecimal(amount));
                 deposits.setCharges(deposits.getAmount());
-                deposits.setDate(DateTime.Now);
+                //string formattedDate = DateTime.Now.ToString("yyyy-MM-dd");
+                deposits.setDate(Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd")));
                 deposits.setTransactionType(5);   // deposit ki id from lookup  
 
 
@@ -134,6 +136,60 @@ namespace DBFinalProject
             charges.Text = deposits.getCharges().ToString();
             date.Text = deposits.getDate().ToString();
 
+        }
+
+        private void kryptonTextBox3_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "Enter Account Number")
+            {
+                kryptonTextBox3.Text = "";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox1_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "Enter Amount")
+            {
+                kryptonTextBox1.Text = "";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox3_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "")
+            {
+                kryptonTextBox3.Text = "Enter Account Number";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox1_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "")
+            {
+                kryptonTextBox1.Text = "Enter Amount";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox2_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox2.Text == "Enter PIN")
+            {
+                kryptonTextBox2.Text = "";
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox2_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox2.Text == "")
+            {
+                kryptonTextBox2.Text = "Enter PIN";
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Gray;
+            }
         }
     }
 }
