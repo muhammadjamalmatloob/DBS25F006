@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using DBFinalProject.Utility;
 
 namespace DBFinalProject
 {
     public partial class ClientManagement : KryptonForm
     {
-        public ClientManagement()
+        AdminDashboard admin;
+        public ClientManagement(AdminDashboard admin)
         {
             InitializeComponent();
             GrpBox.Visible = false;
@@ -21,6 +23,8 @@ namespace DBFinalProject
             GrpDelete.Visible = false;
             radioButton1.Checked = true;
             radioButton4.Checked = true;
+            this.admin = admin;
+            this.kryptonManager1.GlobalPalette = Theme.theme;
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
@@ -92,9 +96,8 @@ namespace DBFinalProject
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
-            AdminDashboard adminDashboard = new AdminDashboard();
-            adminDashboard.Show();
             this.Hide();
+            admin.Show();
         }
     }
 }

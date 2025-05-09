@@ -8,16 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using DBFinalProject.Utility;
 
 namespace DBFinalProject
 {
     public partial class CurrencyExchange : KryptonForm
     {
-        public CurrencyExchange()
+        ManagerDashboard manager;
+        public CurrencyExchange(ManagerDashboard manager)
         {
             InitializeComponent();
             GrpBox.Visible = false;
             radioButton2.Checked = true;
+            this.manager = manager;
+            kryptonManager1.GlobalPalette = Theme.theme;
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
@@ -27,9 +31,8 @@ namespace DBFinalProject
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
-            ManagerDashboard managerDashboard = new ManagerDashboard();
-            managerDashboard.Show();
             this.Hide();
+            manager.Show();
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
