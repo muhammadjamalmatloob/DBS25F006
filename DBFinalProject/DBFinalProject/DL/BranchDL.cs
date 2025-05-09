@@ -15,10 +15,8 @@ namespace DBFinalProject.DL
     {
         public static List<BranchBL> branchList = new List<BranchBL>();
 
-       
 
-        
-       
+
         public static bool AddBranchInDb(BranchBL branch)
         {
             string query = $"INSERT INTO branches (branch_name, branch_code, address, contact, city, country) VALUES ('{branch.get_branch_name()}', 0, '{branch.get_address()}', '{branch.get_contact()}', '{branch.get_city()}', '{branch.get_country()}')";
@@ -144,10 +142,7 @@ namespace DBFinalProject.DL
 
         public static void LoadDataGrid(List<BranchBL> branchList, KryptonDataGridView dvgBranch)
         {
-            //foreach (DataGridViewRow row in dvgBranch.Rows)
-            //{
-            //    row.Height = 50;
-            //}
+            
             dvgBranch.Rows.Clear();
             foreach (var branch in branchList)
             {
@@ -194,6 +189,34 @@ namespace DBFinalProject.DL
                 }
             }
         }
+
+    
+
+        public static BranchBL GetManagerBranch()
+        {
+            string query = $"SELECT * FROM " +
+            $"users u JOIN employees e " +
+            $"ON u.user_id = e.user_id " +
+            $"JOIN  branches b ON e.branch_id = b.branch_id " +
+            $"WHERE u.username = '{MainInterface.username}'";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+              if (reader.Read())
+              {
+                return new BranchBL(
+                  Convert.ToInt32(reader["branch_id"]),
+                  reader["branch_name"].ToString(),
+                  Convert.ToInt32(reader["branch_code"]),
+                  reader["address"].ToString(),
+                  reader["contact"].ToString(),
+                  reader["city"].ToString(),
+                  reader["country"].ToString()
+                );
+              }
+            }
+            return null;
+        }
+
 
         public static string TotalBranches()
         {

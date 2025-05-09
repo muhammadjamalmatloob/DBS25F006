@@ -68,6 +68,10 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.dataGrid = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.myPallet = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
+            this.PurpleTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.GreenTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,9 +79,6 @@
             this.col2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.myPallet = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
-            this.GreenTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -168,6 +169,7 @@
             this.kryptonButton5.Size = new System.Drawing.Size(132, 42);
             this.kryptonButton5.TabIndex = 6;
             this.kryptonButton5.Values.Text = "SEARCH";
+            this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
             // 
             // kryptonTextBox1
             // 
@@ -183,10 +185,13 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox1.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox1.StateCommon.Border.Width = 1;
-            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox1.TabIndex = 13;
             this.kryptonTextBox1.Text = "Search";
+            this.kryptonTextBox1.TextChanged += new System.EventHandler(this.kryptonTextBox1_TextChanged);
+            this.kryptonTextBox1.GotFocus += new System.EventHandler(this.kryptonTextBox1_Focus);
+            this.kryptonTextBox1.LostFocus += new System.EventHandler(this.kryptonTextBox1_LostFocus);
             // 
             // panel2
             // 
@@ -315,13 +320,13 @@
             // 
             // kryptonComboBox2
             // 
+            this.kryptonComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.kryptonComboBox2.DropDownWidth = 272;
             this.kryptonComboBox2.Location = new System.Drawing.Point(2, 26);
             this.kryptonComboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonComboBox2.Name = "kryptonComboBox2";
             this.kryptonComboBox2.Size = new System.Drawing.Size(204, 21);
             this.kryptonComboBox2.TabIndex = 24;
-            this.kryptonComboBox2.Text = "Select Department";
             // 
             // kryptonButton13
             // 
@@ -331,6 +336,7 @@
             this.kryptonButton13.Size = new System.Drawing.Size(83, 33);
             this.kryptonButton13.TabIndex = 23;
             this.kryptonButton13.Values.Text = "Apply";
+            this.kryptonButton13.Click += new System.EventHandler(this.kryptonButton13_Click);
             // 
             // grptype
             // 
@@ -367,13 +373,17 @@
             // 
             // kryptonComboBox1
             // 
+            this.kryptonComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.kryptonComboBox1.DropDownWidth = 272;
+            this.kryptonComboBox1.Items.AddRange(new object[] {
+            "Select Employee Type",
+            "Manager",
+            "Cashier"});
             this.kryptonComboBox1.Location = new System.Drawing.Point(2, 26);
             this.kryptonComboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonComboBox1.Name = "kryptonComboBox1";
             this.kryptonComboBox1.Size = new System.Drawing.Size(204, 21);
             this.kryptonComboBox1.TabIndex = 24;
-            this.kryptonComboBox1.Text = "Select Employee Type";
             // 
             // kryptonButton9
             // 
@@ -383,6 +393,7 @@
             this.kryptonButton9.Size = new System.Drawing.Size(83, 33);
             this.kryptonButton9.TabIndex = 23;
             this.kryptonButton9.Values.Text = "Apply";
+            this.kryptonButton9.Click += new System.EventHandler(this.kryptonButton9_Click);
             // 
             // GrpNme
             // 
@@ -419,13 +430,13 @@
             // 
             // kryptonComboBox7
             // 
+            this.kryptonComboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.kryptonComboBox7.DropDownWidth = 272;
             this.kryptonComboBox7.Location = new System.Drawing.Point(2, 26);
             this.kryptonComboBox7.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonComboBox7.Name = "kryptonComboBox7";
             this.kryptonComboBox7.Size = new System.Drawing.Size(204, 21);
             this.kryptonComboBox7.TabIndex = 24;
-            this.kryptonComboBox7.Text = "Select Employee Name";
             // 
             // kryptonButton10
             // 
@@ -435,6 +446,7 @@
             this.kryptonButton10.Size = new System.Drawing.Size(83, 33);
             this.kryptonButton10.TabIndex = 23;
             this.kryptonButton10.Values.Text = "Apply";
+            this.kryptonButton10.Click += new System.EventHandler(this.kryptonButton10_Click);
             // 
             // GrpBox
             // 
@@ -468,6 +480,7 @@
             this.kryptonButton8.Size = new System.Drawing.Size(105, 39);
             this.kryptonButton8.TabIndex = 29;
             this.kryptonButton8.Values.Text = "Apply";
+            this.kryptonButton8.Click += new System.EventHandler(this.kryptonButton8_Click);
             // 
             // panel5
             // 
@@ -582,6 +595,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Employee ID";
             this.radioButton1.UseVisualStyleBackColor = false;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // dataGrid
             // 
@@ -602,55 +616,6 @@
             this.dataGrid.RowTemplate.Height = 24;
             this.dataGrid.Size = new System.Drawing.Size(899, 540);
             this.dataGrid.TabIndex = 2;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Employee Id";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // col1
-            // 
-            this.col1.HeaderText = "Name";
-            this.col1.MinimumWidth = 6;
-            this.col1.Name = "col1";
-            this.col1.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Employee Type";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Department";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // col2
-            // 
-            this.col2.HeaderText = "Email";
-            this.col2.MinimumWidth = 6;
-            this.col2.Name = "col2";
-            this.col2.Width = 125;
-            // 
-            // col4
-            // 
-            this.col4.HeaderText = "CNIC";
-            this.col4.MinimumWidth = 6;
-            this.col4.Name = "col4";
-            this.col4.Width = 125;
-            // 
-            // col3
-            // 
-            this.col3.HeaderText = "Contact";
-            this.col3.MinimumWidth = 6;
-            this.col3.Name = "col3";
-            this.col3.Width = 125;
             // 
             // myPallet
             // 
@@ -748,8 +713,103 @@
             // 
             // kryptonManager1
             // 
-            this.kryptonManager1.GlobalPalette = this.GreenTheme;
+            this.kryptonManager1.GlobalPalette = this.myPallet;
             this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
+            // 
+            // PurpleTheme
+            // 
+            this.PurpleTheme.ButtonStyles.ButtonCommon.OverrideDefault.Back.Color1 = System.Drawing.Color.MediumOrchid;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.OverrideDefault.Back.Color2 = System.Drawing.Color.DarkMagenta;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.OverrideDefault.Back.ColorAngle = 45F;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Back.Color1 = System.Drawing.Color.MediumOrchid;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Back.Color2 = System.Drawing.Color.DarkMagenta;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Back.ColorAngle = 45F;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Border.Color1 = System.Drawing.Color.DarkSlateGray;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Border.Color2 = System.Drawing.Color.DarkSlateGray;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Border.Rounding = 10;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Border.Width = 1;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Back.Color2 = System.Drawing.Color.SeaShell;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Back.ColorAngle = 45F;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Border.Color1 = System.Drawing.Color.DarkGreen;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Border.Color2 = System.Drawing.Color.DarkGreen;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Border.Rounding = 10;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Border.Width = 1;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PurpleTheme.ButtonStyles.ButtonForm.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.PurpleTheme.ButtonStyles.ButtonForm.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.PurpleTheme.ButtonStyles.ButtonForm.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PurpleTheme.ButtonStyles.ButtonForm.StateDisabled.Border.Width = 0;
+            this.PurpleTheme.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.PurpleTheme.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.PurpleTheme.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PurpleTheme.ButtonStyles.ButtonForm.StateNormal.Border.Width = 0;
+            this.PurpleTheme.ButtonStyles.ButtonForm.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.PurpleTheme.ButtonStyles.ButtonForm.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.PurpleTheme.ButtonStyles.ButtonForm.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PurpleTheme.ButtonStyles.ButtonForm.StatePressed.Border.Width = 0;
+            this.PurpleTheme.ButtonStyles.ButtonForm.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.PurpleTheme.ButtonStyles.ButtonForm.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.PurpleTheme.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PurpleTheme.ButtonStyles.ButtonForm.StateTracking.Border.Width = 0;
+            this.PurpleTheme.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.PurpleTheme.FormStyles.FormMain.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.PurpleTheme.FormStyles.FormMain.StateCommon.Border.Color1 = System.Drawing.Color.DarkSlateGray;
+            this.PurpleTheme.FormStyles.FormMain.StateCommon.Border.Color2 = System.Drawing.Color.DarkSlateGray;
+            this.PurpleTheme.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PurpleTheme.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            this.PurpleTheme.FormStyles.FormMain.StateCommon.Border.Rounding = 12;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.Background.Color1 = System.Drawing.Color.White;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.DataCell.Back.Color1 = System.Drawing.Color.White;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.Color.White;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Color1 = System.Drawing.Color.MediumOrchid;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Color2 = System.Drawing.Color.DarkMagenta;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.ColorAngle = 45F;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Rounding = 7;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Width = 3;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Content.Color1 = System.Drawing.Color.Black;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Content.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Back.Color1 = System.Drawing.Color.MediumOrchid;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Back.Color2 = System.Drawing.Color.DarkMagenta;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Back.ColorAngle = 45F;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Border.Rounding = 7;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Border.Width = 3;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Content.Color1 = System.Drawing.Color.Black;
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Content.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PurpleTheme.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.PurpleTheme.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.PurpleTheme.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
+            this.PurpleTheme.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
+            this.PurpleTheme.PanelStyles.PanelCommon.StateCommon.Color1 = System.Drawing.Color.MediumOrchid;
+            this.PurpleTheme.PanelStyles.PanelCommon.StateCommon.Color2 = System.Drawing.Color.DarkMagenta;
+            this.PurpleTheme.PanelStyles.PanelCommon.StateCommon.ColorAngle = 45F;
+            this.PurpleTheme.PanelStyles.PanelCommon.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
             // 
             // GreenTheme
             // 
@@ -846,6 +906,55 @@
             this.GreenTheme.PanelStyles.PanelCommon.StateCommon.ColorAngle = 45F;
             this.GreenTheme.PanelStyles.PanelCommon.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
             // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Employee Id";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // col1
+            // 
+            this.col1.HeaderText = "Name";
+            this.col1.MinimumWidth = 6;
+            this.col1.Name = "col1";
+            this.col1.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Employee Type";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Department";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // col2
+            // 
+            this.col2.HeaderText = "Email";
+            this.col2.MinimumWidth = 6;
+            this.col2.Name = "col2";
+            this.col2.Width = 125;
+            // 
+            // col4
+            // 
+            this.col4.HeaderText = "Gender";
+            this.col4.MinimumWidth = 6;
+            this.col4.Name = "col4";
+            this.col4.Width = 125;
+            // 
+            // col3
+            // 
+            this.col3.HeaderText = "Contact";
+            this.col3.MinimumWidth = 6;
+            this.col3.Name = "col3";
+            this.col3.Width = 125;
+            // 
             // BranchEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -917,13 +1026,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
@@ -942,5 +1044,13 @@
         public ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
         private ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
         public ComponentFactory.Krypton.Toolkit.KryptonPalette GreenTheme;
+        public ComponentFactory.Krypton.Toolkit.KryptonPalette PurpleTheme;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col3;
     }
 }

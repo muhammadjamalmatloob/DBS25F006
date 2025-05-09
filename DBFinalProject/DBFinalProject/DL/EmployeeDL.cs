@@ -8,12 +8,14 @@ using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.Utility;
 using Org.BouncyCastle.Asn1.Mozilla;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DBFinalProject.DL
 {
     internal class EmployeeDL
     {
         public static List<EmployeeBL> employees = new List<EmployeeBL>();
+        public static List<string> departments = new List<string>();
 
         public static bool AddEmployeeInDb(EmployeeBL employee)
         {
@@ -183,6 +185,8 @@ namespace DBFinalProject.DL
             }
         }
 
+        
+
         public static void LoadAllEmployeeInList()
         {
             employees.Clear();
@@ -199,10 +203,123 @@ namespace DBFinalProject.DL
                     reader["gender"].ToString(),
                     Convert.ToInt32(reader["position"]),
                     reader["department"].ToString(),
-                    Convert.ToInt32(reader["position"]),
+                    Convert.ToInt32(reader["branch_id"]),
                     Convert.ToSingle(reader["salary"]),
                     reader["contact"].ToString()
                 ));
+                }
+            }
+        }
+
+        public static void LoadAllBranchEmployeeInList()
+        {
+            employees.Clear();
+            string query = $"SELECT e.employee_id, e.first_name, e.last_name," +
+                $" l.value AS position, e.department, e.email, e.gender, e.contact" +
+                $" FROM employees e JOIN lookup l ON e.position = l.lookup_id" +
+                $" WHERE e.branch_id = (SELECT branch_id FROM employees WHERE" +
+                $" user_id = (SELECT user_id FROM users WHERE username = '{MainInterface.username}'))" +
+                $" AND l.category = 'position'";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                employees.Clear();
+                while (reader.Read())
+                {
+                    employees.Add(new EmployeeBL(
+                    Convert.ToInt32(reader["employee_id"]),
+                    reader["first_name"].ToString(),
+                    reader["last_name"].ToString(),
+                    reader["email"].ToString(),
+                    reader["position"].ToString(),
+                    reader["department"].ToString(),
+                    reader["contact"].ToString(),
+                    reader["gender"].ToString()
+                ));
+                }
+            }
+        }
+        public static void LoadBranchEmployeeGrid(KryptonDataGridView BranchEmployees)
+        {
+            BranchEmployees.Rows.Clear();
+            foreach (EmployeeBL employee in employees)
+            {
+                BranchEmployees.Rows.Add(
+                    employee.get_employee_id(),
+                    employee.get_first_name() + " " + employee.get_last_name(),
+                    employee.get_position_name(),
+                    employee.get_department(),
+                    employee.get_email(),
+                    employee.get_gender(),
+                    employee.get_contact());
+            }
+        }
+
+        public static void ApplyBranchFilters(string condition)
+        {
+            
+            string query = $"SELECT e.employee_id, e.first_name, e.last_name," +
+                $" l.value AS position, e.department, e.email, e.gender, e.contact" +
+                $" FROM employees e JOIN lookup l ON e.position = l.lookup_id" +
+                $" WHERE e.branch_id = (SELECT branch_id FROM employees WHERE" +
+                $" user_id = (SELECT user_id FROM users WHERE username = '{MainInterface.username}'))" +
+                $" AND l.category = 'position' {condition}";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                employees.Clear();
+                while (reader.Read())
+                {
+                    employees.Add(new EmployeeBL(
+                    Convert.ToInt32(reader["employee_id"]),
+                    reader["first_name"].ToString(),
+                    reader["last_name"].ToString(),
+                    reader["email"].ToString(),
+                    reader["position"].ToString(),
+                    reader["department"].ToString(),
+                    reader["contact"].ToString(),
+                    reader["gender"].ToString()
+                ));
+                }
+            }
+        }
+
+        public static void LoadDepartmentCombobox(KryptonComboBox comboBox)
+        {
+            
+            comboBox.Items.Clear();
+            GetDepartments();
+            comboBox.Items.Add("Select Department");
+            comboBox.SelectedIndex = 0;
+            foreach (var department in departments)
+            {
+                if (department != null)
+                {
+                    comboBox.Items.Add(department);
+                }
+            }
+        }
+
+        public static void LoadBranchEmployeeCombobox(KryptonComboBox comboBox)
+        {
+            LoadAllEmployeeInList();
+            
+            comboBox.Items.Clear();
+            comboBox.Items.Add("Select Employee");
+            comboBox.SelectedIndex = 0;
+            foreach (var employee in employees)
+            {
+                comboBox.Items.Add(employee.get_employee_name());
+            }
+        }
+
+        public static void GetDepartments()
+        {
+            departments.Clear();
+            string query = $"SELECT department FROM employees";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                while (reader.Read())
+                {
+                    departments.Add(reader["department"].ToString());
                 }
             }
         }
@@ -324,6 +441,7 @@ namespace DBFinalProject.DL
                 }
             }
             return total.ToString();
+
         }
     }
 }

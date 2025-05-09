@@ -7,7 +7,7 @@ using DBFinalProject.DL;
 
 namespace DBFinalProject.BL
 {
-    internal class BranchBL
+    public class BranchBL
     {
         private int branch_id;
         private string branch_name;

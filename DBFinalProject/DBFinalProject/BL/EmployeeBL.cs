@@ -7,7 +7,7 @@ using DBFinalProject.DL;
 
 namespace DBFinalProject.BL
 {
-    internal class EmployeeBL : UserBL
+    public class EmployeeBL : UserBL
     {
         private int employee_id;
         private string first_name;
@@ -18,6 +18,7 @@ namespace DBFinalProject.BL
         private int branch_id;
         private float salary;
         private string contact;
+        private string position_name;
 
         public EmployeeBL(string username,string email,string password_hash,int role_id,string first_name, string last_name, string gender, int position, string department, int branch_id, float salary, string contact) : base(username,email,password_hash,role_id)
         {
@@ -46,6 +47,18 @@ namespace DBFinalProject.BL
             this.branch_id = branch_id;
             this.salary = salary;
             this.contact = contact;
+        }
+
+        public EmployeeBL(int employee_id, string first_name, string last_name, string email,  string position_name, string department, string contact, string gender) 
+        {
+            this.employee_id = employee_id;
+            this.email = email;
+            this.first_name = first_name;
+            this.last_name = last_name;
+            this.department = department;
+            this.contact = contact;
+            this.position_name = position_name;
+            this.gender = gender;
         }
 
         public EmployeeBL()
@@ -126,6 +139,15 @@ namespace DBFinalProject.BL
         public int get_position()
         {
             return this.position;
+        }
+
+        public void set_position_name(string position_name)
+        {
+            this.position_name = position_name;
+        }
+        public string get_position_name()
+        {
+            return this.position_name;
         }
         public void set_department(string department)
         {

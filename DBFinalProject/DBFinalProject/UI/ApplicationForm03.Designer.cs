@@ -41,6 +41,7 @@
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
+            this.GreenTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.CnicB = new System.Windows.Forms.PictureBox();
             this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.GreenTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profile)).BeginInit();
@@ -249,6 +249,7 @@
             this.kryptonButton2.Size = new System.Drawing.Size(112, 41);
             this.kryptonButton2.TabIndex = 23;
             this.kryptonButton2.Values.Text = "BACK";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // kryptonButton1
             // 
@@ -258,99 +259,12 @@
             this.kryptonButton1.Size = new System.Drawing.Size(112, 41);
             this.kryptonButton1.TabIndex = 22;
             this.kryptonButton1.Values.Text = "SUBMIT";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // kryptonManager1
             // 
-            this.kryptonManager1.GlobalPalette = this.GreenTheme;
+            this.kryptonManager1.GlobalPalette = this.myPallet;
             this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(61, 226);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 21);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Profile Picture";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(354, 226);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 21);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "CNIC";
-            // 
-            // profile
-            // 
-            this.profile.Image = ((System.Drawing.Image)(resources.GetObject("profile.Image")));
-            this.profile.Location = new System.Drawing.Point(62, 276);
-            this.profile.Name = "profile";
-            this.profile.Size = new System.Drawing.Size(100, 106);
-            this.profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.profile.TabIndex = 27;
-            this.profile.TabStop = false;
-            // 
-            // kryptonButton3
-            // 
-            this.kryptonButton3.Location = new System.Drawing.Point(52, 400);
-            this.kryptonButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.kryptonButton3.Name = "kryptonButton3";
-            this.kryptonButton3.Size = new System.Drawing.Size(112, 41);
-            this.kryptonButton3.TabIndex = 28;
-            this.kryptonButton3.Values.Text = "SELECT";
-            this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
-            // 
-            // CnicF
-            // 
-            this.CnicF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CnicF.Image = ((System.Drawing.Image)(resources.GetObject("CnicF.Image")));
-            this.CnicF.Location = new System.Drawing.Point(215, 276);
-            this.CnicF.Name = "CnicF";
-            this.CnicF.Size = new System.Drawing.Size(143, 106);
-            this.CnicF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.CnicF.TabIndex = 29;
-            this.CnicF.TabStop = false;
-            // 
-            // CnicB
-            // 
-            this.CnicB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CnicB.Image = ((System.Drawing.Image)(resources.GetObject("CnicB.Image")));
-            this.CnicB.Location = new System.Drawing.Point(391, 276);
-            this.CnicB.Name = "CnicB";
-            this.CnicB.Size = new System.Drawing.Size(143, 106);
-            this.CnicB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.CnicB.TabIndex = 30;
-            this.CnicB.TabStop = false;
-            // 
-            // kryptonButton4
-            // 
-            this.kryptonButton4.Location = new System.Drawing.Point(408, 400);
-            this.kryptonButton4.Margin = new System.Windows.Forms.Padding(2);
-            this.kryptonButton4.Name = "kryptonButton4";
-            this.kryptonButton4.Size = new System.Drawing.Size(112, 41);
-            this.kryptonButton4.TabIndex = 31;
-            this.kryptonButton4.Values.Text = "SELECT";
-            this.kryptonButton4.Click += new System.EventHandler(this.kryptonButton4_Click);
-            // 
-            // kryptonButton5
-            // 
-            this.kryptonButton5.Location = new System.Drawing.Point(229, 400);
-            this.kryptonButton5.Margin = new System.Windows.Forms.Padding(2);
-            this.kryptonButton5.Name = "kryptonButton5";
-            this.kryptonButton5.Size = new System.Drawing.Size(112, 41);
-            this.kryptonButton5.TabIndex = 32;
-            this.kryptonButton5.Values.Text = "SELECT";
-            this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
             // 
             // GreenTheme
             // 
@@ -447,6 +361,92 @@
             this.GreenTheme.PanelStyles.PanelCommon.StateCommon.ColorAngle = 45F;
             this.GreenTheme.PanelStyles.PanelCommon.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(61, 226);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 21);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Profile Picture";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(354, 226);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 21);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "CNIC";
+            // 
+            // profile
+            // 
+            this.profile.Image = ((System.Drawing.Image)(resources.GetObject("profile.Image")));
+            this.profile.Location = new System.Drawing.Point(62, 276);
+            this.profile.Name = "profile";
+            this.profile.Size = new System.Drawing.Size(100, 106);
+            this.profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profile.TabIndex = 27;
+            this.profile.TabStop = false;
+            // 
+            // kryptonButton3
+            // 
+            this.kryptonButton3.Location = new System.Drawing.Point(52, 400);
+            this.kryptonButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonButton3.Name = "kryptonButton3";
+            this.kryptonButton3.Size = new System.Drawing.Size(112, 41);
+            this.kryptonButton3.TabIndex = 28;
+            this.kryptonButton3.Values.Text = "SELECT";
+            this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
+            // 
+            // CnicF
+            // 
+            this.CnicF.Image = ((System.Drawing.Image)(resources.GetObject("CnicF.Image")));
+            this.CnicF.Location = new System.Drawing.Point(215, 276);
+            this.CnicF.Name = "CnicF";
+            this.CnicF.Size = new System.Drawing.Size(143, 106);
+            this.CnicF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CnicF.TabIndex = 29;
+            this.CnicF.TabStop = false;
+            // 
+            // CnicB
+            // 
+            this.CnicB.Image = ((System.Drawing.Image)(resources.GetObject("CnicB.Image")));
+            this.CnicB.Location = new System.Drawing.Point(391, 276);
+            this.CnicB.Name = "CnicB";
+            this.CnicB.Size = new System.Drawing.Size(143, 106);
+            this.CnicB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CnicB.TabIndex = 30;
+            this.CnicB.TabStop = false;
+            // 
+            // kryptonButton4
+            // 
+            this.kryptonButton4.Location = new System.Drawing.Point(408, 400);
+            this.kryptonButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonButton4.Name = "kryptonButton4";
+            this.kryptonButton4.Size = new System.Drawing.Size(112, 41);
+            this.kryptonButton4.TabIndex = 31;
+            this.kryptonButton4.Values.Text = "SELECT";
+            this.kryptonButton4.Click += new System.EventHandler(this.kryptonButton4_Click);
+            // 
+            // kryptonButton5
+            // 
+            this.kryptonButton5.Location = new System.Drawing.Point(229, 400);
+            this.kryptonButton5.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonButton5.Name = "kryptonButton5";
+            this.kryptonButton5.Size = new System.Drawing.Size(112, 41);
+            this.kryptonButton5.TabIndex = 32;
+            this.kryptonButton5.Values.Text = "SELECT";
+            this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
+            // 
             // ApplicationForm03
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,8 +469,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ApplicationForm03";
-            this.Palette = this.myPallet;
-            this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ApplicationForm2cs";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();

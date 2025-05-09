@@ -8,15 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using DBFinalProject.Utility;
 
 namespace DBFinalProject
 {
     public partial class TransactionRecord : KryptonForm
     {
-        public TransactionRecord()
+        ManagerDashboard manager;
+        public TransactionRecord(ManagerDashboard manager)
         {
             InitializeComponent();
             GrpBox.Visible = false;
+            this.manager = manager;
+            kryptonManager1.GlobalPalette = Theme.theme;
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
@@ -31,9 +35,8 @@ namespace DBFinalProject
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
-            ManagerDashboard managerDashboard = new ManagerDashboard();
-            managerDashboard.Show();
             this.Hide();
+            manager.Show();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)

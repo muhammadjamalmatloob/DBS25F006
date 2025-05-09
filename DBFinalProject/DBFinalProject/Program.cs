@@ -22,10 +22,9 @@ namespace DBFinalProject
             KryptonManager kryptonManager = new KryptonManager();
             kryptonManager.GlobalPaletteMode = PaletteModeManager.Custom;
 
-            //MainInterface mainForm = new MainInterface();
-            //kryptonManager.GlobalPalette = mainForm.myPallet;
+            
 
-            Application.Run(new AccountTypeManagement());
+            Application.Run(new ManagerDashboard());
         }
     }
 }
