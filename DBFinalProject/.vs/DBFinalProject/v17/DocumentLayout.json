@@ -3,48 +3,56 @@
   "WorkspaceRootPath": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\viewbranchinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\viewbranchinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\bl\\branchbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\bl\\branchbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|d:\\2nd semester\\dbsl\\dbfinal\\dbs25f006\\dbfinalproject\\dbfinalproject\\dl\\loanapplicationdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\dl\\loanapplicationdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|d:\\2nd semester\\dbsl\\dbfinal\\dbs25f006\\dbfinalproject\\dbfinalproject\\dl\\accountdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\dl\\accountdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|d:\\2nd semester\\dbsl\\dbfinal\\dbs25f006\\dbfinalproject\\dbfinalproject\\dl\\branchdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\dl\\branchdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\dl\\branchdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|d:\\2nd semester\\dbsl\\dbfinal\\dbs25f006\\dbfinalproject\\dbfinalproject\\ui\\branchmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\branchmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|d:\\2nd semester\\dbsl\\dbfinal\\dbs25f006\\dbfinalproject\\dbfinalproject\\ui\\viewbranchinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\viewbranchinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|d:\\2nd semester\\dbsl\\dbfinal\\dbs25f006\\dbfinalproject\\dbfinalproject\\ui\\branchmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\branchmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|d:\\2nd semester\\dbsl\\dbfinal\\dbs25f006\\dbfinalproject\\dbfinalproject\\ui\\currencyexchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\currencyexchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\dl\\loanapplicationdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\dl\\loanapplicationdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\managerdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\managerdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\applicationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\applicationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\bl\\branchbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\bl\\branchbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\dl\\accountapplicationdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\dl\\accountapplicationdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\applicationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\applicationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\branchmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\branchmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\branchmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\branchmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\currencyexchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\currencyexchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\managerdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|solutionrelative:dbfinalproject\\ui\\managerdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{743B6AEC-7D12-441F-AF1E-2713CA3CBEDD}|DBFinalProject\\DBFinalProject.csproj|D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\dbfinalproject\\ui\\admindashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -142,7 +150,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "EmployeeDL.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\EmployeeDL.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\DL\\EmployeeDL.cs",
@@ -155,7 +163,121 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BranchDL.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\BranchDL.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\DL\\BranchDL.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\BranchDL.cs",
+              "RelativeToolTip": "DBFinalProject\\DL\\BranchDL.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwMIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T02:55:26.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\Program.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\Program.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\Program.cs",
+              "RelativeToolTip": "DBFinalProject\\Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwBsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T09:13:56.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplicationForm.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ApplicationForm.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\ApplicationForm.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ApplicationForm.cs",
+              "RelativeToolTip": "DBFinalProject\\UI\\ApplicationForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:04:32.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BranchBL.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\BL\\BranchBL.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\BL\\BranchBL.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\BL\\BranchBL.cs",
+              "RelativeToolTip": "DBFinalProject\\BL\\BranchBL.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAIwAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T12:24:38.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ViewBranchInfo.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ViewBranchInfo.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\ViewBranchInfo.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ViewBranchInfo.cs",
+              "RelativeToolTip": "DBFinalProject\\UI\\ViewBranchInfo.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAwwEQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T02:55:00.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminDashboard.cs [Design]",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\AdminDashboard.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\AdminDashboard.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\AdminDashboard.cs [Design]",
+              "RelativeToolTip": "DBFinalProject\\UI\\AdminDashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T11:56:34.995Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoanApplicationDL.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\LoanApplicationDL.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\DL\\LoanApplicationDL.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\LoanApplicationDL.cs",
+              "RelativeToolTip": "DBFinalProject\\DL\\LoanApplicationDL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T12:39:44.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationForm.cs [Design]",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ApplicationForm.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\UI\\ApplicationForm.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ApplicationForm.cs [Design]",
+              "RelativeToolTip": "DBFinalProject\\UI\\ApplicationForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:04:30.003Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "AccountApplicationDL.cs",
+              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\AccountApplicationDL.cs",
+              "RelativeDocumentMoniker": "DBFinalProject\\DL\\AccountApplicationDL.cs",
+              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\AccountApplicationDL.cs",
+              "RelativeToolTip": "DBFinalProject\\DL\\AccountApplicationDL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:05:19.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "CurrencyExchange.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\CurrencyExchange.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\CurrencyExchange.cs",
@@ -163,77 +285,11 @@
               "RelativeToolTip": "DBFinalProject\\UI\\CurrencyExchange.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T12:42:49.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T12:42:49.868Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountDL.cs",
-              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\AccountDL.cs",
-              "RelativeDocumentMoniker": "DBFinalProject\\DL\\AccountDL.cs",
-              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\AccountDL.cs",
-              "RelativeToolTip": "DBFinalProject\\DL\\AccountDL.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAwwDQAAABtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T12:41:08.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BranchDL.cs",
-              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\BranchDL.cs",
-              "RelativeDocumentMoniker": "DBFinalProject\\DL\\BranchDL.cs",
-              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\BranchDL.cs",
-              "RelativeToolTip": "DBFinalProject\\DL\\BranchDL.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAwwBAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T02:55:26.12Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoanApplicationDL.cs",
-              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\LoanApplicationDL.cs",
-              "RelativeDocumentMoniker": "DBFinalProject\\DL\\LoanApplicationDL.cs",
-              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\LoanApplicationDL.cs",
-              "RelativeToolTip": "DBFinalProject\\DL\\LoanApplicationDL.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAIwA4AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T12:39:44.205Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BranchBL.cs",
-              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\BL\\BranchBL.cs",
-              "RelativeDocumentMoniker": "DBFinalProject\\BL\\BranchBL.cs",
-              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\BL\\BranchBL.cs",
-              "RelativeToolTip": "DBFinalProject\\BL\\BranchBL.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T12:24:38.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ViewBranchInfo.cs",
-              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ViewBranchInfo.cs",
-              "RelativeDocumentMoniker": "DBFinalProject\\UI\\ViewBranchInfo.cs",
-              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ViewBranchInfo.cs",
-              "RelativeToolTip": "DBFinalProject\\UI\\ViewBranchInfo.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAwwBMAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T02:55:00.481Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "BranchManagement.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\BranchManagement.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\BranchManagement.cs",
@@ -241,24 +297,22 @@
               "RelativeToolTip": "DBFinalProject\\UI\\BranchManagement.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAjwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T12:44:16.928Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T12:44:16.928Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "BranchManagement.cs [Design]",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\BranchManagement.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\BranchManagement.cs",
               "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\BranchManagement.cs [Design]",
               "RelativeToolTip": "DBFinalProject\\UI\\BranchManagement.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T12:44:11.313Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-09T12:44:11.313Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "AdminDashboard.Designer.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\AdminDashboard.Designer.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\AdminDashboard.Designer.cs",
@@ -266,34 +320,12 @@
               "RelativeToolTip": "DBFinalProject\\UI\\AdminDashboard.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAANoDAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T11:56:39.51Z"
+              "WhenOpened": "2025-05-09T11:56:39.51Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AdminDashboard.cs [Design]",
-              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\AdminDashboard.cs",
-              "RelativeDocumentMoniker": "DBFinalProject\\UI\\AdminDashboard.cs",
-              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\AdminDashboard.cs [Design]",
-              "RelativeToolTip": "DBFinalProject\\UI\\AdminDashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T11:56:34.995Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\Program.cs",
-              "RelativeDocumentMoniker": "DBFinalProject\\Program.cs",
-              "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\Program.cs",
-              "RelativeToolTip": "DBFinalProject\\Program.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAIwBoAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T09:13:56.053Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "ManagerDashboard.cs [Design]",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ManagerDashboard.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\ManagerDashboard.cs",
@@ -304,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "AdminDashboard.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\AdminDashboard.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\AdminDashboard.cs",
@@ -312,11 +344,12 @@
               "RelativeToolTip": "DBFinalProject\\UI\\AdminDashboard.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAAAwwJIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T12:05:10.779Z"
+              "WhenOpened": "2025-05-09T12:05:10.779Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "ManagerDashboard.Designer.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ManagerDashboard.Designer.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\ManagerDashboard.Designer.cs",
@@ -328,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "ManagerDashboard.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ManagerDashboard.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\ManagerDashboard.cs",
@@ -340,7 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "LoanApplicationBL.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\BL\\LoanApplicationBL.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\BL\\LoanApplicationBL.cs",
@@ -352,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "LoanApplications.cs [Design]",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\LoanApplications.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\LoanApplications.cs",
@@ -363,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "ApproveApplicationscs.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ApproveApplicationscs.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\ApproveApplicationscs.cs",
@@ -375,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "LoanApplications.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\LoanApplications.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\LoanApplications.cs",
@@ -387,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "LoanApplications.Designer.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\LoanApplications.Designer.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\LoanApplications.Designer.cs",
@@ -399,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "ResetPasswordDL.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\ResetPasswordDL.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\DL\\ResetPasswordDL.cs",
@@ -411,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "BranchEmployees.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\BranchEmployees.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\BranchEmployees.cs",
@@ -423,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "BranchEmployees.cs [Design]",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\BranchEmployees.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\BranchEmployees.cs",
@@ -434,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "BranchEmployees.Designer.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\BranchEmployees.Designer.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\BranchEmployees.Designer.cs",
@@ -446,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "EmployeeBL.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\BL\\EmployeeBL.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\BL\\EmployeeBL.cs",
@@ -458,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\Form1.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\Form1.cs",
@@ -469,7 +502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\Form1.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\Form1.cs",
@@ -481,7 +514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "EmployeeManagement.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\EmployeeManagement.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\EmployeeManagement.cs",
@@ -493,7 +526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "UserBL.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\BL\\UserBL.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\BL\\UserBL.cs",
@@ -505,7 +538,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "LoginDL.cs",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\DL\\LoginDL.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\DL\\LoginDL.cs",
@@ -517,15 +550,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "ViewBranchInfo.cs [Design]",
               "DocumentMoniker": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ViewBranchInfo.cs",
               "RelativeDocumentMoniker": "DBFinalProject\\UI\\ViewBranchInfo.cs",
               "ToolTip": "D:\\2nd Semester\\DBSL\\DBFinal\\DBS25F006\\DBFinalProject\\DBFinalProject\\UI\\ViewBranchInfo.cs [Design]",
               "RelativeToolTip": "DBFinalProject\\UI\\ViewBranchInfo.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T01:53:55.126Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-08T01:53:55.126Z"
             }
           ]
         }
