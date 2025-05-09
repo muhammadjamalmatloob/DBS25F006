@@ -13,7 +13,7 @@ namespace DBFinalProject.DL
 {
     public class BranchDL
     {
-        public static List<BranchBL> branchList = new List<BranchBL>();
+        private static List<BranchBL> branchList = new List<BranchBL>();
 
 
 
@@ -144,10 +144,7 @@ namespace DBFinalProject.DL
 
         public static void LoadDataGrid(List<BranchBL> branchList, KryptonDataGridView dvgBranch)
         {
-            //foreach (DataGridViewRow row in dvgBranch.Rows)
-            //{
-            //    row.Height = 50;
-            //}
+            
             dvgBranch.Rows.Clear();
             foreach (var branch in branchList)
             {
