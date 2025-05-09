@@ -36,7 +36,14 @@ namespace DBFinalProject.BL
         }
         public override void setCharges(decimal amount)
         {
-            throw new NotImplementedException();
+            if (amount > 0)
+            {
+                this.charges = amount * 0.02m; // 2% charges
+            }
+            else
+            {
+                this.charges = 0;
+            }
         }
     }
 }

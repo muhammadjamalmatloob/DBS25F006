@@ -35,10 +35,7 @@ namespace DBFinalProject.BL
         {
             this.amount_target = amount_target;
         }
-        //public void setClientId(int client_id)
-        //{
-        //    this.client_id = client_id;
-        //}
+     
         public int getExchangeId()
         {
             return this.exchange_id;
@@ -63,32 +60,20 @@ namespace DBFinalProject.BL
         {
             return this.amount_target;
         }
-        //public int getClientId()
-        //{
-        //    return client_id;
-        //}
-
-        //public void setDate(DateTime date)
-        //{
-        //    this.date = date;
-        //}
-        //public DateTime getDate()
-        //{
-        //    return this.date;
-        //}
+        
         public void setExchangeRate(string bcurrency,string tcurrency)
         {
             if (bcurrency == "Rupees" && tcurrency == "Dollars")
             {
-                this.exchange_rate = 281.2m;
+                this.exchange_rate = 0.0036m;
             }
             else if (bcurrency == "Rupees" && tcurrency == "Pounds")
             {
-                this.exchange_rate = 374.43m;
+                this.exchange_rate = 0.0027m;
             }
             else if (bcurrency == "Rupees" && tcurrency == "Euros")
             {
-                this.exchange_rate = 74.89m;
+                this.exchange_rate = 0.0031m;
             }
         }
 

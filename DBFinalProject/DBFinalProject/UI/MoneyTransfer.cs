@@ -18,6 +18,11 @@ namespace DBFinalProject
         public MoneyTransfer()
         {
             InitializeComponent();
+            BranchDL.LoadAllDataInList();
+            BranchDL.LoadAllBranchesInComboBox(kryptonComboBox1);
+            BranchDL.LoadAllBranchesInComboBox(kryptonComboBox2);
+            kryptonComboBox1.SelectedIndex = 0;
+            kryptonComboBox2.SelectedIndex = 0;
             GrpSender.Visible = false;
             GrpVerify.Visible = false;
         }
@@ -45,8 +50,9 @@ namespace DBFinalProject
                 return;
             }
             int to_branch_id = Convert.ToInt32(BranchDL.GetBranchIdByName(selectedBranchName));
-            string to_account_number = kryptonTextBox3.Text.Trim();
+            string to_account_number = kryptonTextBox2.Text.Trim();
 
+            
             if (AccountDL.isAccount(to_account_number, to_branch_id))
             {
                 show_Username(to_account_number);
@@ -152,9 +158,9 @@ namespace DBFinalProject
             string pin = "";
             try
             {
-                to_account_number = kryptonTextBox3.Text.Trim();
+                to_account_number = kryptonTextBox2.Text.Trim();
                 from_branch_id = Convert.ToInt32(BranchDL.GetBranchIdByName(selectedBranchName2));
-                from_account_number = kryptonTextBox3.Text.Trim();
+                from_account_number = kryptonTextBox1.Text.Trim();
                 amount = Convert.ToDecimal(kryptonTextBox3.Text.Trim());
                 pin = kryptonTextBox4.Text.Trim();
             }

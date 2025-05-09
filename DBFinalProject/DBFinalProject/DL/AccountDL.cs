@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using DBFinalProject.Utility;
 using Org.BouncyCastle.Asn1.Mozilla;
 
@@ -13,12 +14,28 @@ namespace DBFinalProject.DL
         public static int getAccountIdByNumber(string account_number)
         {
             string query = $"SELECT account_id FROM accounts WHERE account_number = '{account_number}'";
-            return DatabaseHelper.Instance.Update(query);
+            int id = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    id = Convert.ToInt32(reader["account_id"].ToString());
+                }
+            }
+            return id;
         }
         public static int getCleintIdByNumber(string account_number)
         {
             string query = $"SELECT client_id FROM accounts WHERE account_number = '{account_number}'";
-            return DatabaseHelper.Instance.Update(query);
+            int id = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    id = Convert.ToInt32(reader["client_id"].ToString());
+                }
+            }
+            return id;
         }
         public static decimal getBalanceByNumber(string account_number)
         {
@@ -42,10 +59,10 @@ namespace DBFinalProject.DL
             {
                 if (reader.Read())
                 {
-                    count = Convert.ToInt32(reader["COUNT"].ToString());
+                    count = Convert.ToInt32(reader[0]);
                 }
             }
-            return count > 0;
+            return (count > 0);
         }
         public static string getPinByNumber(string account_number)
         {

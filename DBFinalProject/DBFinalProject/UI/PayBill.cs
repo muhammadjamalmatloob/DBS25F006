@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBFinalProject.DL;
 using DBFinalProject.BL;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace DBFinalProject
 {
-    public partial class PayBill : Form
+    public partial class PayBill : KryptonForm
     {
         public PayBill()
         {
@@ -75,7 +76,11 @@ namespace DBFinalProject
                 payment.setAmount(amount);
                 payment.setCharges(payment.getAmount());
                 payment.setDate(DateTime.Now);
-                payment.setTransactionType(8);   // pay bill ki id from lookup
+                payment.setStatus(15); // for pending status
+                payment.setTransactionType(8); // pay bill ki id from lookup
+                payment.setType(Convert.ToInt32(PaymentDL.getPaymentTypeId(payment_type)));
+                
+
 
                 if (pin == AccountDL.getPinByNumber(account_number))
                 {
@@ -83,9 +88,11 @@ namespace DBFinalProject
                     {
                         if (AccountBL.isSufficientBalance(account_number, payment.getAmount(), payment.getCharges()))
                         {
+                            payment.setStatus(16);
                             if (PaymentDL.payAmmount(payment))
                             {
                                 MessageBox.Show("Payment successful.");
+                                generate_reciept(payment, account_number);
                                 return;
                             }
                             else
@@ -113,7 +120,72 @@ namespace DBFinalProject
 
 
         }
+        private void generate_reciept(PaymentBL pay, string account_number)
+        {
 
-        
+            grpReciept.Visible = true;
+            int user_id = ClientDL.getUserIdByClientId(pay.getClientId());
+            string user_name = UserDL.getUserNameById(user_id);
+            name.Text = user_name;
+            account_num.Text = account_number;
+            amount.Text = pay.getAmount().ToString();
+            charges.Text = pay.getCharges().ToString();
+            date.Text = pay.getDate().ToString();
+
+        }
+
+        private void kryptonTextBox2_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox2.Text == "Enter Pin")
+            {
+                kryptonTextBox2.Text = "";
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox2_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox2.Text == "")
+            {
+                kryptonTextBox2.Text = "Enter Pin";
+                kryptonTextBox2.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox1_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "Enter Amount")
+            {
+                kryptonTextBox1.Text = "";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox1_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "")
+            {
+                kryptonTextBox1.Text = "Enter Amount";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox3_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "Enter Account Number")
+            {
+                kryptonTextBox1.Text = "";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox3_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox3.Text == "")
+            {
+                kryptonTextBox3.Text = "Enter Account Number";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
     }
 }

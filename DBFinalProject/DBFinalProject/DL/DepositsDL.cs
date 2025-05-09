@@ -12,11 +12,27 @@ namespace DBFinalProject.DL
     {
         public static bool depositAmmount(DepositsBL deposits)
         {
-            string query = $"Start Transaction" +
-                $"Insert into transactions VALUES (null,{deposits.getClientId()},{deposits.getTransactionType()},'{deposits.getDate()}',{deposits.getCharges()})" +
-                $"Insert into deposits VALUES (null,{deposits.getToAccountId()},{deposits.getAmount()},{TransactionDL.getTransactionIdByDate(deposits.getDate(), deposits.getClientId())})" +
-                $"UPDATE accounts SET balance = balance + {deposits.getAmount()} - {deposits.getCharges()} WHERE account_id = {deposits.getToAccountId()}" + 
-            $"Commit";
+            string query = $@"
+                    START TRANSACTION;
+                    INSERT INTO transactions 
+                        VALUES (
+                            null,
+                            {deposits.getClientId()},
+                            {deposits.getTransactionType()},
+                            '{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}',
+                            {deposits.getCharges()}
+                        );
+                    INSERT INTO deposits 
+                        VALUES (
+                            null,
+                            {deposits.getToAccountId()},
+                            {deposits.getAmount()},
+                            LAST_INSERT_ID()
+                        );
+                    UPDATE accounts 
+                        SET balance = balance + {deposits.getAmount()} - {deposits.getCharges()}
+                        WHERE account_id = {deposits.getToAccountId()};
+                    COMMIT;";
             return DatabaseHelper.Instance.Update(query) > 0;
         }
 
