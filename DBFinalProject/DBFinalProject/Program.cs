@@ -26,7 +26,7 @@ namespace DBFinalProject
 
             
 
-            Application.Run(new WithdrawMoney());
+            Application.Run(new AdminDashboard());
         }
     }
 }

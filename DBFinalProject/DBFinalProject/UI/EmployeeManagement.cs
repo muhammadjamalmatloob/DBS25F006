@@ -12,6 +12,7 @@ using DBFinalProject.BL;
 using DBFinalProject.DL;
 using DBFinalProject.Utility;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
@@ -24,6 +25,18 @@ namespace DBFinalProject
         public EmployeeManagement(AdminDashboard admin)
         {
             InitializeComponent();
+            load_data();
+            this.admin = admin;
+            this.kryptonManager1.GlobalPalette = Theme.theme;
+        }
+
+        private void Closebtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void load_data()
+        {
             GrpAdd.Visible = false;
             GrpBox.Visible = false;
             GrpUpdate.Visible = false;
@@ -38,7 +51,7 @@ namespace DBFinalProject
             EmployeeDL.LoadAllEmployeeInList();
             EmployeeDL.LoadEmployeeCombobox(kryptonComboBox5);
             EmployeeDL.LoadEmployeeCombobox(kryptonComboBox6);
-            EmployeeDL.LoadDataGrid(dataGrid,"");
+            EmployeeDL.LoadDataGrid(dataGrid, "");
 
             kryptonComboBox1.SelectedIndex = 0;
             kryptonComboBox2.SelectedIndex = 0;
@@ -47,13 +60,6 @@ namespace DBFinalProject
             kryptonComboBox5.SelectedIndex = 0;
             kryptonComboBox6.SelectedIndex = 0;
             kryptonComboBox8.SelectedIndex = 0;
-            this.admin = admin;
-            this.kryptonManager1.GlobalPalette = Theme.theme;
-        }
-
-        private void Closebtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -63,11 +69,12 @@ namespace DBFinalProject
 
         private void kryptonComboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
+
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
+            Clear_Grp();
             GrpAdd.Visible = true;
             GrpBox.Visible = false;
             GrpUpdate.Visible = false;
@@ -97,6 +104,7 @@ namespace DBFinalProject
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
+            Clear_Grp();
             GrpUpdate.Visible = true;
             GrpAdd.Visible = false;
             GrpBox.Visible = false;
@@ -174,6 +182,7 @@ namespace DBFinalProject
 
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
+            Clear_Grp();
             GrpDelete.Visible = true;
             GrpAdd.Visible = false;
             GrpBox.Visible = false;
@@ -282,31 +291,61 @@ namespace DBFinalProject
                 return;
             }
 
-            if (EmployeeDL.AddEmployeeAccountInDb(employee))
+            string password = employee.get_password_hash();
+            string hashedPassword = PasswordFunc.HashPassword(password);
+            employee.set_password_hash(hashedPassword);
+
+            try
             {
-                employee.set_user_id(UserDL.get_user_id(employee.get_username()));
-                if (EmployeeDL.AddEmployeeInDb(employee))
+                if (EmployeeDL.AddEmployeeWithTransaction(employee))
                 {
+                    employee.set_user_id(UserDL.get_user_id(employee.get_username()));
+                    employee.set_employee_id(EmployeeDL.get_employee_id(employee.get_contact()));
+                    EmployeeDL.AddEmployeeToList(employee);
                     EmployeeDL.LoadAllEmployeeInList();
+                    EmployeeDL.LoadDataGrid(dataGrid, "");
                     EmployeeDL.LoadEmployeeCombobox(kryptonComboBox5);
                     EmployeeDL.LoadEmployeeCombobox(kryptonComboBox6);
-                    EmployeeDL.LoadDataGrid(dataGrid, "");
-                    //employee.set_employee_id(EmployeeDL.get_employee_id(employee.get_contact()));
-                    //EmployeeDL.AddEmployeeToList(employee);
-
                     MessageBox.Show("Employee Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-
                     MessageBox.Show("Failed to Add Employee", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
+            catch (Exception ex)
             {
-
-                MessageBox.Show("Failed to Add Employee Account", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+
+
+            //if (EmployeeDL.AddEmployeeAccountInDb(employee))
+            //{
+            //    employee.set_user_id(UserDL.get_user_id(employee.get_username()));
+            //    if (EmployeeDL.AddEmployeeInDb(employee))
+            //    {
+            //        EmployeeDL.LoadAllEmployeeInList();
+            //        EmployeeDL.LoadEmployeeCombobox(kryptonComboBox5);
+            //        EmployeeDL.LoadEmployeeCombobox(kryptonComboBox6);
+            //        EmployeeDL.LoadDataGrid(dataGrid, "");
+            //        //employee.set_employee_id(EmployeeDL.get_employee_id(employee.get_contact()));
+            //        //EmployeeDL.AddEmployeeToList(employee);
+
+            //        MessageBox.Show("Employee Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+            //    else
+            //    {
+
+            //        MessageBox.Show("Failed to Add Employee", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
+            //else
+            //{
+
+            //    MessageBox.Show("Failed to Add Employee Account", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
             GrpAccount.Visible = false;
         }
@@ -333,6 +372,8 @@ namespace DBFinalProject
             }
             string[] parts = selectedItem.Split(' ');
             int employee_Id = Convert.ToInt32(parts[0]);
+            int user_id = EmployeeDL.getUserIdByEmpId(employee_Id);
+
 
             if (EmployeeDL.deleteEmployee(employee_Id))
             {
@@ -555,6 +596,26 @@ namespace DBFinalProject
         {
             string search = kryptonTextBox1.Text.Trim();
             EmployeeDL.LoadDataGrid(dataGrid, search);
+        }
+
+
+        private void Clear_Grp()
+        {
+            kryptonTextBox8.Text = "Contact";
+            kryptonTextBox5.Text = "Contact";
+            kryptonTextBox6.Text = "Salary";
+            kryptonTextBox11.Text = "Password";
+            kryptonTextBox10.Text = "Email";
+            kryptonTextBox9.Text = "User Name";
+            kryptonTextBox3.Text = "Last Name";
+            kryptonTextBox2.Text = "First Name";
+            kryptonComboBox1.SelectedIndex = 0;
+            kryptonComboBox2.SelectedIndex = 0;
+            kryptonComboBox3.SelectedIndex = 0;
+            kryptonComboBox4.SelectedIndex = 0;
+            kryptonComboBox5.SelectedIndex = 0;
+            kryptonComboBox6.SelectedIndex = 0;
+            kryptonComboBox8.SelectedIndex = 0;
         }
     }
 }
