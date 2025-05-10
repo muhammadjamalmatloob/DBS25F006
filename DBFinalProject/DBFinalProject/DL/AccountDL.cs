@@ -104,6 +104,20 @@ namespace DBFinalProject.DL
             }
             return count;
         }
+
+        public static string TotalAccountForSpecificClient(int client_id)
+        {
+            string query = $"SELECT COUNT(*) FROM accounts WHERE client_id = {client_id}";
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+        }
         public static string TotalSavingAccount()
         {
             string query = $"SELECT COUNT(*) AS COUNT FROM accounts a " +
