@@ -91,8 +91,48 @@ namespace DBFinalProject.DL
             }
             return pin;
         }
-
-        
-
+        public static string TotalAccount()
+        {
+            string query = $"SELECT COUNT(*) AS COUNT FROM accounts";
+            string count = "";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    count = reader["COUNT"].ToString();
+                }
+            }
+            return count;
         }
+        public static string TotalSavingAccount()
+        {
+            string query = $"SELECT COUNT(*) AS COUNT FROM accounts a " +
+                $"Natural join account_type " +
+                $"Where type_name like 'Saving%'";
+            string count = "";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    count = reader["COUNT"].ToString();
+                }
+            }
+            return count;
+        }
+        public static string TotalCurrentAccount()
+        {
+            string query = $"SELECT COUNT(*) AS COUNT FROM accounts a " +
+                $"Natural join account_type " +
+                $"Where type_name like 'Current%'";
+            string count = "";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    count = reader["COUNT"].ToString();
+                }
+            }
+            return count;
+        }
+    }
 }

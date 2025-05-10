@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.DL;
+using DBFinalProject.Utility;
 
 namespace DBFinalProject
 {
@@ -87,7 +89,7 @@ namespace DBFinalProject
             form2.Show();   
         }
 
-        private void kryptonButton1_Click(object sender, EventArgs e)
+        private async void kryptonButton1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -119,10 +121,24 @@ namespace DBFinalProject
                     MessageBox.Show(ApplicationForm.application.SetCnicBack(cnicBMS.ToArray()).message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                else if (AccountApplicationDL.Apply() > 0)
+                
+                Task<bool> applyMessage = EmailSender.SendEmailAsync(ApplicationForm.application.GetEmail(), "Account Aplication", "You applied for an account in Apex Bank");
+                
+                if (await applyMessage)
                 {
-                    MessageBox.Show("Application Submitted Successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (AccountApplicationDL.Apply() > 0)
+                    {
+                        MessageBox.Show("Application Submitted Successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("An error occured while sending your application.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     return;
+                }
+                else
+                {
+                    MessageBox.Show("Can't connect to internet.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
