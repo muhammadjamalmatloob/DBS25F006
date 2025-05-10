@@ -148,5 +148,18 @@ namespace DBFinalProject.DL
             }
             return count;
         }
+        public static int getBalanceById(int account_id)
+        {
+            string query = $"SELECT balance FROM accounts WHERE account_id = {account_id}";
+            int balance = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    balance = Convert.ToInt32(reader["balance"].ToString());
+                }
+            }
+            return balance;
+        }
     }
 }

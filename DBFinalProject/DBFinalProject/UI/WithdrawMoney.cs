@@ -53,13 +53,23 @@ namespace DBFinalProject.UI
             {
 
                 WithdrawalBL withdrawal = new WithdrawalBL();
-                withdrawal.setFromAccID(AccountDL.getAccountIdByNumber(account_number));
+                int acc_id = AccountDL.getAccountIdByNumber(account_number);
+                withdrawal.setFromAccID(acc_id);
                 withdrawal.setClientId(AccountDL.getCleintIdByNumber(account_number));
                 withdrawal.setAmount(Convert.ToDecimal(amount));
                 withdrawal.setCharges(withdrawal.getAmount());
                 withdrawal.setDate(DateTime.Now);
                 withdrawal.setTransactionType(6);   // withraw ki id from lookup  
 
+
+
+                int max_amount = AccountTypeDL.getWithdrawlLimit(acc_id);
+                int current_balance = AccountDL.getBalanceById(acc_id);
+                if (Convert.ToInt64(amount) > max_amount)
+                {
+                    MessageBox.Show($"Withdrawl Limit is {max_amount}.");
+                    return;
+                }
 
                 if (pin == AccountDL.getPinByNumber(account_number))
                 {
@@ -124,9 +134,9 @@ namespace DBFinalProject.UI
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
-            AdminDashboard adminDashboard = new AdminDashboard();
-            adminDashboard.Show();
             this.Hide();
+            CashierDashboard cashierDashboard = new CashierDashboard();
+            cashierDashboard.Show();
         }
 
         private void kryptonTextBox3_Enter(object sender, EventArgs e)

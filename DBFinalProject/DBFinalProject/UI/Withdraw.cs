@@ -43,6 +43,7 @@ namespace DBFinalProject
             {
 
                 WithdrawalBL withdrawal = new WithdrawalBL();
+                int acc_id = AccountDL.getAccountIdByNumber(account_number);
                 withdrawal.setFromAccID(AccountDL.getAccountIdByNumber(account_number));
                 withdrawal.setClientId(AccountDL.getCleintIdByNumber(account_number));
                 withdrawal.setAmount(Convert.ToDecimal(amount));
@@ -51,6 +52,13 @@ namespace DBFinalProject
                 withdrawal.setTransactionType(6);   // withraw ki id from lookup  
 
 
+                int max_amount = AccountTypeDL.getWithdrawlLimit(acc_id);
+                int current_balance = AccountDL.getBalanceById(acc_id);
+                if (Convert.ToInt64(amount) > max_amount)
+                {
+                    MessageBox.Show($"Withdrawl Limit is {max_amount}.");
+                    return;
+                }
                 if (pin == AccountDL.getPinByNumber(account_number))
                 {
                     try

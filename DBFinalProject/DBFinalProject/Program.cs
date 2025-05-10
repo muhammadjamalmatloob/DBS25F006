@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.UI.Design;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using DBFinalProject.BL;
 using DBFinalProject.UI;
 
 namespace DBFinalProject
@@ -24,7 +26,7 @@ namespace DBFinalProject
 
             
 
-            Application.Run(new BranchEmployeeReport());
+            Application.Run(new WithdrawMoney());
         }
     }
 }
