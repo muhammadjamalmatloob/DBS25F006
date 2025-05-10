@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBFinalProject.BL;
+using DBFinalProject.UI;
 
 namespace DBFinalProject
 {
@@ -73,18 +74,42 @@ namespace DBFinalProject
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            string loan_type = kryptonComboBox2.SelectedItem.ToString();
-            string purpose = kryptonTextBox2.Text;
-            decimal amount = Convert.ToDecimal(kryptonTextBox1.Text);
-            LoanApplicationBL application = new LoanApplicationBL();
-            //application.setClientId();
-            //application.setLoanTypeId();
-            //application.setAccountId();
-            application.SetRequestAmount(amount);
-            application.setPurpose(purpose);
-            //application.setEmployementStatus();
-            //application.setLoanStatus();
-            application.setApplyDate(DateTime.Now);
+            try
+            {
+                string loan_type = kryptonComboBox2.SelectedItem.ToString();
+                string purpose = kryptonTextBox2.Text;
+                decimal amount = Convert.ToDecimal(kryptonTextBox1.Text);
+                LoanApplicationBL application = new LoanApplicationBL();
+                string username = MainInterface.UserName;
+                int user_id = DL.UserDL.get_user_id(username);
+                int client_id = DL.ClientDL.getClientIdbyUserId(user_id);
+                application.setClientId(client_id);
+                int LTID = DL.LoanTypeDL.getIdByName(loan_type);
+                application.setLoanTypeId(LTID);
+                string account_num = kryptonTextBox3.Text;
+                int acc_id = DL.AccountDL.getAccountIdByNumber(account_num);
+                application.setAccountId(acc_id);
+                application.SetRequestAmount(amount);
+                application.setPurpose(purpose);
+                int e_status = 0;
+                string status = kryptonComboBox1.SelectedItem.ToString();
+                if(status == "Employed")
+                {
+                    e_status = 1;
+                }
+                application.setEmployementStatus(e_status);
+                application.setLoanStatus(18);
+                application.setApplyDate(DateTime.Now);
+                DL.LoanApplicationDL.AddApplication(application);
+                MessageBox.Show("Application Submitted");
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+
 
         }
 
@@ -102,6 +127,10 @@ namespace DBFinalProject
             {
                 kryptonComboBox1.Text = "Employment Status";
             }
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
         }
     }
 }
