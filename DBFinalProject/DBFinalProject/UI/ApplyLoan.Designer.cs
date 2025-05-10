@@ -162,7 +162,7 @@
             this.kryptonComboBox2.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
             this.kryptonComboBox2.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonComboBox2.TabIndex = 34;
-            this.kryptonComboBox2.Text = "Select Loan Typoe ";
+            this.kryptonComboBox2.Text = "Select Loan Type ";
             // 
             // kryptonTextBox2
             // 
@@ -181,7 +181,7 @@
             this.kryptonTextBox2.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox2.TabIndex = 31;
-            this.kryptonTextBox2.Text = "Descyption";
+            this.kryptonTextBox2.Text = "Purpose";
             // 
             // kryptonTextBox1
             // 
@@ -219,11 +219,14 @@
             this.kryptonTextBox3.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.kryptonTextBox3.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox3.TabIndex = 29;
-            this.kryptonTextBox3.Text = "Enter Customer Name";
+            this.kryptonTextBox3.Text = "Account Number";
             // 
             // kryptonComboBox1
             // 
             this.kryptonComboBox1.DropDownWidth = 227;
+            this.kryptonComboBox1.Items.AddRange(new object[] {
+            "Employed",
+            "Unemployed"});
             this.kryptonComboBox1.Location = new System.Drawing.Point(92, 194);
             this.kryptonComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonComboBox1.Name = "kryptonComboBox1";
@@ -239,7 +242,7 @@
             this.kryptonComboBox1.StateCommon.DropBack.Color1 = System.Drawing.Color.White;
             this.kryptonComboBox1.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonComboBox1.TabIndex = 28;
-            this.kryptonComboBox1.Text = "Select Account Status";
+            this.kryptonComboBox1.Text = "Employee Status";
             this.kryptonComboBox1.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBox1_SelectedIndexChanged);
             // 
             // kryptonButton1
@@ -250,6 +253,7 @@
             this.kryptonButton1.Size = new System.Drawing.Size(149, 50);
             this.kryptonButton1.TabIndex = 24;
             this.kryptonButton1.Values.Text = "Apply";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // myPallet
             // 

@@ -158,5 +158,47 @@ namespace DBFinalProject.DL
             }
             return total.ToString();
         }
+
+        public static int getTransactionLimit(int account_type_id)
+        {
+            string query = $"SELECT transaction_limit FROM account_type WHERE account_type_id = {account_type_id}";
+            int transactionLimit = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    transactionLimit = Convert.ToInt32(reader["transaction_limit"]);
+                }
+            }
+            return transactionLimit;
+        }
+
+        public static int getWithdrawlLimit(int account_type_id)
+        {
+            string query = $"SELECT withdrawl_limit FROM account_type WHERE account_type_id = {account_type_id}";
+            int withdrawlLimit = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    withdrawlLimit = Convert.ToInt32(reader["withdrawl_limit"]);
+                }
+            }
+            return withdrawlLimit;
+        }
+
+        public static int getMinBalance(int account_type_id)
+        {
+            string query = $"SELECT min_balance FROM account_type WHERE account_type_id = {account_type_id}";
+            int minBalance = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    minBalance = Convert.ToInt32(reader["min_balance"]);
+                }
+            }
+            return minBalance;
+        }
     }
 }

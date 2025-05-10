@@ -180,9 +180,17 @@ namespace DBFinalProject
                     transfer.setCharges(amount);
 
                     transfer.setAmount(amount);
-                    transfer.setFromAccID(AccountDL.getAccountIdByNumber(from_account_number));
+                    int acc_id = AccountDL.getAccountIdByNumber(from_account_number);
+                    transfer.setFromAccID(acc_id);
                     transfer.setToAccID(AccountDL.getAccountIdByNumber(to_account_number));
 
+                    int max_amount = AccountTypeDL.getTransactionLimit(acc_id);
+                    int current_balance = AccountDL.getBalanceById(acc_id);
+                    if (amount  > max_amount)
+                    {
+                        MessageBox.Show($"Transaction Limit is {max_amount}.");
+                        return;
+                    }
                     try
                     {
                         TransferDL.transferAmmount(transfer);
