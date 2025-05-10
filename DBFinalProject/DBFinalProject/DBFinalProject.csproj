@@ -212,6 +212,12 @@
     <Compile Include="UI\ClientDashboard.Designer.cs">
       <DependentUpon>ClientDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ClientLoanApplication.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ClientLoanApplication.Designer.cs">
+      <DependentUpon>ClientLoanApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ClientTransactionRecord.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -503,6 +509,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ClientLoan.resx">
       <DependentUpon>ClientLoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ClientLoanApplication.resx">
+      <DependentUpon>ClientLoanApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ClientManagement.resx">
       <DependentUpon>ClientManagement.cs</DependentUpon>
