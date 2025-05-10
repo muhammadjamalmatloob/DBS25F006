@@ -65,7 +65,6 @@ namespace DBFinalProject
         {
             try
             {
-                
                 managerBranch = BranchDL.GetManagerBranch();
                 ViewBranch();
             }
