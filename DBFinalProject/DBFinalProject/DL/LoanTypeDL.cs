@@ -77,16 +77,14 @@ namespace DBFinalProject.DL
 
         public static int getIdByName(string type_name)
         {
-            string query = $"SELECT loan_type_id FROM loan_type WHERE type_name = '{type_name}'";
+            int id = 0;
+            string query = $"CALL sp_GetLoanTypeId('{type_name}')";
             var reader = DatabaseHelper.Instance.getData(query);
             if (reader.Read())
             {
-                return reader.GetInt32(0);
+                id = Convert.ToInt32(reader["loan_type_id"]);
             }
-            else
-            {
-                return 0;
-            }
+            return id;
 
         }
 

@@ -34,10 +34,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.GrpSender = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox4 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.grpReciept = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.date = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -138,6 +138,25 @@
             this.GrpSender.TabIndex = 41;
             this.GrpSender.Values.Heading = "WITHDRAW";
             // 
+            // kryptonTextBox1
+            // 
+            this.kryptonTextBox1.Location = new System.Drawing.Point(68, 70);
+            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.Size = new System.Drawing.Size(248, 37);
+            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
+            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
+            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox1.StateCommon.Border.Rounding = 15;
+            this.kryptonTextBox1.StateCommon.Border.Width = 1;
+            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonTextBox1.TabIndex = 35;
+            this.kryptonTextBox1.Text = "Account Number";
+            // 
             // kryptonTextBox4
             // 
             this.kryptonTextBox4.Location = new System.Drawing.Point(68, 222);
@@ -190,25 +209,6 @@
             this.kryptonButton11.Values.Text = "WITHDRAW";
             this.kryptonButton11.Click += new System.EventHandler(this.kryptonButton11_Click);
             // 
-            // kryptonTextBox1
-            // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(68, 70);
-            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(248, 37);
-            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
-            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 15;
-            this.kryptonTextBox1.StateCommon.Border.Width = 1;
-            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox1.TabIndex = 35;
-            this.kryptonTextBox1.Text = "Account Number";
-            // 
             // grpReciept
             // 
             this.grpReciept.Location = new System.Drawing.Point(498, 145);
@@ -228,7 +228,7 @@
             this.grpReciept.Panel.Controls.Add(this.name);
             this.grpReciept.Panel.Controls.Add(this.label3);
             this.grpReciept.Panel.Controls.Add(this.label2);
-            this.grpReciept.Size = new System.Drawing.Size(403, 436);
+            this.grpReciept.Size = new System.Drawing.Size(386, 436);
             this.grpReciept.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.grpReciept.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
             this.grpReciept.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
@@ -377,12 +377,13 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label2.Location = new System.Drawing.Point(109, 32);
+            this.label2.Location = new System.Drawing.Point(63, 29);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(223, 30);
             this.label2.TabIndex = 1;
             this.label2.Text = "WITHRAW RECIEPT";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Withdraw
             // 
