@@ -9,8 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using DBFinalProject.DL;
 using DBFinalProject.UI;
 using DBFinalProject.Utility;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DBFinalProject
 {
@@ -19,6 +21,11 @@ namespace DBFinalProject
         public AdminDashboard()
         {
             InitializeComponent();
+            hide_branch();
+            hide_client();
+            hide_accounts();
+            load_data();
+            Blue.Checked = true;
             if (Theme.theme == myPallet || Theme.theme == GreenTheme || Theme.theme == PurpleTheme)
             {
 
@@ -63,8 +70,8 @@ namespace DBFinalProject
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ClientManagement clientManagement = new ClientManagement(this);
-            clientManagement.Show();
+            Audit audit = new Audit();
+            audit.Show();
 
         }
 
@@ -141,6 +148,150 @@ namespace DBFinalProject
         {
             this.Hide();
             new MainInterface().Show();
+        }
+
+        private void kryptonButton16_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SysttemLogs systtemLogs = new SysttemLogs();
+            systtemLogs.Show();
+        }
+
+        private void load_data()
+        {
+            username.Text = MainInterface.UserName;
+            email.Text = MainInterface.Email;
+
+            totalBranches.Text = BranchDL.TotalBranches();
+            totalEmployee.Text = EmployeeDL.TotalEmployees();
+            totalManager.Text = EmployeeDL.TotalManagers();
+            totalCashier.Text = EmployeeDL.TotalCashiers();
+
+            totalClients.Text = ClientDL.TotalClients();
+            totalTrans.Text = TransactionDL.TotalTransactions();
+            totalBill.Text = PaymentDL.TotalPayments();
+            totalLoanReq.Text = LoanApplicationDL.TotalLoanApplications();
+
+            totalAccountsActive.Text = AccountTypeDL.TotalActiveAccounts();
+            totalAccountsInactive.Text = AccountTypeDL.TotalInActiveAccounts();
+            totalAccountsClosed.Text = AccountTypeDL.TotalClosedAccounts();
+            TotalAccountApplications.Text = AccountApplicationDL.TotalAccountApplications();
+            totalAccounts.Text = (int.Parse(totalAccountsActive.Text) + int.Parse(totalAccountsInactive.Text) + int.Parse(totalAccountsClosed.Text)).ToString();
+        }
+
+        private void hide_branch()
+        {
+            panel4.Visible = true;
+            label17.Visible = false;
+            label18.Visible = false;
+            label19.Visible = false;
+
+            totalCashier.Visible = false;
+            totalManager.Visible = false;
+            totalEmployee.Visible = false;
+
+            kryptonButton6.Visible = false;
+        }
+        private void show_branch()
+        {
+            panel4.Visible = false;
+            label17.Visible = true;
+            label18.Visible = true;
+            label19.Visible = true;
+
+            totalCashier.Visible = true;
+            totalManager.Visible = true;
+            totalEmployee.Visible = true;
+
+            kryptonButton6.Visible = true;
+        }
+
+        private void hide_client()
+        {
+            panel5.Visible = true;
+            label10.Visible = false;
+            label11.Visible = false;
+            label12.Visible = false;
+
+            totalTrans.Visible = false;
+            totalBill.Visible = false;
+            totalLoanReq.Visible = false;
+
+            kryptonButton10.Visible = false;
+        }
+        private void show_client()
+        {
+            panel5.Visible = false;
+            label10.Visible = true;
+            label11.Visible = true;
+            label12.Visible = true;
+
+            totalTrans.Visible = true;
+            totalBill.Visible = true;
+            totalLoanReq.Visible = true;
+
+            kryptonButton10.Visible = true;
+        }
+
+        private void hide_accounts()
+        {
+            panel6.Visible = true;
+            label16.Visible = false;
+            label15.Visible = false;
+            label12.Visible = false;
+            label7.Visible = false;
+
+            totalAccountsActive.Visible = false;
+            totalAccountsInactive.Visible = false;
+            totalAccountsClosed.Visible = false;
+            TotalAccountApplications.Visible = false;
+
+            kryptonButton14.Visible = false;
+        }
+        private void show_accounts()
+        {
+            panel6.Visible = false;
+            label16.Visible = true;
+            label15.Visible = true;
+            label12.Visible = true;
+            label7.Visible = true;
+
+            totalAccountsActive.Visible = true;
+            totalAccountsInactive.Visible = true;
+            totalAccountsClosed.Visible = true;
+            TotalAccountApplications.Visible = true;
+
+            kryptonButton14.Visible = true;
+        }
+
+        private void kryptonButton9_Click(object sender, EventArgs e)
+        {
+            show_branch();
+        }
+
+        private void kryptonButton6_Click(object sender, EventArgs e)
+        {
+            hide_branch();
+        }
+
+        private void kryptonButton11_Click(object sender, EventArgs e)
+        {
+            show_client();
+        }
+
+        private void kryptonButton10_Click(object sender, EventArgs e)
+        {
+            hide_client();
+        }
+
+        private void kryptonButton15_Click(object sender, EventArgs e)
+        {
+            show_accounts();
+        }
+
+        private void kryptonButton14_Click(object sender, EventArgs e)
+        {
+            hide_accounts();
         }
     }
 }
