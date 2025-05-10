@@ -206,6 +206,12 @@
     <Compile Include="UI\BranchEmployeeReport.Designer.cs">
       <DependentUpon>BranchEmployeeReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ClientDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ClientDashboard.Designer.cs">
+      <DependentUpon>ClientDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ClientTransactionRecord.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -491,6 +497,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ClientCurrencyExchange.resx">
       <DependentUpon>ClientCurrencyExchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ClientDashboard.resx">
+      <DependentUpon>ClientDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ClientLoan.resx">
       <DependentUpon>ClientLoan.cs</DependentUpon>
