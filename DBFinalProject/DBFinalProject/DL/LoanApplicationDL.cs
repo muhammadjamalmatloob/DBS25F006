@@ -49,7 +49,6 @@ namespace DBFinalProject.DL
                 applications.Clear();
                 while (reader.Read())
                 {
-                    
                     applications.Add(
                         new LoanApplicationBL(Convert.ToInt32(reader["loan_application_id"]),
                         Convert.ToDecimal(reader["requseted_amount"]),

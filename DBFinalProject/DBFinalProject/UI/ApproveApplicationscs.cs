@@ -49,5 +49,10 @@ namespace DBFinalProject
         {
             GrpDocs.Visible = false;
         }
+
+        private void ApproveApplicationscs_Load(object sender, EventArgs e)
+        {
+            //this.reportViewer1.RefreshReport();
+        }
     }
 }

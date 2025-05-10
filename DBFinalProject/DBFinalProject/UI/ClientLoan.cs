@@ -85,7 +85,6 @@ namespace DBFinalProject
             //application.setEmployementStatus();
             //application.setLoanStatus();
             application.setApplyDate(DateTime.Now);
-
         }
 
         private void kryptonComboBox1_Enter(object sender, EventArgs e)
