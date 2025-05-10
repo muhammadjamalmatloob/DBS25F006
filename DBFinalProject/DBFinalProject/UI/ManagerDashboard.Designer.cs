@@ -66,7 +66,7 @@ namespace DBFinalProject
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
-            this.myPallet = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            
             this.GreenTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.PurpleTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonButton7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -154,8 +154,8 @@ namespace DBFinalProject
             this.myPallet.ButtonStyles.ButtonCommon.StateCommon.Back.ColorAngle = 45F;
             this.myPallet.ButtonStyles.ButtonCommon.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
             this.myPallet.ButtonStyles.ButtonCommon.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
-            this.myPallet.ButtonStyles.ButtonCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.ButtonStyles.ButtonCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.ButtonStyles.ButtonCommon.StateCommon.Border.Rounding = 10;
             this.myPallet.ButtonStyles.ButtonCommon.StateCommon.Border.Width = 1;
@@ -166,8 +166,8 @@ namespace DBFinalProject
             this.myPallet.ButtonStyles.ButtonCommon.StateTracking.Back.ColorAngle = 45F;
             this.myPallet.ButtonStyles.ButtonCommon.StateTracking.Border.Color1 = System.Drawing.Color.DarkBlue;
             this.myPallet.ButtonStyles.ButtonCommon.StateTracking.Border.Color2 = System.Drawing.Color.DarkBlue;
-            this.myPallet.ButtonStyles.ButtonCommon.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.ButtonStyles.ButtonCommon.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.ButtonStyles.ButtonCommon.StateTracking.Border.Rounding = 10;
             this.myPallet.ButtonStyles.ButtonCommon.StateTracking.Border.Width = 1;
@@ -175,32 +175,32 @@ namespace DBFinalProject
             this.myPallet.ButtonStyles.ButtonCommon.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myPallet.ButtonStyles.ButtonForm.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.myPallet.ButtonStyles.ButtonForm.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.myPallet.ButtonStyles.ButtonForm.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.ButtonStyles.ButtonForm.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.ButtonStyles.ButtonForm.StateDisabled.Border.Width = 0;
             this.myPallet.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.myPallet.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.myPallet.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.ButtonStyles.ButtonForm.StateNormal.Border.Width = 0;
             this.myPallet.ButtonStyles.ButtonForm.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.myPallet.ButtonStyles.ButtonForm.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.myPallet.ButtonStyles.ButtonForm.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.ButtonStyles.ButtonForm.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.ButtonStyles.ButtonForm.StatePressed.Border.Width = 0;
             this.myPallet.ButtonStyles.ButtonForm.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.myPallet.ButtonStyles.ButtonForm.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.myPallet.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.ButtonStyles.ButtonForm.StateTracking.Border.Width = 0;
             this.myPallet.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.myPallet.FormStyles.FormMain.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.myPallet.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
             this.myPallet.FormStyles.FormMain.StateCommon.Border.Rounding = 12;
@@ -211,8 +211,8 @@ namespace DBFinalProject
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Color1 = System.Drawing.Color.Navy;
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Color2 = System.Drawing.Color.SteelBlue;
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.ColorAngle = 45F;
-            this.myPallet.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Rounding = 7;
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Width = 3;
@@ -221,8 +221,8 @@ namespace DBFinalProject
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderRow.Back.Color1 = System.Drawing.Color.Navy;
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderRow.Back.Color2 = System.Drawing.Color.SteelBlue;
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderRow.Back.ColorAngle = 45F;
-            this.myPallet.GridStyles.GridCommon.StateCommon.HeaderRow.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.GridStyles.GridCommon.StateCommon.HeaderRow.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderRow.Border.Rounding = 7;
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderRow.Border.Width = 3;
@@ -610,7 +610,6 @@ namespace DBFinalProject
             // 
             // myPallet
             // 
-            this.myPallet.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
             this.myPallet.ButtonStyles.ButtonCommon.OverrideDefault.Back.Color1 = System.Drawing.Color.Navy;
             this.myPallet.ButtonStyles.ButtonCommon.OverrideDefault.Back.Color2 = System.Drawing.Color.SteelBlue;
             this.myPallet.ButtonStyles.ButtonCommon.OverrideDefault.Back.ColorAngle = 45F;
@@ -619,8 +618,8 @@ namespace DBFinalProject
             this.myPallet.ButtonStyles.ButtonCommon.StateCommon.Back.ColorAngle = 45F;
             this.myPallet.ButtonStyles.ButtonCommon.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
             this.myPallet.ButtonStyles.ButtonCommon.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
-            this.myPallet.ButtonStyles.ButtonCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.ButtonStyles.ButtonCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.ButtonStyles.ButtonCommon.StateCommon.Border.Rounding = 10;
             this.myPallet.ButtonStyles.ButtonCommon.StateCommon.Border.Width = 1;
@@ -631,8 +630,8 @@ namespace DBFinalProject
             this.myPallet.ButtonStyles.ButtonCommon.StateTracking.Back.ColorAngle = 45F;
             this.myPallet.ButtonStyles.ButtonCommon.StateTracking.Border.Color1 = System.Drawing.Color.DarkBlue;
             this.myPallet.ButtonStyles.ButtonCommon.StateTracking.Border.Color2 = System.Drawing.Color.DarkBlue;
-            this.myPallet.ButtonStyles.ButtonCommon.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.ButtonStyles.ButtonCommon.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.ButtonStyles.ButtonCommon.StateTracking.Border.Rounding = 10;
             this.myPallet.ButtonStyles.ButtonCommon.StateTracking.Border.Width = 1;
@@ -640,32 +639,32 @@ namespace DBFinalProject
             this.myPallet.ButtonStyles.ButtonCommon.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myPallet.ButtonStyles.ButtonForm.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.myPallet.ButtonStyles.ButtonForm.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.myPallet.ButtonStyles.ButtonForm.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.ButtonStyles.ButtonForm.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.ButtonStyles.ButtonForm.StateDisabled.Border.Width = 0;
             this.myPallet.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.myPallet.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.myPallet.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.ButtonStyles.ButtonForm.StateNormal.Border.Width = 0;
             this.myPallet.ButtonStyles.ButtonForm.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.myPallet.ButtonStyles.ButtonForm.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.myPallet.ButtonStyles.ButtonForm.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.ButtonStyles.ButtonForm.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.ButtonStyles.ButtonForm.StatePressed.Border.Width = 0;
             this.myPallet.ButtonStyles.ButtonForm.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.myPallet.ButtonStyles.ButtonForm.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.myPallet.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.ButtonStyles.ButtonForm.StateTracking.Border.Width = 0;
             this.myPallet.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.myPallet.FormStyles.FormMain.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.myPallet.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
             this.myPallet.FormStyles.FormMain.StateCommon.Border.Rounding = 12;
@@ -676,8 +675,8 @@ namespace DBFinalProject
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Color1 = System.Drawing.Color.Navy;
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Color2 = System.Drawing.Color.SteelBlue;
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.ColorAngle = 45F;
-            this.myPallet.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Rounding = 7;
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Width = 3;
@@ -686,8 +685,8 @@ namespace DBFinalProject
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderRow.Back.Color1 = System.Drawing.Color.Navy;
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderRow.Back.Color2 = System.Drawing.Color.SteelBlue;
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderRow.Back.ColorAngle = 45F;
-            this.myPallet.GridStyles.GridCommon.StateCommon.HeaderRow.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.myPallet.GridStyles.GridCommon.StateCommon.HeaderRow.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderRow.Border.Rounding = 7;
             this.myPallet.GridStyles.GridCommon.StateCommon.HeaderRow.Border.Width = 3;
@@ -714,8 +713,8 @@ namespace DBFinalProject
             this.GreenTheme.ButtonStyles.ButtonCommon.StateCommon.Back.ColorAngle = 45F;
             this.GreenTheme.ButtonStyles.ButtonCommon.StateCommon.Border.Color1 = System.Drawing.Color.DarkGreen;
             this.GreenTheme.ButtonStyles.ButtonCommon.StateCommon.Border.Color2 = System.Drawing.Color.DarkGreen;
-            this.GreenTheme.ButtonStyles.ButtonCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.GreenTheme.ButtonStyles.ButtonCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.GreenTheme.ButtonStyles.ButtonCommon.StateCommon.Border.Rounding = 10;
             this.GreenTheme.ButtonStyles.ButtonCommon.StateCommon.Border.Width = 1;
@@ -726,8 +725,8 @@ namespace DBFinalProject
             this.GreenTheme.ButtonStyles.ButtonCommon.StateTracking.Back.ColorAngle = 45F;
             this.GreenTheme.ButtonStyles.ButtonCommon.StateTracking.Border.Color1 = System.Drawing.Color.DarkGreen;
             this.GreenTheme.ButtonStyles.ButtonCommon.StateTracking.Border.Color2 = System.Drawing.Color.DarkGreen;
-            this.GreenTheme.ButtonStyles.ButtonCommon.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.GreenTheme.ButtonStyles.ButtonCommon.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.GreenTheme.ButtonStyles.ButtonCommon.StateTracking.Border.Rounding = 10;
             this.GreenTheme.ButtonStyles.ButtonCommon.StateTracking.Border.Width = 1;
@@ -735,34 +734,34 @@ namespace DBFinalProject
             this.GreenTheme.ButtonStyles.ButtonCommon.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GreenTheme.ButtonStyles.ButtonForm.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.GreenTheme.ButtonStyles.ButtonForm.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.GreenTheme.ButtonStyles.ButtonForm.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.GreenTheme.ButtonStyles.ButtonForm.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.GreenTheme.ButtonStyles.ButtonForm.StateDisabled.Border.Width = 0;
             this.GreenTheme.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.GreenTheme.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.GreenTheme.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.GreenTheme.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.GreenTheme.ButtonStyles.ButtonForm.StateNormal.Border.Width = 0;
             this.GreenTheme.ButtonStyles.ButtonForm.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.GreenTheme.ButtonStyles.ButtonForm.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.GreenTheme.ButtonStyles.ButtonForm.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.GreenTheme.ButtonStyles.ButtonForm.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.GreenTheme.ButtonStyles.ButtonForm.StatePressed.Border.Width = 0;
             this.GreenTheme.ButtonStyles.ButtonForm.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.GreenTheme.ButtonStyles.ButtonForm.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.GreenTheme.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.GreenTheme.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.GreenTheme.ButtonStyles.ButtonForm.StateTracking.Border.Width = 0;
             this.GreenTheme.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.GreenTheme.FormStyles.FormMain.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.GreenTheme.FormStyles.FormMain.StateCommon.Border.Color1 = System.Drawing.Color.SeaGreen;
             this.GreenTheme.FormStyles.FormMain.StateCommon.Border.Color2 = System.Drawing.Color.SeaGreen;
-            this.GreenTheme.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.GreenTheme.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.GreenTheme.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
             this.GreenTheme.FormStyles.FormMain.StateCommon.Border.Rounding = 12;
@@ -773,8 +772,8 @@ namespace DBFinalProject
             this.GreenTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Color1 = System.Drawing.Color.ForestGreen;
             this.GreenTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Color2 = System.Drawing.Color.LimeGreen;
             this.GreenTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.ColorAngle = 45F;
-            this.GreenTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.GreenTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.GreenTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Rounding = 7;
             this.GreenTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Width = 3;
@@ -783,8 +782,8 @@ namespace DBFinalProject
             this.GreenTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Back.Color1 = System.Drawing.Color.ForestGreen;
             this.GreenTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Back.Color2 = System.Drawing.Color.LimeGreen;
             this.GreenTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Back.ColorAngle = 45F;
-            this.GreenTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.GreenTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.GreenTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Border.Rounding = 7;
             this.GreenTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Border.Width = 3;
@@ -812,8 +811,8 @@ namespace DBFinalProject
             this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Back.ColorAngle = 45F;
             this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Border.Color1 = System.Drawing.Color.DarkSlateGray;
             this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Border.Color2 = System.Drawing.Color.DarkSlateGray;
-            this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Border.Rounding = 10;
             this.PurpleTheme.ButtonStyles.ButtonCommon.StateCommon.Border.Width = 1;
@@ -824,8 +823,8 @@ namespace DBFinalProject
             this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Back.ColorAngle = 45F;
             this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Border.Color1 = System.Drawing.Color.DarkGreen;
             this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Border.Color2 = System.Drawing.Color.DarkGreen;
-            this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Border.Rounding = 10;
             this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Border.Width = 1;
@@ -833,34 +832,34 @@ namespace DBFinalProject
             this.PurpleTheme.ButtonStyles.ButtonCommon.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PurpleTheme.ButtonStyles.ButtonForm.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.PurpleTheme.ButtonStyles.ButtonForm.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.PurpleTheme.ButtonStyles.ButtonForm.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.PurpleTheme.ButtonStyles.ButtonForm.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.PurpleTheme.ButtonStyles.ButtonForm.StateDisabled.Border.Width = 0;
             this.PurpleTheme.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.PurpleTheme.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.PurpleTheme.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.PurpleTheme.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.PurpleTheme.ButtonStyles.ButtonForm.StateNormal.Border.Width = 0;
             this.PurpleTheme.ButtonStyles.ButtonForm.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.PurpleTheme.ButtonStyles.ButtonForm.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.PurpleTheme.ButtonStyles.ButtonForm.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.PurpleTheme.ButtonStyles.ButtonForm.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.PurpleTheme.ButtonStyles.ButtonForm.StatePressed.Border.Width = 0;
             this.PurpleTheme.ButtonStyles.ButtonForm.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.PurpleTheme.ButtonStyles.ButtonForm.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.PurpleTheme.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.PurpleTheme.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.PurpleTheme.ButtonStyles.ButtonForm.StateTracking.Border.Width = 0;
             this.PurpleTheme.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.PurpleTheme.FormStyles.FormMain.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.PurpleTheme.FormStyles.FormMain.StateCommon.Border.Color1 = System.Drawing.Color.DarkSlateGray;
             this.PurpleTheme.FormStyles.FormMain.StateCommon.Border.Color2 = System.Drawing.Color.DarkSlateGray;
-            this.PurpleTheme.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.PurpleTheme.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.PurpleTheme.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
             this.PurpleTheme.FormStyles.FormMain.StateCommon.Border.Rounding = 12;
@@ -871,8 +870,8 @@ namespace DBFinalProject
             this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Color1 = System.Drawing.Color.MediumOrchid;
             this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Color2 = System.Drawing.Color.DarkMagenta;
             this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.ColorAngle = 45F;
-            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Rounding = 7;
             this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderColumn.Border.Width = 3;
@@ -881,8 +880,8 @@ namespace DBFinalProject
             this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Back.Color1 = System.Drawing.Color.MediumOrchid;
             this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Back.Color2 = System.Drawing.Color.DarkMagenta;
             this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Back.ColorAngle = 45F;
-            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Border.Rounding = 7;
             this.PurpleTheme.GridStyles.GridCommon.StateCommon.HeaderRow.Border.Width = 3;
@@ -910,7 +909,7 @@ namespace DBFinalProject
             // 
             // ThemeMenu
             // 
-            this.ThemeMenu.Location = new System.Drawing.Point(458, 174);
+            this.ThemeMenu.Location = new System.Drawing.Point(492, 152);
             this.ThemeMenu.Margin = new System.Windows.Forms.Padding(2);
             this.ThemeMenu.Name = "ThemeMenu";
             // 
@@ -925,8 +924,8 @@ namespace DBFinalProject
             this.ThemeMenu.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.ThemeMenu.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
             this.ThemeMenu.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
-            this.ThemeMenu.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.ThemeMenu.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.ThemeMenu.StateCommon.Border.Rounding = 15;
             this.ThemeMenu.StateCommon.Border.Width = 3;
@@ -1074,7 +1073,6 @@ namespace DBFinalProject
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton6;
-        public ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
         private ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
         public ComponentFactory.Krypton.Toolkit.KryptonPalette GreenTheme;
         public ComponentFactory.Krypton.Toolkit.KryptonPalette PurpleTheme;
@@ -1085,5 +1083,6 @@ namespace DBFinalProject
         private System.Windows.Forms.RadioButton Green;
         private System.Windows.Forms.RadioButton Purple;
         private System.Windows.Forms.RadioButton Blue;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
     }
 }

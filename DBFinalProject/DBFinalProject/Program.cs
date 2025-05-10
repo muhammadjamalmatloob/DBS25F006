@@ -24,7 +24,7 @@ namespace DBFinalProject
 
             
 
-            Application.Run(new ManagerDashboard());
+            Application.Run(new BranchEmployeeReport());
         }
     }
 }

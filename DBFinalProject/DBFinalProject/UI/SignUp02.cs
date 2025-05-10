@@ -102,7 +102,6 @@ namespace DBFinalProject
             {
                 kryptonTextBox1.Text = "Enter Email";
                 kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-                kryptonTextBox1.PasswordChar = '\0';
             }
 
         }

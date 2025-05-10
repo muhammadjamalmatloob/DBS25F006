@@ -90,6 +90,10 @@
     <Reference Include="Microsoft.ReportViewer.WinForms.resources">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.resources.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=9.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.9.3.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
@@ -148,6 +152,7 @@
     <Compile Include="BL\AccountBL.cs" />
     <Compile Include="BL\AccountTypeBL.cs" />
     <Compile Include="BL\BranchBL.cs" />
+    <Compile Include="BL\EmployeesReport.cs" />
     <Compile Include="BL\ClientBL.cs" />
     <Compile Include="BL\CurrencyExchangeBL.cs" />
     <Compile Include="BL\DepositsBL.cs" />
@@ -170,6 +175,7 @@
     <Compile Include="DL\CurrencyExchangeDL.cs" />
     <Compile Include="DL\DepositsDL.cs" />
     <Compile Include="DL\EmployeeDL.cs" />
+    <Compile Include="DL\EmployeesReportDL.cs" />
     <Compile Include="DL\LoanApplicationDL.cs" />
     <Compile Include="DL\LoanTypeDL.cs" />
     <Compile Include="DL\LoginDL.cs" />
@@ -181,12 +187,24 @@
     <Compile Include="DL\TransactionDL.cs" />
     <Compile Include="DL\TransferDL.cs" />
     <Compile Include="DL\WithdrawalDL.cs" />
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="UI\Audit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Audit.Designer.cs">
       <DependentUpon>Audit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BranchEmployeeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BranchEmployeeReport.Designer.cs">
+      <DependentUpon>BranchEmployeeReport.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ClientTransactionRecord.cs">
       <SubType>UserControl</SubType>
@@ -420,7 +438,10 @@
       <DependentUpon>Withdraw.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility\Theme.cs" />
-    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EmployeesReport_.rdlc" />
     <EmbeddedResource Include="UI\AccountTypeManagement.resx">
       <DependentUpon>AccountTypeManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -455,6 +476,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\BillPayments.resx">
       <DependentUpon>BillPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BranchEmployeeReport.resx">
+      <DependentUpon>BranchEmployeeReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\BranchEmployees.resx">
       <DependentUpon>BranchEmployees.cs</DependentUpon>
@@ -561,6 +585,7 @@
     <None Include=".vs\DBFinalProject.csproj.dtbcache.json" />
     <None Include="bin\Debug\DBFinalProject.exe.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DBFinalProject.BL.EmployeesReport.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -574,9 +599,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reports\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="bin\Debug\BouncyCastle.Cryptography.dll" />
     <Content Include="bin\Debug\BouncyCastle.Cryptography.xml" />

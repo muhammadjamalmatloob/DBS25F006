@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using DBFinalProject.DL;
 using DBFinalProject.Utility;
 
 namespace DBFinalProject
@@ -27,6 +28,8 @@ namespace DBFinalProject
                 Theme.theme = myPallet;
                 kryptonManager1.GlobalPalette = Theme.theme;
             }
+
+            GetAllTotals();
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
@@ -156,5 +159,29 @@ namespace DBFinalProject
         {
 
         }
+
+        private void GetAllTotals()
+        {
+            try
+            {
+                label19.Text += " " + EmployeeDL.TotalEmployees();
+                label18.Text += " " + EmployeeDL.TotalCashiers();
+                label17.Text += " " + EmployeeDL.TotalManagers();
+                label9.Text += " " + ClientDL.TotalClients();
+                label10.Text += " " + TransactionDL.TotalTransactions();
+                label11.Text += " " + LoanApplicationDL.TotalLoanApplications();
+                label12.Text += " " + PaymentDL.TotalPayments();
+                label16.Text += " " + AccountDL.TotalAccount();
+                label15.Text += " " + AccountDL.TotalCurrentAccount();
+                label14.Text += " " + AccountDL.TotalSavingAccount();
+                label7.Text += " " + AccountApplicationDL.TotalAccountApplications();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+            
     }
 }
