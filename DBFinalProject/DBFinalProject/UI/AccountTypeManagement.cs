@@ -24,6 +24,8 @@ namespace DBFinalProject.UI
             AccountTypeDL.LoadDataGrid(AccountTypeDL.accountTypes, dgvAccount);
             AccountTypeDL.LoadAccountTypeInComboBox(kryptonComboBox2);
             AccountTypeDL.LoadAccountTypeInComboBox(kryptonComboBox3);
+            kryptonComboBox3.SelectedIndex = 0;
+            kryptonComboBox2.SelectedIndex = 0;
 
             GrpAdd.Visible = false;
             GrpBox.Visible = false;
@@ -463,6 +465,21 @@ namespace DBFinalProject.UI
 
             var filteredList = AccountTypeDL.accountTypes.Where(a => a.get_type_name().ToLower().Contains(search)).ToList();
             AccountTypeDL.LoadDataGrid(filteredList, dgvAccount);
+        }
+
+        private void clear_grp()
+        {
+            kryptonTextBox9.Text = "Withdrawl Limit";
+            kryptonTextBox5.Text = "Descryption";
+            kryptonTextBox3.Text = "Minimum Balance";
+            kryptonTextBox2.Text = "Type Name";
+
+            kryptonTextBox10.Text = "Minimum Balance";
+            kryptonTextBox12.Text = "Descryption";
+            kryptonTextBox10.Text = "Minimum Balance";
+
+            kryptonComboBox3.SelectedIndex = 0;
+            kryptonComboBox2.SelectedIndex = 0;
         }
     }
 }
