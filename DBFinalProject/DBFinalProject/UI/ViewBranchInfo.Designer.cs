@@ -64,17 +64,17 @@
             this.kryptonPanel1.Controls.Add(this.panel2);
             this.kryptonPanel1.Controls.Add(this.label1);
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(1521, 107);
+            this.kryptonPanel1.Size = new System.Drawing.Size(1141, 87);
             this.kryptonPanel1.TabIndex = 5;
             // 
             // kryptonButton14
             // 
-            this.kryptonButton14.Location = new System.Drawing.Point(27, 32);
-            this.kryptonButton14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonButton14.Location = new System.Drawing.Point(20, 26);
+            this.kryptonButton14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonButton14.Name = "kryptonButton14";
-            this.kryptonButton14.Size = new System.Drawing.Size(111, 41);
+            this.kryptonButton14.Size = new System.Drawing.Size(83, 33);
             this.kryptonButton14.TabIndex = 26;
             this.kryptonButton14.Values.Text = "Back";
             this.kryptonButton14.Click += new System.EventHandler(this.kryptonButton14_Click);
@@ -88,10 +88,10 @@
             this.Closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Closebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Closebtn.ForeColor = System.Drawing.Color.White;
-            this.Closebtn.Location = new System.Drawing.Point(1476, 0);
+            this.Closebtn.Location = new System.Drawing.Point(1107, 0);
             this.Closebtn.Margin = new System.Windows.Forms.Padding(0);
             this.Closebtn.Name = "Closebtn";
-            this.Closebtn.Size = new System.Drawing.Size(45, 43);
+            this.Closebtn.Size = new System.Drawing.Size(34, 35);
             this.Closebtn.TabIndex = 12;
             this.Closebtn.Text = "X";
             this.Closebtn.UseVisualStyleBackColor = false;
@@ -102,10 +102,10 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(216, 10);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(162, 8);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(127, 82);
+            this.panel2.Size = new System.Drawing.Size(95, 67);
             this.panel2.TabIndex = 2;
             // 
             // label1
@@ -114,9 +114,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(339, 34);
+            this.label1.Location = new System.Drawing.Point(254, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 38);
+            this.label1.Size = new System.Drawing.Size(162, 30);
             this.label1.TabIndex = 2;
             this.label1.Text = "OUR BRANCH";
             // 
@@ -215,8 +216,8 @@
             // 
             // GrpDelete
             // 
-            this.GrpDelete.Location = new System.Drawing.Point(112, 182);
-            this.GrpDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GrpDelete.Location = new System.Drawing.Point(84, 148);
+            this.GrpDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GrpDelete.Name = "GrpDelete";
             // 
             // GrpDelete.Panel
@@ -230,7 +231,7 @@
             this.GrpDelete.Panel.Controls.Add(this.label4);
             this.GrpDelete.Panel.Controls.Add(this.label3);
             this.GrpDelete.Panel.Controls.Add(this.panel1);
-            this.GrpDelete.Size = new System.Drawing.Size(1333, 514);
+            this.GrpDelete.Size = new System.Drawing.Size(1000, 418);
             this.GrpDelete.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.GrpDelete.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
             this.GrpDelete.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
@@ -248,9 +249,10 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Teal;
-            this.label16.Location = new System.Drawing.Point(925, 102);
+            this.label16.Location = new System.Drawing.Point(694, 83);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(50, 29);
+            this.label16.Size = new System.Drawing.Size(39, 24);
             this.label16.TabIndex = 15;
             this.label16.Text = "text";
             // 
@@ -260,9 +262,10 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Teal;
-            this.label15.Location = new System.Drawing.Point(925, 201);
+            this.label15.Location = new System.Drawing.Point(694, 163);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(50, 29);
+            this.label15.Size = new System.Drawing.Size(39, 24);
             this.label15.TabIndex = 14;
             this.label15.Text = "text";
             // 
@@ -272,9 +275,10 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Teal;
-            this.label14.Location = new System.Drawing.Point(925, 295);
+            this.label14.Location = new System.Drawing.Point(694, 240);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(50, 29);
+            this.label14.Size = new System.Drawing.Size(39, 24);
             this.label14.TabIndex = 13;
             this.label14.Text = "text";
             this.label14.Click += new System.EventHandler(this.label14_Click);
@@ -285,9 +289,10 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Teal;
-            this.label13.Location = new System.Drawing.Point(925, 395);
+            this.label13.Location = new System.Drawing.Point(694, 321);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(50, 29);
+            this.label13.Size = new System.Drawing.Size(39, 24);
             this.label13.TabIndex = 12;
             this.label13.Text = "text";
             // 
@@ -297,9 +302,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Teal;
-            this.label6.Location = new System.Drawing.Point(624, 91);
+            this.label6.Location = new System.Drawing.Point(468, 74);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(228, 40);
+            this.label6.Size = new System.Drawing.Size(184, 31);
             this.label6.TabIndex = 5;
             this.label6.Text = "Branch Name:";
             // 
@@ -309,9 +315,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Teal;
-            this.label5.Location = new System.Drawing.Point(624, 284);
+            this.label5.Location = new System.Drawing.Point(468, 231);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(263, 40);
+            this.label5.Size = new System.Drawing.Size(210, 31);
             this.label5.TabIndex = 4;
             this.label5.Text = "Branch Address:";
             // 
@@ -321,9 +328,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Teal;
-            this.label4.Location = new System.Drawing.Point(624, 386);
+            this.label4.Location = new System.Drawing.Point(468, 314);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(198, 40);
+            this.label4.Size = new System.Drawing.Size(159, 31);
             this.label4.TabIndex = 3;
             this.label4.Text = "Branch City:";
             // 
@@ -333,9 +341,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(624, 190);
+            this.label3.Location = new System.Drawing.Point(468, 154);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(217, 40);
+            this.label3.Size = new System.Drawing.Size(174, 31);
             this.label3.TabIndex = 2;
             this.label3.Text = "Branch Code:";
             // 
@@ -344,10 +353,10 @@
             this.panel1.BackColor = System.Drawing.Color.AliceBlue;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(3, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(556, 475);
+            this.panel1.Size = new System.Drawing.Size(417, 386);
             this.panel1.TabIndex = 0;
             // 
             // kryptonManager1
@@ -549,13 +558,13 @@
             // 
             // ViewBranchInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1521, 788);
+            this.ClientSize = new System.Drawing.Size(1141, 640);
             this.Controls.Add(this.GrpDelete);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ViewBranchInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewBranchInfo";

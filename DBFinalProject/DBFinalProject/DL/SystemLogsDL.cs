@@ -61,5 +61,15 @@ namespace DBFinalProject.DL
                 }
             }
         }
+
+        public static bool AddLog(int level, string action, string details)
+        {
+            string query = $"Insert into system_logs (time, log_level, user_id, action, details) " +
+                $"values (Now(),{level}, " +
+                $"(Select user_id From users Where username = '{MainInterface.username}'), " +
+                $"'{action}', '{details}')";
+            DatabaseHelper.Instance.Update(query);
+            return true;
+        }
     }
 }
