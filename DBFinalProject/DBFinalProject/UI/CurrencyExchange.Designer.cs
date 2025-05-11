@@ -39,6 +39,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.GrpBox = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
@@ -54,11 +55,11 @@
             this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.myPallet = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -83,7 +84,7 @@
             this.kryptonPanel1.Controls.Add(this.panel2);
             this.kryptonPanel1.Controls.Add(this.label1);
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1141, 87);
             this.kryptonPanel1.TabIndex = 6;
@@ -91,7 +92,7 @@
             // kryptonButton14
             // 
             this.kryptonButton14.Location = new System.Drawing.Point(20, 26);
-            this.kryptonButton14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonButton14.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonButton14.Name = "kryptonButton14";
             this.kryptonButton14.Size = new System.Drawing.Size(83, 33);
             this.kryptonButton14.TabIndex = 26;
@@ -122,7 +123,7 @@
             this.panel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel7.BackgroundImage")));
             this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel7.Location = new System.Drawing.Point(620, 15);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(90, 60);
             this.panel7.TabIndex = 14;
@@ -130,16 +131,17 @@
             // kryptonButton5
             // 
             this.kryptonButton5.Location = new System.Drawing.Point(944, 28);
-            this.kryptonButton5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonButton5.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonButton5.Name = "kryptonButton5";
             this.kryptonButton5.Size = new System.Drawing.Size(132, 42);
             this.kryptonButton5.TabIndex = 6;
             this.kryptonButton5.Values.Text = "SEARCH";
+            this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
             // 
             // kryptonTextBox1
             // 
             this.kryptonTextBox1.Location = new System.Drawing.Point(715, 28);
-            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
             this.kryptonTextBox1.Size = new System.Drawing.Size(204, 37);
             this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -150,10 +152,12 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonTextBox1.StateCommon.Border.Rounding = 15;
             this.kryptonTextBox1.StateCommon.Border.Width = 1;
-            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
             this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox1.TabIndex = 13;
             this.kryptonTextBox1.Text = "Search";
+            this.kryptonTextBox1.GotFocus += new System.EventHandler(this.kryptonTextBox1_Focus);
+            this.kryptonTextBox1.LostFocus += new System.EventHandler(this.kryptonTextBox1_LostFocus);
             // 
             // panel2
             // 
@@ -161,7 +165,7 @@
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Location = new System.Drawing.Point(162, 8);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(95, 67);
             this.panel2.TabIndex = 2;
@@ -184,17 +188,28 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.kryptonButton2);
             this.panel1.Controls.Add(this.kryptonButton1);
             this.panel1.Location = new System.Drawing.Point(0, 87);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(228, 594);
             this.panel1.TabIndex = 7;
             // 
+            // kryptonButton2
+            // 
+            this.kryptonButton2.Location = new System.Drawing.Point(39, 316);
+            this.kryptonButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.Size = new System.Drawing.Size(154, 72);
+            this.kryptonButton2.TabIndex = 4;
+            this.kryptonButton2.Values.Text = "Remove Filters";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
+            // 
             // kryptonButton1
             // 
             this.kryptonButton1.Location = new System.Drawing.Point(39, 187);
-            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.Size = new System.Drawing.Size(154, 72);
             this.kryptonButton1.TabIndex = 3;
@@ -206,7 +221,7 @@
             this.panel3.Controls.Add(this.GrpBox);
             this.panel3.Controls.Add(this.kryptonDataGridView1);
             this.panel3.Location = new System.Drawing.Point(232, 105);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(899, 546);
             this.panel3.TabIndex = 9;
@@ -214,7 +229,7 @@
             // GrpBox
             // 
             this.GrpBox.Location = new System.Drawing.Point(16, 76);
-            this.GrpBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GrpBox.Margin = new System.Windows.Forms.Padding(2);
             this.GrpBox.Name = "GrpBox";
             // 
             // GrpBox.Panel
@@ -237,16 +252,17 @@
             // kryptonButton8
             // 
             this.kryptonButton8.Location = new System.Drawing.Point(12, 314);
-            this.kryptonButton8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonButton8.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonButton8.Name = "kryptonButton8";
             this.kryptonButton8.Size = new System.Drawing.Size(105, 39);
             this.kryptonButton8.TabIndex = 29;
             this.kryptonButton8.Values.Text = "Apply";
+            this.kryptonButton8.Click += new System.EventHandler(this.kryptonButton8_Click);
             // 
             // kryptonButton6
             // 
             this.kryptonButton6.Location = new System.Drawing.Point(167, 314);
-            this.kryptonButton6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonButton6.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonButton6.Name = "kryptonButton6";
             this.kryptonButton6.Size = new System.Drawing.Size(105, 39);
             this.kryptonButton6.TabIndex = 26;
@@ -262,7 +278,7 @@
             this.panel6.Controls.Add(this.radioButton3);
             this.panel6.Controls.Add(this.radioButton1);
             this.panel6.Location = new System.Drawing.Point(12, 15);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(260, 284);
             this.panel6.TabIndex = 27;
@@ -273,7 +289,7 @@
             this.radioButton5.BackColor = System.Drawing.Color.Transparent;
             this.radioButton5.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton5.Location = new System.Drawing.Point(37, 209);
-            this.radioButton5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton5.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(149, 24);
             this.radioButton5.TabIndex = 26;
@@ -287,7 +303,7 @@
             this.radioButton4.BackColor = System.Drawing.Color.Transparent;
             this.radioButton4.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton4.Location = new System.Drawing.Point(37, 166);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton4.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(141, 24);
             this.radioButton4.TabIndex = 25;
@@ -301,12 +317,12 @@
             this.radioButton2.BackColor = System.Drawing.Color.Transparent;
             this.radioButton2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.Location = new System.Drawing.Point(37, 45);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(106, 24);
+            this.radioButton2.Size = new System.Drawing.Size(130, 24);
             this.radioButton2.TabIndex = 24;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Amount > 0";
+            this.radioButton2.Text = "Amount > 5000";
             this.radioButton2.UseVisualStyleBackColor = false;
             // 
             // label2
@@ -327,7 +343,7 @@
             this.radioButton3.BackColor = System.Drawing.Color.Transparent;
             this.radioButton3.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton3.Location = new System.Drawing.Point(37, 124);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(141, 24);
             this.radioButton3.TabIndex = 22;
@@ -341,7 +357,7 @@
             this.radioButton1.BackColor = System.Drawing.Color.Transparent;
             this.radioButton1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(37, 82);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(141, 24);
             this.radioButton1.TabIndex = 21;
@@ -355,14 +371,14 @@
             this.kryptonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3,
             this.Column4,
             this.Column5,
             this.Column6,
-            this.Column7});
+            this.Column7,
+            this.Column3});
             this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonDataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonDataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonDataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
             this.kryptonDataGridView1.RowHeadersWidth = 51;
             this.kryptonDataGridView1.RowTemplate.Height = 24;
@@ -374,6 +390,7 @@
             this.Column1.HeaderText = "Exchange Id";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 125;
             // 
             // Column2
@@ -381,20 +398,15 @@
             this.Column2.HeaderText = "Customer Name ";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Account Status";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Base Currency";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 125;
             // 
             // Column5
@@ -402,6 +414,7 @@
             this.Column5.HeaderText = "Target Currency";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             this.Column5.Width = 125;
             // 
             // Column6
@@ -409,17 +422,27 @@
             this.Column6.HeaderText = "Exchange Rate";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             this.Column6.Width = 125;
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "Amount ";
+            this.Column7.HeaderText = "Amount Base Currency";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
-            this.Column7.Width = 125;
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 180;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Amount Target Currency";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 180;
             // 
             // myPallet
             // 
+            this.myPallet.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
             this.myPallet.ButtonStyles.ButtonCommon.OverrideDefault.Back.Color1 = System.Drawing.Color.Navy;
             this.myPallet.ButtonStyles.ButtonCommon.OverrideDefault.Back.Color2 = System.Drawing.Color.SteelBlue;
             this.myPallet.ButtonStyles.ButtonCommon.OverrideDefault.Back.ColorAngle = 45F;
@@ -525,7 +548,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CurrencyExchange";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CurrencyExchange";
@@ -559,13 +582,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private System.Windows.Forms.Panel panel3;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox GrpBox;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton8;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton6;
@@ -578,5 +594,13 @@
         private System.Windows.Forms.RadioButton radioButton1;
         public ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
         private ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

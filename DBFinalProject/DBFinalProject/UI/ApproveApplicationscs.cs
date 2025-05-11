@@ -8,28 +8,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using DBFinalProject.DL;
+using DBFinalProject.Utility;
 
 namespace DBFinalProject
 {
     public partial class ApproveApplicationscs : KryptonForm
     {
-        public ApproveApplicationscs()
+        ManagerDashboard manager;
+        public ApproveApplicationscs(ManagerDashboard manager)
         {
             
             InitializeComponent();
-            foreach (DataGridViewRow row in kryptonDataGridView1.Rows) 
-            {
-                row.Height = 50;
-            }
-            kryptonDataGridView1.Rows.Add(1, "Ali", "ali@gmail.com", "03214220667", "Pakistani", "35210-7889331-7", "Lahore, Pakistan", "Submitted");
+            this.manager = manager;
+            this.kryptonManager1.GlobalPalette = Theme.theme;
+            AccountApplicationDL.LoadAllApplicationsInList();
+            AccountApplicationDL.LoadBranchTransactionsToGrid(kryptonDataGridView1);
+            
+            
             
         }
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
-            AdminDashboard adminDashboard = new AdminDashboard();
-            adminDashboard.Show();
             this.Hide();
+            manager.Show();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
@@ -37,17 +40,87 @@ namespace DBFinalProject
             Application.Exit();
         }
 
-        private void kryptonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void kryptonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 10 && e.RowIndex >= 0) 
+            if (e.ColumnIndex == 8 && e.RowIndex >= 0)
             {
-                GrpDocs.Visible = true;
+                try
+                {
+                    if (AccountApplicationDL.Reject(e.RowIndex))
+                    {
+                        Task <bool> result = EmailSender.SendEmailAsync(AccountApplicationDL.profiles[e.RowIndex].GetEmail(),
+                            "Apex BankAccount Application",
+                            "Your application for account to Apex Bank is rejected");
+                        if (!await result)
+                        {
+                            MessageBox.Show("Cant Send Email", "Error");
+                        }
+                        AccountApplicationDL.LoadAllApplicationsInList();
+                        AccountApplicationDL.LoadBranchTransactionsToGrid(kryptonDataGridView1);
+                        MessageBox.Show("Application rejected successfully", "Error");
+                        
+                    }
+                    
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error");
+                }
+            }
+            else if (e.ColumnIndex == 7 && e.RowIndex >= 0)
+            {
+                try
+                {
+                    if (AccountApplicationDL.Accept(e.RowIndex))
+                    {
+                        AccountApplicationDL.AddClient(e.RowIndex);
+                        AccountApplicationDL.AddAccount(e.RowIndex);
+                        Task<bool> result = EmailSender.SendEmailAsync(AccountApplicationDL.profiles[e.RowIndex].GetEmail(),
+                            "Apex BankAccount Application",
+                            "Your application for account to Apex Bank is accepted");
+                        if (!await result)
+                        {
+                            MessageBox.Show("Cant Send Email", "Error");
+                        }
+                        AccountApplicationDL.LoadAllApplicationsInList();
+                        AccountApplicationDL.LoadBranchTransactionsToGrid(kryptonDataGridView1);
+                        MessageBox.Show("Application accepted successfully", "Information");
+                        
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error");
+                }
             }
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            GrpDocs.Visible = false;
+            
+        }
+
+        private void kryptonTextBox1_Focus(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "Search")
+            {
+                kryptonTextBox1.Text = "";
+                kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            }
+
+        }
+
+        private void kryptonTextBox1_LostFocus(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "")
+            {
+                kryptonTextBox1.Text = "Search";
+                kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            }
+
         }
     }
 }

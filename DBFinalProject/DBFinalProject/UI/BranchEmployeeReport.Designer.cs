@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.Closebtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Closebtn = new System.Windows.Forms.Button();
             this.myPallet = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.GreenTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.PurpleTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.employeesReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -44,19 +44,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesReportBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.employeesReportBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "DBFinalProject.Reports.EmployeesReport_.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 424);
-            this.reportViewer1.TabIndex = 0;
             // 
             // kryptonPanel1
             // 
@@ -71,6 +58,19 @@
             this.kryptonPanel1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.kryptonPanel1.Size = new System.Drawing.Size(802, 81);
             this.kryptonPanel1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(267, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(268, 34);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "APEX BANK LIMITED";
             // 
             // Closebtn
             // 
@@ -89,27 +89,6 @@
             this.Closebtn.Text = "X";
             this.Closebtn.UseVisualStyleBackColor = false;
             this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(267, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(268, 34);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "APEX BANK LIMITED";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.reportViewer1);
-            this.panel1.Location = new System.Drawing.Point(0, 76);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 424);
-            this.panel1.TabIndex = 4;
             // 
             // myPallet
             // 
@@ -203,6 +182,27 @@
             this.myPallet.PanelStyles.PanelCommon.StateCommon.Color2 = System.Drawing.Color.LightBlue;
             this.myPallet.PanelStyles.PanelCommon.StateCommon.ColorAngle = 45F;
             this.myPallet.PanelStyles.PanelCommon.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.reportViewer1);
+            this.panel1.Location = new System.Drawing.Point(0, 76);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 424);
+            this.panel1.TabIndex = 4;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.employeesReportBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "DBFinalProject.Reports.BranchEmplyees.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(800, 424);
+            this.reportViewer1.TabIndex = 0;
             // 
             // GreenTheme
             // 
@@ -417,7 +417,6 @@
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            
             this.Text = "BranchEmployeeReport";
             this.Load += new System.EventHandler(this.BranchEmployeeReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
@@ -430,15 +429,14 @@
         }
 
         #endregion
-
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private System.Windows.Forms.Button Closebtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource employeesReportBindingSource;
         private System.Windows.Forms.Panel panel1;
         public ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
         public ComponentFactory.Krypton.Toolkit.KryptonPalette GreenTheme;
         public ComponentFactory.Krypton.Toolkit.KryptonPalette PurpleTheme;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource employeesReportBindingSource;
     }
 }

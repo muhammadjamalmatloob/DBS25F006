@@ -35,9 +35,9 @@ namespace DBFinalProject
             string firstname = kryptonTextBox1.Text;
             string lastname = kryptonTextBox2.Text;
             string contact = kryptonTextBox3.Text;
-            string gender = kryptonComboBox1.Text;
+            string gender = kryptonComboBox2.Text;
             string cnic = kryptontextbox5.Text;
-            string country = kryptonComboBox2.Text;
+            string country = kryptonComboBox1.Text;
             string address = kryptonTextBox4.Text;
             string mail = kryptonTextBox6.Text;
             var (Email_Valid, Email_message) = await application.SetEmail(mail);
@@ -80,14 +80,18 @@ namespace DBFinalProject
                 MessageBox.Show(application.SetCountry(country).message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+            else if (SignUpDL.EmailPresent(mail))
+            {
+                MessageBox.Show("Client with email already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             else if (!Email_Valid)
             {
                 MessageBox.Show(Email_message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             emailVerification = true;
-            if (kryptonComboBox2.SelectedIndex == 1)
+            if (kryptonComboBox1.SelectedIndex == 1)
             {
                 application.SetGender(Gender.Male);
             }

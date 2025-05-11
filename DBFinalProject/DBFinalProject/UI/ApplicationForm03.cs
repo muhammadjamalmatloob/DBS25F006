@@ -93,12 +93,24 @@ namespace DBFinalProject
         {
             try
             {
-                MemoryStream profileMS = new MemoryStream();
-                MemoryStream cnicFMS = new MemoryStream();
-                MemoryStream cnicBMS = new MemoryStream();
-                profile.Image.Save(profileMS, profile.Image.RawFormat);
-                CnicF.Image.Save(cnicFMS, profile.Image.RawFormat);
-                CnicB.Image.Save(cnicBMS, profile.Image.RawFormat);
+                byte[] profilePicBytes, cnicFrontBytes, cnicBackBytes;
+                using (MemoryStream profileMS = new MemoryStream())
+                {
+                    profile.Image.Save(profileMS, profile.Image.RawFormat);
+                    profilePicBytes = profileMS.ToArray();
+                }
+
+                using (MemoryStream cnicFMS = new MemoryStream())
+                {
+                    CnicF.Image.Save(cnicFMS, CnicF.Image.RawFormat);
+                    cnicFrontBytes = cnicFMS.ToArray();
+                }
+
+                using (MemoryStream cnicBMS = new MemoryStream())
+                {
+                    CnicB.Image.Save(cnicBMS, CnicB.Image.RawFormat);
+                    cnicBackBytes = cnicBMS.ToArray();
+                }
                 if (profile.BorderStyle == BorderStyle.None ||
                     CnicF.BorderStyle == BorderStyle.None ||
                     CnicB.BorderStyle == BorderStyle.None)
@@ -106,29 +118,31 @@ namespace DBFinalProject
                     MessageBox.Show("Please upload all documents.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                else if (!ApplicationForm.application.SetProfilePic(profileMS.ToArray()).valid)
+                else if (!ApplicationForm.application.SetProfilePic(profilePicBytes).valid)
                 {
-                    MessageBox.Show(ApplicationForm.application.SetProfilePic(profileMS.ToArray()).message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ApplicationForm.application.SetProfilePic(profilePicBytes).message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                else if (!ApplicationForm.application.SetCnicFront(cnicFMS.ToArray()).valid)
+                else if (!ApplicationForm.application.SetCnicFront(cnicFrontBytes).valid)
                 {
-                    MessageBox.Show(ApplicationForm.application.SetCnicFront(cnicFMS.ToArray()).message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ApplicationForm.application.SetCnicFront(cnicFrontBytes).message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                else if (!ApplicationForm.application.SetCnicBack(cnicBMS.ToArray()).valid)
+                else if (!ApplicationForm.application.SetCnicBack(cnicBackBytes).valid)
                 {
-                    MessageBox.Show(ApplicationForm.application.SetCnicBack(cnicBMS.ToArray()).message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ApplicationForm.application.SetCnicBack(cnicBackBytes).message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                
+
                 Task<bool> applyMessage = EmailSender.SendEmailAsync(ApplicationForm.application.GetEmail(), "Account Aplication", "You applied for an account in Apex Bank");
-                
+
                 if (await applyMessage)
                 {
                     if (AccountApplicationDL.Apply() > 0)
                     {
                         MessageBox.Show("Application Submitted Successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    new MainInterface().Show();
                     }
                     else
                     {

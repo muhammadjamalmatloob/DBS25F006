@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using DBFinalProject.Reports;
 using DBFinalProject.UI;
 
 namespace DBFinalProject
@@ -24,7 +25,7 @@ namespace DBFinalProject
 
             
 
-            Application.Run(new BranchEmployeeReport());
+            Application.Run(new MainInterface());
         }
     }
 }
