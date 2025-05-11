@@ -157,6 +157,22 @@ namespace DBFinalProject.DL
 
         }
 
-        
+
+        public static bool Accept(int rowidx, KryptonDataGridView grid)
+        {
+            string query = $"Update loan_application set loan_status = 'Approved'" +
+                $" Where loan_application_id = '{grid.Rows[rowidx].Cells[0].Value}'";
+            int row = DatabaseHelper.Instance.Update(query);
+            return row > 0;
+        }
+
+        public static bool Reject(int rowidx, KryptonDataGridView grid)
+        {
+            string query = $"Update loan_application set loan_status = 'Rejected'" +
+                $" Where loan_application_id = '{grid.Rows[rowidx].Cells[0].Value}'";
+            int row = DatabaseHelper.Instance.Update(query);
+            return row > 0;
+        }
+
     }
 }

@@ -39,5 +39,13 @@ namespace DBFinalProject.DL
             return reader["position"].ToString();
             
         }
+
+        public static string GetEmail()
+        {
+            string query = $"Select email from users Where username = '{MainInterface.username}'";
+            var reader = DatabaseHelper.Instance.getData(query);
+            reader.Read();
+            return reader["email"].ToString();
+        }
     }
 }

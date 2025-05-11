@@ -13,7 +13,10 @@ namespace DBFinalProject.BL
         private int from_account_id {  get; set; }
         private int to_account_id { get; set;}
         private decimal amount { get; set; }
+        
         public TransferBL() { }
+
+        
         public void setFromAccID(int accID)
         {
             from_account_id = accID;
