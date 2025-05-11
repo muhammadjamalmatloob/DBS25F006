@@ -58,9 +58,11 @@ namespace DBFinalProject
             if (!Regex.IsMatch(email, "[@]"))
             {
                 MessageBox.Show("Invalid email format.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemLogsDL.AddLog(27, "Password Reset Failed", "Invalid Information Entered");
             }
             else if (!ResetPasswordDL.EmailPresent(email))
             {
+                SystemLogsDL.AddLog(27, "Password Reset Failed", "Invalid Information Entered");
                 MessageBox.Show("No user with this email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
@@ -89,6 +91,7 @@ namespace DBFinalProject
                 }
                 else
                 {
+                    SystemLogsDL.AddLog(28, "Password Reset Failed", "Failed to send OTP");
                     MessageBox.Show("Failed to send OTP. Please check your email and try again.");
                     ResetOtpFields();
                 }
@@ -113,10 +116,12 @@ namespace DBFinalProject
             string entered_otp = kryptonTextBox2.Text;
             if(numberOfverification >= 3)
             {
+                SystemLogsDL.AddLog(29, "Password Reset Failed", "Wrong Password entered many times");
                 MessageBox.Show("No more option left. Invalid attempt to access an account.");
             }
             else if (entered_otp == otp)
             {
+                SystemLogsDL.AddLog(26, "Password Reset", "OTP verified");
                 MessageBox.Show("OTP verified. You can now reset your password.");
                 new ResetPassword01().Show();
                 this.Hide();
@@ -124,6 +129,7 @@ namespace DBFinalProject
             }
             else
             {
+                SystemLogsDL.AddLog(27, "Password Reset Failed", "Invalid Information Entered");
                 MessageBox.Show($"Incorrect OTP.{3 - numberOfverification} more option(s) left. Please try again.");
             }
         }
@@ -142,6 +148,7 @@ namespace DBFinalProject
 
             if (timeLeft <= 0 && otp != null)
             {
+                SystemLogsDL.AddLog(27, "Password Reset Failed", "OTP expired");
                 timer1.Stop();
                 MessageBox.Show("OTP has expired. Please request a new one.", "OTP Expired", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 ResetOtpFields();
