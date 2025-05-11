@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
-
+using DBFinalProject.Reports;
 using DBFinalProject.Utility;
 
 
@@ -93,7 +93,7 @@ namespace DBFinalProject
                 CurrencyExchangeBL exchange = new CurrencyExchangeBL();
                 exchange.setBaseCurrency("Rupees");
                 exchange.setTargetCurrency(target_currency);
-                exchange.setAmountBase(Convert.ToDecimal(amount));
+                exchange.setAmountBase(Convert.ToDecimal(base_amount));
                 exchange.setExchangeRate("Rupees", target_currency);
                 exchange.setAmountTarget(exchange.getExchangeRate() * exchange.getAmountBase());
                 target_currency = exchange.getTargetCurrency();
@@ -140,10 +140,14 @@ namespace DBFinalProject
             ExchangeReportBL ReportBL = new ExchangeReportBL();
             ReportBL.customer = name.Text;
             ReportBL.account_number = account_num.Text;
-            ReportBL.base_currency = base_currency;
+            ReportBL.base_currency = "Rupees";
             ReportBL.target_currency = target_currency;
             ReportBL.base_amount = base_amount;
             ReportBL.target_amount = target_amount;
+
+            ExchangeReport exchangeReport = new ExchangeReport();
+            exchangeReport.ExchangeReportBL = ReportBL;
+            exchangeReport.Show();
 
         }
         private void generate_reciept(CurrencyExchangeBL currency, string account_number)
@@ -182,8 +186,8 @@ namespace DBFinalProject
         {
             if (kryptonTextBox1.Text == "Amount Paid")
             {
-                kryptonTextBox3.Text = "";
-                kryptonTextBox3.StateCommon.Content.Color1 = Color.Black;
+                kryptonTextBox1.Text = "";
+                kryptonTextBox1.StateCommon.Content.Color1 = Color.Black;
             }
         }
 
@@ -218,6 +222,11 @@ namespace DBFinalProject
         {
             kryptonTextBox2.PasswordChar = '*';
             kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            prepare_invoice();
         }
     }
 }

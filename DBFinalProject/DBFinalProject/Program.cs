@@ -31,7 +31,7 @@ namespace DBFinalProject
             
 
 
-            Application.Run(new CashierDashboard());
+            Application.Run(new MainInterface());
 
         }
     }
