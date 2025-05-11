@@ -79,7 +79,7 @@ namespace DBFinalProject
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PayBill payBill = new PayBill();
+            PayBill payBill = new PayBill(this);
             payBill.Show();
             
         }
@@ -87,7 +87,7 @@ namespace DBFinalProject
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ExchaangeCurr_Cashier exchangeCurr_Cashier = new ExchaangeCurr_Cashier();
+            ExchaangeCurr_Cashier exchangeCurr_Cashier = new ExchaangeCurr_Cashier(this);
             exchangeCurr_Cashier.Show();
             
         }
@@ -95,7 +95,7 @@ namespace DBFinalProject
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ApplyLoan applyLoan = new ApplyLoan();
+            ApplyLoan applyLoan = new ApplyLoan(this);
             applyLoan.Show();
             
         }
