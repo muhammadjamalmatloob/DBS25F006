@@ -173,10 +173,7 @@
     <Compile Include="BL\TransferReportBL.cs" />
     <Compile Include="BL\UserBL.cs" />
     <Compile Include="BL\WithdrawalBL.cs" />
-
-    
     <Compile Include="BL\WithdrawReportBL.cs" />
-
     <Compile Include="DL\AccountApplicationDL.cs" />
     <Compile Include="DL\AccountDL.cs" />
     <Compile Include="DL\AccountTypeDL.cs" />
@@ -213,10 +210,10 @@
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
-    <Compile Include="Reports\ExchangeReport.cs">
+    <Compile Include="UI\ExchangeReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reports\ExchangeReport.Designer.cs">
+    <Compile Include="UI\ExchangeReport.Designer.cs">
       <DependentUpon>ExchangeReport.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\AllEmployeesReport.cs">
@@ -507,7 +504,7 @@
     <Compile Include="Utility\Theme.cs" />
     <EmbeddedResource Include="Reports\CurrencyExchange.rdlc" />
     <EmbeddedResource Include="Reports\DepositeReport.rdlc" />
-    <EmbeddedResource Include="Reports\ExchangeReport.resx">
+    <EmbeddedResource Include="UI\ExchangeReport.resx">
       <DependentUpon>ExchangeReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\TransferReport.rdlc" />
