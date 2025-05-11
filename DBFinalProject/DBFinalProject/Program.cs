@@ -26,7 +26,7 @@ namespace DBFinalProject
 
             
 
-            Application.Run(new AdminDashboard());
+            Application.Run(new CashierDashboard());
         }
     }
 }

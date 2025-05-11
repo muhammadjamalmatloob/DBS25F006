@@ -43,6 +43,20 @@ namespace DBFinalProject.DL
             }
             return total.ToString();
         }
+
+        public static string TotalClientsOfSpecificBranch(int branch_id)
+        {
+            string query = $"SELECT COUNT(*) FROM clients  WHERE branch_id = {branch_id}";
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+        }
         public static int getUserIdByClientId(int client_id)
         {
             string query = $"SELECT user_id FROM clients WHERE client_id = {client_id}";

@@ -41,8 +41,8 @@
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.email = new System.Windows.Forms.Label();
+            this.username = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -74,6 +74,7 @@
             this.totalClients = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -136,6 +137,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panel1.Controls.Add(this.kryptonButton6);
             this.panel1.Controls.Add(this.kryptonButton5);
             this.panel1.Controls.Add(this.kryptonButton8);
             this.panel1.Controls.Add(this.kryptonButton4);
@@ -167,7 +169,7 @@
             // 
             // kryptonButton4
             // 
-            this.kryptonButton4.Location = new System.Drawing.Point(11, 481);
+            this.kryptonButton4.Location = new System.Drawing.Point(11, 512);
             this.kryptonButton4.Name = "kryptonButton4";
             this.kryptonButton4.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton4.TabIndex = 5;
@@ -176,7 +178,7 @@
             // 
             // kryptonButton3
             // 
-            this.kryptonButton3.Location = new System.Drawing.Point(12, 367);
+            this.kryptonButton3.Location = new System.Drawing.Point(11, 426);
             this.kryptonButton3.Name = "kryptonButton3";
             this.kryptonButton3.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton3.TabIndex = 4;
@@ -185,7 +187,7 @@
             // 
             // kryptonButton2
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(11, 257);
+            this.kryptonButton2.Location = new System.Drawing.Point(12, 332);
             this.kryptonButton2.Name = "kryptonButton2";
             this.kryptonButton2.Size = new System.Drawing.Size(297, 50);
             this.kryptonButton2.TabIndex = 3;
@@ -201,25 +203,25 @@
             this.kryptonButton1.Values.Text = "Money Transfer";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
-            // label5
+            // email
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(935, 268);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 25);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "TEXT";
+            this.email.AutoSize = true;
+            this.email.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email.Location = new System.Drawing.Point(935, 268);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(52, 25);
+            this.email.TabIndex = 15;
+            this.email.Text = "TEXT";
             // 
-            // label4
+            // username
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(935, 180);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 25);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "TEXT";
+            this.username.AutoSize = true;
+            this.username.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.Location = new System.Drawing.Point(935, 180);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(52, 25);
+            this.username.TabIndex = 14;
+            this.username.Text = "TEXT";
             // 
             // label3
             // 
@@ -252,6 +254,8 @@
             // 
             // kryptonManager1
             // 
+            this.kryptonManager1.GlobalPalette = this.myPallet;
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
             // 
             // myPallet
             // 
@@ -345,8 +349,6 @@
             this.myPallet.PanelStyles.PanelCommon.StateCommon.Color2 = System.Drawing.Color.LightBlue;
             this.myPallet.PanelStyles.PanelCommon.StateCommon.ColorAngle = 45F;
             this.myPallet.PanelStyles.PanelCommon.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
-            this.kryptonManager1.GlobalPalette = this.myPallet;
-            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
             // 
             // kryptonPanel2
             // 
@@ -555,7 +557,7 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Location = new System.Drawing.Point(42, 98);
+            this.panel5.Location = new System.Drawing.Point(29, 94);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(286, 180);
             this.panel5.TabIndex = 10;
@@ -682,6 +684,15 @@
             this.label10.TabIndex = 2;
             this.label10.Text = "Total Transactions: ";
             // 
+            // kryptonButton6
+            // 
+            this.kryptonButton6.Location = new System.Drawing.Point(11, 243);
+            this.kryptonButton6.Name = "kryptonButton6";
+            this.kryptonButton6.Size = new System.Drawing.Size(297, 50);
+            this.kryptonButton6.TabIndex = 8;
+            this.kryptonButton6.Values.Text = "Withdraw Money";
+            this.kryptonButton6.Click += new System.EventHandler(this.kryptonButton6_Click);
+            // 
             // CashierDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -689,8 +700,8 @@
             this.ClientSize = new System.Drawing.Size(1520, 802);
             this.Controls.Add(this.kryptonPanel2);
             this.Controls.Add(this.kryptonPanel5);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.email);
+            this.Controls.Add(this.username);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel3);
@@ -728,8 +739,8 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label email;
+        private System.Windows.Forms.Label username;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
@@ -762,5 +773,6 @@
         private System.Windows.Forms.Label totalClients;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton6;
     }
 }

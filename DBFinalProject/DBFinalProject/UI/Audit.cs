@@ -168,6 +168,7 @@ namespace DBFinalProject.UI
             AuditDL.LoadDataGrid_payment(dgvPayment);
             AuditDL.LoadDataGrid_exchange(dgvExchange);
             AuditDL.LoadDataGrid_account(dgvAccount);
+            AuditDL.LoadDataGrid_loan(dgvLoan);
         }
         private void hide_all_groups()
         {

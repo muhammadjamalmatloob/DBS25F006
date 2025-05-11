@@ -63,6 +63,7 @@ namespace DBFinalProject
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
+            clear_grp();
             GrpBox.Visible = false;
             GrpDelete.Visible = false;
             GrpAdd.Visible = true;
@@ -71,6 +72,7 @@ namespace DBFinalProject
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
+            clear_grp();
             GrpBox.Visible = false;
             GrpDelete.Visible = false;
             GrpAdd.Visible = false;
@@ -79,6 +81,7 @@ namespace DBFinalProject
 
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
+            clear_grp();
             GrpBox.Visible = false;
             GrpDelete.Visible = true;
             GrpAdd.Visible = false;
@@ -200,17 +203,27 @@ namespace DBFinalProject
             }
             int loan_type_id = LoanTypeDL.getIdByName(selectedItem);
 
-            if (LoanTypeDL.DeleteLoanTypeInDb(loan_type_id))
+
+            try
             {
-                LoanTypeDL.LoadAllLoanTypes();
-                LoanTypeDL.LoadDataGrid(LoanTypeDL.loanTypeList, dgvLoan);
-                LoanTypeDL.LoadLoanTypeInComboBox(kryptonComboBox2);
-                LoanTypeDL.LoadLoanTypeInComboBox(kryptonComboBox3);
-                MessageBox.Show("Loan Type Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (LoanTypeDL.DeleteLoanTypeInDb(loan_type_id))
+                {
+                    LoanTypeDL.LoadAllLoanTypes();
+                    LoanTypeDL.LoadDataGrid(LoanTypeDL.loanTypeList, dgvLoan);
+                    LoanTypeDL.LoadLoanTypeInComboBox(kryptonComboBox2);
+                    LoanTypeDL.LoadLoanTypeInComboBox(kryptonComboBox3);
+                    MessageBox.Show("Loan Type Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to Delete Loan Type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
-            else
+            catch
             {
                 MessageBox.Show("Failed to Delete Loan Type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
 
@@ -467,7 +480,20 @@ namespace DBFinalProject
             var filteredList = LoanTypeDL.loanTypeList.Where(a => a.get_type_name().ToLower().Contains(search)).ToList();
             LoanTypeDL.LoadDataGrid(filteredList, dgvLoan);
         
-    }
+        }
+
+        private void clear_grp()
+        {
+            kryptonTextBox8.Text = "Eligibility";
+            kryptonTextBox5.Text = "Descryption";
+            kryptonTextBox6.Text = "Repayment Frequency";
+            kryptonTextBox7.Text = "Interest Rate";
+            kryptonTextBox3.Text = "Loan Terms";
+            kryptonTextBox2.Text = "Type Name";
+            kryptonTextBox9.Text = "Eligibility";
+            kryptonTextBox11.Text = "Interest Rate";
+            kryptonTextBox12.Text = "Descryption";
+        }
 
     }
 }

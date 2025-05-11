@@ -172,9 +172,9 @@ namespace DBFinalProject
             totalBill.Text = PaymentDL.TotalPayments();
             totalLoanReq.Text = LoanApplicationDL.TotalLoanApplications();
 
-            totalAccountsActive.Text = AccountTypeDL.TotalActiveAccounts();
-            totalAccountsInactive.Text = AccountTypeDL.TotalInActiveAccounts();
-            totalAccountsClosed.Text = AccountTypeDL.TotalClosedAccounts();
+            totalAccountsActive.Text = AccountTypeDL.TotalAccounts(23);
+            totalAccountsInactive.Text = AccountTypeDL.TotalAccounts(24);
+            totalAccountsClosed.Text = AccountTypeDL.TotalAccounts(25);
             TotalAccountApplications.Text = AccountApplicationDL.TotalAccountApplications();
             totalAccounts.Text = (int.Parse(totalAccountsActive.Text) + int.Parse(totalAccountsInactive.Text) + int.Parse(totalAccountsClosed.Text)).ToString();
         }

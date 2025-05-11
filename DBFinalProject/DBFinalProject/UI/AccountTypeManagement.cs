@@ -197,18 +197,27 @@ namespace DBFinalProject.UI
                 MessageBox.Show("Select Account Type first", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             int account_type_id = AccountTypeDL.getIdByName(selectedName);
-            if (AccountTypeDL.DeleteAccountTypeInDb(account_type_id))
+
+            try
             {
-                AccountTypeDL.LoadAllDataInList();
-                AccountTypeDL.LoadDataGrid(AccountTypeDL.accountTypes, dgvAccount);
-                AccountTypeDL.LoadAccountTypeInComboBox(kryptonComboBox2);
-                AccountTypeDL.LoadAccountTypeInComboBox(kryptonComboBox3);
-                MessageBox.Show("Account Type Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (AccountTypeDL.DeleteAccountTypeInDb(account_type_id))
+                {
+                    AccountTypeDL.LoadAllDataInList();
+                    AccountTypeDL.LoadDataGrid(AccountTypeDL.accountTypes, dgvAccount);
+                    AccountTypeDL.LoadAccountTypeInComboBox(kryptonComboBox2);
+                    AccountTypeDL.LoadAccountTypeInComboBox(kryptonComboBox3);
+                    MessageBox.Show("Account Type Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to Delete Account Type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("Failed to Delete Account Type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+                MessageBox.Show("Failed to Delete Account Type ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             GrpDelete.Visible = false;
         }

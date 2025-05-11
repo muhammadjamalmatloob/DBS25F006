@@ -147,6 +147,20 @@ namespace DBFinalProject.DL
             return count;
         }
 
+        public static string TotalAccountofBranch(int branch_id)
+        {
+            string query = $"SELECT COUNT(*) AS COUNT FROM accounts WHERE branch_id = {branch_id}";
+            string count = "";
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    count = reader["COUNT"].ToString();
+                }
+            }
+            return count;
+        }
+
         public static string TotalAccountForSpecificClient(int client_id)
         {
             string query = $"SELECT COUNT(*) FROM accounts WHERE client_id = {client_id}";

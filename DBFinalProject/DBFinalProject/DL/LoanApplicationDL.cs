@@ -63,6 +63,8 @@ namespace DBFinalProject.DL
             }
         }
 
+
+
         public static void LoadBranchLoansToGrid(KryptonDataGridView Grid, int condition, string match)
         {
             Grid.Rows.Clear();
@@ -154,5 +156,7 @@ namespace DBFinalProject.DL
             return total.ToString();
 
         }
+
+        
     }
 }

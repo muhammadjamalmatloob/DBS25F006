@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -374,20 +375,28 @@ namespace DBFinalProject
             int employee_Id = Convert.ToInt32(parts[0]);
             int user_id = EmployeeDL.getUserIdByEmpId(employee_Id);
 
-
-            if (EmployeeDL.deleteEmployee(employee_Id))
+            try
             {
-                EmployeeDL.LoadAllEmployeeInList();
-                //EmployeeDL.RemoveEmployee(employee_Id);
-                EmployeeDL.LoadDataGrid(dataGrid,"");
-                
-                EmployeeDL.LoadEmployeeCombobox(kryptonComboBox5);
-                EmployeeDL.LoadEmployeeCombobox(kryptonComboBox6);
-                MessageBox.Show("Employee Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (EmployeeDL.deleteEmployee(employee_Id))
+                {
+                    EmployeeDL.LoadAllEmployeeInList();
+                    //EmployeeDL.RemoveEmployee(employee_Id);
+                    EmployeeDL.LoadDataGrid(dataGrid, "");
+
+                    EmployeeDL.LoadEmployeeCombobox(kryptonComboBox5);
+                    EmployeeDL.LoadEmployeeCombobox(kryptonComboBox6);
+                    MessageBox.Show("Employee Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to Delete Employee", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
-            else
+            catch 
             {
                 MessageBox.Show("Failed to Delete Employee", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             GrpDelete.Visible = false;
         }

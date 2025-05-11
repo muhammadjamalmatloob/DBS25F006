@@ -4,10 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using DBFinalProject.UI;
+using DBFinalProject.DL;
 
 namespace DBFinalProject
 {
@@ -18,6 +21,26 @@ namespace DBFinalProject
             InitializeComponent();
             hide_accounts();
             hide_client();
+            load_data();
+        }
+
+        private void load_data()
+        {
+            username.Text = MainInterface.UserName;
+            email.Text = MainInterface.Email;
+            int user_id = UserDL.get_user_id(MainInterface.UserName);
+            int branch_id = EmployeeDL.getBranchIdByUserId(user_id);
+
+            totalAccounts.Text = AccountTypeDL.TotalAccounts(branch_id);
+            totalAccountsActive.Text = AccountTypeDL.TotalAccounts(23,branch_id);
+            totalAccountsInactive.Text = AccountTypeDL.TotalAccounts(24, branch_id);
+            totalAccountsClosed.Text = AccountTypeDL.TotalAccounts(25, branch_id);
+            TotalAccountApplications.Text = AccountApplicationDL.TotalAccountApplications(branch_id);
+
+            totalClients.Text = ClientDL.TotalClients();
+            totalTrans.Text = TransactionDL.TotalTransactions();
+            totalBill.Text = PaymentDL.TotalPayments();
+            totalLoanReq.Text = LoanApplicationDL.TotalLoanApplications();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
@@ -145,6 +168,13 @@ namespace DBFinalProject
         private void kryptonButton11_Click(object sender, EventArgs e)
         {
             hide_accounts();
+        }
+
+        private void kryptonButton6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            WithdrawMoney withdraw = new WithdrawMoney();
+            withdraw.Show();
         }
     }
 }
