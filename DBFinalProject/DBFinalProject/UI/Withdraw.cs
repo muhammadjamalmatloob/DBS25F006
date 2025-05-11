@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -23,11 +24,13 @@ namespace DBFinalProject
         {
             
             InitializeComponent();
+            grpReciept.Visible = false;
             
         }
 
         private void kryptonButton11_Click(object sender, EventArgs e)
         {
+            reset_reciept();
             string account_number = "";
             string amount = "";
             string pin = "";
@@ -75,7 +78,6 @@ namespace DBFinalProject
                             {
 
                                 MessageBox.Show("Withdrawal successful.");
-                                // jab confirm Withrawl ho jaye ga phr 
                                 generate_reciept(withdrawal, account_number);
                             }
                             else
@@ -118,6 +120,17 @@ namespace DBFinalProject
             amount.Text = withdrawal.getAmount().ToString();
             charges.Text = withdrawal.getCharges().ToString();
             date.Text = withdrawal.getDate().ToString();
+
+        }
+
+        private void reset_reciept()
+        {
+            grpReciept.Visible = false;
+            name.Text = "NAME";
+            account_num.Text = "NUM";
+            amount.Text = "AMOUNT";
+            charges.Text = "CHARGES";
+            date.Text = "DATE";
 
         }
 

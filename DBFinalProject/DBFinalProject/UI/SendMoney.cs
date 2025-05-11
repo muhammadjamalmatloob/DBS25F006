@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBFinalProject.BL;
@@ -186,7 +187,6 @@ namespace DBFinalProject
                         transfer.setFromAccID(acc_id);
                         transfer.setToAccID(AccountDL.getAccountIdByNumber(to_account_number));
                         int max_amount = AccountTypeDL.getTransactionLimit(acc_type_id);
-                        MessageBox.Show(max_amount.ToString());
                         if (amount > max_amount)
                         {
                             MessageBox.Show($"Transaction Limit is {max_amount}.");
@@ -200,6 +200,14 @@ namespace DBFinalProject
                                 {
                                     TransferDL.transferAmmount(transfer);
                                     MessageBox.Show("Transfer successful.");
+                                    Thread.Sleep(5000);
+                                    GrpSender.Visible = false;
+                                    GrpVerify.Visible = false;
+                                    label3.Text = "NAME";
+                                    kryptonTextBox1.Text = "Enter Account Number";
+                                    kryptonTextBox3.Text = "Amount";
+                                    kryptonTextBox4.PasswordChar = '\0';
+                                    kryptonTextBox4.Text = "PIN";
                                     return;
                                 }
                                 catch (Exception ex)
