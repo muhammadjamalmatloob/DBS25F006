@@ -10,14 +10,24 @@ using System.Windows.Forms;
 using DBFinalProject.DL;
 using DBFinalProject.BL;
 using ComponentFactory.Krypton.Toolkit;
+
+using DBFinalProject.UI;
+
+
 using DBFinalProject.Utility;
 
 namespace DBFinalProject
 {
+    
     public partial class PayBill : KryptonForm
     {
+
+        string payment_type;
+
+
         CashierDashboard cashier;
         public PayBill(CashierDashboard cashier)
+
         {
             InitializeComponent();
             grpReciept.Visible = false;
@@ -68,14 +78,24 @@ namespace DBFinalProject
             }
             int branch_id = Convert.ToInt32(BranchDL.GetBranchIdByName(selectedBranchName));
             string account_number = kryptonTextBox3.Text.Trim();
-            string payment_type = kryptonComboBox1.Text.Trim();
+            payment_type = kryptonComboBox1.Text.Trim();
             if (payment_type == null || payment_type == "Select Payment Type")
             {
                 MessageBox.Show("Please select a payment type first.");
                 return;
             }
-            decimal amount = Convert.ToDecimal(kryptonTextBox1.Text.Trim());
-            string pin = kryptonTextBox2.Text.Trim();
+            decimal amount = 0;
+            string pin = "";
+            try
+            {
+                amount = Convert.ToDecimal(kryptonTextBox1.Text.Trim());
+                pin = kryptonTextBox2.Text.Trim();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
 
             if (AccountDL.isAccount(account_number, branch_id))
             {
@@ -88,7 +108,7 @@ namespace DBFinalProject
                 payment.setStatus(15); // for pending status
                 payment.setTransactionType(8); // pay bill ki id from lookup
                 payment.setType(Convert.ToInt32(PaymentDL.getPaymentTypeId(payment_type)));
-                
+               
 
 
                 if (pin == AccountDL.getPinByNumber(account_number))
@@ -135,6 +155,20 @@ namespace DBFinalProject
 
 
         }
+
+        private void prepare_invoice()
+        {
+            PaymentInvoiceBL ReportBL = new PaymentInvoiceBL();
+            ReportBL.customer = name.Text;
+            ReportBL.type = payment_type;
+            ReportBL.amount = Convert.ToDecimal(amount.Text);
+            ReportBL.currency = "Rupees";
+
+            PaymentReciept pay = new PaymentReciept();
+            pay.paymentInvoiceBL = ReportBL;
+            pay.Show();
+
+        }
         private void generate_reciept(PaymentBL pay, string account_number)
         {
 
@@ -146,6 +180,7 @@ namespace DBFinalProject
             amount.Text = pay.getAmount().ToString();
             charges.Text = pay.getCharges().ToString();
             date.Text = pay.getDate().ToString();
+            //type.Text = pay.getType().ToString();
 
         }
 
@@ -189,8 +224,8 @@ namespace DBFinalProject
         {
             if (kryptonTextBox3.Text == "Enter Account Number")
             {
-                kryptonTextBox1.Text = "";
-                kryptonTextBox1.StateCommon.Content.Color1 = Color.Black;
+                kryptonTextBox3.Text = "";
+                kryptonTextBox3.StateCommon.Content.Color1 = Color.Black;
             }
         }
 
@@ -207,6 +242,16 @@ namespace DBFinalProject
         {
             kryptonTextBox2.PasswordChar = '*';
             kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
+        }
+
+        private void type_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            prepare_invoice();
         }
     }
 }

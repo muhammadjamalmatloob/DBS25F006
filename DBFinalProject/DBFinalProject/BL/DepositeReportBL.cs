@@ -13,6 +13,8 @@ namespace DBFinalProject.BL
         public string amount {  get; set; }
         public string currency { get; set; }
 
+
+        public DepositeReportBL() { }
         public DepositeReportBL(string customer, string account_number, string amount, string currency)
         {
             this.customer = customer;

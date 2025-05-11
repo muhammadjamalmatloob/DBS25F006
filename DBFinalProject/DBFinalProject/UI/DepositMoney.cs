@@ -10,7 +10,11 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
+
+using DBFinalProject.UI;
+
 using DBFinalProject.Utility;
+
 
 namespace DBFinalProject
 {
@@ -108,6 +112,7 @@ namespace DBFinalProject
                     {
                         if (DepositsDL.depositAmmount(deposits))
                         {
+                            
                             MessageBox.Show("Deposit successful.");
                             // jab confirm deposit ho jaye ga phr 
                             generate_reciept(deposits,account_number);
@@ -132,6 +137,20 @@ namespace DBFinalProject
                 MessageBox.Show("Account number is not valid.");
                 return;
             }
+        }
+
+        private void prepare_invoice()
+        {
+            DepositeReportBL ReportBL = new DepositeReportBL();
+            ReportBL.customer = name.Text;
+            ReportBL.account_number = account_num.Text;
+            ReportBL.amount = amount.Text;
+            ReportBL.currency = "Rupees";
+
+            DepositeReport deposit = new DepositeReport();
+            deposit.depositeReportBL = ReportBL;
+            deposit.Show();
+
         }
 
         private void kryptonGroupBox1_Panel_Paint(object sender, PaintEventArgs e)
@@ -211,6 +230,13 @@ namespace DBFinalProject
         {
             kryptonTextBox2.PasswordChar = '*';
             kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
+        }
+
+
+        // generate
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            prepare_invoice();
         }
     }
 }

@@ -12,6 +12,8 @@ namespace DBFinalProject.BL
         public string account_number { get; set; }
         public string amount { get; set; }
         public string currency { get; set; }
+
+        public WithdrawReportBL() { }
         public WithdrawReportBL(string customer, string account_number, string amount, string currency)
         {
             this.customer = customer;

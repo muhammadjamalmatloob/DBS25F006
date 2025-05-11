@@ -125,6 +125,20 @@ namespace DBFinalProject.UI
                 return;
             }
         }
+
+        private void prepare_invoice()
+        {
+            WithdrawReportBL ReportBL = new WithdrawReportBL();
+            ReportBL.customer = name.Text;
+            ReportBL.account_number = account_num.Text;
+            ReportBL.amount = amount.Text;
+            ReportBL.currency = "Rupees";
+
+            WithdrawReport withdraw = new WithdrawReport();
+            withdraw.withdrawReportBL = ReportBL;
+            withdraw.Show();
+
+        }
         private void generate_reciept(WithdrawalBL withdrawal, string account_number)
         {
 
@@ -209,6 +223,12 @@ namespace DBFinalProject.UI
         {
             kryptonTextBox2.PasswordChar = '*';
             kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
+        }
+
+        // Generate invoice
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            prepare_invoice();
         }
     }
 }

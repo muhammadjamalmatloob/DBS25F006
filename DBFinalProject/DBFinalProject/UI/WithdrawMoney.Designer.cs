@@ -53,8 +53,12 @@
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.myPallet = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpReciept)).BeginInit();
@@ -140,6 +144,7 @@
             // 
             // grpReciept.Panel
             // 
+            this.grpReciept.Panel.Controls.Add(this.kryptonButton2);
             this.grpReciept.Panel.Controls.Add(this.date);
             this.grpReciept.Panel.Controls.Add(this.label14);
             this.grpReciept.Panel.Controls.Add(this.charges);
@@ -427,6 +432,16 @@
             this.kryptonButton1.Values.Text = "Withraw";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
+          // kryptonButton2
+            // 
+            this.kryptonButton2.Location = new System.Drawing.Point(304, 489);
+            this.kryptonButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.Size = new System.Drawing.Size(186, 50);
+            this.kryptonButton2.TabIndex = 25;
+            this.kryptonButton2.Values.Text = "Generate Invoice";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
+
             // kryptonManager1
             // 
             // 
@@ -524,6 +539,7 @@
             this.myPallet.PanelStyles.PanelCommon.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
             this.kryptonManager1.GlobalPalette = this.myPallet;
             this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
+
             // 
             // WithdrawMoney
             // 
@@ -581,7 +597,11 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+
         private ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
         public ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
+
     }
 }

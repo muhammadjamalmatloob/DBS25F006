@@ -43,30 +43,34 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.paymentInvoiceBLBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "DBFinalProject.Reports.PaymentReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(662, 328);
+            this.reportViewer1.Size = new System.Drawing.Size(883, 404);
             this.reportViewer1.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.reportViewer1);
-            this.panel1.Location = new System.Drawing.Point(7, 0);
+            this.panel1.Location = new System.Drawing.Point(9, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(662, 328);
+            this.panel1.Size = new System.Drawing.Size(883, 404);
             this.panel1.TabIndex = 0;
             // 
             // PaymentReciept
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 340);
+            this.ClientSize = new System.Drawing.Size(908, 418);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PaymentReciept";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PaymentReciept";

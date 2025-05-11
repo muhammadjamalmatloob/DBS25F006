@@ -153,11 +153,8 @@
     <Compile Include="BL\AccountTypeBL.cs" />
     <Compile Include="BL\AllEmployeeRepBL.cs" />
     <Compile Include="BL\BranchBL.cs" />
-
     <Compile Include="BL\DepositeReportBL.cs" />
-
     <Compile Include="BL\ClientLoanApplicationBL.cs" />
-
     <Compile Include="BL\EmployeesReport.cs" />
     <Compile Include="BL\ClientBL.cs" />
     <Compile Include="BL\CurrencyExchangeBL.cs" />
