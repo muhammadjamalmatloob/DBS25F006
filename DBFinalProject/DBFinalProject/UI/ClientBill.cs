@@ -84,68 +84,61 @@ namespace DBFinalProject
             string CheckPin = "";
             string pin = kryptonTextBox2.Text.Trim();
             string account_number = kryptonTextBox3.Text;
-            CheckPin = DL.AccountDL.getPinByNumber(account_number);
-            if (pin == CheckPin)
+            string username = LoginDL.user.getUsername();
+            int user_id = DL.UserDL.get_user_id(username);
+            int client_id = DL.ClientDL.getClientIdbyUserId(user_id);
+            if(DL.AccountDL.isAccountOfClient(account_number,client_id))
             {
-                decimal amount = Convert.ToDecimal(kryptonTextBox1.Text);
-                PaymentBL payment = new PaymentBL();
-                payment.setAccountId(AccountDL.getAccountIdByNumber(account_number));
-                payment.setClientId(AccountDL.getCleintIdByNumber(account_number));
-                payment.setAmount(amount);
-                payment.setCharges(payment.getAmount());
-                payment.setDate(DateTime.Now);
-                payment.setTransactionType(8);   // pay bill ki id from lookup
-                string payment_type = kryptonComboBox1.SelectedItem.ToString();
-                payment.setAmount(amount);
-                //payment.setType(payment_type);
-                /*if(balance - amount < 0)
+                CheckPin = DL.AccountDL.getPinByNumber(account_number);
+                if (pin == CheckPin)
                 {
-                    payment.setStatus();
-                }
-                else
-                {
-                    payment.setStatus();
-                }*/
-                //payment.setType(payment_type);
-                try
-                {
-                    if (AccountBL.isSufficientBalance(account_number, payment.getAmount(), payment.getCharges()))
+                    decimal amount = Convert.ToDecimal(kryptonTextBox1.Text);
+                    PaymentBL payment = new PaymentBL();
+                    payment.setAccountId(AccountDL.getAccountIdByNumber(account_number));
+                    payment.setClientId(AccountDL.getCleintIdByNumber(account_number));
+                    payment.setAmount(amount);
+                    payment.setCharges(payment.getAmount());
+                    payment.setTransactionType(8);
+                    string payment_type = kryptonComboBox1.SelectedItem.ToString();
+                    payment.setAmount(amount);
+                    payment.setType(Convert.ToInt32(PaymentDL.getPaymentTypeId(payment_type)));
+                    payment.setStatus(16);
+                    try
                     {
-                        if (PaymentDL.payAmmount(payment))
+                        if (AccountBL.isSufficientBalance(account_number, payment.getAmount(), payment.getCharges()))
                         {
-                            MessageBox.Show("Payment successful.");
-                            return;
+                            if (PaymentDL.payAmmount(payment))
+                            {
+                                MessageBox.Show("Payment successful.");
+                                return;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Payment failed.");
+                                return;
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Payment failed.");
+                            MessageBox.Show("Insufficient balance.");
                             return;
                         }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Insufficient balance.");
-                        return;
+                        MessageBox.Show(ex.Message);
                     }
+
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Invalid PIN.");
                 }
-                
             }
             else
             {
-                MessageBox.Show("Invalid PIN.");
+                MessageBox.Show("Invalid Account","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-
-
-
-
-
-
-
-
 
         }
 

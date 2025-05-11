@@ -48,7 +48,6 @@ namespace DBFinalProject.DL
                     {transfer.getToAccounId()},
                     {transfer.getAmount()},
                     LAST_INSERT_ID()
-                    
                 );
     
             UPDATE accounts 

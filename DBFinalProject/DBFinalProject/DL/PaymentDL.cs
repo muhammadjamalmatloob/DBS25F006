@@ -64,7 +64,7 @@ namespace DBFinalProject.DL
         );
     
     UPDATE accounts 
-        SET balance = balance - ({payment.getAmount()} - {payment.getCharges()})
+        SET balance = balance - ({payment.getAmount()} + {payment.getCharges()})
         WHERE account_id = {payment.getAccountId()};
     
     COMMIT;

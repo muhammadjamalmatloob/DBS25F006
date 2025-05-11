@@ -15,6 +15,11 @@ namespace DBFinalProject.UI
         public ClientTransactionRecord()
         {
             InitializeComponent();
+            string username = DL.LoginDL.user.getUsername();
+            int user_id = DL.UserDL.get_user_id(username);
+            int client_id = DL.ClientDL.getClientIdbyUserId(user_id);
+            DL.TransactionRecordDL.getRecords(client_id);
+            DL.TransactionRecordDL.LoadDataGrid(DL.TransactionRecordDL.transactionRecords, kryptonDataGridView1);
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
