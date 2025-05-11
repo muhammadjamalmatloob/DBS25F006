@@ -100,16 +100,19 @@ namespace DBFinalProject
             if (string.IsNullOrEmpty(p1) || string.IsNullOrEmpty(p2))
             {
                 MessageBox.Show("Please fill all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemLogsDL.AddLog(27, "Password Reset Failed", "Invalid Information Entered");
                 return;
             }
             else if (p1 != p2)
             {
                 MessageBox.Show("Enter same password in both fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemLogsDL.AddLog(27, "Password Reset Failed", "Invalid Information Entered");
                 return;
             }
             else if (!ResetPasswordDL.IsPasswordValidWithErrors(p1).isValid)
             {
                 MessageBox.Show(ResetPasswordDL.IsPasswordValidWithErrors(p1).errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemLogsDL.AddLog(27, "Password Reset Failed", "Invalid Information Entered");
                 return;
             }
             try
@@ -117,10 +120,12 @@ namespace DBFinalProject
                 int r = ResetPasswordDL.UpdatePassword(p1, ResetPassword.email);
                 if (r > 0)
                 {
+                    SystemLogsDL.AddLog(26, "Password Reset", "Successfull");
                     MessageBox.Show("Password updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
+                    SystemLogsDL.AddLog(28, "Password Reset", "An error occured");
                     MessageBox.Show("Failed to update password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 this.Hide();
@@ -128,6 +133,7 @@ namespace DBFinalProject
             }
             catch (Exception ex)
             {
+                SystemLogsDL.AddLog(28, "Password Reset", "An error occured");
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

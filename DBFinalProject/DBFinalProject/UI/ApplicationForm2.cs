@@ -52,11 +52,13 @@ namespace DBFinalProject
                 kryptonComboBox2.SelectedIndex == 0)
             {
                 MessageBox.Show("Please fill all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
                 return;
             }
             if (!ApplicationForm.application.SetBranch(branch).valid)
             {
                 MessageBox.Show(ApplicationForm.application.SetBranch(branch).message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
                 return;
             }
             if (!ApplicationForm.application.SetAccountType(accountType).valid)

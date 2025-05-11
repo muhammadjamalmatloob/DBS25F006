@@ -92,6 +92,7 @@ namespace DBFinalProject
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Please enter both username and password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemLogsDL.AddLog(27, "Login Failed", "Invalid Information Entered");
                 return;
             }
 
@@ -111,6 +112,7 @@ namespace DBFinalProject
                     switch (role)
                     {
                         case "Admin":
+
                             MessageBox.Show("Login successful! Admin Dashboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             AdminDashboard adminDashboard = new AdminDashboard();
                             adminDashboard.Show();
@@ -121,12 +123,14 @@ namespace DBFinalProject
                             switch (position)
                             {
                                 case "Manager":
+                                    SystemLogsDL.AddLog(26, "Login", "Successful");
                                     MessageBox.Show("Login successful! Opening Manager Dashboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     ManagerDashboard cashierDashboard = new ManagerDashboard();
                                     cashierDashboard.Show();
                                     this.Hide();
                                     break;
                                 case "Cashier":
+                                    SystemLogsDL.AddLog(26, "Login", "Successful");
                                     MessageBox.Show("Login successful! Opening Cashier Dashboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     CashierDashboard managerDashboard = new CashierDashboard();
                                     managerDashboard.Show();
@@ -136,8 +140,8 @@ namespace DBFinalProject
                             break;
                         case "Client":
                             MessageBox.Show("Login successful! Opening Administrative Staff Dashboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            SystemLogsDL.AddLog(26, "Login", "Successful");
 
-                            
                             GeneralMenu clientDashboard = new GeneralMenu();
                             clientDashboard.Show();
 
@@ -145,6 +149,7 @@ namespace DBFinalProject
                             break;
                         default:
                             MessageBox.Show("Invalid role.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            SystemLogsDL.AddLog(27, "Login Failed", "Invalid Information Entered");
                             break;
                     }
 
@@ -153,13 +158,14 @@ namespace DBFinalProject
                 else
                 {
                     MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    SystemLogsDL.AddLog(27, "Login Failed", "Invalid Information Entered");
                 }
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemLogsDL.AddLog(28, "Login Failed", "An Error occcured");
             }
             pass.PasswordChar = '•';
             

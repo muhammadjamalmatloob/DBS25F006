@@ -39,6 +39,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.GrpBox = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
@@ -60,7 +61,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -155,8 +155,8 @@
             this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox1.TabIndex = 13;
             this.kryptonTextBox1.Text = "Search";
-            this.kryptonTextBox1.GotFocus += new System.EventHandler(kryptonTextBox1_Focus);
-            this.kryptonTextBox1.LostFocus += new System.EventHandler(kryptonTextBox1_LostFocus);
+            this.kryptonTextBox1.GotFocus += new System.EventHandler(this.kryptonTextBox1_Focus);
+            this.kryptonTextBox1.LostFocus += new System.EventHandler(this.kryptonTextBox1_LostFocus);
             // 
             // panel2
             // 
@@ -194,6 +194,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(228, 561);
             this.panel1.TabIndex = 8;
+            // 
+            // kryptonButton2
+            // 
+            this.kryptonButton2.Location = new System.Drawing.Point(39, 297);
+            this.kryptonButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.Size = new System.Drawing.Size(154, 72);
+            this.kryptonButton2.TabIndex = 4;
+            this.kryptonButton2.Values.Text = "Remove Filters";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // kryptonButton1
             // 
@@ -571,6 +581,7 @@
             this.Column1.HeaderText = "Payment Id";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 125;
             // 
             // Column2
@@ -578,6 +589,7 @@
             this.Column2.HeaderText = "Customer Name ";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 150;
             // 
             // Column4
@@ -585,6 +597,7 @@
             this.Column4.HeaderText = "Currency";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 125;
             // 
             // Column5
@@ -592,6 +605,7 @@
             this.Column5.HeaderText = "Payment type";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             this.Column5.Width = 125;
             // 
             // Column6
@@ -599,17 +613,8 @@
             this.Column6.HeaderText = "Amount Paid";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             this.Column6.Width = 125;
-            // 
-            // kryptonButton2
-            // 
-            this.kryptonButton2.Location = new System.Drawing.Point(39, 297);
-            this.kryptonButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(154, 72);
-            this.kryptonButton2.TabIndex = 4;
-            this.kryptonButton2.Values.Text = "Remove Filters";
-            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // BillPayments
             // 

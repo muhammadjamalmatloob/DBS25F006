@@ -139,8 +139,8 @@
             this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox1.TabIndex = 13;
             this.kryptonTextBox1.Text = "Search";
-            this.kryptonTextBox1.GotFocus += new System.EventHandler(kryptonTextBox1_Focus);
-            this.kryptonTextBox1.LostFocus += new System.EventHandler(kryptonTextBox1_LostFocus);
+            this.kryptonTextBox1.GotFocus += new System.EventHandler(this.kryptonTextBox1_Focus);
+            this.kryptonTextBox1.LostFocus += new System.EventHandler(this.kryptonTextBox1_LostFocus);
             // 
             // panel2
             // 
@@ -396,6 +396,7 @@
             this.Column1.HeaderText = "Application Id";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 125;
             // 
             // Column2
@@ -403,20 +404,23 @@
             this.Column2.HeaderText = "Name";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Email";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Contact";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 125;
             // 
             // Column5
@@ -424,21 +428,24 @@
             this.Column5.HeaderText = "Country";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 150;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "CNIC";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 150;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "Address";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
-            this.Column7.Width = 125;
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 200;
             // 
             // Column9
             // 
@@ -451,13 +458,13 @@
             // 
             // Column10
             // 
-            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column10.HeaderText = "Reject";
             this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
             this.Column10.Text = "Reject";
             this.Column10.UseColumnTextForButtonValue = true;
-            this.Column10.Width = 60;
+            this.Column10.Width = 125;
             // 
             // ApproveApplicationscs
             // 
