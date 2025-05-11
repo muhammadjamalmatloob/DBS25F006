@@ -62,7 +62,7 @@ namespace DBFinalProject
             this.kryptonButton12 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton13 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.PurpleTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.myPallet = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            
             this.kryptonPanel4 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
