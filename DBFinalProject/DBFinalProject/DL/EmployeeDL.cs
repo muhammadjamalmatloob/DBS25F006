@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.Utility;
+using MySqlX.XDevAPI;
 using Org.BouncyCastle.Asn1.Mozilla;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -33,7 +34,7 @@ namespace DBFinalProject.DL
             string transaction = $@"
                     START TRANSACTION;" +
                     $"INSERT INTO users (username, email, password_hash, role_id)" +
-                    $"VALUES ('{employee.get_username()}', '{employee.get_email()}', '{employee.get_password_hash()}', {employee.get_role_id()});"+
+                    $"VALUES ('{employee.get_username()}', '{employee.get_email()}', '{PasswordFunc.HashPassword(employee.get_password_hash()),3}', {employee.get_role_id()});"+
 
                     $"INSERT INTO employees (user_id, first_name, last_name, gender, department, position, branch_id, salary, contact, email)" +
                    $" VALUES (LAST_INSERT_ID(), '{employee.get_first_name()}', '{employee.get_last_name()}', '{employee.get_gender()}', '{employee.get_department()}', {employee.get_position()}, {employee.get_branch_id()}, {employee.get_salary()}, '{employee.get_contact()}', '{employee.get_email()}'); " +
@@ -58,8 +59,9 @@ namespace DBFinalProject.DL
         {
             string transaction = $@"
                                 START TRANSACTION;
-                                DELETE FROM users WHERE user_id = {user_id};
+                                
                                 DELETE FROM employees WHERE employee_id = {employee_id};
+                                DELETE FROM users WHERE user_id = {user_id};
                                 COMMIT;";
             return DatabaseHelper.Instance.Update(transaction) > 0;
         }

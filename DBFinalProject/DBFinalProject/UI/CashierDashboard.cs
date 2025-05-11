@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.UI;
 using DBFinalProject.DL;
+using DBFinalProject.Utility;
 
 namespace DBFinalProject
 {
@@ -22,6 +23,17 @@ namespace DBFinalProject
             hide_accounts();
             hide_client();
             load_data();
+            Blue.Checked = true;
+            if (Theme.theme == myPallet || Theme.theme == GreenTheme)
+            {
+
+                kryptonManager1.GlobalPalette = Theme.theme;
+            }
+            else
+            {
+                Theme.theme = myPallet;
+                kryptonManager1.GlobalPalette = Theme.theme;
+            }
         }
 
         private void load_data()
@@ -175,6 +187,35 @@ namespace DBFinalProject
             this.Hide();
             WithdrawMoney withdraw = new WithdrawMoney();
             withdraw.Show();
+        }
+
+
+        // theme
+        private void kryptonButton7_Click(object sender, EventArgs e)
+        {
+            ThemeMenu.Visible = true;
+        }
+
+        private void kryptonButton14_Click(object sender, EventArgs e)
+        {
+            if (Blue.Checked)
+            {
+                kryptonManager1.GlobalPalette = this.myPallet;
+                Theme.theme = myPallet;
+            }
+            else if (Green.Checked)
+            {
+                kryptonManager1.GlobalPalette = this.GreenTheme;
+                Theme.theme = GreenTheme;
+            }
+            MessageBox.Show("Theme applied successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ThemeMenu.Visible = false;
+        }
+
+        private void kryptonButton13_Click(object sender, EventArgs e)
+        {
+            kryptonManager1.GlobalPalette = Theme.theme;
+            ThemeMenu.Visible = false;
         }
     }
 }

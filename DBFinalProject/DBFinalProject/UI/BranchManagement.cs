@@ -178,23 +178,7 @@ namespace DBFinalProject
 
         }
 
-        //private void kryptonTextBox3_Enter(object sender, EventArgs e)
-        //{
-        //    if (kryptonTextBox3.Text == "Branch Code ")
-        //    {
-        //        kryptonTextBox3.Text = "";
-        //        kryptonTextBox3.ForeColor = Color.Black;
-        //    }
-        //}
 
-        //private void kryptonTextBox3_Leave(object sender, EventArgs e)
-        //{
-        //    if (kryptonTextBox3.Text == "")
-        //    {
-        //        kryptonTextBox3.Text = "Branch Code ";
-        //        kryptonTextBox3.ForeColor = Color.Black;
-        //    }
-        //}
 
         private void kryptonTextBox3_TextChanged(object sender, EventArgs e)
         {
