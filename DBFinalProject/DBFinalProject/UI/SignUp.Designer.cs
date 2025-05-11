@@ -42,6 +42,8 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.login_btn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -281,11 +283,37 @@
             this.login_btn.Values.Text = "Next";
             this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(87, 110);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(109, 89);
+            this.panel2.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.SteelBlue;
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(9, 235);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(268, 34);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "APEX BANK LIMITED";
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 450);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pass);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.user_name);
@@ -323,5 +351,7 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton login_btn;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
     }
 }

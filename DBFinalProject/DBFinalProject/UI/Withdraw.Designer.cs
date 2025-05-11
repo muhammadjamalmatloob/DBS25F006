@@ -241,7 +241,6 @@
             this.grpReciept.StateCommon.Border.Width = 3;
             this.grpReciept.TabIndex = 42;
             this.grpReciept.Values.Heading = "";
-            this.grpReciept.Visible = false;
             // 
             // date
             // 

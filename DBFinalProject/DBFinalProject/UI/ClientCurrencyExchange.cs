@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
@@ -66,6 +67,7 @@ namespace DBFinalProject.UI
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+            reset_reciept();
             string account_number = "";
             string base_currency = "";
             string target_currency = "";
@@ -152,6 +154,17 @@ namespace DBFinalProject.UI
             amount.Text = currency.getAmountBase().ToString();
             charges.Text = currency.getCharges().ToString();
             date.Text = currency.getDate().ToString();
+        }
+
+        private void reset_reciept()
+        {
+
+            grpReciept.Visible = false;
+            name.Text = "NAME";
+            account_num.Text = "NUM";
+            amount.Text = "amount";
+            charges.Text = "charges";
+            date.Text = "date";
         }
 
         private void kryptonTextBox2_Enter(object sender, EventArgs e)
