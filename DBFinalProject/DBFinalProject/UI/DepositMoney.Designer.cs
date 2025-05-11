@@ -56,6 +56,7 @@
             this.name = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpRecieve)).BeginInit();
@@ -264,7 +265,7 @@
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(116, 463);
+            this.kryptonButton1.Location = new System.Drawing.Point(144, 459);
             this.kryptonButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.Size = new System.Drawing.Size(149, 50);
@@ -447,6 +448,7 @@
             // 
             // grpReciept.Panel
             // 
+            this.grpReciept.Panel.Controls.Add(this.kryptonButton2);
             this.grpReciept.Panel.Controls.Add(this.date);
             this.grpReciept.Panel.Controls.Add(this.label14);
             this.grpReciept.Panel.Controls.Add(this.charges);
@@ -603,6 +605,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "DEPOSIT RECIEPT";
             // 
+            // kryptonButton2
+            // 
+            this.kryptonButton2.Location = new System.Drawing.Point(339, 479);
+            this.kryptonButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.Size = new System.Drawing.Size(214, 50);
+            this.kryptonButton2.TabIndex = 33;
+            this.kryptonButton2.Values.Text = "Generate Invoice";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
+            // 
             // DepositMoney
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -662,5 +674,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label charges;
         private System.Windows.Forms.Label label10;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
     }
 }

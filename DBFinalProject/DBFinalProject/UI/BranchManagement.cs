@@ -497,6 +497,10 @@ namespace DBFinalProject
             kryptonComboBox1.SelectedIndex = 0;
             kryptonComboBox2.SelectedIndex = 0;
         }
-            
+
+        private void kryptonButton15_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

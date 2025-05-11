@@ -10,11 +10,16 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
+using DBFinalProject.UI;
 
 namespace DBFinalProject
 {
     public partial class ExchaangeCurr_Cashier : KryptonForm
     {
+        string base_currency;
+        string target_currency;
+        string base_amount;
+        string target_amount;
         public ExchaangeCurr_Cashier()
         {
             InitializeComponent();
@@ -59,13 +64,13 @@ namespace DBFinalProject
             }
             int branch_id = Convert.ToInt32(BranchDL.GetBranchIdByName(selectedBranchName));
             string account_number = "";
-            string target_currency = "";
-            string amount = "";
+            
+            
             string pin = "";
             try
             {
                 account_number = kryptonTextBox3.Text.Trim();
-                amount = kryptonTextBox1.Text.Trim();
+                base_amount = kryptonTextBox1.Text.Trim();
                 pin = kryptonTextBox2.Text.Trim();
                 target_currency = kryptonComboBox4.Text.Trim();
             }
@@ -84,6 +89,8 @@ namespace DBFinalProject
                 exchange.setAmountBase(Convert.ToDecimal(amount));
                 exchange.setExchangeRate("Rupees", target_currency);
                 exchange.setAmountTarget(exchange.getExchangeRate() * exchange.getAmountBase());
+                target_currency = exchange.getTargetCurrency();
+                target_amount = exchange.getAmountTarget().ToString();
 
                 exchange.setClientId(AccountDL.getCleintIdByNumber(account_number));
                 exchange.setDate(DateTime.Now);
@@ -118,6 +125,19 @@ namespace DBFinalProject
                     }
                 }
             }
+        }
+
+
+        private void prepare_invoice()
+        {
+            ExchangeReportBL ReportBL = new ExchangeReportBL();
+            ReportBL.customer = name.Text;
+            ReportBL.account_number = account_num.Text;
+            ReportBL.base_currency = base_currency;
+            ReportBL.target_currency = target_currency;
+            ReportBL.base_amount = base_amount;
+            ReportBL.target_amount = target_amount;
+
         }
         private void generate_reciept(CurrencyExchangeBL currency, string account_number)
         {

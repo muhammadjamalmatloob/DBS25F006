@@ -14,6 +14,8 @@ namespace DBFinalProject.BL
         public string target_amount { get; set; }
         public string base_currency { get; set; }
         public string target_currency { get; set; }
+
+        public ExchangeReportBL() { }
         public ExchangeReportBL(string customer, string account_number, string base_amount, string target_amount, string base_currency, string target_currency)
         {
             this.customer = customer;

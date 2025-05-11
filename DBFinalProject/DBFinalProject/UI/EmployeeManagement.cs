@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
+using DBFinalProject.UI;
 using DBFinalProject.Utility;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
@@ -646,6 +647,14 @@ namespace DBFinalProject
             kryptonComboBox5.SelectedIndex = 0;
             kryptonComboBox6.SelectedIndex = 0;
             kryptonComboBox8.SelectedIndex = 0;
+        }
+
+
+        // generate report 
+        private void kryptonButton17_Click(object sender, EventArgs e)
+        {
+            AllEmployeesReport allEmployeesReport = new AllEmployeesReport();
+            allEmployeesReport.Show();
         }
     }
 }

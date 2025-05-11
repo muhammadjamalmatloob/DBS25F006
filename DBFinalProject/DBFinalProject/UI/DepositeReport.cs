@@ -13,19 +13,22 @@ namespace DBFinalProject.UI
 {
     public partial class DepositeReport : Form
     {
+
+        public DepositeReportBL depositeReportBL { get; set; }
         public DepositeReport()
         {
             InitializeComponent();
-            this.depositeReportBLBindingSource.DataSource = new DepositeReportBL(
-                "Umer",
-                "123456789",
-                "100000",
-                "Euro");
+            depositeReportBL = new DepositeReportBL();
+            //this.depositeReportBLBindingSource.DataSource = new DepositeReportBL(
+            //    "Umer",
+            //    "123456789",
+            //    "100000",
+            //    "Euro");
         }
 
         private void DepositeReport_Load(object sender, EventArgs e)
         {
-
+            this.depositeReportBLBindingSource.DataSource = depositeReportBL;
             this.reportViewer1.RefreshReport();
             
         }

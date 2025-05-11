@@ -15,7 +15,7 @@ namespace DBFinalProject.Utility
         private String port = "3306";
         private String databaseName = "bank_management";
         private String databaseUser = "root";
-        private String databasePassword = "jamal251@uet";
+        private String databasePassword = "1234567890-=1234567890-=";
 
         private DatabaseHelper() { }
 

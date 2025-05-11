@@ -7,17 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
+using DBFinalProject.UI;
 
 namespace DBFinalProject
 {
     public partial class MoneyTransfer : KryptonForm
     {
+
+        TransferReportBL ReportBL { get; set; }
         public MoneyTransfer()
         {
             InitializeComponent();
+            ReportBL = new TransferReportBL();
             BranchDL.LoadAllDataInList();
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox1);
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox2);
@@ -25,6 +30,7 @@ namespace DBFinalProject
             kryptonComboBox2.SelectedIndex = 0;
             GrpSender.Visible = false;
             GrpVerify.Visible = false;
+            kryptonButton1.Visible = false;
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
@@ -200,7 +206,10 @@ namespace DBFinalProject
                     }
                     try
                     {
+                        kryptonButton1.Visible = true;
                         TransferDL.transferAmmount(transfer);
+
+                        prepare_invoice(transfer.getClientId(), to_account_number, from_account_number, transfer.getAmount());
                         MessageBox.Show("Transfer successful.");
                         return;
                     }
@@ -221,6 +230,19 @@ namespace DBFinalProject
                 MessageBox.Show("Your Account does not exists.");
                 return;
             }
+        }
+
+        private void prepare_invoice(int client_id,string to_acc_num, string from_acc_num, decimal amount)
+        {
+            int user_id = ClientDL.getUserIdByClientId(client_id);
+            string user_name = UserDL.getUserNameById(user_id);
+            
+            ReportBL.customer = user_name;
+            ReportBL.to_account_number = to_acc_num;
+            ReportBL.from_account_number = from_acc_num;
+            ReportBL.amount = amount.ToString();
+            ReportBL.currency = "Rupees";
+
         }
 
         private void kryptonTextBox4_Enter(object sender, EventArgs e)
@@ -245,6 +267,14 @@ namespace DBFinalProject
         {
             kryptonTextBox4.PasswordChar = '*';
             kryptonTextBox4.StateCommon.Content.Color1 = Color.Black;
+        }
+
+        // generate 
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            TranferReport tranfer = new TranferReport();
+            tranfer.transferReportBL = ReportBL;
+            tranfer.Show();
         }
     }
 }
