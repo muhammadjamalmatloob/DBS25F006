@@ -107,6 +107,7 @@ namespace DBFinalProject
             {
                 LoanApplicationDL.LoadBranchLoansToGrid(kryptonDataGridView1, 100000, "");
             }
+            SetButtonText();
             GrpBox.Visible = false;
         }
 
@@ -118,6 +119,7 @@ namespace DBFinalProject
         private void remove_filter()
         {
             LoanApplicationDL.LoadBranchLoansToGrid(kryptonDataGridView1, 0, "");
+            SetButtonText();
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)
@@ -135,6 +137,55 @@ namespace DBFinalProject
             {
                 LoanApplicationDL.LoadBranchLoansToGrid(kryptonDataGridView1, 0, "");
             }
+            SetButtonText();
+        }
+
+        private void kryptonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == 6)
+            {
+                try
+                {
+                    if (LoanApplicationDL.Accept(e.RowIndex, kryptonDataGridView1))
+                    {
+                        LoanApplicationDL.LoadAllBranchLoansInList();
+                        LoanApplicationDL.LoadBranchLoansToGrid(kryptonDataGridView1, 0, "");
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Not able to accept loan application.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occured: " +ex.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (e.RowIndex >= 0 && e.ColumnIndex == 7)
+            {
+                try
+                {
+                    if (LoanApplicationDL.Reject(e.RowIndex, kryptonDataGridView1))
+                    {
+                        LoanApplicationDL.LoadAllBranchLoansInList();
+                        LoanApplicationDL.LoadBranchLoansToGrid(kryptonDataGridView1, 0, "");
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Not able to reject loan application.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occured: " + ex.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void Cell_Value_Changed(object sender, DataGridViewCellEventArgs e)
+        {
             
         }
     }

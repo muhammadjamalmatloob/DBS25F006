@@ -17,12 +17,17 @@ namespace DBFinalProject.UI
         public BranchEmployeeReport()
         {
             InitializeComponent();
+            EmployeesReportDL.AddIntoList();
+            this.employeesReportBindingSource.DataSource = EmployeesReportDL.employees_rep;
         }
 
         private void BranchEmployeeReport_Load(object sender, EventArgs e)
         {
             EmployeesReportDL.AddIntoList();
-            this.employeesReportBindingSource.DataSource = EmployeesReportDL.employees_rep;
+            
+            this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
 
@@ -34,6 +39,11 @@ namespace DBFinalProject.UI
         private void Closebtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

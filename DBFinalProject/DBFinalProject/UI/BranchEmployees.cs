@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.DL;
+using DBFinalProject.UI;
 using DBFinalProject.Utility;
 using Mysqlx.Crud;
 
@@ -224,6 +225,11 @@ namespace DBFinalProject
                 EmployeeDL.LoadBranchEmployeeGrid(dataGrid);
             }
             GrpDep.Visible = false;
+        }
+
+        private void kryptonButton15_Click(object sender, EventArgs e)
+        {
+            new BranchEmployeeReport().Show();
         }
     }
 }

@@ -28,7 +28,8 @@ namespace DBFinalProject
                 Theme.theme = myPallet;
                 kryptonManager1.GlobalPalette = Theme.theme;
             }
-
+            label4.Text = MainInterface.username;
+            label5.Text = LoginDL.GetEmail();
             GetAllTotals();
         }
 
@@ -79,24 +80,27 @@ namespace DBFinalProject
 
         private void kryptonButton6_Click(object sender, EventArgs e)
         {
+            this.Hide();
             TransactionRecord transactionRecord = new TransactionRecord(this);
             transactionRecord.Show();
-            this.Hide();
+            
 
         }
 
         private void kryptonButton8_Click(object sender, EventArgs e)
         {
+            this.Hide();
             MainInterface mainInterface = new MainInterface();
             mainInterface.Show();
-            this.Hide();
+            
         }
 
         private void kryptonButton7_Click(object sender, EventArgs e)
         {
-            ApproveApplicationscs approveApplicationscs = new ApproveApplicationscs();
-            approveApplicationscs.Show();
             this.Hide();
+            ApproveApplicationscs approveApplicationscs = new ApproveApplicationscs(this);
+            approveApplicationscs.Show();
+            
         }
 
         private void Blue_CheckedChanged(object sender, EventArgs e)
@@ -182,6 +186,12 @@ namespace DBFinalProject
             }
 
         }
-            
+
+        private void kryptonButton9_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ApproveApplicationscs approveApplicationscs = new ApproveApplicationscs(this);
+            approveApplicationscs.Show();
+        }
     }
 }

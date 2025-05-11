@@ -68,10 +68,6 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.dataGrid = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.myPallet = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
-            this.PurpleTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.GreenTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,6 +75,11 @@
             this.col2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.myPallet = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
+            this.PurpleTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.GreenTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.kryptonButton15 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -222,6 +223,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.kryptonButton15);
             this.panel1.Controls.Add(this.kryptonButton4);
             this.panel1.Controls.Add(this.kryptonButton3);
             this.panel1.Controls.Add(this.kryptonButton2);
@@ -617,6 +619,55 @@
             this.dataGrid.Size = new System.Drawing.Size(899, 540);
             this.dataGrid.TabIndex = 2;
             // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Employee Id";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // col1
+            // 
+            this.col1.HeaderText = "Name";
+            this.col1.MinimumWidth = 6;
+            this.col1.Name = "col1";
+            this.col1.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Employee Type";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Department";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // col2
+            // 
+            this.col2.HeaderText = "Email";
+            this.col2.MinimumWidth = 6;
+            this.col2.Name = "col2";
+            this.col2.Width = 125;
+            // 
+            // col4
+            // 
+            this.col4.HeaderText = "Gender";
+            this.col4.MinimumWidth = 6;
+            this.col4.Name = "col4";
+            this.col4.Width = 125;
+            // 
+            // col3
+            // 
+            this.col3.HeaderText = "Contact";
+            this.col3.MinimumWidth = 6;
+            this.col3.Name = "col3";
+            this.col3.Width = 125;
+            // 
             // myPallet
             // 
             this.myPallet.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
@@ -906,54 +957,15 @@
             this.GreenTheme.PanelStyles.PanelCommon.StateCommon.ColorAngle = 45F;
             this.GreenTheme.PanelStyles.PanelCommon.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
             // 
-            // Column2
+            // kryptonButton15
             // 
-            this.Column2.HeaderText = "Employee Id";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // col1
-            // 
-            this.col1.HeaderText = "Name";
-            this.col1.MinimumWidth = 6;
-            this.col1.Name = "col1";
-            this.col1.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Employee Type";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Department";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // col2
-            // 
-            this.col2.HeaderText = "Email";
-            this.col2.MinimumWidth = 6;
-            this.col2.Name = "col2";
-            this.col2.Width = 125;
-            // 
-            // col4
-            // 
-            this.col4.HeaderText = "Gender";
-            this.col4.MinimumWidth = 6;
-            this.col4.Name = "col4";
-            this.col4.Width = 125;
-            // 
-            // col3
-            // 
-            this.col3.HeaderText = "Contact";
-            this.col3.MinimumWidth = 6;
-            this.col3.Name = "col3";
-            this.col3.Width = 125;
+            this.kryptonButton15.Location = new System.Drawing.Point(2, 437);
+            this.kryptonButton15.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonButton15.Name = "kryptonButton15";
+            this.kryptonButton15.Size = new System.Drawing.Size(221, 42);
+            this.kryptonButton15.TabIndex = 7;
+            this.kryptonButton15.Values.Text = "VIEW REPORT";
+            this.kryptonButton15.Click += new System.EventHandler(this.kryptonButton15_Click);
             // 
             // BranchEmployees
             // 
@@ -1052,5 +1064,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col2;
         private System.Windows.Forms.DataGridViewTextBoxColumn col4;
         private System.Windows.Forms.DataGridViewTextBoxColumn col3;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton15;
     }
 }

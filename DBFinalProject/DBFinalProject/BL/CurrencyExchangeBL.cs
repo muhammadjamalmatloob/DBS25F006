@@ -15,8 +15,24 @@ namespace DBFinalProject.BL
         private decimal amount_base { get; set; }
         private decimal amount_target { get; set; }
 
+        private string client_name { get; set; }
+
 
         public CurrencyExchangeBL() { }
+
+        public CurrencyExchangeBL(int exchange_id, string base_currency, string target_currency,
+            decimal exchange_rate, decimal amount_base, decimal amount_target, string client_name)
+        {
+            this.amount_base = amount_base;
+            this.exchange_id = exchange_id;
+            this.base_currency = base_currency;
+            this.target_currency = target_currency;
+            this.exchange_rate = exchange_rate;
+            this.amount_base = amount_base;
+            this.amount_target = amount_target;
+            this.client_name = client_name;
+        }
+        
 
   
         public void setBaseCurrency(string base_currency)
@@ -60,7 +76,17 @@ namespace DBFinalProject.BL
         {
             return this.amount_target;
         }
-        
+
+        public string getCustomerName()
+        {
+            return this.client_name;
+        }
+
+        public void setCustomerName(string name)
+        {
+            client_name = name;
+        }
+
         public void setExchangeRate(string bcurrency,string tcurrency)
         {
             if (bcurrency == "Rupees" && tcurrency == "Dollars")

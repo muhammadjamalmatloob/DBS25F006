@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DBFinalProject.DL;
 using DBFinalProject.Utility;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
@@ -10,6 +11,7 @@ namespace DBFinalProject.BL
 {
     public class ApplicationProfile
     {
+        private int id;
         private byte[] _profilePic;
         private byte[] _cnicFront;
         private byte[] _cnicBack;
@@ -26,6 +28,31 @@ namespace DBFinalProject.BL
         private string _branch;
         private string account_type;
 
+        public ApplicationProfile(int id, byte[] profilePic, byte[] cnicFront, byte[] cnicBack, string firstName, string lastName, Gender gender, string contact, string email, string country, string address, string cnic, DateTime applicationDate, string branch, string account_type)
+        {
+            this.id = id;
+            _profilePic = profilePic;
+            _cnicFront = cnicFront;
+            _cnicBack = cnicBack;
+            _firstName = firstName;
+            _lastName = lastName;
+            _gender = gender;
+            _contact = contact;
+            _email = email;
+            _country = country;
+            _address = address;
+            _cnic = cnic;
+            _applicationDate = applicationDate;
+            _branch = branch;
+            this.account_type = account_type;
+        }
+
+        public ApplicationProfile() { }
+        public int GetID() => id;
+        public void setID(int id)
+        {
+            this.id = id;
+        }
         public byte[] GetProfilePic() => _profilePic;
         public (bool valid, string message) SetProfilePic(byte[] value)
         {

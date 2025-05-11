@@ -151,23 +151,32 @@
     <Compile Include="BL\AccountApplicationBL.cs" />
     <Compile Include="BL\AccountBL.cs" />
     <Compile Include="BL\AccountTypeBL.cs" />
+    <Compile Include="BL\AllEmployeeRepBL.cs" />
     <Compile Include="BL\BranchBL.cs" />
+
+    <Compile Include="BL\DepositeReportBL.cs" />
+
     <Compile Include="BL\ClientLoanApplicationBL.cs" />
+
     <Compile Include="BL\EmployeesReport.cs" />
     <Compile Include="BL\ClientBL.cs" />
     <Compile Include="BL\CurrencyExchangeBL.cs" />
     <Compile Include="BL\DepositsBL.cs" />
     <Compile Include="BL\EmployeeBL.cs" />
+    <Compile Include="BL\ExchangeReportBL.cs" />
     <Compile Include="BL\LoanApplicationBL.cs" />
     <Compile Include="BL\LoanTypeBL.cs" />
     <Compile Include="BL\LoginBL.cs" />
     <Compile Include="BL\PaymentBL.cs" />
+    <Compile Include="BL\PaymentInvoiceBL.cs" />
     <Compile Include="BL\SystemLogsBL.cs" />
     <Compile Include="BL\TransactionBL.cs" />
     <Compile Include="BL\TransactionRecordBL.cs" />
     <Compile Include="BL\TransferBL.cs" />
+    <Compile Include="BL\TransferReportBL.cs" />
     <Compile Include="BL\UserBL.cs" />
     <Compile Include="BL\WithdrawalBL.cs" />
+    <Compile Include="BL\WithdrawReportBL.cs" />
     <Compile Include="DL\AccountApplicationDL.cs" />
     <Compile Include="DL\AccountDL.cs" />
     <Compile Include="DL\AccountTypeDL.cs" />
@@ -191,6 +200,12 @@
     <Compile Include="DL\TransactionRecordDL.cs" />
     <Compile Include="DL\TransferDL.cs" />
     <Compile Include="DL\WithdrawalDL.cs" />
+    <Compile Include="LoadApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadApp.Designer.cs">
+      <DependentUpon>LoadApp.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +213,18 @@
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Reports\ExchangeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ExchangeReport.Designer.cs">
+      <DependentUpon>ExchangeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AllEmployeesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AllEmployeesReport.Designer.cs">
+      <DependentUpon>AllEmployeesReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Audit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +254,18 @@
     </Compile>
     <Compile Include="UI\ClientTransactionRecord.Designer.cs">
       <DependentUpon>ClientTransactionRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DepositeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DepositeReport.Designer.cs">
+      <DependentUpon>DepositeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PaymentReciept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PaymentReciept.Designer.cs">
+      <DependentUpon>PaymentReciept.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\SignUp.cs">
       <SubType>Form</SubType>
@@ -435,6 +474,12 @@
     <Compile Include="UI\SysttemLogs.Designer.cs">
       <DependentUpon>SysttemLogs.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TranferReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TranferReport.Designer.cs">
+      <DependentUpon>TranferReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TransactionRecord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -453,11 +498,29 @@
     <Compile Include="UI\Withdraw.Designer.cs">
       <DependentUpon>Withdraw.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\WithdrawReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WithdrawReport.Designer.cs">
+      <DependentUpon>WithdrawReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utility\Theme.cs" />
+    <EmbeddedResource Include="Reports\CurrencyExchange.rdlc" />
+    <EmbeddedResource Include="Reports\DepositeReport.rdlc" />
+    <EmbeddedResource Include="Reports\ExchangeReport.resx">
+      <DependentUpon>ExchangeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransferReport.rdlc" />
+    <EmbeddedResource Include="LoadApp.resx">
+      <DependentUpon>LoadApp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\EmployeesReport_.rdlc" />
+    <EmbeddedResource Include="Reports\AllEmployees.rdlc" />
+    <EmbeddedResource Include="Reports\BranchEmplyees.rdlc" />
+    <EmbeddedResource Include="Reports\PaymentReport.rdlc" />
+    <EmbeddedResource Include="Reports\WithdrawReport.rdlc" />
     <EmbeddedResource Include="UI\AccountTypeManagement.resx">
       <DependentUpon>AccountTypeManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -471,6 +534,9 @@
     <Compile Include="Utility\EmailSender.cs" />
     <EmbeddedResource Include="UI\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AllEmployeesReport.resx">
+      <DependentUpon>AllEmployeesReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ApplicationForm.resx">
       <DependentUpon>ApplicationForm.cs</DependentUpon>
@@ -532,6 +598,9 @@
     <EmbeddedResource Include="UI\CurrencyExchange.resx">
       <DependentUpon>CurrencyExchange.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\DepositeReport.resx">
+      <DependentUpon>DepositeReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DepositMoney.resx">
       <DependentUpon>DepositMoney.cs</DependentUpon>
     </EmbeddedResource>
@@ -571,6 +640,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\PaymentReciept.resx">
+      <DependentUpon>PaymentReciept.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\ResetPassword.resx">
       <DependentUpon>ResetPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -592,6 +664,9 @@
     <EmbeddedResource Include="UI\SysttemLogs.resx">
       <DependentUpon>SysttemLogs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\TranferReport.resx">
+      <DependentUpon>TranferReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\TransactionRecord.resx">
       <DependentUpon>TransactionRecord.cs</DependentUpon>
     </EmbeddedResource>
@@ -604,10 +679,18 @@
     <EmbeddedResource Include="UI\WithdrawMoney.resx">
       <DependentUpon>WithdrawMoney.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include=".vs\DBFinalProject.csproj.dtbcache.json" />
+    <EmbeddedResource Include="UI\WithdrawReport.resx">
+      <DependentUpon>WithdrawReport.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="bin\Debug\DBFinalProject.exe.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DBFinalProject.BL.AllEmployeeRepBL.datasource" />
+    <None Include="Properties\DataSources\DBFinalProject.BL.DepositeReportBL.datasource" />
     <None Include="Properties\DataSources\DBFinalProject.BL.EmployeesReport.datasource" />
+    <None Include="Properties\DataSources\DBFinalProject.BL.ExchangeReportBL.datasource" />
+    <None Include="Properties\DataSources\DBFinalProject.BL.PaymentInvoiceBL.datasource" />
+    <None Include="Properties\DataSources\DBFinalProject.BL.TransferReportBL.datasource" />
+    <None Include="Properties\DataSources\DBFinalProject.BL.WithdrawReportBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
