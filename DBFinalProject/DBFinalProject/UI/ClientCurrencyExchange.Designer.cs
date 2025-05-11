@@ -107,6 +107,8 @@
             this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox2.TabIndex = 38;
             this.kryptonTextBox2.Text = "Amount";
+            this.kryptonTextBox2.Enter += new System.EventHandler(this.kryptonTextBox2_Enter);
+            this.kryptonTextBox2.Leave += new System.EventHandler(this.kryptonTextBox2_Leave);
             // 
             // kryptonTextBox4
             // 
@@ -126,10 +128,16 @@
             this.kryptonTextBox4.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox4.TabIndex = 37;
             this.kryptonTextBox4.Text = "PIN";
+            this.kryptonTextBox4.Enter += new System.EventHandler(this.kryptonTextBox4_Enter);
+            this.kryptonTextBox4.Leave += new System.EventHandler(this.kryptonTextBox4_Leave);
             // 
             // kryptonComboBox4
             // 
             this.kryptonComboBox4.DropDownWidth = 227;
+            this.kryptonComboBox4.Items.AddRange(new object[] {
+            "Dollars",
+            "Pounds",
+            "Euros"});
             this.kryptonComboBox4.Location = new System.Drawing.Point(81, 55);
             this.kryptonComboBox4.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonComboBox4.Name = "kryptonComboBox4";

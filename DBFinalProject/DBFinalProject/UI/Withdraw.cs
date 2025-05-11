@@ -27,6 +27,9 @@ namespace DBFinalProject
             string account_number = "";
             string amount = "";
             string pin = "";
+            string username = DL.LoginDL.user.getUsername();
+            int user_id = DL.UserDL.get_user_id(username);
+            int client_id = DL.ClientDL.getClientIdbyUserId(user_id);
             try
             {
                 account_number = kryptonTextBox1.Text.Trim();
@@ -39,7 +42,7 @@ namespace DBFinalProject
                 return;
             }
 
-            if (AccountDL.isAccount(account_number))
+            if (AccountDL.isAccountOfClient(account_number,client_id))
             {
 
                 WithdrawalBL withdrawal = new WithdrawalBL();
@@ -49,14 +52,13 @@ namespace DBFinalProject
                 withdrawal.setAmount(Convert.ToDecimal(amount));
                 withdrawal.setCharges(withdrawal.getAmount());
                 withdrawal.setDate(DateTime.Now);
-                withdrawal.setTransactionType(6);   // withraw ki id from lookup  
-
-
-                int max_amount = AccountTypeDL.getWithdrawlLimit(acc_id);
+                withdrawal.setTransactionType(6);
+                int acc_type_id = DL.AccountDL.getAccountTypeIdByNumber(account_number);
+                int max_amount = AccountTypeDL.getWithdrawlLimit(acc_type_id);
                 int current_balance = AccountDL.getBalanceById(acc_id);
                 if (Convert.ToInt64(amount) > max_amount)
                 {
-                    MessageBox.Show($"Withdrawl Limit is {max_amount}.");
+                    MessageBox.Show($"Withdrawal Limit is {max_amount}.");
                     return;
                 }
                 if (pin == AccountDL.getPinByNumber(account_number))
@@ -68,13 +70,13 @@ namespace DBFinalProject
                             if (WithdrawalDL.withdrawlAmmount(withdrawal))
                             {
 
-                                MessageBox.Show("Withrawl successful.");
+                                MessageBox.Show("Withdrawal successful.");
                                 // jab confirm Withrawl ho jaye ga phr 
                                 generate_reciept(withdrawal, account_number);
                             }
                             else
                             {
-                                MessageBox.Show("Withrawl failed.");
+                                MessageBox.Show("Withdrawal failed.");
                             }
                         }
                         else
@@ -88,6 +90,10 @@ namespace DBFinalProject
                         MessageBox.Show("Error: " + ex.Message);
                         return;
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid PIN");
                 }
             }
             else
@@ -148,6 +154,22 @@ namespace DBFinalProject
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void kryptonTextBox1_Enter(object sender, EventArgs e)
+        {
+            if(kryptonTextBox1.Text == "Account Number")
+            {
+                kryptonTextBox1.Text = "";
+            }
+        }
+
+        private void kryptonTextBox1_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox1.Text == "")
+            {
+                kryptonTextBox1.Text = "Account Number";
+            }
         }
     }
 }

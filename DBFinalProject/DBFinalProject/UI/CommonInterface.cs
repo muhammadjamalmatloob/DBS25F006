@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBFinalProject.DL;
 
 namespace DBFinalProject
 {
@@ -22,16 +23,11 @@ namespace DBFinalProject
         {
             string username="";
             string total_acc = "";
-            decimal balance = 0;
-            username = MainInterface.UserName;
+            username = LoginDL.user.getUsername();
             int user_id = DL.UserDL.get_user_id(username);
             int client_id = DL.ClientDL.getClientIdbyUserId(user_id);
             total_acc = DL.AccountDL.TotalAccountForSpecificClient(client_id);
-            label1.Text = username;
-            label6.Text = total_acc;
-            Thread.Sleep(2000);
-            label1.Text = "*******";
-            label6.Text = "*******";
+            MessageBox.Show("Username: "+username+"\nYour Accounts: "+total_acc);
         }
 
         private void kryptonComboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -69,12 +65,24 @@ namespace DBFinalProject
         {
             try
             {
+                string username = DL.LoginDL.user.getUsername();
+                int user_id = DL.UserDL.get_user_id(username);
+                int client_id = DL.ClientDL.getClientIdbyUserId(user_id);
                 string acc_num = kryptonTextBox1.Text;
-                decimal balance = DL.AccountDL.getBalanceByNumber(acc_num);
-                kryptonTextBox2.Text += balance.ToString();
-                Thread.Sleep(2000);
-                kryptonTextBox1.Text = "Enter Account Number";
-                kryptonTextBox2.Text = "balance: ";
+                bool check = DL.AccountDL.isAccountOfClient(acc_num, client_id);
+                if(check)
+                {
+                    decimal balance = DL.AccountDL.getBalanceByNumber(acc_num, client_id);
+                    MessageBox.Show("Remaining Balance: " + balance.ToString());
+                    Thread.Sleep(2000);
+                    kryptonTextBox1.Text = "Enter Account Number";
+
+                }
+                else
+                {
+                    MessageBox.Show("This is not your Account");
+                    kryptonTextBox1.Text = "Enter Account Number";
+                }
 
             }
             catch(Exception ex)

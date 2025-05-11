@@ -152,6 +152,7 @@
     <Compile Include="BL\AccountBL.cs" />
     <Compile Include="BL\AccountTypeBL.cs" />
     <Compile Include="BL\BranchBL.cs" />
+    <Compile Include="BL\ClientLoanApplicationBL.cs" />
     <Compile Include="BL\EmployeesReport.cs" />
     <Compile Include="BL\ClientBL.cs" />
     <Compile Include="BL\CurrencyExchangeBL.cs" />
@@ -163,6 +164,7 @@
     <Compile Include="BL\PaymentBL.cs" />
     <Compile Include="BL\SystemLogsBL.cs" />
     <Compile Include="BL\TransactionBL.cs" />
+    <Compile Include="BL\TransactionRecordBL.cs" />
     <Compile Include="BL\TransferBL.cs" />
     <Compile Include="BL\UserBL.cs" />
     <Compile Include="BL\WithdrawalBL.cs" />
@@ -172,6 +174,7 @@
     <Compile Include="DL\AuditDL.cs" />
     <Compile Include="DL\BranchDL.cs" />
     <Compile Include="DL\ClientDL.cs" />
+    <Compile Include="DL\ClientLoanApplicationDL.cs" />
     <Compile Include="DL\CurrencyExchangeDL.cs" />
     <Compile Include="DL\DepositsDL.cs" />
     <Compile Include="DL\EmployeeDL.cs" />
@@ -185,6 +188,7 @@
     <Compile Include="DL\SignUpDL.cs" />
     <Compile Include="DL\SystemLogsDL.cs" />
     <Compile Include="DL\TransactionDL.cs" />
+    <Compile Include="DL\TransactionRecordDL.cs" />
     <Compile Include="DL\TransferDL.cs" />
     <Compile Include="DL\WithdrawalDL.cs" />
     <Compile Include="MainMenu.cs">

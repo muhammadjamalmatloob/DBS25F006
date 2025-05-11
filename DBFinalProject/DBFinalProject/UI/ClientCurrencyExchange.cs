@@ -19,6 +19,7 @@ namespace DBFinalProject.UI
         public ClientCurrencyExchange()
         {
             InitializeComponent();
+            grpReciept.Visible = false;
         }
 
         private void kryptonComboBox3_Enter(object sender, EventArgs e)
@@ -49,7 +50,7 @@ namespace DBFinalProject.UI
 
         private void kryptonTextBox1_Enter(object sender, EventArgs e)
         {
-            if (kryptonTextBox1.Text == "Amount")
+            if (kryptonTextBox1.Text == "Account Number")
             {
                 kryptonTextBox1.Text = "";
             }
@@ -59,7 +60,7 @@ namespace DBFinalProject.UI
         {
             if (kryptonTextBox1.Text == "")
             {
-                kryptonTextBox1.Text = "Amount";
+                kryptonTextBox1.Text = "Account Number";
             }
         }
 
@@ -70,63 +71,73 @@ namespace DBFinalProject.UI
             string target_currency = "";
             string amount = "";
             string pin = "";
-            string CheckPin = "";
+            
             try
             {
-                account_number = kryptonTextBox1.Text.Trim();
-                amount = kryptonTextBox2.Text.Trim();
-                pin = kryptonTextBox4.Text.Trim();
-                target_currency = kryptonComboBox4.SelectedItem.ToString();
-                base_currency = "Rupees";
-                CheckPin = DL.AccountDL.getPinByNumber(account_number);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return;
-
-            }
-
-            if (pin == CheckPin)
-            {
-                CurrencyExchangeBL exchange = new CurrencyExchangeBL();
-                exchange.setBaseCurrency("Rupees");
-                exchange.setTargetCurrency(target_currency);
-                exchange.setAmountBase(Convert.ToDecimal(amount));
-                exchange.setExchangeRate("Rupees", target_currency);
-                exchange.setAmountTarget(exchange.getExchangeRate() * exchange.getAmountBase());
-
-                exchange.setClientId(AccountDL.getCleintIdByNumber(account_number));
-                exchange.setDate(DateTime.Now);
-                exchange.setTransactionType(9);   // exchange ki id from lookup
-                exchange.setCharges(exchange.getAmountBase());
-
-                if (pin == AccountDL.getPinByNumber(account_number))
+                try
                 {
-                    try
+                    account_number = kryptonTextBox1.Text.Trim();
+                    amount = kryptonTextBox2.Text.Trim();
+                    pin = kryptonTextBox4.Text.Trim();
+                    target_currency = kryptonComboBox4.SelectedItem.ToString();
+                    base_currency = "Rupees";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return;
+
+                }
+                string username = DL.LoginDL.user.getUsername();
+                int user_id = DL.UserDL.get_user_id(username);
+                int client_id = DL.ClientDL.getClientIdbyUserId(user_id);
+                int acc_id = DL.AccountDL.getAccountIdByNumber(account_number);
+                if (DL.AccountDL.isAccountOfClient(account_number, client_id))
+                {
+                    CurrencyExchangeBL exchange = new CurrencyExchangeBL();
+                    exchange.setBaseCurrency("Rupees");
+                    exchange.setTargetCurrency(target_currency);
+                    exchange.setAmountBase(Convert.ToDecimal(amount));
+                    exchange.setExchangeRate("Rupees", target_currency);
+                    exchange.setAmountTarget(exchange.getExchangeRate() * exchange.getAmountBase());
+
+                    exchange.setClientId(AccountDL.getCleintIdByNumber(account_number));
+                    exchange.setDate(DateTime.Now);
+                    exchange.setTransactionType(9);   // exchange ki id from lookup
+                    exchange.setCharges(exchange.getAmountBase());
+
+                    if (pin == AccountDL.getPinByNumber(account_number))
                     {
-                        if (AccountBL.isSufficientBalance(account_number, exchange.getAmountBase(), exchange.getCharges()))
+                        try
                         {
-                            if (CurrencyExchangeDL.exchangeAmmount(exchange))
+                            if (AccountBL.isSufficientBalance(account_number, exchange.getAmountBase(), exchange.getCharges()))
                             {
-                                MessageBox.Show("Exchange successful.");
-                                generate_reciept(exchange, account_number);
+                                if (CurrencyExchangeDL.exchangeAmmount(exchange,acc_id))
+                                {
+                                    MessageBox.Show("Exchange successful.");
+                                    generate_reciept(exchange, account_number);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Exchange failed.");
+                                }
                             }
                             else
                             {
-                                MessageBox.Show("Exchange failed.");
+                                MessageBox.Show("Insufficient balance.");
                             }
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Insufficient balance.");
+                            MessageBox.Show("Error: " + ex.Message);
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
                 }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
             }
         }
 
@@ -141,7 +152,38 @@ namespace DBFinalProject.UI
             amount.Text = currency.getAmountBase().ToString();
             charges.Text = currency.getCharges().ToString();
             date.Text = currency.getDate().ToString();
+        }
 
+        private void kryptonTextBox2_Enter(object sender, EventArgs e)
+        {
+            if(kryptonTextBox2.Text == "Amount")
+            {
+                kryptonTextBox2.Text = "";
+            }
+        }
+
+        private void kryptonTextBox2_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox2.Text == "")
+            {
+                kryptonTextBox2.Text = "Amount";
+            }
+        }
+
+        private void kryptonTextBox4_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox4.Text == "PIN")
+            {
+                kryptonTextBox4.Text = "";
+            }
+        }
+
+        private void kryptonTextBox4_Leave(object sender, EventArgs e)
+        {
+            if (kryptonTextBox4.Text == "")
+            {
+                kryptonTextBox4.Text = "PIN";
+            }
         }
     }
 }

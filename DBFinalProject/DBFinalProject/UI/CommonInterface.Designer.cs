@@ -42,11 +42,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.GrpDep = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton12 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton13 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpDep)).BeginInit();
@@ -200,7 +199,6 @@
             // 
             // GrpDep.Panel
             // 
-            this.GrpDep.Panel.Controls.Add(this.kryptonTextBox2);
             this.GrpDep.Panel.Controls.Add(this.kryptonTextBox1);
             this.GrpDep.Panel.Controls.Add(this.kryptonButton12);
             this.GrpDep.Panel.Controls.Add(this.kryptonButton13);
@@ -216,6 +214,16 @@
             this.GrpDep.TabIndex = 36;
             this.GrpDep.Values.Heading = "View Balance";
             this.GrpDep.Visible = false;
+            // 
+            // kryptonTextBox1
+            // 
+            this.kryptonTextBox1.Location = new System.Drawing.Point(30, 23);
+            this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.Size = new System.Drawing.Size(143, 23);
+            this.kryptonTextBox1.TabIndex = 26;
+            this.kryptonTextBox1.Text = "Enter Account Number";
+            this.kryptonTextBox1.Enter += new System.EventHandler(this.kryptonTextBox1_Enter);
+            this.kryptonTextBox1.Leave += new System.EventHandler(this.kryptonTextBox1_Leave);
             // 
             // kryptonButton12
             // 
@@ -245,25 +253,6 @@
             this.kryptonButton2.TabIndex = 37;
             this.kryptonButton2.Values.Text = "Check Balance";
             this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
-            // 
-            // kryptonTextBox1
-            // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(30, 23);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(143, 23);
-            this.kryptonTextBox1.TabIndex = 26;
-            this.kryptonTextBox1.Text = "Enter Account Number";
-            this.kryptonTextBox1.Enter += new System.EventHandler(this.kryptonTextBox1_Enter);
-            this.kryptonTextBox1.Leave += new System.EventHandler(this.kryptonTextBox1_Leave);
-            // 
-            // kryptonTextBox2
-            // 
-            this.kryptonTextBox2.Location = new System.Drawing.Point(30, 91);
-            this.kryptonTextBox2.Name = "kryptonTextBox2";
-            this.kryptonTextBox2.ReadOnly = true;
-            this.kryptonTextBox2.Size = new System.Drawing.Size(100, 23);
-            this.kryptonTextBox2.TabIndex = 27;
-            this.kryptonTextBox2.Text = "Balance: ";
             // 
             // CommonInterface
             // 
@@ -314,7 +303,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton12;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton13;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
     }
 }

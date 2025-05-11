@@ -35,7 +35,7 @@ namespace DBFinalProject
                 return;
             }
             int to_branch_id = Convert.ToInt32(DL.BranchDL.GetBranchIdByName(selectedBranchName));
-            string to_account_number = kryptonTextBox3.Text.Trim();
+            string to_account_number = kryptonTextBox2.Text;
 
             if (DL.AccountDL.isAccount(to_account_number, to_branch_id))
             {
@@ -150,14 +150,17 @@ namespace DBFinalProject
 
         private void kryptonButton11_Click(object sender, EventArgs e)
         {
+            string username = DL.LoginDL.user.getUsername();
+            int user_id = DL.UserDL.get_user_id(username);
+            int client_id = DL.ClientDL.getClientIdbyUserId(user_id);
             string to_account_number = "";
             string from_account_number = "";
             decimal amount = 0;
             string pin = "";
             try
             {
-                to_account_number = kryptonTextBox3.Text.Trim();
-                from_account_number = kryptonTextBox3.Text.Trim();
+                to_account_number = kryptonTextBox2.Text.Trim();
+                from_account_number = kryptonTextBox1.Text.Trim();
                 amount = Convert.ToDecimal(kryptonTextBox3.Text.Trim());
                 pin = kryptonTextBox4.Text.Trim();
             }
@@ -166,50 +169,66 @@ namespace DBFinalProject
                 MessageBox.Show("Error: " + ex.Message);
                 return;
             }
-            if (AccountDL.isAccount(from_account_number))
+            if(from_account_number != to_account_number)
             {
-                if (pin == AccountDL.getPinByNumber(from_account_number))
+                if (AccountDL.isAccountOfClient(from_account_number, client_id))
                 {
-                    TransferBL transfer = new TransferBL();
-                    transfer.setClientId(AccountDL.getCleintIdByNumber(from_account_number));
-                    transfer.setTransactionType(7); // transfer ki id from lookup
-                    transfer.setDate(DateTime.Now);
-                    transfer.setCharges(amount);
-
-                    transfer.setAmount(amount);
-                    int acc_id = AccountDL.getAccountIdByNumber(from_account_number);
-                    transfer.setFromAccID(acc_id);
-                    transfer.setToAccID(AccountDL.getAccountIdByNumber(to_account_number));
-
-                    int max_amount = AccountTypeDL.getTransactionLimit(acc_id);
-                    int current_balance = AccountDL.getBalanceById(acc_id);
-                    if (amount > max_amount)
+                    if (pin == AccountDL.getPinByNumber(from_account_number))
                     {
-                        MessageBox.Show($"Transaction Limit is {max_amount}.");
-                        return;
+                        TransferBL transfer = new TransferBL();
+                        transfer.setClientId(AccountDL.getCleintIdByNumber(from_account_number));
+                        transfer.setTransactionType(7);
+                        transfer.setDate(DateTime.Now);
+                        transfer.setCharges(amount);
+                        transfer.setAmount(amount);
+                        int acc_id = AccountDL.getAccountIdByNumber(from_account_number);
+                        int acc_type_id = AccountDL.getAccountTypeIdByNumber(from_account_number);
+                        transfer.setFromAccID(acc_id);
+                        transfer.setToAccID(AccountDL.getAccountIdByNumber(to_account_number));
+                        int max_amount = AccountTypeDL.getTransactionLimit(acc_type_id);
+                        MessageBox.Show(max_amount.ToString());
+                        if (amount > max_amount)
+                        {
+                            MessageBox.Show($"Transaction Limit is {max_amount}.");
+                            return;
+                        }
+                        else
+                        {
+                            if (AccountBL.isSufficientBalance(from_account_number,transfer.getAmount(),transfer.getCharges()))
+                            {
+                                try
+                                {
+                                    TransferDL.transferAmmount(transfer);
+                                    MessageBox.Show("Transfer successful.");
+                                    return;
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("Error: " + ex.Message);
+                                    return;
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Insufficient Balance");
+                            }
+                        }
                     }
-                    try
+                    else
                     {
-                        TransferDL.transferAmmount(transfer);
-                        MessageBox.Show("Transfer successful.");
-                        return;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
+                        MessageBox.Show("Your PIN is incorrect.");
                         return;
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Your PIN is incorrect.");
+                    MessageBox.Show("Your Account does not exists.");
                     return;
                 }
             }
             else
             {
-                MessageBox.Show("Your Account does not exists.");
-                return;
+                MessageBox.Show("No Money Transfer Between Same Accounts");
             }
         }
     }
