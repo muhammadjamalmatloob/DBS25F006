@@ -20,6 +20,10 @@ namespace DBFinalProject.BL
         }
         public void setAmount(decimal amount)
         {
+            if (amount < 0)
+            {
+                throw new ArgumentException("Amount cannot be negative");
+            }
             this.amount = amount;
         }
         public int getwithdrawal_id()

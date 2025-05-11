@@ -34,9 +34,10 @@ namespace DBFinalProject
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
+            this.Hide();
             CashierDashboard cashierDashboard = new CashierDashboard();
             cashierDashboard.Show();
-            this.Hide();
+            
         }
 
 
@@ -171,15 +172,24 @@ namespace DBFinalProject
                 if (pin == AccountDL.getPinByNumber(from_account_number))
                 {
                     TransferBL transfer = new TransferBL();
-                    transfer.setClientId(AccountDL.getCleintIdByNumber(from_account_number));
-                    transfer.setTransactionType(7); // transfer ki id from lookup
-                    transfer.setDate(DateTime.Now);
-                    transfer.setCharges(amount);
+                    int acc_id = 0;
+                    try
+                    {
+                        transfer.setClientId(AccountDL.getCleintIdByNumber(from_account_number));
+                        transfer.setTransactionType(7); // transfer ki id from lookup
+                        transfer.setDate(DateTime.Now);
+                        transfer.setCharges(amount);
 
-                    transfer.setAmount(amount);
-                    int acc_id = AccountDL.getAccountIdByNumber(from_account_number);
-                    transfer.setFromAccID(acc_id);
-                    transfer.setToAccID(AccountDL.getAccountIdByNumber(to_account_number));
+                        transfer.setAmount(amount);
+                        acc_id = AccountDL.getAccountIdByNumber(from_account_number);
+                        transfer.setFromAccID(acc_id);
+                        transfer.setToAccID(AccountDL.getAccountIdByNumber(to_account_number));
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                        return;
+                    }
 
                     int max_amount = AccountTypeDL.getTransactionLimit(acc_id);
                     int current_balance = AccountDL.getBalanceById(acc_id);
@@ -229,6 +239,12 @@ namespace DBFinalProject
                 kryptonTextBox4.Text = "Enter Pin";
                 kryptonTextBox4.StateCommon.Content.Color1 = Color.Gray;
             }
+        }
+
+        private void kryptonTextBox4_TextChanged(object sender, EventArgs e)
+        {
+            kryptonTextBox4.PasswordChar = '*';
+            kryptonTextBox4.StateCommon.Content.Color1 = Color.Black;
         }
     }
 }

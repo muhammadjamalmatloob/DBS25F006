@@ -60,6 +60,7 @@ namespace DBFinalProject
             kryptonComboBox4.SelectedIndex = 0;
             kryptonComboBox5.SelectedIndex = 0;
             kryptonComboBox6.SelectedIndex = 0;
+            kryptonComboBox7.SelectedIndex = 0;
             kryptonComboBox8.SelectedIndex = 0;
         }
 
@@ -233,8 +234,22 @@ namespace DBFinalProject
                 employee.set_first_name(kryptonTextBox2.Text);
                 employee.set_last_name(kryptonTextBox3.Text);
                 employee.set_department(kryptonComboBox8.Text);
+                string department = kryptonComboBox8.Text;
+                if (string.IsNullOrWhiteSpace(kryptonComboBox8.Text) || department == "Select Department")
+                {
+                    MessageBox.Show("Please select Department", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
                 employee.set_branch_id(BranchDL.GetBranchIdByName(kryptonComboBox1.Text));
                 employee.set_gender(kryptonComboBox2.Text);
+                string gender = kryptonComboBox2.Text;
+                if (string.IsNullOrWhiteSpace(gender)  ||  gender == "Select Gender")
+                {
+                    MessageBox.Show("Please select Gender", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 employee.set_salary(float.Parse(kryptonTextBox6.Text));
                 employee.set_contact(kryptonTextBox5.Text);
                 if (EmployeeDL.isDublicateContact(kryptonTextBox5.Text))
@@ -244,6 +259,12 @@ namespace DBFinalProject
                 }
 
                 employee.set_position(UserDL.get_role_id(kryptonComboBox7.Text));
+                string position = kryptonComboBox7.Text;
+                if (string.IsNullOrWhiteSpace(position) || position == "Assign Role")
+                {
+                    MessageBox.Show("Please select Position", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 if (!EmployeeDL.isDoublicateRole(employee.get_position(),employee.get_branch_id()))
                 {
@@ -377,7 +398,7 @@ namespace DBFinalProject
 
             try
             {
-                if (EmployeeDL.deleteEmployee(employee_Id))
+                if (EmployeeDL.DeleteEmployeeWithTransaction(employee_Id,user_id))
                 {
                     EmployeeDL.LoadAllEmployeeInList();
                     //EmployeeDL.RemoveEmployee(employee_Id);

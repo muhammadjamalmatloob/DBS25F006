@@ -203,5 +203,11 @@ namespace DBFinalProject
                 kryptonTextBox2.StateCommon.Content.Color1 = Color.Gray;
             }
         }
+
+        private void kryptonTextBox2_TextChanged(object sender, EventArgs e)
+        {
+            kryptonTextBox2.PasswordChar = '*';
+            kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
+        }
     }
 }

@@ -54,12 +54,20 @@ namespace DBFinalProject.UI
 
                 WithdrawalBL withdrawal = new WithdrawalBL();
                 int acc_id = AccountDL.getAccountIdByNumber(account_number);
-                withdrawal.setFromAccID(acc_id);
-                withdrawal.setClientId(AccountDL.getCleintIdByNumber(account_number));
-                withdrawal.setAmount(Convert.ToDecimal(amount));
-                withdrawal.setCharges(withdrawal.getAmount());
-                withdrawal.setDate(DateTime.Now);
-                withdrawal.setTransactionType(6);   // withraw ki id from lookup  
+                try
+                {
+                    withdrawal.setFromAccID(acc_id);
+                    withdrawal.setClientId(AccountDL.getCleintIdByNumber(account_number));
+                    withdrawal.setAmount(Convert.ToDecimal(amount));
+                    withdrawal.setCharges(withdrawal.getAmount());
+                    withdrawal.setDate(DateTime.Now);
+                    withdrawal.setTransactionType(6);   // withraw ki id from lookup
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                    return;
+                }
 
 
 
@@ -177,9 +185,10 @@ namespace DBFinalProject.UI
 
         private void kryptonTextBox2_Enter(object sender, EventArgs e)
         {
-            if (kryptonTextBox2.Text == "PIN")
+            if (kryptonTextBox2.Text == "ENTER PIN")
             {
                 kryptonTextBox2.Text = "";
+                kryptonTextBox2.PasswordChar = '*';
                 kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
             }
         }
@@ -188,9 +197,15 @@ namespace DBFinalProject.UI
         {
             if (kryptonTextBox2.Text == "")
             {
-                kryptonTextBox2.Text = "PIN";
+                kryptonTextBox2.Text = "ENTER PIN";
                 kryptonTextBox2.StateCommon.Content.Color1 = Color.Gray;
             }
+        }
+
+        private void kryptonTextBox2_TextChanged(object sender, EventArgs e)
+        {
+            kryptonTextBox2.PasswordChar = '*';
+            kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
         }
     }
 }

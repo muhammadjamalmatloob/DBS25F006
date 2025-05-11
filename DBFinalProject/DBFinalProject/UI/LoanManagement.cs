@@ -151,8 +151,12 @@ namespace DBFinalProject
         private void kryptonButton9_Click(object sender, EventArgs e)
         {
             string selectedItem = "";
-
-                selectedItem = kryptonComboBox3.SelectedItem.ToString();
+            if (string.IsNullOrWhiteSpace(kryptonComboBox2.Text))
+            {
+                MessageBox.Show("Select Loan Type");
+                return;
+            }
+            selectedItem = kryptonComboBox3.SelectedItem.ToString();
             
             
             int loan_type_id = LoanTypeDL.getIdByName(selectedItem);
@@ -195,6 +199,11 @@ namespace DBFinalProject
             string selectedItem = "";
             try
             {
+                if (string.IsNullOrWhiteSpace(kryptonComboBox2.Text))
+                {
+                    MessageBox.Show("Select Loan Type");
+                    return;
+                }
                 selectedItem = kryptonComboBox2.SelectedItem.ToString();
             }
             catch
