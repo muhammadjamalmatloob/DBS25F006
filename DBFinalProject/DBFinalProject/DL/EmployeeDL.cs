@@ -40,7 +40,20 @@ namespace DBFinalProject.DL
                     $"COMMIT;";
             return DatabaseHelper.Instance.Update(transaction) > 0;
         }
+        public static int getBranchIdByUserId(int user_id)
+        {
+            string query = $"SELECT branch_id FROM employees WHERE user_id = '{user_id}'";
 
+            int branch_id = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    branch_id = Convert.ToInt32(reader["branch_id"].ToString());
+                }
+            }
+            return branch_id;
+        }
         public static bool DeleteEmployeeWithTransaction(int employee_id,int user_id)
         {
             string transaction = $@"
