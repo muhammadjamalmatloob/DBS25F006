@@ -17,5 +17,21 @@ namespace DBFinalProject
         {
             InitializeComponent();
         }
+
+        private void Closebtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new MainInterface().Show();
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://apexbank98.wuaze.com");
+        }
     }
 }

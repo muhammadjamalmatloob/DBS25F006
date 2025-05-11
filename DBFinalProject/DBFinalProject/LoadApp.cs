@@ -16,34 +16,28 @@ namespace DBFinalProject
 {
     public partial class LoadApp : KryptonForm
     {
+        private int timeLeft = 15;
         public LoadApp()
         {
+
             InitializeComponent();
-            Thread.Sleep(1000);
-            //Task load = Loading();
+              
         }
 
         private void AppLoad(object sender, EventArgs e)
         {
-            
+            timer1.Start();
 
         }
-        //private async Task Loading()
-        //{
-        //    label1.Location = new Point(55, label1.Location.Y);
-        //    label1.Text = "Loading Features ...";
-        //    Thread.Sleep(2000);
-        //    label1.Location = new Point(84, label1.Location.Y);
-        //    label1.Text = "Processing ...";
-        //    Thread.Sleep(2000);
-        //    label1.Location = new Point(32, label1.Location.Y);
-        //    label1.Text = "Connecting to Server ...";
-        //    Thread.Sleep(1000);
-        //    label1.Location = new Point(32, label1.Location.Y);
-        //    label1.Text = "Initializing ...";
-        //    Thread.Sleep(2000);
-        //    this.Hide();
-        //    new MainInterface().Show();
-        //}
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            timeLeft--;
+            if (timeLeft == 0)
+            {
+                this.Hide();
+                new MainMenu().Show();
+            }
+        }
     }
 }

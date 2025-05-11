@@ -68,58 +68,7 @@ namespace DBFinalProject.DL
         public static void LoadBranchLoansToGrid(KryptonDataGridView Grid, int condition, string match)
         {
             Grid.Rows.Clear();
-            int a1 = 10000, a2 = 500000, a3 = 100, a4 = 2000000;
-            string n1 = "Jamal", n2 = "Umer", n3 = "Rumman", n4 = "Apex Bank";
-            if (a1 > condition && Regex.IsMatch(n1, match))
-            {
-                Grid.Rows.Add(
-                    1,
-                    n1,
-                    "Interest Free",
-                    a1,
-                    DateTime.Now,
-                    "Want to destroy your bank 😎😎"
-                    );
-            }
-            if (a2 > condition && Regex.IsMatch(n2, match))
-            {
-                Grid.Rows.Add(
-                2,
-                n2,
-                "Interest Free",
-                a2,
-                DateTime.Now,
-                "Want to kill manager 😎😎",
-                "Approve",
-                "Reject"
-                );
-            }
-            if (a3 > condition && Regex.IsMatch(n3, match))
-            {
-                Grid.Rows.Add(
-                3,
-                n3,
-                "Interest Free",
-                a3,
-                DateTime.Now,
-                "Want to kill both of above to save the bank 😎😎",
-                "Approve",
-                "Reject"
-                );
-            }
-            if (a4 > condition && Regex.IsMatch(n4, match))
-            {
-                Grid.Rows.Add(
-                4,
-                n4,
-                "Interest Free",
-                a4,
-                DateTime.Now,
-                "Want to shift bank to another country to save it from above three 😭😭😭",
-                "Approve",
-                "Reject"
-                );
-            }
+            
             foreach (var application in applications)
             {
                 if (application.getAmountRequested() > condition && Regex.IsMatch(application.GetClientName(), match))

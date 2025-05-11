@@ -575,4 +575,15 @@
         /wcpiFLFCjwgdwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>At Apex Bank, we're driven by a vision to empower individuals and businesses globally through innovative 
+and reliable financial solutions. As an international bank, we leverage our extensive network and deep expertise
+to offer a comprehensive suite of services tailored to your unique needs, wherever you are in the world.</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Welcome to Apex Bank! We're thrilled to embark on this financial journey with you.
+As an international bank, we bring a world of opportunities right to your fingertips. 
+Explore our services, designed to help you achieve your financial aspirations, no matter where you are.
+Discover a banking experience that's secure, convenient, and tailored to your global needs.</value>
+  </data>
 </root>
