@@ -10,23 +10,27 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
+using DBFinalProject.Utility;
 
 namespace DBFinalProject
 {
     public partial class ApplyLoan : KryptonForm
     {
-        public ApplyLoan()
+        CashierDashboard cashier;
+        public ApplyLoan(CashierDashboard cashier)
         {
             InitializeComponent();
             LoanTypeDL.LoadAllLoanTypes();
             LoanTypeDL.LoadLoanTypeInComboBox(kryptonComboBox2);
+            this.cashier = cashier;
+            kryptonManager1.GlobalPalette = Theme.theme;
         }
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
-            CashierDashboard cashierDashboard = new CashierDashboard();
-            cashierDashboard.Show();
+           
             this.Hide();
+            cashier.Show();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)

@@ -168,6 +168,7 @@
     <Compile Include="BL\TransferBL.cs" />
     <Compile Include="BL\UserBL.cs" />
     <Compile Include="BL\WithdrawalBL.cs" />
+    <Compile Include="DatabaseHelper.cs" />
     <Compile Include="DL\AccountApplicationDL.cs" />
     <Compile Include="DL\AccountDL.cs" />
     <Compile Include="DL\AccountTypeDL.cs" />
@@ -607,7 +608,13 @@
     <None Include=".vs\DBFinalProject.csproj.dtbcache.json" />
     <None Include="bin\Debug\DBFinalProject.exe.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DBFinalProject.BL.AllEmployeeRepBL.datasource" />
+    <None Include="Properties\DataSources\DBFinalProject.BL.DepositeReportBL.datasource" />
     <None Include="Properties\DataSources\DBFinalProject.BL.EmployeesReport.datasource" />
+    <None Include="Properties\DataSources\DBFinalProject.BL.ExchangeReportBL.datasource" />
+    <None Include="Properties\DataSources\DBFinalProject.BL.PaymentInvoiceBL.datasource" />
+    <None Include="Properties\DataSources\DBFinalProject.BL.TransferReportBL.datasource" />
+    <None Include="Properties\DataSources\DBFinalProject.BL.WithdrawReportBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

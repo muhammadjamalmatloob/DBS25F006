@@ -82,7 +82,7 @@
             this.Closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Closebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Closebtn.ForeColor = System.Drawing.Color.White;
-            this.Closebtn.Location = new System.Drawing.Point(1105, 0);
+            this.Closebtn.Location = new System.Drawing.Point(889, 0);
             this.Closebtn.Margin = new System.Windows.Forms.Padding(0);
             this.Closebtn.Name = "Closebtn";
             this.Closebtn.Size = new System.Drawing.Size(34, 35);
@@ -436,5 +436,6 @@
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette myPallet;
     }
 }

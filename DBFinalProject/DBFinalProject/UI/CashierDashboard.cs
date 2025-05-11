@@ -24,7 +24,7 @@ namespace DBFinalProject
             hide_client();
             load_data();
             Blue.Checked = true;
-            if (Theme.theme == myPallet || Theme.theme == GreenTheme)
+            if (Theme.theme == myPallet || Theme.theme == GreenTheme || Theme.theme == PurpleTheme)
             {
 
                 kryptonManager1.GlobalPalette = Theme.theme;
@@ -62,44 +62,50 @@ namespace DBFinalProject
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            MoneyTransfer moneyTransfer = new MoneyTransfer();
-            moneyTransfer.Show();
             this.Hide();
+            MoneyTransfer moneyTransfer = new MoneyTransfer(this);
+            moneyTransfer.Show();
+            
         }
 
         private void kryptonButton5_Click(object sender, EventArgs e)
         {
-            DepositMoney depositMoney = new DepositMoney();
-            depositMoney.Show();
             this.Hide();
+            DepositMoney depositMoney = new DepositMoney(this);
+            depositMoney.Show();
+            
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
+            this.Hide();
             PayBill payBill = new PayBill();
             payBill.Show();
-            this.Hide();
+            
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             ExchaangeCurr_Cashier exchangeCurr_Cashier = new ExchaangeCurr_Cashier();
             exchangeCurr_Cashier.Show();
-            this.Hide();
+            
         }
 
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
+            this.Hide();
             ApplyLoan applyLoan = new ApplyLoan();
             applyLoan.Show();
-            this.Hide();
+            
         }
 
         private void kryptonButton8_Click(object sender, EventArgs e)
         {
+            this.Hide();
             MainInterface mainInterface = new MainInterface();
             mainInterface.Show();
-            this.Hide();
+            
         }
 
        
@@ -185,7 +191,7 @@ namespace DBFinalProject
         private void kryptonButton6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            WithdrawMoney withdraw = new WithdrawMoney();
+            WithdrawMoney withdraw = new WithdrawMoney(this);
             withdraw.Show();
         }
 
@@ -208,6 +214,11 @@ namespace DBFinalProject
                 kryptonManager1.GlobalPalette = this.GreenTheme;
                 Theme.theme = GreenTheme;
             }
+            else if (Purple.Checked)
+            {
+                kryptonManager1.GlobalPalette = this.PurpleTheme; ;
+                Theme.theme = PurpleTheme;
+            }
             MessageBox.Show("Theme applied successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ThemeMenu.Visible = false;
         }
@@ -216,6 +227,30 @@ namespace DBFinalProject
         {
             kryptonManager1.GlobalPalette = Theme.theme;
             ThemeMenu.Visible = false;
+        }
+
+        private void Blue_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Blue.Checked)
+            {
+                kryptonManager1.GlobalPalette = this.myPallet;
+            }
+        }
+
+        private void Purple_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Purple.Checked)
+            {
+                kryptonManager1.GlobalPalette = this.PurpleTheme;
+            }
+        }
+
+        private void Green_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Green.Checked)
+            {
+                kryptonManager1.GlobalPalette = this.GreenTheme;
+            }
         }
     }
 }
