@@ -109,6 +109,7 @@ namespace DBFinalProject.DL
 
         }
 
+
         public static void LoadAllApplicationsInList()
         {
             profiles.Clear();
@@ -268,6 +269,21 @@ namespace DBFinalProject.DL
                 $"(Select branch_id From branches Where branch_name = '{profiles[row].GetBranch()}'))";
                 int rows = DatabaseHelper.Instance.Update(query);
                 return rows > 0;
+        }
+        public static string TotalAccountApplications(int branch_id)
+        {
+            string query = $"SELECT COUNT(*) from account_application  WHERE branch_id = {branch_id}";
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+
+
         }
     }
 }

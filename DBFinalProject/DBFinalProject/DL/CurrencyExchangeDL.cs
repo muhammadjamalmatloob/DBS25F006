@@ -61,6 +61,7 @@ namespace DBFinalProject.DL
             return DatabaseHelper.Instance.Update(query) > 0;
         }
 
+
         public static void LoadAllBranchExchangesInList()
         {
             exchanges.Clear();
@@ -169,6 +170,41 @@ namespace DBFinalProject.DL
             {
                 row.Height = 50;
             }
+        }
+
+        public static bool exchangeAmmount(CurrencyExchangeBL exchange,int acc_id)
+        {
+            string query = $@"
+                    START TRANSACTION;
+    
+                    INSERT INTO transactions 
+                        VALUES (
+                            null,
+                            {exchange.getClientId()},
+                            {exchange.getTransactionType()},
+                            '{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}',
+                            {exchange.getCharges()}
+                        );
+    
+                    INSERT INTO currency_exchange 
+                        VALUES (
+                            null,
+                            '{exchange.getBaseCurrency()}',
+                            '{exchange.getTargetCurrency()}',
+                            {exchange.getExchangeRate()},
+                            {exchange.getAmountBase()},
+                            {exchange.getAmountTarget()},
+                            LAST_INSERT_ID()
+                        );
+    
+                    UPDATE accounts 
+                        SET balance = balance - ({exchange.getAmountBase()} + {exchange.getCharges()})
+                        WHERE account_id = {acc_id};
+    
+                    COMMIT;
+                ";
+            return DatabaseHelper.Instance.Update(query) > 0;
+
         }
     }
 }

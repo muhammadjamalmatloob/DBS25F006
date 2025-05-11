@@ -18,7 +18,7 @@ namespace DBFinalProject.DL
 
         public static void AddApplication(LoanApplicationBL application)
         {
-            string query = $"INSERT INTO loan_application VALUES ('{application.getLoanApplicationId()}','{application.getAccountId()}', '{application.getAmountRequested()}','{application.getPurpose()}','{application.getEmploymentStatus()}','{application.getLoanStatus()}','{application.getApplyDate()}','{application.getApproveDate()}','{application.getReviewedBy()}','{application.getReviewedDate()}')";
+            string query = $"INSERT INTO loan_application VALUES ({application.getLoanApplicationId()},{application.getClientId()},{application.getLoanTypeId()},{application.getAccountId()}, {application.getAmountRequested()},'{application.getPurpose()}',{application.getEmploymentStatus()},'{application.getLoanStatus()}','{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}',null,null,null)";
             DatabaseHelper.Instance.Update(query);
         }
 
@@ -62,6 +62,8 @@ namespace DBFinalProject.DL
                 }
             }
         }
+
+
 
         public static void LoadBranchLoansToGrid(KryptonDataGridView Grid, int condition, string match)
         {
@@ -155,6 +157,7 @@ namespace DBFinalProject.DL
 
         }
 
+
         public static bool Accept(int rowidx, KryptonDataGridView grid)
         {
             string query = $"Update loan_application set loan_status = 'Approved'" +
@@ -170,5 +173,6 @@ namespace DBFinalProject.DL
             int row = DatabaseHelper.Instance.Update(query);
             return row > 0;
         }
+
     }
 }

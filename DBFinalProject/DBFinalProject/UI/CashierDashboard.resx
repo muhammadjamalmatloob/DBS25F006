@@ -121,7 +121,7 @@
   <data name="panel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        1QAADdUBPdZY8QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEWGSURBVHhe7d0J
+        0wAADdMBvdUcagAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEWGSURBVHhe7d0J
         mBXlmfbxCiLjgksSvmgmjhnGMeAKsijK1k1EUCIgiAg0dJMQNUZHjY7OJMZRQVyj0bgvcUlcooJG4q6I
         qLgr7iiyaXCJihplka2+522btk6dp7vPqa56T1W9/7qu3zXjM0P3ObW8993Qp8rzfR9Aynk1kzcV24ku
         YoAYJY4QvxHni+vF7WKGuF/MEk+K58WrYr5YIj4Qn4rlYm0D87+bmfm/mf8f8/9r/oz5s+ZrmK9lvqb5
@@ -424,7 +424,7 @@
   <data name="panel3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHCgSURBVHhe7d0H
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHCgSURBVHhe7d0H
         eFRV2gfwJQlJSOhJSOiETui99w6hCoiCijQRQYpgQUoUERS7a9e1N+y9rL1ir6Cr7qqray9rQ5p7vvcd
         Er/c5D+TO5O5M/fe+f+f5/d83yJz5945wznv3HLOXxiGYRItm98ePWLzW6O3if+IvfK/v9jy1pjbNr85
         clTxX2EYhmEYxi8554Xp1WTAv0mYYE5/e/StRa9OyCh+CcMwDMMwXk6RKUqSAf7usgM+cvpbox/etm16
@@ -909,6 +909,9 @@
 </value>
   </data>
   <metadata name="kryptonManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="myPallet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="myPallet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -1464,7 +1467,13 @@
         DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMBOO+200/8HPuezFa7MA9IAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>238, 8</value>
+  </metadata>
+  <metadata name="kryptonPalette1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>432, 8</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>95</value>
   </metadata>
 </root>

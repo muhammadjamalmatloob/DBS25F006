@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using DBFinalProject.Utility;
 
 namespace DBFinalProject
 {
@@ -19,6 +20,16 @@ namespace DBFinalProject
         public GeneralMenu()
         {
             InitializeComponent();
+            if (Theme.theme == myPallet || Theme.theme == GreenTheme)
+            {
+
+                kryptonManager1.GlobalPalette = Theme.theme;
+            }
+            else
+            {
+                Theme.theme = myPallet;
+                kryptonManager1.GlobalPalette = Theme.theme;
+            }
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
@@ -50,6 +61,7 @@ namespace DBFinalProject
             commonInterface1.Visible = false;
             clientCurrencyExchange1.Visible = false;
             sendMoney1.Visible = false;
+            clientLoanApplication1.Visible = false;
             withdraw1.Visible = false;
             clientLoan1.Visible = false;
             clientBill1.Visible = false;
@@ -68,6 +80,7 @@ namespace DBFinalProject
             clientCurrencyExchange1.Visible = false;
             sendMoney1.Visible = false;
             clientLoan1.Visible = false;
+            clientLoanApplication1.Visible = false;
             clientBill1.Visible = false;
         }
 
@@ -80,6 +93,7 @@ namespace DBFinalProject
         {
             commonInterface1.Visible = true;
             clientTransactionRecord1.Visible = false;
+            clientLoanApplication1.Visible = false;
             clientCurrencyExchange1.Visible = false;
             sendMoney1.Visible = false;
             withdraw1.Visible = false;
@@ -102,6 +116,7 @@ namespace DBFinalProject
             sendMoney1.Visible = true;
             clientTransactionRecord1.Visible = false;
             clientCurrencyExchange1.Visible = false;
+            clientLoanApplication1.Visible = false;
             commonInterface1.Visible = false;
             withdraw1.Visible = false;
             clientLoan1.Visible = false;
@@ -119,6 +134,7 @@ namespace DBFinalProject
         {
             clientLoan1.Visible = true;
             clientTransactionRecord1.Visible = false;
+            clientLoanApplication1.Visible = false;
             clientCurrencyExchange1.Visible = false;
             sendMoney1.Visible = false;
             commonInterface1.Visible = false;
@@ -130,6 +146,7 @@ namespace DBFinalProject
         {
             clientCurrencyExchange1.Visible = true;
             clientTransactionRecord1.Visible = false;
+            clientLoanApplication1.Visible = false;
             clientLoan1.Visible = false;
             sendMoney1.Visible = false;
             commonInterface1.Visible = false;
@@ -140,6 +157,62 @@ namespace DBFinalProject
         private void button2_Click(object sender, EventArgs e)
         {
             clientBill1.Visible = true;
+            clientLoanApplication1.Visible = false;
+            clientCurrencyExchange1.Visible = false;
+            clientTransactionRecord1.Visible = false;
+            clientLoan1.Visible = false;
+            sendMoney1.Visible = false;
+            commonInterface1.Visible = false;
+            withdraw1.Visible = false;
+        }
+
+        private void kryptonButton7_Click(object sender, EventArgs e)
+        {
+            ThemeMenu.Visible = true;
+        }
+
+        private void kryptonButton12_Click(object sender, EventArgs e)
+        {
+            kryptonManager1.GlobalPalette = Theme.theme;
+            ThemeMenu.Visible = false;
+        }
+
+        private void kryptonButton13_Click(object sender, EventArgs e)
+        {
+            if (Blue.Checked)
+            {
+                kryptonManager1.GlobalPalette = this.myPallet;
+                Theme.theme = myPallet;
+            }
+            else if (Green.Checked)
+            {
+                kryptonManager1.GlobalPalette = this.GreenTheme;
+                Theme.theme = GreenTheme;
+            }
+            MessageBox.Show("Theme applied successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ThemeMenu.Visible = false;
+        }
+
+        private void Blue_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Blue.Checked)
+            {
+                kryptonManager1.GlobalPalette = this.myPallet;
+            }
+        }
+
+        private void Green_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Green.Checked)
+            {
+                kryptonManager1.GlobalPalette = this.GreenTheme;
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            clientLoanApplication1.Visible = true;
+            clientBill1.Visible = false;
             clientCurrencyExchange1.Visible = false;
             clientTransactionRecord1.Visible = false;
             clientLoan1.Visible = false;

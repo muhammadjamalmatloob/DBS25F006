@@ -36,15 +36,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.Closebtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.GrpDep = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonButton12 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton13 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GrpDep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrpDep.Panel)).BeginInit();
+            this.GrpDep.Panel.SuspendLayout();
+            this.GrpDep.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -119,31 +126,9 @@
             this.label7.Location = new System.Drawing.Point(469, 268);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 28);
+            this.label7.Size = new System.Drawing.Size(120, 28);
             this.label7.TabIndex = 27;
-            this.label7.Text = "ACCOUNT NO:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(611, 314);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 21);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "*******";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(469, 314);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 28);
-            this.label8.TabIndex = 29;
-            this.label8.Text = "BALANCE:";
+            this.label7.Text = "ACCOUNTS:";
             // 
             // kryptonPanel1
             // 
@@ -199,21 +184,84 @@
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(445, 470);
+            this.kryptonButton1.Location = new System.Drawing.Point(373, 477);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.Size = new System.Drawing.Size(87, 37);
             this.kryptonButton1.TabIndex = 32;
             this.kryptonButton1.Values.Text = "View";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
+            // GrpDep
+            // 
+            this.GrpDep.Location = new System.Drawing.Point(675, 279);
+            this.GrpDep.Margin = new System.Windows.Forms.Padding(2);
+            this.GrpDep.Name = "GrpDep";
+            // 
+            // GrpDep.Panel
+            // 
+            this.GrpDep.Panel.Controls.Add(this.kryptonTextBox1);
+            this.GrpDep.Panel.Controls.Add(this.kryptonButton12);
+            this.GrpDep.Panel.Controls.Add(this.kryptonButton13);
+            this.GrpDep.Size = new System.Drawing.Size(224, 293);
+            this.GrpDep.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.GrpDep.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
+            this.GrpDep.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
+            this.GrpDep.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.GrpDep.StateCommon.Border.Rounding = 15;
+            this.GrpDep.StateCommon.Border.Width = 3;
+            this.GrpDep.TabIndex = 36;
+            this.GrpDep.Values.Heading = "View Balance";
+            this.GrpDep.Visible = false;
+            // 
+            // kryptonTextBox1
+            // 
+            this.kryptonTextBox1.Location = new System.Drawing.Point(30, 23);
+            this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.Size = new System.Drawing.Size(143, 23);
+            this.kryptonTextBox1.TabIndex = 26;
+            this.kryptonTextBox1.Text = "Enter Account Number";
+            this.kryptonTextBox1.Enter += new System.EventHandler(this.kryptonTextBox1_Enter);
+            this.kryptonTextBox1.Leave += new System.EventHandler(this.kryptonTextBox1_Leave);
+            // 
+            // kryptonButton12
+            // 
+            this.kryptonButton12.Location = new System.Drawing.Point(114, 219);
+            this.kryptonButton12.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonButton12.Name = "kryptonButton12";
+            this.kryptonButton12.Size = new System.Drawing.Size(83, 33);
+            this.kryptonButton12.TabIndex = 25;
+            this.kryptonButton12.Values.Text = "Back";
+            this.kryptonButton12.Click += new System.EventHandler(this.kryptonButton12_Click);
+            // 
+            // kryptonButton13
+            // 
+            this.kryptonButton13.Location = new System.Drawing.Point(12, 221);
+            this.kryptonButton13.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonButton13.Name = "kryptonButton13";
+            this.kryptonButton13.Size = new System.Drawing.Size(83, 33);
+            this.kryptonButton13.TabIndex = 23;
+            this.kryptonButton13.Values.Text = "Check";
+            this.kryptonButton13.Click += new System.EventHandler(this.kryptonButton13_Click);
+            // 
+            // kryptonButton2
+            // 
+            this.kryptonButton2.Location = new System.Drawing.Point(512, 477);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.Size = new System.Drawing.Size(141, 37);
+            this.kryptonButton2.TabIndex = 37;
+            this.kryptonButton2.Values.Text = "Check Balance";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
+            // 
             // CommonInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.kryptonButton2);
+            this.Controls.Add(this.GrpDep);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.kryptonPanel1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
@@ -223,9 +271,15 @@
             this.Controls.Add(this.label3);
             this.Name = "CommonInterface";
             this.Size = new System.Drawing.Size(923, 600);
+            this.Load += new System.EventHandler(this.CommonInterface_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GrpDep.Panel)).EndInit();
+            this.GrpDep.Panel.ResumeLayout(false);
+            this.GrpDep.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GrpDep)).EndInit();
+            this.GrpDep.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,12 +294,15 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label8;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private System.Windows.Forms.Button Closebtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label9;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox GrpDep;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton12;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton13;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
     }
 }

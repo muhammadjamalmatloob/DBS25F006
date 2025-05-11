@@ -53,13 +53,31 @@ namespace DBFinalProject.UI
             {
 
                 WithdrawalBL withdrawal = new WithdrawalBL();
-                withdrawal.setFromAccID(AccountDL.getAccountIdByNumber(account_number));
-                withdrawal.setClientId(AccountDL.getCleintIdByNumber(account_number));
-                withdrawal.setAmount(Convert.ToDecimal(amount));
-                withdrawal.setCharges(withdrawal.getAmount());
-                withdrawal.setDate(DateTime.Now);
-                withdrawal.setTransactionType(6);   // withraw ki id from lookup  
+                int acc_id = AccountDL.getAccountIdByNumber(account_number);
+                try
+                {
+                    withdrawal.setFromAccID(acc_id);
+                    withdrawal.setClientId(AccountDL.getCleintIdByNumber(account_number));
+                    withdrawal.setAmount(Convert.ToDecimal(amount));
+                    withdrawal.setCharges(withdrawal.getAmount());
+                    withdrawal.setDate(DateTime.Now);
+                    withdrawal.setTransactionType(6);   // withraw ki id from lookup
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                    return;
+                }
 
+
+
+                int max_amount = AccountTypeDL.getWithdrawlLimit(acc_id);
+                int current_balance = AccountDL.getBalanceById(acc_id);
+                if (Convert.ToInt64(amount) > max_amount)
+                {
+                    MessageBox.Show($"Withdrawl Limit is {max_amount}.");
+                    return;
+                }
 
                 if (pin == AccountDL.getPinByNumber(account_number))
                 {
@@ -124,9 +142,9 @@ namespace DBFinalProject.UI
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
-            AdminDashboard adminDashboard = new AdminDashboard();
-            adminDashboard.Show();
             this.Hide();
+            CashierDashboard cashierDashboard = new CashierDashboard();
+            cashierDashboard.Show();
         }
 
         private void kryptonTextBox3_Enter(object sender, EventArgs e)
@@ -167,9 +185,10 @@ namespace DBFinalProject.UI
 
         private void kryptonTextBox2_Enter(object sender, EventArgs e)
         {
-            if (kryptonTextBox2.Text == "PIN")
+            if (kryptonTextBox2.Text == "ENTER PIN")
             {
                 kryptonTextBox2.Text = "";
+                kryptonTextBox2.PasswordChar = '*';
                 kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
             }
         }
@@ -178,9 +197,15 @@ namespace DBFinalProject.UI
         {
             if (kryptonTextBox2.Text == "")
             {
-                kryptonTextBox2.Text = "PIN";
+                kryptonTextBox2.Text = "ENTER PIN";
                 kryptonTextBox2.StateCommon.Content.Color1 = Color.Gray;
             }
+        }
+
+        private void kryptonTextBox2_TextChanged(object sender, EventArgs e)
+        {
+            kryptonTextBox2.PasswordChar = '*';
+            kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
         }
     }
 }

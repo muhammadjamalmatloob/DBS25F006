@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.Utility;
+using MySqlX.XDevAPI;
 using Org.BouncyCastle.Asn1.Mozilla;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -28,6 +29,43 @@ namespace DBFinalProject.DL
             return DatabaseHelper.Instance.Update(query) > 0;
         }
 
+        public static bool AddEmployeeWithTransaction(EmployeeBL employee)
+        {
+            string transaction = $@"
+                    START TRANSACTION;" +
+                    $"INSERT INTO users (username, email, password_hash, role_id)" +
+                    $"VALUES ('{employee.get_username()}', '{employee.get_email()}', '{PasswordFunc.HashPassword(employee.get_password_hash()),3}', {employee.get_role_id()});"+
+
+                    $"INSERT INTO employees (user_id, first_name, last_name, gender, department, position, branch_id, salary, contact, email)" +
+                   $" VALUES (LAST_INSERT_ID(), '{employee.get_first_name()}', '{employee.get_last_name()}', '{employee.get_gender()}', '{employee.get_department()}', {employee.get_position()}, {employee.get_branch_id()}, {employee.get_salary()}, '{employee.get_contact()}', '{employee.get_email()}'); " +
+                    $"COMMIT;";
+            return DatabaseHelper.Instance.Update(transaction) > 0;
+        }
+        public static int getBranchIdByUserId(int user_id)
+        {
+            string query = $"SELECT branch_id FROM employees WHERE user_id = '{user_id}'";
+
+            int branch_id = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    branch_id = Convert.ToInt32(reader["branch_id"].ToString());
+                }
+            }
+            return branch_id;
+        }
+        public static bool DeleteEmployeeWithTransaction(int employee_id,int user_id)
+        {
+            string transaction = $@"
+                                START TRANSACTION;
+                                
+                                DELETE FROM employees WHERE employee_id = {employee_id};
+                                DELETE FROM users WHERE user_id = {user_id};
+                                COMMIT;";
+            return DatabaseHelper.Instance.Update(transaction) > 0;
+        }
+
         public static void AddEmployeeToList(EmployeeBL employee)
         {
             employees.Add(employee);
@@ -45,10 +83,7 @@ namespace DBFinalProject.DL
                 }
             }
         }
-        public static void RemoveEmployee(int employee_id_to_delete)
-        {
-            employees.RemoveAll(e => e.get_employee_id() == employee_id_to_delete);
-        }
+        
 
         public static bool updateEmployeeInDb(EmployeeBL employee, int id_to_update)
         {
@@ -354,6 +389,20 @@ namespace DBFinalProject.DL
                     return false;
                 }
             }
+        }
+
+        public static int getUserIdByEmpId(int employee_id)
+        {
+            string query = $"SELECT user_id FROM employees WHERE employee_id = {employee_id}";
+            int user_id = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    user_id = Convert.ToInt32(reader["user_id"].ToString());
+                }
+            }
+            return user_id;
         }
 
 

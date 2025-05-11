@@ -27,6 +27,7 @@ namespace DBFinalProject
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox2);
             BranchDL.LoadDataGrid(BranchDL.branchList, dgvBranch);
             kryptonComboBox1.SelectedIndex = 0;
+            kryptonComboBox2.SelectedIndex = 0;
 
 
             GrpBox.Visible = false;
@@ -60,6 +61,7 @@ namespace DBFinalProject
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
+            clear_grp();
             GrpBox.Visible = false;
             GrpUpdate.Visible = false;
             GrpAdd.Visible = true;
@@ -68,6 +70,7 @@ namespace DBFinalProject
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
+            clear_grp();
             GrpBox.Visible = false;
             GrpUpdate.Visible = true;
             GrpAdd.Visible = false;
@@ -76,6 +79,7 @@ namespace DBFinalProject
 
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
+            clear_grp();
             GrpBox.Visible = false;
             GrpUpdate.Visible = false;
             GrpAdd.Visible = false;
@@ -144,16 +148,23 @@ namespace DBFinalProject
                 return;
             }
 
-
-            if (BranchDL.AddBranchInDb(branch))
+            try
             {
-                MessageBox.Show("Branch Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                BranchDL.LoadAllDataInList();
+                if (BranchDL.AddBranchInDb(branch))
+                {
+                    MessageBox.Show("Branch Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BranchDL.LoadAllDataInList();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to Add Branch", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
-            else
+            catch
             {
                 MessageBox.Show("Failed to Add Branch", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                return;
             }
 
             apply_filters();
@@ -167,23 +178,7 @@ namespace DBFinalProject
 
         }
 
-        //private void kryptonTextBox3_Enter(object sender, EventArgs e)
-        //{
-        //    if (kryptonTextBox3.Text == "Branch Code ")
-        //    {
-        //        kryptonTextBox3.Text = "";
-        //        kryptonTextBox3.ForeColor = Color.Black;
-        //    }
-        //}
 
-        //private void kryptonTextBox3_Leave(object sender, EventArgs e)
-        //{
-        //    if (kryptonTextBox3.Text == "")
-        //    {
-        //        kryptonTextBox3.Text = "Branch Code ";
-        //        kryptonTextBox3.ForeColor = Color.Black;
-        //    }
-        //}
 
         private void kryptonTextBox3_TextChanged(object sender, EventArgs e)
         {
@@ -225,17 +220,26 @@ namespace DBFinalProject
             branch.set_branch_id(branch_id);
 
             BranchBL b = BranchDL.GetBranchById(branch_id);
-            if (BranchDL.DeleteBranchInDb(branch_id))
+
+            try
             {
-                MessageBox.Show("Branch Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                BranchDL.LoadAllDataInList();
-                
-                
+                if (BranchDL.DeleteBranchInDb(branch_id))
+                {
+                    MessageBox.Show("Branch Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    BranchDL.LoadAllDataInList();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Failed to Delete Branch", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Failed to Delete Branch", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             apply_filters();
@@ -263,12 +267,7 @@ namespace DBFinalProject
                 branch.set_city(kryptonTextBox10.Text);
                 branch.set_contact(kryptonTextBox8.Text);
                 branch.set_country(kryptonTextBox7.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            
 
 
             if (BranchDL.UpdateBranchInDb(branch))
@@ -280,12 +279,16 @@ namespace DBFinalProject
             {
                 MessageBox.Show("Failed to Update Branch", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             apply_filters();
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox1);
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox2);
             GrpUpdate.Visible = false;
-
         }
 
         private void kryptonButton8_Click(object sender, EventArgs e)
@@ -484,5 +487,16 @@ namespace DBFinalProject
             var filteredList = BranchDL.branchList.Where(b => b.get_branch_name().ToLower().Contains(search)).ToList();
             BranchDL.LoadDataGrid(filteredList, dgvBranch);
         }
+        private void clear_grp()
+        {
+            kryptonTextBox7.Text = "Country";
+            kryptonTextBox8.Text = "Contact";
+            kryptonTextBox10.Text = "City";
+            kryptonTextBox11.Text = "Address ";
+            kryptonTextBox2.Text = "Branch Name";
+            kryptonComboBox1.SelectedIndex = 0;
+            kryptonComboBox2.SelectedIndex = 0;
+        }
+            
     }
 }

@@ -144,10 +144,10 @@
             this.Closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Closebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Closebtn.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Closebtn.Location = new System.Drawing.Point(666, -1);
+            this.Closebtn.Location = new System.Drawing.Point(888, -1);
             this.Closebtn.Margin = new System.Windows.Forms.Padding(0);
             this.Closebtn.Name = "Closebtn";
-            this.Closebtn.Size = new System.Drawing.Size(34, 35);
+            this.Closebtn.Size = new System.Drawing.Size(45, 43);
             this.Closebtn.TabIndex = 15;
             this.Closebtn.Text = "X";
             this.Closebtn.UseVisualStyleBackColor = true;
@@ -158,18 +158,20 @@
             this.login.AutoSize = true;
             this.login.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.login.Location = new System.Drawing.Point(360, 130);
+            this.login.Location = new System.Drawing.Point(480, 160);
+            this.login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(298, 26);
+            this.login.Size = new System.Drawing.Size(387, 32);
             this.login.TabIndex = 14;
             this.login.Text = "SingUp or Apply For Account";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(443, 23);
+            this.pictureBox2.Location = new System.Drawing.Point(591, 28);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(102, 92);
+            this.pictureBox2.Size = new System.Drawing.Size(136, 113);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
@@ -177,9 +179,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-2, -25);
+            this.pictureBox1.Location = new System.Drawing.Point(-3, -31);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(287, 501);
+            this.pictureBox1.Size = new System.Drawing.Size(383, 617);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
@@ -191,20 +194,20 @@
             // 
             // login_btn
             // 
-            this.login_btn.Location = new System.Drawing.Point(443, 194);
-            this.login_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.login_btn.Location = new System.Drawing.Point(591, 239);
+            this.login_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.login_btn.Name = "login_btn";
-            this.login_btn.Size = new System.Drawing.Size(101, 35);
+            this.login_btn.Size = new System.Drawing.Size(135, 43);
             this.login_btn.TabIndex = 21;
             this.login_btn.Values.Text = "SignUP";
             this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(416, 305);
-            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonButton1.Location = new System.Drawing.Point(555, 375);
+            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(161, 47);
+            this.kryptonButton1.Size = new System.Drawing.Size(215, 58);
             this.kryptonButton1.TabIndex = 22;
             this.kryptonButton1.Values.Text = "Apply For Account";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
@@ -214,17 +217,18 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(474, 251);
+            this.label1.Location = new System.Drawing.Point(632, 309);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 26);
+            this.label1.Size = new System.Drawing.Size(56, 32);
             this.label1.TabIndex = 23;
             this.label1.Text = "OR";
             // 
             // SignUpORApply
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 450);
+            this.ClientSize = new System.Drawing.Size(933, 554);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.Closebtn);
@@ -233,7 +237,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.login_btn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SignUpORApply";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUpORApply";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

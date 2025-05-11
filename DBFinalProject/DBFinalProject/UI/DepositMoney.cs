@@ -62,11 +62,13 @@ namespace DBFinalProject
             string account_number = "";
             string amount = "";
             string pin = "";
+            int amount_int = 0; 
             try
             {
                 account_number = kryptonTextBox3.Text.Trim();
                 amount = kryptonTextBox1.Text.Trim();
                 pin = kryptonTextBox2.Text.Trim();
+                amount_int = Convert.ToInt32(amount);
             }
             catch (Exception ex)
             {
@@ -76,16 +78,26 @@ namespace DBFinalProject
 
             if (AccountDL.isAccount(account_number, branch_id))
             {
+                
                 DepositsBL deposits = new DepositsBL();
-                deposits.setToAccountId(AccountDL.getAccountIdByNumber(account_number));
+                int acc_id = AccountDL.getAccountIdByNumber(account_number);
+                deposits.setToAccountId(acc_id);
+
                 deposits.setClientId(AccountDL.getCleintIdByNumber(account_number));
-                MessageBox.Show($"{deposits.getClientId()}");
+                
                 deposits.setAmount(Convert.ToDecimal(amount));
                 deposits.setCharges(deposits.getAmount());
                 //string formattedDate = DateTime.Now.ToString("yyyy-MM-dd");
                 deposits.setDate(Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd")));
                 deposits.setTransactionType(5);   // deposit ki id from lookup  
 
+                int min_amount = AccountTypeDL.getMinBalance(acc_id);
+                int current_balance = AccountDL.getBalanceById(acc_id);
+                if (amount_int + current_balance < min_amount)
+                {
+                    MessageBox.Show($"Minimum Balance should be {min_amount}.");
+                    return;
+                }
 
                 if (pin == AccountDL.getPinByNumber(account_number))
                 {
@@ -190,6 +202,12 @@ namespace DBFinalProject
                 kryptonTextBox2.Text = "Enter PIN";
                 kryptonTextBox2.StateCommon.Content.Color1 = Color.Gray;
             }
+        }
+
+        private void kryptonTextBox2_TextChanged(object sender, EventArgs e)
+        {
+            kryptonTextBox2.PasswordChar = '*';
+            kryptonTextBox2.StateCommon.Content.Color1 = Color.Black;
         }
     }
 }

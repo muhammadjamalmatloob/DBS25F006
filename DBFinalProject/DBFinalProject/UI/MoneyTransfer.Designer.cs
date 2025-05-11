@@ -43,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.kryptonButton9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.GrpSender = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonComboBox2 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonTextBox4 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -50,7 +51,6 @@
             this.myPallet = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.GreenTheme = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
-            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
@@ -281,6 +281,16 @@
             this.GrpSender.TabIndex = 38;
             this.GrpSender.Values.Heading = "SENDER";
             // 
+            // kryptonButton2
+            // 
+            this.kryptonButton2.Location = new System.Drawing.Point(312, 470);
+            this.kryptonButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.Size = new System.Drawing.Size(173, 41);
+            this.kryptonButton2.TabIndex = 37;
+            this.kryptonButton2.Values.Text = "TRANSFER";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
+            // 
             // kryptonComboBox2
             // 
             this.kryptonComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -321,6 +331,9 @@
             this.kryptonTextBox4.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox4.TabIndex = 33;
             this.kryptonTextBox4.Text = "Enter Pin";
+            this.kryptonTextBox4.TextChanged += new System.EventHandler(this.kryptonTextBox4_TextChanged);
+            this.kryptonTextBox4.Enter += new System.EventHandler(this.kryptonTextBox4_Enter);
+            this.kryptonTextBox4.Leave += new System.EventHandler(this.kryptonTextBox4_Leave);
             // 
             // kryptonTextBox3
             // 
@@ -556,16 +569,6 @@
             // 
             this.kryptonManager1.GlobalPalette = this.GreenTheme;
             this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
-            // 
-            // kryptonButton2
-            // 
-            this.kryptonButton2.Location = new System.Drawing.Point(312, 470);
-            this.kryptonButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(173, 41);
-            this.kryptonButton2.TabIndex = 37;
-            this.kryptonButton2.Values.Text = "TRANSFER";
-            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // MoneyTransfer
             // 

@@ -192,6 +192,7 @@
             this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox2.TabIndex = 31;
             this.kryptonTextBox2.Text = "Enter Pin";
+            this.kryptonTextBox2.TextChanged += new System.EventHandler(this.kryptonTextBox2_TextChanged);
             this.kryptonTextBox2.Enter += new System.EventHandler(this.kryptonTextBox2_Enter);
             this.kryptonTextBox2.Leave += new System.EventHandler(this.kryptonTextBox2_Leave);
             // 

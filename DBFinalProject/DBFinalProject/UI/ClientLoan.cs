@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBFinalProject.BL;
+using DBFinalProject.DL;
+using DBFinalProject.UI;
 
 namespace DBFinalProject
 {
@@ -16,6 +18,8 @@ namespace DBFinalProject
         public ClientLoan()
         {
             InitializeComponent();
+            LoanTypeDL.LoadAllLoanTypes();
+            LoanTypeDL.LoadLoanTypeInComboBox(kryptonComboBox2);
         }
 
         private void kryptonTextBox2_TextChanged(object sender, EventArgs e)
@@ -41,7 +45,7 @@ namespace DBFinalProject
 
         private void kryptonTextBox2_Enter(object sender, EventArgs e)
         {
-            if (kryptonTextBox2.Text == "Description")
+            if (kryptonTextBox2.Text == "Purpose")
             {
                 kryptonComboBox2.Text = "";
             }
@@ -51,7 +55,7 @@ namespace DBFinalProject
         {
             if(kryptonTextBox2.Text == "")
             {
-                kryptonComboBox2.Text = "Description";
+                kryptonComboBox2.Text = "Purpose";
             }
         }
 
@@ -73,18 +77,53 @@ namespace DBFinalProject
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            string loan_type = kryptonComboBox2.SelectedItem.ToString();
-            string purpose = kryptonTextBox2.Text;
-            decimal amount = Convert.ToDecimal(kryptonTextBox1.Text);
-            LoanApplicationBL application = new LoanApplicationBL();
-            //application.setClientId();
-            //application.setLoanTypeId();
-            //application.setAccountId();
-            application.SetRequestAmount(amount);
-            application.setPurpose(purpose);
-            //application.setEmployementStatus();
-            //application.setLoanStatus();
-            application.setApplyDate(DateTime.Now);
+            try
+            {
+                string username = DL.LoginDL.user.getUsername();
+                string account_num = kryptonTextBox3.Text;
+                string loan_type = kryptonComboBox2.SelectedItem.ToString();
+                if (loan_type == null || loan_type == "Select Loan Type")
+                {
+                    MessageBox.Show("Please Select Loan Type");
+                }
+                string purpose = kryptonTextBox2.Text;
+                decimal amount = Convert.ToDecimal(kryptonTextBox1.Text);
+                int user_id = DL.UserDL.get_user_id(username);
+                int client_id = DL.ClientDL.getClientIdbyUserId(user_id);
+                int acc_id = DL.AccountDL.getAccountIdByNumber(account_num);
+                int LTID = DL.LoanTypeDL.getIdByName(loan_type);
+                string status = kryptonComboBox1.SelectedItem.ToString();
+                if(DL.AccountDL.isAccountOfClient(account_num,client_id))
+                {
+
+                    LoanApplicationBL application = new LoanApplicationBL();
+                    application.setClientId(client_id);
+                    application.setLoanTypeId(LTID);
+                    application.setAccountId(acc_id);
+                    application.SetRequestAmount(amount);
+                    application.setPurpose(purpose);
+                    int e_status = 0;
+                    if (status == "Employed")
+                    {
+                        e_status = 1;
+                    }
+                    application.setEmployementStatus(e_status);
+                    application.setLoanStatus(18);
+                    application.setApplyDate(DateTime.Now);
+                    DL.LoanApplicationDL.AddApplication(application);
+                    MessageBox.Show("Application Submitted");
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Account");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+
 
         }
 
@@ -101,6 +140,26 @@ namespace DBFinalProject
             if (kryptonComboBox1.Text == "")
             {
                 kryptonComboBox1.Text = "Employment Status";
+            }
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void kryptonTextBox3_Enter(object sender, EventArgs e)
+        {
+            if(kryptonTextBox3.Text == "Account Number")
+            {
+                kryptonTextBox3.Text = "";
+            }
+        }
+
+        private void kryptonTextBox3_Leave(object sender, EventArgs e)
+        {
+            if(kryptonTextBox3.Text == "")
+            {
+                kryptonTextBox3.Text = "Account Number";
             }
         }
     }

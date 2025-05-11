@@ -34,9 +34,10 @@ namespace DBFinalProject
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
+            this.Hide();
             CashierDashboard cashierDashboard = new CashierDashboard();
             cashierDashboard.Show();
-            this.Hide();
+            
         }
 
 
@@ -125,7 +126,6 @@ namespace DBFinalProject
                 kryptonTextBox3.StateCommon.Content.Color1 = Color.Black;
             }
         }
-
         private void kryptonTextBox3_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(kryptonTextBox3.Text))
@@ -141,8 +141,6 @@ namespace DBFinalProject
         }
 
         // transfer wala btn
-
-
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
             string selectedBranchName2 = kryptonComboBox2.Text.Trim();
@@ -174,15 +172,32 @@ namespace DBFinalProject
                 if (pin == AccountDL.getPinByNumber(from_account_number))
                 {
                     TransferBL transfer = new TransferBL();
-                    transfer.setClientId(AccountDL.getCleintIdByNumber(from_account_number));
-                    transfer.setTransactionType(7); // transfer ki id from lookup
-                    transfer.setDate(DateTime.Now);
-                    transfer.setCharges(amount);
+                    int acc_id = 0;
+                    try
+                    {
+                        transfer.setClientId(AccountDL.getCleintIdByNumber(from_account_number));
+                        transfer.setTransactionType(7); // transfer ki id from lookup
+                        transfer.setDate(DateTime.Now);
+                        transfer.setCharges(amount);
 
-                    transfer.setAmount(amount);
-                    transfer.setFromAccID(AccountDL.getAccountIdByNumber(from_account_number));
-                    transfer.setToAccID(AccountDL.getAccountIdByNumber(to_account_number));
+                        transfer.setAmount(amount);
+                        acc_id = AccountDL.getAccountIdByNumber(from_account_number);
+                        transfer.setFromAccID(acc_id);
+                        transfer.setToAccID(AccountDL.getAccountIdByNumber(to_account_number));
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                        return;
+                    }
 
+                    int max_amount = AccountTypeDL.getTransactionLimit(acc_id);
+                    int current_balance = AccountDL.getBalanceById(acc_id);
+                    if (amount  > max_amount)
+                    {
+                        MessageBox.Show($"Transaction Limit is {max_amount}.");
+                        return;
+                    }
                     try
                     {
                         TransferDL.transferAmmount(transfer);
@@ -206,6 +221,30 @@ namespace DBFinalProject
                 MessageBox.Show("Your Account does not exists.");
                 return;
             }
+        }
+
+        private void kryptonTextBox4_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox4.Text == "Enter Pin")
+            {
+                kryptonTextBox4.Text = "";
+                kryptonTextBox4.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox4_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox4.Text))
+            {
+                kryptonTextBox4.Text = "Enter Pin";
+                kryptonTextBox4.StateCommon.Content.Color1 = Color.Gray;
+            }
+        }
+
+        private void kryptonTextBox4_TextChanged(object sender, EventArgs e)
+        {
+            kryptonTextBox4.PasswordChar = '*';
+            kryptonTextBox4.StateCommon.Content.Color1 = Color.Black;
         }
     }
 }

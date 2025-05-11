@@ -24,6 +24,8 @@ namespace DBFinalProject.UI
             AccountTypeDL.LoadDataGrid(AccountTypeDL.accountTypes, dgvAccount);
             AccountTypeDL.LoadAccountTypeInComboBox(kryptonComboBox2);
             AccountTypeDL.LoadAccountTypeInComboBox(kryptonComboBox3);
+            kryptonComboBox3.SelectedIndex = 0;
+            kryptonComboBox2.SelectedIndex = 0;
 
             GrpAdd.Visible = false;
             GrpBox.Visible = false;
@@ -195,18 +197,27 @@ namespace DBFinalProject.UI
                 MessageBox.Show("Select Account Type first", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             int account_type_id = AccountTypeDL.getIdByName(selectedName);
-            if (AccountTypeDL.DeleteAccountTypeInDb(account_type_id))
+
+            try
             {
-                AccountTypeDL.LoadAllDataInList();
-                AccountTypeDL.LoadDataGrid(AccountTypeDL.accountTypes, dgvAccount);
-                AccountTypeDL.LoadAccountTypeInComboBox(kryptonComboBox2);
-                AccountTypeDL.LoadAccountTypeInComboBox(kryptonComboBox3);
-                MessageBox.Show("Account Type Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (AccountTypeDL.DeleteAccountTypeInDb(account_type_id))
+                {
+                    AccountTypeDL.LoadAllDataInList();
+                    AccountTypeDL.LoadDataGrid(AccountTypeDL.accountTypes, dgvAccount);
+                    AccountTypeDL.LoadAccountTypeInComboBox(kryptonComboBox2);
+                    AccountTypeDL.LoadAccountTypeInComboBox(kryptonComboBox3);
+                    MessageBox.Show("Account Type Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to Delete Account Type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("Failed to Delete Account Type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+                MessageBox.Show("Failed to Delete Account Type ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             GrpDelete.Visible = false;
         }
@@ -463,6 +474,21 @@ namespace DBFinalProject.UI
 
             var filteredList = AccountTypeDL.accountTypes.Where(a => a.get_type_name().ToLower().Contains(search)).ToList();
             AccountTypeDL.LoadDataGrid(filteredList, dgvAccount);
+        }
+
+        private void clear_grp()
+        {
+            kryptonTextBox9.Text = "Withdrawl Limit";
+            kryptonTextBox5.Text = "Descryption";
+            kryptonTextBox3.Text = "Minimum Balance";
+            kryptonTextBox2.Text = "Type Name";
+
+            kryptonTextBox10.Text = "Minimum Balance";
+            kryptonTextBox12.Text = "Descryption";
+            kryptonTextBox10.Text = "Minimum Balance";
+
+            kryptonComboBox3.SelectedIndex = 0;
+            kryptonComboBox2.SelectedIndex = 0;
         }
     }
 }
