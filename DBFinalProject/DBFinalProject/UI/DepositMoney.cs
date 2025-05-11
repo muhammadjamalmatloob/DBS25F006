@@ -10,20 +10,27 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
+
 using DBFinalProject.UI;
+
+using DBFinalProject.Utility;
+
 
 namespace DBFinalProject
 {
     public partial class DepositMoney : KryptonForm
     {
-        public DepositMoney()
+        CashierDashboard cashier;
+        public DepositMoney(CashierDashboard cashier)
         {
+            this.cashier = cashier;
             InitializeComponent();
             BranchDL.LoadAllDataInList();
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox1);
             kryptonComboBox1.SelectedIndex = 0;
             
             grpReciept.Visible = false;
+            kryptonManager1.GlobalPalette = Theme.theme;
         }
 
          
@@ -40,9 +47,8 @@ namespace DBFinalProject
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
-            CashierDashboard cashierDashboard = new CashierDashboard();
-            cashierDashboard.Show();
             this.Hide();
+            cashier.Show();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)

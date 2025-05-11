@@ -10,18 +10,22 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
+using DBFinalProject.Utility;
 
 namespace DBFinalProject.UI
 {
     public partial class WithdrawMoney : KryptonForm
     {
-        public WithdrawMoney()
+        CashierDashboard cashier;
+        public WithdrawMoney(CashierDashboard cashier)
         {
+            this.cashier = cashier;
             InitializeComponent();
             grpReciept.Visible = false;
             BranchDL.LoadAllDataInList();
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox1);
             kryptonComboBox1.SelectedIndex = 0;
+            kryptonManager1.GlobalPalette = Theme.theme;
         }
 
         // withraw button
@@ -157,8 +161,7 @@ namespace DBFinalProject.UI
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CashierDashboard cashierDashboard = new CashierDashboard();
-            cashierDashboard.Show();
+            cashier.Show();
         }
 
         private void kryptonTextBox3_Enter(object sender, EventArgs e)

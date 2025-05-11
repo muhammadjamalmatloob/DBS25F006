@@ -12,14 +12,18 @@ using System.Xml.Linq;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
+using DBFinalProject.Utility;
 
 namespace DBFinalProject
 {
     public partial class Withdraw : UserControl
     {
+        
         public Withdraw()
         {
+            
             InitializeComponent();
+            
         }
 
         private void kryptonButton11_Click(object sender, EventArgs e)

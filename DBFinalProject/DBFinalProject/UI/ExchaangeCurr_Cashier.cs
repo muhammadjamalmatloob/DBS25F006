@@ -10,17 +10,22 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
-using DBFinalProject.UI;
+
+using DBFinalProject.Utility;
+
 
 namespace DBFinalProject
 {
     public partial class ExchaangeCurr_Cashier : KryptonForm
     {
+
         string base_currency;
         string target_currency;
         string base_amount;
         string target_amount;
-        public ExchaangeCurr_Cashier()
+        CashierDashboard cashier;
+        public ExchaangeCurr_Cashier(CashierDashboard cashier)
+
         {
             InitializeComponent();
             grpReciept.Visible = false;
@@ -28,6 +33,8 @@ namespace DBFinalProject
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox1);
             kryptonComboBox1.SelectedIndex = 0;
             kryptonComboBox4.SelectedIndex = 0;
+            this.cashier = cashier;
+            kryptonManager1.GlobalPalette = Theme.theme;
         }
 
         private void kryptonComboBox3_SelectedIndexChanged(object sender, EventArgs e)
@@ -42,9 +49,9 @@ namespace DBFinalProject
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
-            CashierDashboard cashierDashboard = new CashierDashboard();
-            cashierDashboard.Show();
+           
             this.Hide();
+            cashier.Show();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)

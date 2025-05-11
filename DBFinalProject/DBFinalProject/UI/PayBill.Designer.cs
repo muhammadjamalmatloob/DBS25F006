@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PayBill));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonButton14 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -53,7 +54,11 @@
             this.name = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+
+            this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
+
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrpRecieve)).BeginInit();
@@ -75,15 +80,17 @@
             this.kryptonPanel1.Controls.Add(this.panel2);
             this.kryptonPanel1.Controls.Add(this.label1);
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(1521, 107);
+            this.kryptonPanel1.Size = new System.Drawing.Size(1141, 87);
             this.kryptonPanel1.TabIndex = 26;
             // 
             // kryptonButton14
             // 
-            this.kryptonButton14.Location = new System.Drawing.Point(27, 32);
+            this.kryptonButton14.Location = new System.Drawing.Point(20, 26);
+            this.kryptonButton14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonButton14.Name = "kryptonButton14";
-            this.kryptonButton14.Size = new System.Drawing.Size(111, 41);
+            this.kryptonButton14.Size = new System.Drawing.Size(83, 33);
             this.kryptonButton14.TabIndex = 26;
             this.kryptonButton14.Values.Text = "Back";
             this.kryptonButton14.Click += new System.EventHandler(this.kryptonButton14_Click);
@@ -97,10 +104,10 @@
             this.Closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Closebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Closebtn.ForeColor = System.Drawing.Color.White;
-            this.Closebtn.Location = new System.Drawing.Point(1476, 0);
+            this.Closebtn.Location = new System.Drawing.Point(1107, 0);
             this.Closebtn.Margin = new System.Windows.Forms.Padding(0);
             this.Closebtn.Name = "Closebtn";
-            this.Closebtn.Size = new System.Drawing.Size(45, 43);
+            this.Closebtn.Size = new System.Drawing.Size(34, 35);
             this.Closebtn.TabIndex = 12;
             this.Closebtn.Text = "X";
             this.Closebtn.UseVisualStyleBackColor = false;
@@ -111,9 +118,10 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(216, 10);
+            this.panel2.Location = new System.Drawing.Point(162, 8);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(127, 83);
+            this.panel2.Size = new System.Drawing.Size(95, 67);
             this.panel2.TabIndex = 2;
             // 
             // label1
@@ -122,15 +130,17 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(338, 35);
+            this.label1.Location = new System.Drawing.Point(254, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 38);
+            this.label1.Size = new System.Drawing.Size(98, 30);
             this.label1.TabIndex = 2;
             this.label1.Text = "Pay Bill";
             // 
             // GrpRecieve
             // 
-            this.GrpRecieve.Location = new System.Drawing.Point(53, 137);
+            this.GrpRecieve.Location = new System.Drawing.Point(40, 111);
+            this.GrpRecieve.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GrpRecieve.Name = "GrpRecieve";
             // 
             // GrpRecieve.Panel
@@ -142,7 +152,7 @@
             this.GrpRecieve.Panel.Controls.Add(this.kryptonComboBox1);
             this.GrpRecieve.Panel.Controls.Add(this.kryptonButton1);
             this.GrpRecieve.Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.GrpRecieve_Panel_Paint);
-            this.GrpRecieve.Size = new System.Drawing.Size(791, 575);
+            this.GrpRecieve.Size = new System.Drawing.Size(593, 467);
             this.GrpRecieve.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.GrpRecieve.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
             this.GrpRecieve.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
@@ -160,9 +170,10 @@
             this.kryptonComboBox3.DropDownWidth = 227;
             this.kryptonComboBox3.Items.AddRange(new object[] {
             "Select Branch"});
-            this.kryptonComboBox3.Location = new System.Drawing.Point(14, 67);
+            this.kryptonComboBox3.Location = new System.Drawing.Point(10, 54);
+            this.kryptonComboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonComboBox3.Name = "kryptonComboBox3";
-            this.kryptonComboBox3.Size = new System.Drawing.Size(350, 37);
+            this.kryptonComboBox3.Size = new System.Drawing.Size(262, 33);
             this.kryptonComboBox3.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.kryptonComboBox3.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Navy;
             this.kryptonComboBox3.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Navy;
@@ -178,9 +189,10 @@
             // 
             // kryptonTextBox2
             // 
-            this.kryptonTextBox2.Location = new System.Drawing.Point(412, 169);
+            this.kryptonTextBox2.Location = new System.Drawing.Point(309, 137);
+            this.kryptonTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonTextBox2.Name = "kryptonTextBox2";
-            this.kryptonTextBox2.Size = new System.Drawing.Size(350, 40);
+            this.kryptonTextBox2.Size = new System.Drawing.Size(262, 37);
             this.kryptonTextBox2.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonTextBox2.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
             this.kryptonTextBox2.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
@@ -199,9 +211,10 @@
             // 
             // kryptonTextBox1
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(412, 67);
+            this.kryptonTextBox1.Location = new System.Drawing.Point(309, 54);
+            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(350, 40);
+            this.kryptonTextBox1.Size = new System.Drawing.Size(262, 37);
             this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
             this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
@@ -219,9 +232,10 @@
             // 
             // kryptonTextBox3
             // 
-            this.kryptonTextBox3.Location = new System.Drawing.Point(14, 169);
+            this.kryptonTextBox3.Location = new System.Drawing.Point(10, 137);
+            this.kryptonTextBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonTextBox3.Name = "kryptonTextBox3";
-            this.kryptonTextBox3.Size = new System.Drawing.Size(350, 40);
+            this.kryptonTextBox3.Size = new System.Drawing.Size(262, 37);
             this.kryptonTextBox3.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonTextBox3.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
             this.kryptonTextBox3.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
@@ -248,9 +262,10 @@
             "Fee Payment",
             "Loan Payment",
             "Tax Payment"});
-            this.kryptonComboBox1.Location = new System.Drawing.Point(14, 282);
+            this.kryptonComboBox1.Location = new System.Drawing.Point(10, 229);
+            this.kryptonComboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonComboBox1.Name = "kryptonComboBox1";
-            this.kryptonComboBox1.Size = new System.Drawing.Size(350, 37);
+            this.kryptonComboBox1.Size = new System.Drawing.Size(262, 33);
             this.kryptonComboBox1.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.kryptonComboBox1.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Navy;
             this.kryptonComboBox1.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Navy;
@@ -265,17 +280,18 @@
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(321, 448);
-            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonButton1.Location = new System.Drawing.Point(241, 364);
+            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(149, 50);
+            this.kryptonButton1.Size = new System.Drawing.Size(112, 41);
             this.kryptonButton1.TabIndex = 24;
             this.kryptonButton1.Values.Text = "Pay";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // grpReciept
             // 
-            this.grpReciept.Location = new System.Drawing.Point(885, 137);
+            this.grpReciept.Location = new System.Drawing.Point(664, 111);
+            this.grpReciept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpReciept.Name = "grpReciept";
             // 
             // grpReciept.Panel
@@ -292,7 +308,7 @@
             this.grpReciept.Panel.Controls.Add(this.name);
             this.grpReciept.Panel.Controls.Add(this.label3);
             this.grpReciept.Panel.Controls.Add(this.label2);
-            this.grpReciept.Size = new System.Drawing.Size(597, 575);
+            this.grpReciept.Size = new System.Drawing.Size(448, 467);
             this.grpReciept.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.grpReciept.StateCommon.Border.Color1 = System.Drawing.Color.DarkBlue;
             this.grpReciept.StateCommon.Border.Color2 = System.Drawing.Color.DarkBlue;
@@ -310,9 +326,11 @@
             this.date.BackColor = System.Drawing.Color.Transparent;
             this.date.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date.ForeColor = System.Drawing.Color.SteelBlue;
+
             this.date.Location = new System.Drawing.Point(290, 406);
+
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(56, 29);
+            this.date.Size = new System.Drawing.Size(46, 24);
             this.date.TabIndex = 13;
             this.date.Text = "date";
             // 
@@ -322,9 +340,11 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.SteelBlue;
+
             this.label14.Location = new System.Drawing.Point(25, 406);
+
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(171, 29);
+            this.label14.Size = new System.Drawing.Size(143, 24);
             this.label14.TabIndex = 12;
             this.label14.Text = "Payment Date:";
             // 
@@ -334,9 +354,11 @@
             this.charges.BackColor = System.Drawing.Color.Transparent;
             this.charges.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.charges.ForeColor = System.Drawing.Color.SteelBlue;
+
             this.charges.Location = new System.Drawing.Point(255, 341);
+
             this.charges.Name = "charges";
-            this.charges.Size = new System.Drawing.Size(91, 29);
+            this.charges.Size = new System.Drawing.Size(75, 24);
             this.charges.TabIndex = 9;
             this.charges.Text = "charges";
             // 
@@ -346,9 +368,11 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.SteelBlue;
+
             this.label10.Location = new System.Drawing.Point(25, 341);
+
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(125, 29);
+            this.label10.Size = new System.Drawing.Size(102, 24);
             this.label10.TabIndex = 8;
             this.label10.Text = "CHARGES:";
             // 
@@ -358,9 +382,11 @@
             this.amount.BackColor = System.Drawing.Color.Transparent;
             this.amount.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.amount.ForeColor = System.Drawing.Color.SteelBlue;
+
             this.amount.Location = new System.Drawing.Point(258, 267);
+
             this.amount.Name = "amount";
-            this.amount.Size = new System.Drawing.Size(88, 29);
+            this.amount.Size = new System.Drawing.Size(72, 24);
             this.amount.TabIndex = 7;
             this.amount.Text = "amount";
             // 
@@ -370,9 +396,11 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.SteelBlue;
+
             this.label8.Location = new System.Drawing.Point(25, 267);
+
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(158, 29);
+            this.label8.Size = new System.Drawing.Size(131, 24);
             this.label8.TabIndex = 6;
             this.label8.Text = "Amount Paid:";
             // 
@@ -382,9 +410,11 @@
             this.account_num.BackColor = System.Drawing.Color.Transparent;
             this.account_num.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.account_num.ForeColor = System.Drawing.Color.SteelBlue;
+
             this.account_num.Location = new System.Drawing.Point(324, 204);
+
             this.account_num.Name = "account_num";
-            this.account_num.Size = new System.Drawing.Size(60, 29);
+            this.account_num.Size = new System.Drawing.Size(48, 24);
             this.account_num.TabIndex = 5;
             this.account_num.Text = "Num";
             // 
@@ -394,9 +424,11 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.SteelBlue;
+
             this.label6.Location = new System.Drawing.Point(25, 204);
+
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(225, 29);
+            this.label6.Size = new System.Drawing.Size(186, 24);
             this.label6.TabIndex = 4;
             this.label6.Text = "ACCOUNT NUMBER:";
             // 
@@ -406,9 +438,11 @@
             this.name.BackColor = System.Drawing.Color.Transparent;
             this.name.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name.ForeColor = System.Drawing.Color.SteelBlue;
+
             this.name.Location = new System.Drawing.Point(338, 123);
+
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(72, 29);
+            this.name.Size = new System.Drawing.Size(58, 24);
             this.name.TabIndex = 3;
             this.name.Text = "NAME";
             // 
@@ -418,9 +452,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.SteelBlue;
+
             this.label3.Location = new System.Drawing.Point(34, 123);
+
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(230, 29);
+            this.label3.Size = new System.Drawing.Size(191, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "CLIENT USER NAME:";
             // 
@@ -430,12 +466,14 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label2.Location = new System.Drawing.Point(105, 44);
+            this.label2.Location = new System.Drawing.Point(79, 36);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(343, 38);
+            this.label2.Size = new System.Drawing.Size(275, 30);
             this.label2.TabIndex = 1;
             this.label2.Text = "BILL PAYMENT RECIEPT";
             // 
+
             // kryptonButton2
             // 
             this.kryptonButton2.Location = new System.Drawing.Point(343, 497);
@@ -445,16 +483,22 @@
             this.kryptonButton2.TabIndex = 34;
             this.kryptonButton2.Values.Text = "Generate Report";
             this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
+
+            // kryptonManager1
+            // 
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
+
             // 
             // PayBill
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1520, 802);
+            this.ClientSize = new System.Drawing.Size(1141, 640);
             this.Controls.Add(this.grpReciept);
             this.Controls.Add(this.GrpRecieve);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PayBill";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PayBill";
@@ -503,6 +547,9 @@
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+
+        private ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
     }
 }

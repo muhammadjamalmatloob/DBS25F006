@@ -10,15 +10,24 @@ using System.Windows.Forms;
 using DBFinalProject.DL;
 using DBFinalProject.BL;
 using ComponentFactory.Krypton.Toolkit;
+
 using DBFinalProject.UI;
+
+
+using DBFinalProject.Utility;
 
 namespace DBFinalProject
 {
     
     public partial class PayBill : KryptonForm
     {
+
         string payment_type;
-        public PayBill()
+
+
+        CashierDashboard cashier;
+        public PayBill(CashierDashboard cashier)
+
         {
             InitializeComponent();
             grpReciept.Visible = false;
@@ -26,13 +35,15 @@ namespace DBFinalProject
             BranchDL.LoadAllBranchesInComboBox(kryptonComboBox3);
             kryptonComboBox3.SelectedIndex = 0;
             kryptonComboBox1.SelectedIndex = 0;
+            kryptonManager1.GlobalPalette = Theme.theme;
+            this.cashier = cashier;
         }
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
-            CashierDashboard cashierDashboard = new CashierDashboard();
-            cashierDashboard.Show();
+            
             this.Hide();
+            cashier.Show();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)

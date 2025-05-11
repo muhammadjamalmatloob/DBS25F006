@@ -11,16 +11,25 @@ using System.Xml.Linq;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.DL;
+
 using DBFinalProject.UI;
+
+using DBFinalProject.Utility;
+
 
 namespace DBFinalProject
 {
     public partial class MoneyTransfer : KryptonForm
     {
 
+
         TransferReportBL ReportBL { get; set; }
-        public MoneyTransfer()
+
+        CashierDashboard cashier;
+        public MoneyTransfer(CashierDashboard cashier)
+
         {
+            this.cashier = cashier;
             InitializeComponent();
             ReportBL = new TransferReportBL();
             BranchDL.LoadAllDataInList();
@@ -30,7 +39,10 @@ namespace DBFinalProject
             kryptonComboBox2.SelectedIndex = 0;
             GrpSender.Visible = false;
             GrpVerify.Visible = false;
+
             kryptonButton1.Visible = false;
+            kryptonManager1.GlobalPalette = Theme.theme;
+
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
@@ -41,8 +53,7 @@ namespace DBFinalProject
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CashierDashboard cashierDashboard = new CashierDashboard();
-            cashierDashboard.Show();
+            cashier.Show();
             
         }
 
