@@ -158,11 +158,12 @@ namespace DBFinalProject
                 else
                 {
                     MessageBox.Show("Failed to Add Branch", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
-            catch(Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Failed to Add Branch", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

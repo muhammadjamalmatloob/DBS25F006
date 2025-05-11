@@ -125,7 +125,6 @@ namespace DBFinalProject
                 kryptonTextBox3.StateCommon.Content.Color1 = Color.Black;
             }
         }
-
         private void kryptonTextBox3_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(kryptonTextBox3.Text))
@@ -141,8 +140,6 @@ namespace DBFinalProject
         }
 
         // transfer wala btn
-
-
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
             string selectedBranchName2 = kryptonComboBox2.Text.Trim();
@@ -213,6 +210,24 @@ namespace DBFinalProject
             {
                 MessageBox.Show("Your Account does not exists.");
                 return;
+            }
+        }
+
+        private void kryptonTextBox4_Enter(object sender, EventArgs e)
+        {
+            if (kryptonTextBox4.Text == "Enter Pin")
+            {
+                kryptonTextBox4.Text = "";
+                kryptonTextBox4.StateCommon.Content.Color1 = Color.Black;
+            }
+        }
+
+        private void kryptonTextBox4_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(kryptonTextBox4.Text))
+            {
+                kryptonTextBox4.Text = "Enter Pin";
+                kryptonTextBox4.StateCommon.Content.Color1 = Color.Gray;
             }
         }
     }

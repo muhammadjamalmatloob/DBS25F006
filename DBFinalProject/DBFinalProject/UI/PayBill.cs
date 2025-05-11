@@ -65,6 +65,11 @@ namespace DBFinalProject
             int branch_id = Convert.ToInt32(BranchDL.GetBranchIdByName(selectedBranchName));
             string account_number = kryptonTextBox3.Text.Trim();
             string payment_type = kryptonComboBox1.Text.Trim();
+            if (payment_type == null || payment_type == "Select Payment Type")
+            {
+                MessageBox.Show("Please select a payment type first.");
+                return;
+            }
             decimal amount = Convert.ToDecimal(kryptonTextBox1.Text.Trim());
             string pin = kryptonTextBox2.Text.Trim();
 
@@ -101,6 +106,7 @@ namespace DBFinalProject
                                 return;
                             }
                         }
+                        
                         else
                         {
                             MessageBox.Show("Insufficient balance.");
@@ -116,6 +122,11 @@ namespace DBFinalProject
                 {
                     MessageBox.Show("Invalid PIN.");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Account number is not valid.");
+                return;
             }
 
 

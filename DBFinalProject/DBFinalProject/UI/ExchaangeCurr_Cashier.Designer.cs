@@ -129,7 +129,7 @@
             // 
             // GrpRecieve
             // 
-            this.GrpRecieve.Location = new System.Drawing.Point(121, 147);
+            this.GrpRecieve.Location = new System.Drawing.Point(145, 147);
             this.GrpRecieve.Name = "GrpRecieve";
             // 
             // GrpRecieve.Panel
@@ -270,7 +270,7 @@
             // 
             // grpReciept
             // 
-            this.grpReciept.Location = new System.Drawing.Point(733, 147);
+            this.grpReciept.Location = new System.Drawing.Point(836, 147);
             this.grpReciept.Name = "grpReciept";
             // 
             // grpReciept.Panel

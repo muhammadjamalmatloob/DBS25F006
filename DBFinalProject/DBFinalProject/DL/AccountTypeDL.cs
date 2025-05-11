@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using DBFinalProject.BL;
 using DBFinalProject.Utility;
@@ -117,9 +118,22 @@ namespace DBFinalProject.DL
             }
         }
 
-        public static string TotalActiveAccounts()
+        public static string TotalAccounts(int status)
         {
-            string query = "SELECT COUNT(*) from accounts where status = 23";
+            string query = $"SELECT COUNT(*) from accounts where status = {status}";
+            int total = 0;
+            using (var reader = DatabaseHelper.Instance.getData(query))
+            {
+                if (reader.Read())
+                {
+                    total = Convert.ToInt32(reader[0]);
+                }
+            }
+            return total.ToString();
+        }
+        public static string TotalAccounts(int status,int branch_id)
+        {
+            string query = $"SELECT COUNT(*) from accounts where status = {status}  and branch_id = {branch_id}";
             int total = 0;
             using (var reader = DatabaseHelper.Instance.getData(query))
             {
@@ -131,33 +145,33 @@ namespace DBFinalProject.DL
             return total.ToString();
         }
 
-        public static string TotalInActiveAccounts()
-        {
-            string query = "SELECT COUNT(*) from accounts where status = 24";
-            int total = 0;
-            using (var reader = DatabaseHelper.Instance.getData(query))
-            {
-                if (reader.Read())
-                {
-                    total = Convert.ToInt32(reader[0]);
-                }
-            }
-            return total.ToString();
-        }
+        //public static string TotalInActiveAccounts()
+        //{
+        //    string query = "SELECT COUNT(*) from accounts where status = 24";
+        //    int total = 0;
+        //    using (var reader = DatabaseHelper.Instance.getData(query))
+        //    {
+        //        if (reader.Read())
+        //        {
+        //            total = Convert.ToInt32(reader[0]);
+        //        }
+        //    }
+        //    return total.ToString();
+        //}
 
-        public static string TotalClosedAccounts()
-        {
-            string query = "SELECT COUNT(*) from accounts where status = 25";
-            int total = 0;
-            using (var reader = DatabaseHelper.Instance.getData(query))
-            {
-                if (reader.Read())
-                {
-                    total = Convert.ToInt32(reader[0]);
-                }
-            }
-            return total.ToString();
-        }
+        //public static string TotalClosedAccounts()
+        //{
+        //    string query = "SELECT COUNT(*) from accounts where status = 25";
+        //    int total = 0;
+        //    using (var reader = DatabaseHelper.Instance.getData(query))
+        //    {
+        //        if (reader.Read())
+        //        {
+        //            total = Convert.ToInt32(reader[0]);
+        //        }
+        //    }
+        //    return total.ToString();
+        //}
 
         public static int getTransactionLimit(int account_type_id)
         {

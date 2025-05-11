@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -85,6 +86,7 @@ namespace DBFinalProject.DL
             }
             return user_id;
         }
+        
 
         public static bool isDublicateUserName(string user_name)
         {
